@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link href="/">
           <div className="flex items-center space-x-2 cursor-pointer">
             <Image src={logo} alt="Logo" width={70} height={50} />
-            {/* <span className="text-xl font-bold text-gray-800">InoVis</span> */}
+            
           </div>
         </Link>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
             <ShoppingBag size={18} />
           </button>
 
-          {/* “Let’s Talk” button visible on md+ */}
+         
           <button className="hidden md:block border border-black text-black px-5 py-2 rounded-lg hover:bg-black hover:text-white transition">
             Let’s Talk
           </button>
@@ -76,9 +76,7 @@ const Navbar = () => {
               </li>
             ))}
             <div className="flex items-center space-x-3 pt-3">
-              {/* <button className="p-2 rounded-full bg-black text-white hover:bg-lime-400 hover:text-black transition">
-                <ShoppingBag size={18} />
-              </button> */}
+             
               <button className="border border-black text-black px-5 py-2 rounded-lg hover:bg-black hover:text-white transition">
                 Let’s Talk
               </button>
