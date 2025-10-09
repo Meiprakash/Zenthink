@@ -90,7 +90,7 @@ export default function Hero() {
         "
           >
             <div
-              className="w-full h-full rounded-full bg-no-repeat bg-center animate-slow-spin"
+              className="w-full h-full rounded-full bg-no-repeat bg-center "
               style={{
                 backgroundImage: `url(${hero.src})`,
                 backgroundSize: "contain",
