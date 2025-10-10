@@ -1,8 +1,17 @@
 import Image from "next/image";
-import ServiceSection from "@/app/Components/Service";
+import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/Hero_Section";
+import InvestorsSection from "./Components/Investors";
+import AboutUs from "./Components/AboutUS";
 
 export default function Home() {
   return (
-   <ServiceSection/>
+    <div>
+      <Navbar />
+      <Hero />
+      <InvestorsSection/>
+      <AboutUs/>
+      <ServiceSection/>
+    </div>
   );
 }
