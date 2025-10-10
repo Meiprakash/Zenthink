@@ -6,7 +6,7 @@ import ServiceSection from "./Components/Service";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white">
       <Navbar />
       <Hero />
       <InvestorsSection/>
