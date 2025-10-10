@@ -1,9 +1,9 @@
 "use client";
 
 import { Layers } from "lucide-react";
-import hero from "@/assats/hero.jpg";
+import Image from "next/image";
 
-const rotatingTexts = ["Web Design", "Development", "Branding", "UI/UX Design"];
+const rotatingTexts = ["Web Design","UX Design", "Branding", "UI Design"];
 
 export default function Hero() {
   return (
@@ -13,8 +13,8 @@ export default function Hero() {
         <div className="max-w-2xl space-y-6 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight text-black">
             Designing Digital Worlds That Spark{" "}
-            <span className="text-lime-400">Emotion</span> and{" "}
-            <span className="text-lime-400">Action</span>
+            <span className="text-gray-400">Emotion</span> and{" "}
+            <span className="text-gray-400">Action</span>
           </h1>
           <p className="text-gray-600">
             From bold websites to memorable brand identities, we turn your
@@ -23,15 +23,15 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mt-6">
-            {/* lets talk btn */}
+            {/* Let's talk btn */}
             <button className="relative overflow-hidden rounded-full bg-black px-6 py-3 text-white font-medium group cursor-pointer">
               <span className="relative z-10">Let’s Work Together ?</span>
-              <span className="absolute inset-0 bg-lime-400 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
+              <span className="absolute inset-0 bg-blue-400 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
             </button>
 
             {/* Avatars */}
-            <div className="flex items-center space-x-2">
-              <div className="flex -space-x-2">
+            <div className="flex items-center space-x-3 ">
+              <div className="flex items-center content-center">
                 <img
                   src="https://i.pravatar.cc/40?img=1"
                   className="w-8 h-8 rounded-full border-2 border-white"
@@ -48,7 +48,7 @@ export default function Hero() {
                   alt="User"
                 />
               </div>
-              <span className="text-sm text-gray-600">
+              <span className="text-xl text-gray-600">
                 <strong>120K+</strong> Active users
               </span>
             </div>
@@ -56,14 +56,14 @@ export default function Hero() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="relative flex items-center justify-center w-full md:w-1/2">
-          {/* Floating Text  */}
-          <div className="h-[450px] overflow-hidden flex flex-col justify-center mr-60 z-10">
-            <div className="animate-scroll-vertical">
+        <div className="relative flex items-center justify-end w-full md:w-1/2 gap-10 md:gap-16">
+          {/* Floating / Scrolling Texts */}
+          <div className="h-[400px] md:h-[500px] overflow-hidden flex flex-col justify-center z-10 ml-2">
+            <div className="animate-scroll-up ">
               {[...rotatingTexts, ...rotatingTexts].map((text, i) => (
                 <div
-                  key={i}
-                  className="mb-8 bg-white text-black shadow-md rounded-full px-6 py-2 text-base font-medium whitespace-nowrap flex items-center gap-2"
+                  key={`${text}-${i}`}
+                  className="mb-16 md:mb-8 bg-white text-black shadow-md rounded-full px-6 py-3 text-sm md:text-base font-medium flex items-center gap-6"
                 >
                   <span>{text}</span>
                   <Layers size={18} />
@@ -72,31 +72,15 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Sphere with pattern */}
-          <div
-            className="
-          absolute
-          right-[-140px]
-          top-1/2
-          -translate-y-1/2
-          w-[550px]
-          h-[550px]
-          md:w-[650px]
-          md:h-[650px]
-          flex
-          items-center
-          justify-center
-          pointer-events-none
-        "
-          >
-            <div
-              className="w-full h-full rounded-full bg-no-repeat bg-center "
-              style={{
-                backgroundImage: `url(${hero.src})`,
-                backgroundSize: "contain",
-                clipPath: "inset(0 0 0 50%)",
-              }}
-            ></div>
+          {/* Sphere */}
+          <div className="relative w-[160px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px]">
+            <Image
+              src="/hero.jpg"
+              alt="Hero Pattern"
+              fill
+              className="object-contain "
+              priority
+            />
           </div>
         </div>
       </div>
