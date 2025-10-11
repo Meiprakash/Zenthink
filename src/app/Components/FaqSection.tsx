@@ -155,7 +155,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-10 overflow-hidden">
+    <section className="w-full bg-white py-0 px-4 sm:px-6 lg:px-10 overflow-hidden">
       {/* Header Section */}
       <motion.div
         className="max-w-6xl mx-auto text-center lg:text-left"
