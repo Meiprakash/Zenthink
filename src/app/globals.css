@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+
 
 :root {
   --background: #ffffff;
@@ -22,10 +24,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-/* ennoda code ====================================================*/
 @keyframes scroll-up {
   0% {
     transform: translateY(0);
