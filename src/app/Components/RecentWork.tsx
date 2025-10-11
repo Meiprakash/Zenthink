@@ -43,7 +43,7 @@ const RecentWork: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.9 }}
           viewport={{ once: true }}
           className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
         >

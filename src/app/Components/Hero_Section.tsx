@@ -2,87 +2,153 @@
 
 import { Layers } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-const rotatingTexts = ["Web Design","UX Design", "Branding", "UI Design"];
+const rotatingTexts = ["Web Design", "UX Design", "Branding", "UI Design"];
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]">
       <div className="max-w-7xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* LEFT SIDE */}
-        <div className="max-w-2xl space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight text-black">
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ type: "spring", stiffness: 70, damping: 20 }}
+          className="max-w-2xl space-y-6 text-center md:text-left"
+        >
+          <motion.h1
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-4xl md:text-6xl font-bold leading-tight text-black"
+          >
             Designing Digital Worlds That Spark{" "}
             <span className="text-gray-400">Emotion</span> and{" "}
             <span className="text-gray-400">Action</span>
-          </h1>
-          <p className="text-gray-600">
+          </motion.h1>
+
+          <motion.p
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-gray-600"
+          >
             From bold websites to memorable brand identities, we turn your
             vision into a digital experience. Let’s build something
             unforgettable—together.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mt-6">
-            {/* Let's talk btn */}
-            <button className="relative overflow-hidden rounded-full bg-black px-6 py-3 text-white font-medium group cursor-pointer">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mt-6"
+          >
+            {/* Let's work button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative overflow-hidden rounded-full bg-black px-6 py-3 text-white font-medium group cursor-pointer"
+            >
               <span className="relative z-10">Let’s Work Together ?</span>
-              <span className="absolute inset-0 bg-blue-400 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
-            </button>
+              <motion.span
+                initial={{ x: "-100%" }}
+                whileHover={{ x: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="absolute inset-0 bg-blue-400 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"
+              ></motion.span>
+            </motion.button>
 
             {/* Avatars */}
-            <div className="flex items-center space-x-3 ">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="flex items-center space-x-3"
+            >
               <div className="flex items-center content-center">
-                <img
+                <motion.img
                   src="https://i.pravatar.cc/40?img=1"
                   className="w-8 h-8 rounded-full border-2 border-white"
                   alt="User"
+                  whileHover={{ scale: 1.1 }}
                 />
-                <img
+                <motion.img
                   src="https://i.pravatar.cc/40?img=2"
-                  className="w-8 h-8 rounded-full border-2 border-white"
+                  className="w-8 h-8 rounded-full border-2 border-white -ml-2"
                   alt="User"
+                  whileHover={{ scale: 1.1 }}
                 />
-                <img
+                <motion.img
                   src="https://i.pravatar.cc/40?img=3"
-                  className="w-8 h-8 rounded-full border-2 border-white"
+                  className="w-8 h-8 rounded-full border-2 border-white -ml-2"
                   alt="User"
+                  whileHover={{ scale: 1.1 }}
                 />
               </div>
               <span className="text-xl text-gray-600">
                 <strong>120K+</strong> Active users
               </span>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
 
         {/* RIGHT SIDE */}
-        <div className="relative flex items-center justify-end w-full md:w-1/2 gap-10 md:gap-16">
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 70,
+            damping: 20,
+            delay: 0.4,
+          }}
+          className="relative flex items-center justify-end w-full md:w-1/2 gap-10 md:gap-16"
+        >
           {/* Floating / Scrolling Texts */}
           <div className="h-[400px] md:h-[500px] overflow-hidden flex flex-col justify-center z-10 ml-2">
-            <div className="animate-scroll-up ">
+            <motion.div
+              animate={{ y: ["0%", "-50%"] }}
+              transition={{
+                repeat: Infinity,
+                duration: 8,
+                ease: "linear",
+              }}
+            >
               {[...rotatingTexts, ...rotatingTexts].map((text, i) => (
-                <div
+                <motion.div
                   key={`${text}-${i}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
                   className="mb-16 md:mb-8 bg-white text-black shadow-md rounded-full px-6 py-3 text-sm md:text-base font-medium flex items-center gap-6"
                 >
                   <span>{text}</span>
                   <Layers size={18} />
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
-          {/* Sphere */}
-          <div className="relative w-[160px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px]">
+          {/* Floating Sphere Image */}
+          <motion.div
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="relative w-[160px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px]"
+          >
             <Image
               src="/hero.jpg"
               alt="Hero Pattern"
               fill
-              className="object-contain "
+              className="object-contain"
               priority
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

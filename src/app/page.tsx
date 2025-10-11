@@ -4,7 +4,7 @@ import Hero from "./Components/Hero_Section";
 import InvestorsSection from "./Components/Investors";
 import AboutUs from "./Components/AboutUS";
 import ServiceSection from "./Components/Service";
-import RecentWork from "./Component/RecentWork";
+import RecentWork from "./Components/RecentWork";
 
 export default function Home() {
   return (
