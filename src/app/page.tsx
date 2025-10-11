@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TestimonialsSection from "./Components/Testimonials";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero_Section";
 import InvestorsSection from "./Components/Investors";
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutUs/>
       <ServiceSection/>
       <RecentWork/>
+      <TestimonialsSection/>
     </div>
   );
 }
