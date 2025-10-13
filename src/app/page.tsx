@@ -8,6 +8,7 @@ import ServiceSection from "./Components/Service";
 import RecentWork from "./Components/RecentWork";
 import FAQ from "./Components/FaqSection";
 import BlogSection from "./Components/Blog";
+import ConnectSection from "./Components/ConnectUs";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
       <RecentWork/>
       <TestimonialsSection />
       <FAQ />
-      <BlogSection/>
+      <BlogSection />
+      <ConnectSection/>
     </div>
   );
 }
