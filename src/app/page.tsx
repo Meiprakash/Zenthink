@@ -7,6 +7,8 @@ import AboutUs from "./Components/AboutUS";
 import ServiceSection from "./Components/Service";
 import RecentWork from "./Components/RecentWork";
 import FAQ from "./Components/FaqSection";
+import BlogSection from "./Components/Blog";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
@@ -18,7 +20,9 @@ export default function Home() {
       <ServiceSection/>
       <RecentWork/>
       <TestimonialsSection />
-      <FAQ/>
+      <FAQ />
+      <BlogSection />
+      <Footer/>
     </div>
   );
 }
