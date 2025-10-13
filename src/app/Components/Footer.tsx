@@ -6,130 +6,135 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-tr from-black via-[#0b001f] to-[#3c0f6e] text-white rounded-t-[2rem]">
-      <div className="container mx-auto px-6 py-16">
-        <div className="flex flex-col-2 md:flex-row md:justify-end md:items-start gap-12">
-          {/* Left Section */}
+    <footer className="relative overflow-hidden rounded-t-[4rem] bg-gradient-to-r from-[#060606] via-[#0e0a20] to-[#3c0f6e] text-white">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-12 py-16">
+        {/* Top Section */}
+        <div className="flex flex-wrap justify-between gap-12 lg:gap-20 md:ml-9">
+          {/* Left */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex-1 md:ml-30 "
+            transition={{ duration: 0.6 }}
+            className="min-w-[250px] flex-1"
           >
-            <div className=" md:p-6 ">
-              <h2 className="text-9xl ml-0 mb-1">InoVis</h2>
-              <p className="text-whitex text-xl mb-2 ">Save time.Get Started Now
-              </p>
-              <p className="text-gray-400 max-w-xs">
-                Unleash the most advanced Agency and boost your productivity
-              </p>
-            </div>
+            <p className="md:text-8xl sm:text-[52px] font-semibold mb-3 ">
+              InoVis
+            </p>
+            <p className="text-lg mb-2 font-medium tracking-tight">
+              Save time. Get Started Now.
+            </p>
+            <p className="text-gray-400 max-w-xs text-base leading-relaxed">
+              Unleash the most advanced Agency and boost your productivity
+            </p>
 
-            <div className="mt-28">
-              <p className="text-lg font-semibold mb-3">Stay in the know</p>
+            <div className="mt-10 md:ml-0">
+              <p className="text-lg font-semibold mb-4">Stay in the know</p>
               <div className="flex items-center gap-4">
-                <motion.a
-                  whileHover={{ scale: 1.2 }}
-                  href="#"
-                  className="bg-white text-black p-2 rounded-full hover:bg-purple-600 hover:text-white transition-all"
-                >
-                  <FaTwitter />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.2 }}
-                  href="#"
-                  className="bg-white text-black p-2 rounded-full hover:bg-purple-600 hover:text-white transition-all"
-                >
-                  <FaLinkedinIn />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.2 }}
-                  href="#"
-                  className="bg-white text-black p-2 rounded-full hover:bg-purple-600 hover:text-white transition-all"
-                >
-                  <FaYoutube />
-                </motion.a>
+                {[
+                  { icon: <FaTwitter />, href: "#" },
+                  { icon: <FaLinkedinIn />, href: "#" },
+                  { icon: <FaYoutube />, href: "#" },
+                ].map((item, i) => (
+                  <motion.a
+                    key={i}
+                    whileHover={{ scale: 1.15 }}
+                    href={item.href}
+                    className="bg-white text-black p-3 rounded-full hover:bg-purple-600 hover:text-white transition-all"
+                  >
+                    {item.icon}
+                  </motion.a>
+                ))}
               </div>
             </div>
           </motion.div>
 
-          {/* Center Section */}
+          {/* Company */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="flex-1 md:ml-120"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="min-w-[150px] flex-1 md:ml-110 sm:ml-10"
           >
-            <h4 className="font-semibold text-lg mb-4">Company</h4>
-            <ul className="space-y-3 text-gray-400">
-              <li>
-                <Link href="#">Home</Link>
-              </li>
-              <li>
-                <Link href="#">About us</Link>
-              </li>
-              <li>
-                <Link href="#">Service</Link>
-              </li>
-              <li>
-                <Link href="#">Blog</Link>
-              </li>
-              <li>
-                <Link href="#">Shop</Link>
-              </li>
-              <li>
-                <Link href="#">Contact Us</Link>
-              </li>
+            <h4 className="font-semibold md:text-2xl mb-6">Company</h4>
+            <ul className="space-y-6 text-gray-200 md:text-lg mb-6">
+              {[
+                "Home",
+                "About us",
+                "Service",
+                "Blog",
+                "Shop",
+                "Contact Us",
+              ].map((item, i) => (
+                <li key={i}>
+                  <Link
+                    href="#"
+                    className="hover:text-white transition-colors "
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
-          {/* Right Section */}
+          {/* Utilities */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            className="flex-1"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="min-w-[150px] flex-1 sm:ml-0"
           >
-            <h4 className="font-semibold text-lg mb-4">Utilities</h4>
-            <ul className="space-y-3 text-gray-400">
-              <li>
-                <Link href="#">Privacy & policy</Link>
-              </li>
-              <li>
-                <Link href="#">Style guide</Link>
-              </li>
-              <li>
-                <Link href="#">Changelog</Link>
-              </li>
-              <li>
-                <Link href="#">License</Link>
-              </li>
-              <li>
-                <Link href="#">404 page</Link>
-              </li>
+            <h4 className="font-semibold md:text-2xl mb-4">Utilities</h4>
+            <ul className="space-y-6 text-gray-200 md:text-lg">
+              {[
+                "Privacy & policy",
+                "Style guide",
+                "Changelog",
+                "License",
+                "404 page",
+              ].map((item, i) => (
+                <li key={i}>
+                  <Link href="#" className="hover:text-white transition-colors">
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </motion.div>
         </div>
 
         {/* Divider */}
-        <div className="my-8 border-t border-gray-700"></div>
+        <div className="my-10 border-t border-gray-700"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-400">
-          <p>
-            © All Rights Reserved. Designed by{" "}
-            <span className="text-white font-medium">ideapeel</span> | Powered
-            by <span className="text-white font-medium">Webflow</span>
-          </p>
-          <div className="flex gap-6">
-            <Link href="#" className="hover:text-white transition-colors">
-              Privacy policy
-            </Link>
-            <Link href="#" className="hover:text-white transition-colors">
-              Cookies Policy
-            </Link>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="min-w-[150px] flex-1"
+          >
+        <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-white gap-4 text-center sm:text-left">
+            <div>
+              <p className="md:text-lg font-semibold">All Rights Reserved.</p>
+              <p className="text-lg">
+                Designed by{" "}
+                <span className="text-white md:text-xl font-bold">
+                  ideapeel | <span>{"   "}</span>
+                </span>{" "}
+                Powered by{" "}
+                <span className="text-white md:text-xl font-bold"> Webflow</span>
+              </p>
+            </div>
+            <div className="flex gap-6">
+              <Link href="#" className="hover:text-white transition-colors">
+                Privacy policy
+              </Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Cookies Policy
+              </Link>
+            </div>
         </div>
+          </motion.div>
       </div>
     </footer>
   );
