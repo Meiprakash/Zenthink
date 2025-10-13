@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TestimonialsSection from "./Components/Testimonials";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero_Section";
@@ -9,6 +8,7 @@ import RecentWork from "./Components/RecentWork";
 import FAQ from "./Components/FaqSection";
 import BlogSection from "./Components/Blog";
 import ConnectSection from "./Components/ConnectUs";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
@@ -23,6 +23,7 @@ export default function Home() {
       <FAQ />
       <BlogSection />
       <ConnectSection/>
+      <Footer/>
     </div>
   );
 }
