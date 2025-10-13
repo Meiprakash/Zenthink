@@ -4,7 +4,16 @@ import { Layers } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const rotatingTexts = ["Web Design", "UX Design", "Branding", "UI Design"];
+const rotatingTexts = [
+  "Web Design",
+  "UX Design",
+  "Branding",
+  "UI Design",
+  "Web Design",
+  "UX Design",
+  "Branding",
+  "UI Design",
+];
 
 export default function Hero() {
   return (
@@ -107,26 +116,26 @@ export default function Hero() {
           className="relative flex items-center justify-end w-full md:w-1/2 gap-10 md:gap-16"
         >
           {/* Floating / Scrolling Texts */}
-          <div className="h-[400px] md:h-[500px] overflow-hidden flex flex-col justify-center z-10 ml-2">
+
+          <div className="h-[400px] md:h-[400px] overflow-hidden relative">
             <motion.div
-              animate={{ y: ["0%", "-50%"] }}
+              animate={{ y: ["0%", "-50%"] }} 
               transition={{
                 repeat: Infinity,
-                duration: 8,
+                duration: 18,
                 ease: "linear",
+                repeatType: "loop",
               }}
+              className="flex flex-col"
             >
               {[...rotatingTexts, ...rotatingTexts].map((text, i) => (
-                <motion.div
-                  key={`${text}-${i}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
+                <div
+                  key={i}
                   className="mb-16 md:mb-8 bg-white text-black shadow-md rounded-full px-6 py-3 text-sm md:text-base font-medium flex items-center gap-6"
                 >
                   <span>{text}</span>
                   <Layers size={18} />
-                </motion.div>
+                </div>
               ))}
             </motion.div>
           </div>
