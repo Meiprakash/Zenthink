@@ -54,7 +54,13 @@ export default function AboutUs() {
           <p className="text-md text-gray-900 mb-3 flex items-center gap-2">
             About us{" "}
             <span>
-              <Image src="/badge-icon.webp" alt="badge" className="w-4" />
+              <Image
+                src="/badge-icon.webp"
+                alt="badge"
+                width={16}
+                height={16}
+                className="w-4"
+              />
             </span>
           </p>
 
@@ -89,6 +95,7 @@ export default function AboutUs() {
               <Image
                 src="/videimg.jpg"
                 alt="About video"
+               fill
                 className="w-full h-full object-cover rounded-[28px] brightness-60 "
               />
 
@@ -129,7 +136,13 @@ export default function AboutUs() {
                   className="w-full flex items-center justify-between p-5 text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <Image src="/trophy.png" alt="icon" className="w-6" />
+                    <Image
+                      src="/trophy.png"
+                      alt="icon"
+                      width={16}
+                      height={16}
+                      className="w-6"
+                    />
                     <span className="font-semibold text-lg text-gray-800">
                       {item.title}
                     </span>
@@ -142,6 +155,8 @@ export default function AboutUs() {
                     <Image
                       src="/Earo_Up.png"
                       alt="toggle"
+                      width={16}
+                      height={16}
                       className="w-5 opacity-80"
                     />
                   </span>

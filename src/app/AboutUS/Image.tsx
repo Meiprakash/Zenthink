@@ -18,9 +18,10 @@ export default function SecondComp() {
         className="relative w-full sm:h-[300px] md:h-[600px]  overflow-hidden"
       >
         <Image
-          src="about-hero-img.jpg"
+          src="/about-hero-img.jpg"
           alt="About Hero"
-          className="w-full h-full object-cover brightness-70"
+         fill
+          className="w-full h-full object-cover "
         />
 
         {/* Play Button */}

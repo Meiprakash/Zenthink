@@ -44,7 +44,13 @@ const FAQ = () => {
         <p className="flex justify-center lg:justify-start items-center text-lg text-black mb-2 tracking-wide">
           FAQ{" "}
           <span>
-            <Image src="/badge.jpg" className="w-5 ml-2 mt-1" alt="badge" />
+            <Image
+              src="/badge.jpg"
+              className="w-5 ml-2 mt-1"
+              alt="badge"
+              width={16}
+              height={16}
+            />
           </span>
         </p>
         <h2 className="text-3xl sm:text-4xl font-semibold mb-4 leading-tight text-gray-900">

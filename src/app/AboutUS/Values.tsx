@@ -33,7 +33,7 @@ const Values = () => {
             <p className="text-black text-lg  flex">
               Values{" "}
               <span>
-                <Image src="badge.jpg" alt="" />
+                <Image src="/badge.jpg" width={16} height={16} alt="" />
               </span>
             </p>
             <p className=" text-6xl text-black">Guiding Lights of Our Works</p>
