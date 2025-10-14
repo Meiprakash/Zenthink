@@ -2,6 +2,8 @@
 import { motion, easeOut } from "framer-motion";
 import Navbar from "../Components/Navbar/Navbar";
 import { div } from "framer-motion/client";
+import SecondComp from "./Image";
+import StatsSection from "./CountUP";
 
 export default function Hero() {
   // container variant for staggered children
@@ -83,6 +85,8 @@ export default function Hero() {
           </h2>
         </motion.div>
       </motion.div>
+      <SecondComp />
+      <StatsSection/>
     </div>
   );
 }

@@ -59,8 +59,7 @@ export default function AboutUs() {
             </span>
           </p>
 
-          {/* IMPORTANT: two columns *always* (left = heading, right = description).
-              If you want to let mobile stack later, change `grid-cols-2` -> `md:grid-cols-2`. */}
+         
           <div className="grid grid-cols-2 gap-8 items-start ">
             {/* Left: Heading */}
             <div>
