@@ -43,7 +43,13 @@ const BlogSection: React.FC = () => {
             <span className="flex text-gray-800 text-lg font-medium  mb-4">
               Blog{" "}
               <span className="ml-2 ">
-                <img src="/badge.jpg" className="w-6 mt-0.9" alt="" />
+                <Image
+                  src="/badge.jpg"
+                  className="w-6 mt-0.9"
+                  alt=""
+                  width={16}
+                  height={16}
+                />
               </span>
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">

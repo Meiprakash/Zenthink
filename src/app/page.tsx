@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TestimonialsSection from "./Components/Testimonials";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero_Section";
@@ -8,6 +7,7 @@ import ServiceSection from "./Components/Service";
 import RecentWork from "./Components/RecentWork";
 import FAQ from "./Components/FaqSection";
 import BlogSection from "./Components/Blog";
+import ConnectSection from "./Components/ConnectUs";
 import Footer from "./Components/Footer";
 
 export default function Home() {
@@ -22,6 +22,7 @@ export default function Home() {
       <TestimonialsSection />
       <FAQ />
       <BlogSection />
+      <ConnectSection/>
       <Footer/>
     </div>
   );
