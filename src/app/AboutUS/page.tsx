@@ -1,7 +1,10 @@
 "use client";
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
 import Navbar from "../Components/Navbar/Navbar";
-import { div } from "framer-motion/client";
+import SecondComp from "./Image";
+import StatsSection from "./CountUP";
+import Values from "./Values";
 
 export default function Hero() {
   // container variant for staggered children
@@ -46,9 +49,11 @@ export default function Hero() {
           variants={item}
           className="col-span-2 md:mt-15 sm:mt-12 md:ml-23 sm:m-9"
         >
-          <img
-            src="hero-award-img.jpg"
+          <Image
+            src="/hero-award-img.jpg"
             alt="star-image"
+            width={200}
+            height={200}
             className="sm:mb-4 md:w-13 sm:w-12"
           />
           <span className="text-gray-800 md:text-lg sm:mt-8 sm:text-sm">
@@ -61,9 +66,11 @@ export default function Hero() {
           variants={item}
           className="col-span-2 md:ml-22 flex items-center gap-3 md:h-13 sm:h-10"
         >
-          <img
-            src="about-avater-group.jpg"
+          <Image
+            src="/about-avater-group.jpg"
             alt="user-img"
+            width={200}
+            height={200}
             className="h-full w-auto object-contain"
           />
           <p className="text-black grid justify-center h-full leading-tight">
@@ -75,7 +82,10 @@ export default function Hero() {
         </motion.div>
 
         {/* Description */}
-        <motion.div variants={item} className="col-span-3 md:pl-15 md:mr-38 md:ml-20">
+        <motion.div
+          variants={item}
+          className="col-span-3 md:pl-15 md:mr-38 md:ml-20"
+        >
           <h2 className="md:text-lg text-gray-500 sm:text-sm sm:ml-9 sm:mr-5">
             We combine bold ideas with smart strategy to design brand
             experiences that connect, convert, and inspire. From startups to
@@ -83,6 +93,9 @@ export default function Hero() {
           </h2>
         </motion.div>
       </motion.div>
+      <SecondComp />
+      <StatsSection />
+      <Values />
     </div>
   );
 }
