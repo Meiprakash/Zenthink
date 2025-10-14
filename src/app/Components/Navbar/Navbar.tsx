@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import logo from "@/app/assets/logo.png";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Hero from "@/app/AboutUS/page";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -28,7 +29,7 @@ const Navbar = () => {
       transition={{ type: "spring", stiffness: 80, damping: 15 }}
       className="top-0 left-0 w-full    "
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-7 bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]">
         {/* Logo */}
         <Link href="/">
           <motion.div
@@ -36,7 +37,7 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
             className="flex items-center space-x-2 cursor-pointer "
           >
-            <Image src={logo} alt="Logo" width={70} height={50} />
+            <Image src={logo} alt="Logo" width={80} height={50} />
           </motion.div>
         </Link>
 
