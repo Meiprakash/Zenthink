@@ -54,7 +54,7 @@ export default function AboutUs() {
           <p className="text-md text-gray-900 mb-3 flex items-center gap-2">
             About us{" "}
             <span>
-              <img src="/badge-icon.webp" alt="badge" className="w-4" />
+              <Image src="/badge-icon.webp" alt="badge" className="w-4" />
             </span>
           </p>
 
@@ -86,7 +86,7 @@ export default function AboutUs() {
             <div className="relative w-300   max-w-[560px] rounded-[28px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30 sm:ml-15 md:ml-8 md:h-110 ">
               {/* subtle overlay for frosted look */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-white/0 z-10 pointer-events-none" />
-              <img
+              <Image
                 src="/videimg.jpg"
                 alt="About video"
                 className="w-full h-full object-cover rounded-[28px] brightness-60 "
@@ -129,7 +129,7 @@ export default function AboutUs() {
                   className="w-full flex items-center justify-between p-5 text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <img src="/trophy.png" alt="icon" className="w-6" />
+                    <Image src="/trophy.png" alt="icon" className="w-6" />
                     <span className="font-semibold text-lg text-gray-800">
                       {item.title}
                     </span>
@@ -139,7 +139,7 @@ export default function AboutUs() {
                       activeIndex === i ? "rotate-180" : ""
                     }`}
                   >
-                    <img
+                    <Image
                       src="/Earo_Up.png"
                       alt="toggle"
                       className="w-5 opacity-80"

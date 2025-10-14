@@ -1,7 +1,7 @@
 "use client";
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
 import Navbar from "../Components/Navbar/Navbar";
-import { div } from "framer-motion/client";
 import SecondComp from "./Image";
 import StatsSection from "./CountUP";
 import Values from "./Values";
@@ -49,7 +49,7 @@ export default function Hero() {
           variants={item}
           className="col-span-2 md:mt-15 sm:mt-12 md:ml-23 sm:m-9"
         >
-          <img
+          <Image
             src="hero-award-img.jpg"
             alt="star-image"
             className="sm:mb-4 md:w-13 sm:w-12"
@@ -64,7 +64,7 @@ export default function Hero() {
           variants={item}
           className="col-span-2 md:ml-22 flex items-center gap-3 md:h-13 sm:h-10"
         >
-          <img
+          <Image
             src="about-avater-group.jpg"
             alt="user-img"
             className="h-full w-auto object-contain"

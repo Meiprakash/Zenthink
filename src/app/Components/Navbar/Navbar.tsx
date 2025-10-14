@@ -1,13 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { ShoppingBag, Menu, X } from "lucide-react";
+import {  Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import logo from "@/app/assets/logo.png";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import Hero from "@/app/AboutUS/page";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -59,14 +58,7 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="flex items-center space-x-3 md:space-x-4">
-          {/* Shopping Bag */}
-          {/* <motion.button
-            whileHover={{ scale: 1.1, rotate: 10 }}
-            whileTap={{ scale: 0.9 }}
-            className="p-2 rounded-full bg-black text-white transition"
-          >
-            <ShoppingBag size={18} />
-          </motion.button> */}
+     
 
           {/* Let’s Talk Button */}
           <motion.button
