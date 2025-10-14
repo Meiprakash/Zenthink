@@ -17,7 +17,7 @@ const stats: StatCardProps[] = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-white py-16">
       <div className="max-w-6xl mx-auto grid sm:grid-cols-4  md:grid-cols-4 text-center gap-10">
         {stats.map((stat, i) => (
           <StatCard key={i} {...stat} />
