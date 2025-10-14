@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
-import { motion, AnimatePresence , easeOut } from "framer-motion";
+import { motion, AnimatePresence, easeOut } from "framer-motion";
 
 interface AccordionItem {
   title: string;
@@ -16,19 +16,19 @@ export default function AboutUs() {
 
   const items: AccordionItem[] = [
     {
-      title: "1K+ Projects Done",
+      title: " 100+ Projects Delivered ",
       content:
-        "Welcome Inovis where storytelling center we are more than video production company creative or the partners video welcome.",
+        "From concept to deployment, we've transformed business challenges into powerful software solutions across 10+ industries, delivering measurable ROI and sustainable growth for every client.",
     },
     {
-      title: "5K+ Happy Clients",
+      title: "1K+ Happy Clients",
       content:
-        "We take pride in building long-term relationships with clients, delivering value through creativity, innovation, and collaboration.",
+        "Our success is measured by yours. We build lasting partnerships through transparent communication, agile development, and unwavering commitment to your business objectives and technical excellence",
     },
     {
-      title: "30+ Countries",
+      title: "10+ Countries",
       content:
-        "Our projects span over 30 countries, empowering brands globally with thoughtful design and visual storytelling.",
+        "Global presence, personalized service. We bring world-class software expertise to businesses worldwide, adapting our solutions to local markets while maintaining international quality standards.",
     },
   ];
 
@@ -41,7 +41,6 @@ export default function AboutUs() {
     },
   };
 
-
   return (
     <section className="w-full px-6 md:px-16 py-16 bg-[#faf8f4] font-[Inter,sans-serif]">
       <motion.div
@@ -51,31 +50,30 @@ export default function AboutUs() {
         viewport={{ once: true, amount: 0.2 }}
       >
         {/* Top label + 2-column header row */}
-        <motion.div className="mb-8" variants={fadeUp}>
-          <p className="text-md text-gray-500 mb-3 flex items-center gap-2">
+        <motion.div className="mb-8 " variants={fadeUp}>
+          <p className="text-md text-gray-900 mb-3 flex items-center gap-2">
             About us{" "}
             <span>
               <img src="/badge-icon.webp" alt="badge" className="w-4" />
             </span>
           </p>
 
-         
           <div className="grid grid-cols-2 gap-8 items-start ">
             {/* Left: Heading */}
             <div>
-              <h2 className="text-[28px] sm:text-4xl md:text-5xl lg:text-[48px] font-bold text-gray-900 leading-tight tracking-tight">
-                Our Approach is Holistic <br className="hidden md:block" /> and
-                Collaborative.
+              <h2 className="text-[28px] sm:text-4xl md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
+                Our Approach is Innovative <br className="hidden md:block" />{" "}
+                and Results-Focused.
               </h2>
             </div>
 
             {/* Right: Description */}
             <div>
-              <p className="text-gray-600 text-[14.5px] sm:text-[15px] md:text-base leading-relaxed max-w-md">
-                Website design, a fresh brand identity, or eye-catching
-                marketing materials. Our team is skilled in a range of design
-                disciplines, including graphic design, web design, UX/UI design,
-                and more.
+              <p className="text-gray-600 md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+                Custom software development, robust enterprise solutions, or
+                scalable digital platforms. Our team excels across multiple
+                technology domains, including cloud architecture, application
+                development, system integration, and more.
               </p>
             </div>
           </div>
@@ -85,13 +83,13 @@ export default function AboutUs() {
         <div className="grid md:grid-cols-2   gap-10 items-start">
           {/* Left: Video thumbnail / image */}
           <motion.div variants={fadeUp} className="flex justify-start ">
-            <div className="relative w-full max-w-[560px] rounded-[28px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30 sm:ml-15 md:m-0 ">
+            <div className="relative w-300   max-w-[560px] rounded-[28px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30 sm:ml-15 md:ml-8 md:h-110 ">
               {/* subtle overlay for frosted look */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-white/0 z-10 pointer-events-none" />
               <img
                 src="/videimg.jpg"
                 alt="About video"
-                className="w-full h-full object-cover rounded-[28px]  "
+                className="w-full h-full object-cover rounded-[28px] brightness-60 "
               />
 
               {/* Play CTA */}
@@ -116,11 +114,11 @@ export default function AboutUs() {
           </motion.div>
 
           {/* Right: Accordion */}
-          <motion.div variants={fadeUp} className="flex flex-col gap-4">
+          <motion.div variants={fadeUp} className="flex flex-col gap-4 ">
             {items.map((item, i) => (
               <div
                 key={i}
-                className={`rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300 ${
+                className={`rounded-2xl bg-blue-10 border border-gray-200 overflow-hidden transition-all duration-300 p-3 ${
                   activeIndex === i
                     ? "bg-[#f7f7f7] shadow-sm"
                     : "bg-white hover:shadow-sm"

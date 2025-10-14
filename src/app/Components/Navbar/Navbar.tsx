@@ -60,13 +60,13 @@ const Navbar = () => {
         {/* Right Section */}
         <div className="flex items-center space-x-3 md:space-x-4">
           {/* Shopping Bag */}
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.1, rotate: 10 }}
             whileTap={{ scale: 0.9 }}
             className="p-2 rounded-full bg-black text-white transition"
           >
             <ShoppingBag size={18} />
-          </motion.button>
+          </motion.button> */}
 
           {/* Let’s Talk Button */}
           <motion.button

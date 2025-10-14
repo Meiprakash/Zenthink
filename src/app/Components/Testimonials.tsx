@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
             {/* Header */}
             <motion.div
               variants={headerVariants}
-              className="flex flex-col md:flex-row md:items-end md:justify-between mb-16"
+              className="flex  flex-row md:items-end md:justify-between mb-16 "
             >
               <div>
                 <p className="text-gray-800 text-md font-medium mb-2 flex items-center gap-2">
@@ -127,7 +127,7 @@ export default function TestimonialsSection() {
                   customers
                 </h2>
               </div>
-              <p className="text-gray-500 max-w-md mt-6 md:mt-0 text-base leading-relaxed">
+              <p className="text-gray-500 max-w-md mt-6 md:mt-0 text-end leading-relaxed">
                 Our services help you create digital products. Stay ahead of the
                 curve with our latest insights, tips, and industry trends.
               </p>

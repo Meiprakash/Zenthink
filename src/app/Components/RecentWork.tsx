@@ -45,7 +45,7 @@ const RecentWork: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+          className="flex flex-row md:items-end justify-between mb-16 gap-6"
         >
           {/* Left title part */}
           <div>
@@ -60,17 +60,18 @@ const RecentWork: React.FC = () => {
                 />
               </span>
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="sm:text-3xl md:text-5xl font-semibold text-gray-900 leading-tight">
               Explore Our <br className="hidden md:block" />
-              Amazing Works
+              Transformative Solutions
             </h2>
           </div>
 
           {/* Right description part */}
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-lg">
-            We believe great work comes from clear collaboration. Our process is
-            designed to guide. Most of our work is protected under NDAs, but
-            here is a small glimpse into our Work.
+          <p className="text-gray-600 text-base md:text-lg sm:text-sm leading-relaxed max-w-lg sm:ml-18 sm:mt-5">
+            We believe exceptional software comes from deep collaboration. Our
+            approach is designed to deliver results. Most of our projects are
+            protected under NDAs, but here is a glimpse into our delivered
+            solutions.
           </p>
         </motion.div>
 
@@ -82,7 +83,7 @@ const RecentWork: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="col-span-8"
+            className="md:col-span-8 sm:col-span-6"
           >
             <WorkCard work={works[0]} height="h-[500px]" />
           </motion.div>
@@ -92,7 +93,7 @@ const RecentWork: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="col-span-4"
+            className="md:col-span-4 sm:col-span-6"
           >
             <WorkCard work={works[1]} height="h-[500px]" />
           </motion.div>
@@ -103,7 +104,7 @@ const RecentWork: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="col-span-5"
+            className="col-span-5 sm:col-span-6"
           >
             <WorkCard work={works[2]} height="h-[420px]" />
           </motion.div>
@@ -113,7 +114,7 @@ const RecentWork: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="col-span-7"
+            className="col-span-7 sm:col-span-6"
           >
             <WorkCard work={works[3]} height="h-[420px]" />
           </motion.div>
@@ -150,7 +151,7 @@ const WorkCard = ({ work, height }: { work: any; height: string }) => (
     </div>
     {/* Text area */}
     <div className="pl-6 pr-6 pb-6">
-      <h3 className="text-3xl  text-gray-900 mb-1">
+      <h3 className="md:text-3xl  text-gray-900 mb-1">
         {work.title}
       </h3>
       <p className="text-gray-600 p-3 text-lg">{work.description}</p>

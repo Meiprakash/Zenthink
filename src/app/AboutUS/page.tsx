@@ -4,6 +4,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import { div } from "framer-motion/client";
 import SecondComp from "./Image";
 import StatsSection from "./CountUP";
+import Values from "./Values";
 
 export default function Hero() {
   // container variant for staggered children
@@ -86,7 +87,8 @@ export default function Hero() {
         </motion.div>
       </motion.div>
       <SecondComp />
-      <StatsSection/>
+      <StatsSection />
+      <Values/>
     </div>
   );
 }
