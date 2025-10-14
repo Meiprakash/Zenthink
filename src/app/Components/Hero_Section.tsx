@@ -45,7 +45,7 @@ export default function Hero() {
           >
             From enterprise applications to industry-specific platforms, we
             transform your business challenges into scalable software solutions.
-            Let's build your digital future—together
+            Let&apo;s build your digital future—together
           </motion.p>
 
           <motion.div
