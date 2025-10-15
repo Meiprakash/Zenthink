@@ -24,7 +24,7 @@ const Values = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
         >
-          <Image src="/badge.jpg" alt="badge" width={20} height={20} />
+          <Image src="/badge.jpg" alt="badge" width={20} height={20} className="mt-1" />
         </motion.div>
       </div>
 
