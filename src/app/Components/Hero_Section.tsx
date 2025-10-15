@@ -4,7 +4,16 @@ import { Layers } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const rotatingTexts = ["Web Design", "UX Design", "Branding", "UI Design"];
+const rotatingTexts = [
+  "Web Design",
+  "UX Design",
+  "Branding",
+  "UI Design",
+  "Web Design",
+  "UX Design",
+  "Branding",
+  "UI Design",
+];
 
 export default function Hero() {
   return (
@@ -15,17 +24,17 @@ export default function Hero() {
           initial={{ opacity: 0, x: -80 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ type: "spring", stiffness: 70, damping: 20 }}
-          className="max-w-2xl space-y-6 text-center md:text-left"
+          className="max-w-2xl space-y-6 text-start md:text-left"
         >
           <motion.h1
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold leading-tight text-black"
+            className="text-4xl md:text-5xl font-semibold leading-tight text-black"
           >
-            Designing Digital Worlds That Spark{" "}
-            <span className="text-gray-400">Emotion</span> and{" "}
-            <span className="text-gray-400">Action</span>
+            Engineering{"  "}
+            <span className="text-gray-400">Software Solutions</span> That Drive{" "}
+            <span className="text-gray-400">Business Growth</span>
           </motion.h1>
 
           <motion.p
@@ -34,9 +43,9 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-gray-600"
           >
-            From bold websites to memorable brand identities, we turn your
-            vision into a digital experience. Let’s build something
-            unforgettable—together.
+            From enterprise applications to industry-specific platforms, we
+            transform your business challenges into scalable software solutions.
+            Let&apo;s build your digital future—together
           </motion.p>
 
           <motion.div
@@ -107,26 +116,26 @@ export default function Hero() {
           className="relative flex items-center justify-end w-full md:w-1/2 gap-10 md:gap-16"
         >
           {/* Floating / Scrolling Texts */}
-          <div className="h-[400px] md:h-[500px] overflow-hidden flex flex-col justify-center z-10 ml-2">
+
+          <div className="h-[400px] md:h-[400px] overflow-hidden relative">
             <motion.div
               animate={{ y: ["0%", "-50%"] }}
               transition={{
                 repeat: Infinity,
-                duration: 8,
+                duration: 18,
                 ease: "linear",
+                repeatType: "loop",
               }}
+              className="flex flex-col"
             >
               {[...rotatingTexts, ...rotatingTexts].map((text, i) => (
-                <motion.div
-                  key={`${text}-${i}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
+                <div
+                  key={i}
                   className="mb-16 md:mb-8 bg-white text-black shadow-md rounded-full px-6 py-3 text-sm md:text-base font-medium flex items-center gap-6"
                 >
                   <span>{text}</span>
                   <Layers size={18} />
-                </motion.div>
+                </div>
               ))}
             </motion.div>
           </div>
