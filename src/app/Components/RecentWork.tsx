@@ -126,8 +126,16 @@ const RecentWork: React.FC = () => {
 
 export default RecentWork;
 
+// 🔹 Define a type for work items
+interface WorkItem {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
 // 🔹 Reusable WorkCard Component
-const WorkCard = ({ work, height }: { work: any; height: string }) => (
+const WorkCard = ({ work, height }: { work: WorkItem; height: string }) => (
   <Link
     href={work.link}
     className="block overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-500"
