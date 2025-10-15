@@ -5,6 +5,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import SecondComp from "./Image";
 import StatsSection from "./CountUP";
 import Values from "./Values";
+import AwardsSection from "./AwardsSection";
 
 export default function Hero() {
   // container variant for staggered children
@@ -96,6 +97,7 @@ export default function Hero() {
       <SecondComp />
       <StatsSection />
       <Values />
+      <AwardsSection/>
     </div>
   );
 }
