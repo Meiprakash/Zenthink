@@ -6,6 +6,7 @@ import SecondComp from "./Image";
 import StatsSection from "./CountUP";
 import Values from "./Values";
 import AwardsSection from "./AwardsSection";
+import ProcessSection from "./Process";
 
 export default function Hero() {
   // container variant for staggered children
@@ -97,7 +98,8 @@ export default function Hero() {
       <SecondComp />
       <StatsSection />
       <Values />
-      <AwardsSection/>
+      <AwardsSection />
+      <ProcessSection/>
     </div>
   );
 }
