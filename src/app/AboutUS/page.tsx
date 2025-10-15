@@ -7,6 +7,12 @@ import StatsSection from "./CountUP";
 import Values from "./Values";
 import AwardsSection from "./AwardsSection";
 import ProcessSection from "./Process";
+import Team from "./Team";
+import TestimonialsSection from "../Components/Testimonials";
+import FAQ from "../Components/FaqSection";
+import BlogSection from "../Components/Blog";
+import ConnectSection from "../Components/ConnectUs";
+import Footer from "../Components/Footer";
 
 export default function Hero() {
   // container variant for staggered children
@@ -99,7 +105,13 @@ export default function Hero() {
       <StatsSection />
       <Values />
       <AwardsSection />
-      <ProcessSection/>
+      <ProcessSection />
+      <Team />
+      <TestimonialsSection />
+      <FAQ />
+      <BlogSection />
+      <ConnectSection />
+      <Footer/>
     </div>
   );
 }

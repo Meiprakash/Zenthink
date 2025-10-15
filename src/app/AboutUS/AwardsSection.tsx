@@ -36,7 +36,7 @@ const awards = [
 
 const AwardsSection = () => {
   return (
-    <section className="px-6 md:px-16 lg:px-24 py-16 bg-white md:ml-13">
+    <section className="px-6 md:px-16 lg:px-24 py-16 bg-white md:ml-5">
       {/* Header */}
       <div className="flex items-center gap-2 mb-6">
         <motion.h2
@@ -70,7 +70,7 @@ const AwardsSection = () => {
         <h3 className="sm:text-2xl md:text-4xl font-bold text-gray-900 max-w-md sm:mr-4 ">
           Achieved awards for excellence recognizing success.
         </h3>
-        <p className="text-gray-600 sm:text-sm max-w-lg mt-4 md:mt-0   text-base leading-relaxed">
+        <p className="text-gray-600 sm:text-sm max-w-lg mt-4 md:mt-0   md:text-base leading-relaxed">
           We believe great work comes from clear collaboration. Our process is
           designed to guide you from the first idea to final launch—smoothly,
           strategically, and creatively.

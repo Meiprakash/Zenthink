@@ -127,7 +127,7 @@ export default function TestimonialsSection() {
                   customers
                 </h2>
               </div>
-              <p className="text-gray-500 max-w-md mt-6 md:mt-0 text-end leading-relaxed">
+              <p className="text-gray-500 max-w-md mt-6 md:mt-0 text-start leading-relaxed">
                 Our services help you create digital products. Stay ahead of the
                 curve with our latest insights, tips, and industry trends.
               </p>
