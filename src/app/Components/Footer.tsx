@@ -6,7 +6,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden rounded-t-[1rem] bg-gradient-to-r from-[#060606] via-[#0e0a20] to-[#3c0f6e] text-white">
+    <footer
+      className="relative overflow-hidden rounded-t-[1rem] bg-gradient-to-r from-[#060606] via-[#0e0a20] to-[#3c0f6e] text-white"
+    >
       <div className="max-w-[1300px] mx-auto px-6 md:px-12 py-16">
         {/* Top Section */}
         <div className="flex flex-wrap justify-between gap-12 lg:gap-20 md:ml-9">
