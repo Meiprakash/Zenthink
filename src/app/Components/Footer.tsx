@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden rounded-t-[4rem] bg-gradient-to-r from-[#060606] via-[#0e0a20] to-[#3c0f6e] text-white">
+    <footer className="relative overflow-hidden rounded-t-[1rem] bg-gradient-to-r from-[#060606] via-[#0e0a20] to-[#3c0f6e] text-white">
       <div className="max-w-[1300px] mx-auto px-6 md:px-12 py-16">
         {/* Top Section */}
         <div className="flex flex-wrap justify-between gap-12 lg:gap-20 md:ml-9">
@@ -27,7 +27,7 @@ const Footer = () => {
               Unleash the most advanced Agency and boost your productivity
             </p>
 
-            <div className="mt-10 md:ml-0">
+            <div className="mt-40 md:ml-0">
               <p className="text-lg font-semibold mb-4">Stay in the know</p>
               <div className="flex items-center gap-4">
                 {[
@@ -58,19 +58,19 @@ const Footer = () => {
             <h4 className="font-semibold md:text-2xl mb-6">Company</h4>
             <ul className="space-y-6 text-gray-200 md:text-lg mb-6">
               {[
-                "Home",
-                "About us",
-                "Service",
-                "Blog",
-                "Shop",
-                "Contact Us",
+                { name: "Home", link: "/" },
+                { name: "About Us", link: "/about-us" },
+                { name: "Service", link: "/service" },
+                { name: "Blog", link: "/blog" },
+                { name: "Shop", link: "/shop" },
+                { name: "Contact Us", link: "/Contact" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link
-                    href="#"
-                    className="hover:text-white transition-colors "
+                    href={item.link}
+                    className="hover:text-white transition-colors"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -107,13 +107,13 @@ const Footer = () => {
         <div className="my-10 border-t border-gray-700"></div>
 
         {/* Bottom Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="min-w-[150px] flex-1"
-          >
-        <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-white gap-4 text-center sm:text-left">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="min-w-[150px] flex-1"
+        >
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-white gap-4 text-center sm:text-left">
             <div>
               <p className="md:text-lg font-semibold">All Rights Reserved.</p>
               <p className="text-lg">
@@ -122,7 +122,10 @@ const Footer = () => {
                   ideapeel | <span>{"   "}</span>
                 </span>{" "}
                 Powered by{" "}
-                <span className="text-white md:text-xl font-bold"> Webflow</span>
+                <span className="text-white md:text-xl font-bold">
+                  {" "}
+                  Webflow
+                </span>
               </p>
             </div>
             <div className="flex gap-6">
@@ -133,8 +136,8 @@ const Footer = () => {
                 Cookies Policy
               </Link>
             </div>
-        </div>
-          </motion.div>
+          </div>
+        </motion.div>
       </div>
     </footer>
   );

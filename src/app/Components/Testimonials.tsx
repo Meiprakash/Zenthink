@@ -111,7 +111,7 @@ export default function TestimonialsSection() {
               variants={headerVariants}
               className="flex  flex-row md:items-end md:justify-between mb-16 "
             >
-              <div>
+              <div className="">
                 <p className="text-gray-800 text-md font-medium mb-2 flex items-center gap-2">
                   Testimonials{" "}
                   <Image
@@ -122,7 +122,7 @@ export default function TestimonialsSection() {
                     className="inline-block"
                   />
                 </p>
-                <h2 className="text-5xl font-bold text-gray-900 leading-tight">
+                <h2 className="md:text-4xl sm:text-lg font-bold text-gray-900 leading-tight">
                   Praise from our <br />
                   customers
                 </h2>
@@ -156,7 +156,7 @@ export default function TestimonialsSection() {
                       className="w-[120px] h-auto object-contain"
                     />
                   </div>
-                  <p className="text-gray-700 text-base leading-relaxed mb-8">
+                  <p className="text-gray-700 text-xl  leading-relaxed mb-8">
                     {item.text}
                   </p>
                   <div className="flex items-center gap-3">
@@ -167,8 +167,8 @@ export default function TestimonialsSection() {
                       height={40}
                       className="rounded-full border border-gray-200 object-cover"
                     />
-                    <div>
-                      <p className="font-semibold text-gray-900 text-sm">
+                    <div className="">
+                      <p className="font-semibold text-gray-900 text-md">
                         {item.name}
                       </p>
                       <p className="text-gray-500 text-sm">{item.title}</p>

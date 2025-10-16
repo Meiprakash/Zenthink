@@ -26,6 +26,21 @@ const faqs = [
     answer:
       "Yes! We tailor all marketing strategies to your brand’s goals and target audience.",
   },
+  {
+    question: "How quickly can deliver design for our business?",
+    answer:
+      "Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere.",
+  },
+  {
+    question: "Offer customized offer solution?",
+    answer:
+      "Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere.",
+  },
+  {
+    question: "Why is it the best website builder?",
+    answer:
+      "Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere.",
+  },
 ];
 
 const FAQ = () => {
@@ -54,34 +69,33 @@ const FAQ = () => {
           </span>
         </p>
         <div className="flex items-start">
-
-        <h2 className="flex sm:item-start text-start text-3xl sm:text-4xl font-semibold mb-4  text-gray-900">
-          Frequently Asked Questions
-        </h2>
-        <p className="text-gray-600 text-lg max-w-2xl text-start  mx-auto lg:mx-0">
-          Our services help you create digital products. Stay ahead of the curve
-          with our latest insights, tips, and industry trends.
-        </p>
+          <h2 className="flex sm:item-start text-start text-3xl sm:text-4xl font-semibold mb-4  text-gray-900">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl text-start  mx-auto lg:mx-0">
+            Our services help you create digital products. Stay ahead of the
+            curve with our latest insights, tips, and industry trends.
+          </p>
         </div>
       </motion.div>
 
       {/* FAQ Grid Section */}
-      <div className="max-w-6xl mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
+      <div className="max-w-9xl mx-auto mt-10 mr-10  grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
         {/* Image Section */}
         <motion.div
-          className="relative flex justify-center"
+          className=" flex justify-center mr-10 pb-9 pl-20 w-full "
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="relative w-full max-w-sm">
+          <div className="relative h-[530px] w-auto max-w-lg ">
             <Image
               src="/faq.jpg"
               alt="FAQ"
-              width={400}
-              height={400}
-              className="rounded-[25px] w-full h-110 object-cover shadow-sm"
+              width={1200} // intrinsic width
+              height={530} // intrinsic height (keep original)
+              className="rounded-[25px] w-[1200px] h-[530px] object-cover"
             />
 
             {/* Floating Card */}
@@ -91,9 +105,9 @@ const FAQ = () => {
                 Didn’t find what you were looking for? Let’s chat and solve it
                 together!
               </p>
-              <button className="relative overflow-hidden text-sm font-medium px-4 py-3 rounded-lg text-white bg-black group">
+              <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group">
                 <span className="relative z-10">See All Work</span>
-                <span className="absolute inset-0 rounded-lg bg-gradient-to-tr bg-blue-800 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                <span className="absolute inset-0 rounded-lg  bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
               </button>
             </div>
           </div>
@@ -101,14 +115,17 @@ const FAQ = () => {
 
         {/* Accordion Section */}
         <motion.div
-          className="w-full"
+          className="w-full mr-30 "
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-gray-200 py-4">
+            <div
+              key={index}
+              className="border-b border-gray-200 py-4 px-10 md:mr-19"
+            >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="flex items-center justify-between w-full text-left text-lg font-medium text-black"

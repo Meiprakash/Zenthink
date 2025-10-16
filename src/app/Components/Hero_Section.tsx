@@ -3,6 +3,7 @@
 import { Layers } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const rotatingTexts = [
   "Web Design",
@@ -60,7 +61,10 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="relative overflow-hidden rounded-full bg-black px-6 py-3 text-white font-medium group cursor-pointer"
             >
-              <span className="relative z-10">Let’s Work Together ?</span>
+              <Link href="/Contact">
+                <span className="relative z-10">Let’s Work Together ?</span>
+                <span className="absolute inset-0 rounded-lg bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+              </Link>
               <motion.span
                 initial={{ x: "-100%" }}
                 whileHover={{ x: 0 }}

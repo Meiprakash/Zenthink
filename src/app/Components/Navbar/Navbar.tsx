@@ -1,16 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import {  Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import logo from "@/app/assets/logo.png";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/AboutUS" },
+  { name: "About", href: "/about-us" },
   { name: "Service", href: "/Service" },
   { name: "Blog", href: "/Blog" },
   { name: "Shop", href: "/Shop" },
@@ -20,6 +21,7 @@ const navItems = [
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <motion.nav
@@ -49,7 +51,12 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Link href={item.href} className="hover:text-black transition">
+              <Link
+                href={item.href}
+                className={`transition hover:text-black ${
+                  pathname === item.href ? "text-black " : "text-gray-700"
+                }`}
+              >
                 {item.name}
               </Link>
             </motion.li>
@@ -58,8 +65,6 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="flex items-center space-x-3 md:space-x-4">
-     
-
           {/* Let’s Talk Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -101,7 +106,11 @@ const Navbar = () => {
                   <Link
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
-                    className="block text-gray-200 hover:text-blue-400 transition duration-300 text-md "
+                    className={`block text-md transition duration-300 ${
+                      pathname === item.href
+                        ? "text-blue-400 font-semibold"
+                        : "text-gray-200 hover:text-blue-400"
+                    }`}
                   >
                     {item.name}
                   </Link>
