@@ -107,10 +107,18 @@ const BlogSection: React.FC = () => {
         </div>
       </div>
       <div className="flex justify-center gap-6 mt-6 ">
-        <button className="relative overflow-hidden text-sm font-large px-4 py-4 rounded-lg text-white bg-black group">
-          <span className="relative z-10">See All Work</span>
-          <span className="absolute inset-0  bg-purple-600 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 rounded-xl ease-out"></span>
-        </button>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-10 inline-block"
+        >
+          <Link href="/Blog">
+            <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group">
+              <span className="relative z-10">See All Blog</span>
+              <span className="absolute inset-0 rounded-lg  bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+            </button>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
