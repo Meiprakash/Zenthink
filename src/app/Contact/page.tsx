@@ -21,7 +21,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 min-h-screen">
+    <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] min-h-screen">
       <Navbar />
 
       <motion.section
@@ -29,11 +29,11 @@ export default function Hero() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="w-full flex flex-col md:flex-row items-start justify-between px-8 md:px-20 py-24 md:py-28 "
+        className="w-full flex  md:flex-row items-start justify-between px-8 md:px-30 py-24 md:py-20 bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]"
       >
         {/* Left Side — Heading */}
         <motion.div variants={item} className="flex-1 max-w-2xl mb-10 md:mb-0">
-          <h1 className="text-gray-900 font-semibold text-4xl sm:text-5xl md:text-6xl leading-tight">
+          <h1 className="text-gray-900 font-semibold text-4xl sm:text-4xl md:text-6xl leading-tight">
             We Create <br /> Amazing Project
           </h1>
         </motion.div>
@@ -41,13 +41,13 @@ export default function Hero() {
         {/* Right Side — Description */}
         <motion.div
           variants={item}
-          className="flex-1 max-w-md text-gray-600 text-lg md:text-xl leading-relaxed"
+          className="flex-1 max-w-md md:mt-7 text-gray-600 sm:text-md md:text-lg leading-relaxed"
         >
           Our services help you create digital products and solve your problems
           objectively, with strategy, technology, and analysis.
         </motion.div>
       </motion.section>
-      <div className="bg-gradient-to-b from-white to-gray-50 py-7 px-6 md:px-20">
+      <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] py-7 px-6 md:px-20">
         {/* ---- Contact Section ---- */}
         <motion.section
           variants={container}
@@ -72,9 +72,10 @@ export default function Hero() {
                   Full Name
                 </label>
                 <input
+                  suppressHydrationWarning
                   type="text"
                   placeholder="Your Full Name"
-                  className="w-full bg-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                 />
               </div>
 
@@ -84,9 +85,10 @@ export default function Hero() {
                   Phone Number
                 </label>
                 <input
+                  suppressHydrationWarning
                   type="text"
                   placeholder="Your Phone Number"
-                  className="w-full bg-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                 />
               </div>
 
@@ -96,9 +98,10 @@ export default function Hero() {
                   Email Address
                 </label>
                 <input
+                  suppressHydrationWarning
                   type="email"
                   placeholder="Your Email Address"
-                  className="w-full bg-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                 />
               </div>
 
@@ -108,9 +111,10 @@ export default function Hero() {
                   Existing Project URL
                 </label>
                 <input
+                  suppressHydrationWarning
                   type="text"
                   placeholder="Your Project URL"
-                  className="w-full bg-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                 />
               </div>
 
@@ -120,9 +124,10 @@ export default function Hero() {
                   Message
                 </label>
                 <textarea
+                  suppressHydrationWarning
                   rows={5}
                   placeholder="Your Message"
-                  className="w-full bg-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                 ></textarea>
               </div>
 
@@ -182,9 +187,9 @@ export default function Hero() {
             </div>
           </motion.div>
         </motion.section>
-          </div>
-          <ConnectSection />
-          <Footer/>
+      </div>
+      <ConnectSection />
+      <Footer />
     </div>
   );
 }
