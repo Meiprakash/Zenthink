@@ -69,7 +69,7 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/Contact")}
             className="hidden md:block border border-black text-black px-5 py-2 rounded-lg hover:bg-black hover:text-white transition"
           >
             Let’s Talk
@@ -125,7 +125,7 @@ const Navbar = () => {
               >
                 <button
                   onClick={() => {
-                    router.push("/");
+                    router.push("/Contact");
                     setMenuOpen(false);
                   }}
                   className="border bg-white border-black text-black px-5 py-2 rounded-lg hover:bg-blue-400 hover:text-white transition duration-300"
