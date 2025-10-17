@@ -65,23 +65,23 @@ const blogs = [
     link: "/blog/design-mistakes",
   },
   {
-      title: "The $0 Marketing Plan Creative Strategies",
-      author: "Jenny Kia",
-      date: "May 20, 2025",
-      description:
+    title: "The $0 Marketing Plan Creative Strategies",
+    author: "Jenny Kia",
+    date: "May 20, 2025",
+    description:
       "Explore these fantastic and cost-free strategies to promote your digital products effectively and stand out in the market!",
-      image: "/blog-02.png",
-      link: "/blog/design-mistakes",
-    },
-    {
-      title: "Worst Advice We've Ever Heard About Web Design",
-      author: "Jenny Kia",
-      date: "May 20, 2025",
-      description:
-        "A digital overhaul increased website traffic, enhanced user engagement, and fueled business growth.",
-      image: "/blog-01.png",
-      link: "/blog/design-mistakes",
-    },
+    image: "/blog-02.png",
+    link: "/blog/design-mistakes",
+  },
+  {
+    title: "Worst Advice We've Ever Heard About Web Design",
+    author: "Jenny Kia",
+    date: "May 20, 2025",
+    description:
+      "A digital overhaul increased website traffic, enhanced user engagement, and fueled business growth.",
+    image: "/blog-01.png",
+    link: "/blog/design-mistakes",
+  },
 ];
 
 const Blog: React.FC = () => {
@@ -155,11 +155,10 @@ const Blog: React.FC = () => {
             ))}
           </div>
         </div>
-
-          </section>
-          <FAQ />
-          <ConnectSection />
-          <Footer/>
+      </section>
+      <FAQ />
+      <ConnectSection />
+      <Footer />
     </div>
   );
 };
