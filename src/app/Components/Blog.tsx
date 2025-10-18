@@ -13,7 +13,7 @@ const blogs = [
     description:
       "Learn from industry errors to avoid web design mistakes. This can enhance your skills and lead to better websites.",
     image: "/blog-02.png",
-    link: "/blog/case-study",
+    link: "/Blog/case-study",
   },
   {
     title: "Top Mistakes Make With Web Design Process",

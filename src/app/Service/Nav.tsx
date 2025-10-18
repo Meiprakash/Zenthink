@@ -30,7 +30,7 @@ const cardsData: Record<
     {
       image: "/project-06.png",
       title: "UIUX Project 1",
-      link: "/service/UIUX-project-1",
+      link: "/Service/ui-ux",
       description:
         "Add life to your brand through animation, movement, and storytelling.",
       tags: ["UI/UX", "Design", "Creative"],
@@ -105,6 +105,7 @@ const Nav = () => {
                   <Link href={card.link}>
                     <div className="flex flex-col md:flex-row items-center md:items-start bg-white rounded-3xl shadow-sm overflow-hidden p-6 cursor-pointer">
                       {/* Left Image */}
+                      {/* <h2>{ card.title}</h2> */}
                       <motion.div
                         transition={{ duration: 0.5 }}
                         className="w-full md:w-1/2 overflow-hidden rounded-2xl"
