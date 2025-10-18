@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -105,10 +106,12 @@ const FAQ = () => {
                 Didn’t find what you were looking for? Let’s chat and solve it
                 together!
               </p>
-              <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group">
+              <Link href="/Service">
+              <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group cursor-pointer">
                 <span className="relative z-10">See All Work</span>
                 <span className="absolute inset-0 rounded-lg  bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
               </button>
+              </Link>
             </div>
           </div>
         </motion.div>

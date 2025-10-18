@@ -17,7 +17,7 @@ const blogs = [
     description:
       "Learn from industry errors to avoid web design mistakes. This can enhance your skills and lead to better websites.",
     image: "/blog-02.png",
-    link: "/blog/case-study",
+    link: "/Blog/case-study",
   },
   {
     title: "Top Mistakes Make With Web Design Process",
@@ -26,7 +26,7 @@ const blogs = [
     description:
       "Delve into the ways in which emotional connections and visual identities shape and influence the perception of a brand in the minds of consumers.",
     image: "/blog-07.png",
-    link: "/blog/design-mistakes",
+    link: "/Blog/design-mistakes",
   },
   {
     title: "What Makes a Brand Stand Out in 2025?s",
