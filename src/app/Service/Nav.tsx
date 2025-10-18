@@ -40,7 +40,7 @@ const cardsData: Record<
     {
       image: "/project-05.png",
       title: "Web Dev Project 1",
-      link: "/service/UIUX-project-1",
+      link: "/Service/web-dev",
 
       description:
         "Modernize your site with strategic updates that improve usability.",
@@ -51,7 +51,7 @@ const cardsData: Record<
     {
       image: "/project-06.png",
       title: "Branding Project 1",
-      link: "/service/UIUX-project-1",
+      link: "/Service/Branding-project-1",
       description: "Create memorable brands that stand out in the market.",
       tags: ["Branding", "Marketing", "Design"],
     },
@@ -60,7 +60,7 @@ const cardsData: Record<
     {
       image: "/project-05.png",
       title: "Motion Project 1",
-      link: "/service/UIUX-project-1",
+      link: "/Service/Motion-project-1",
       description: "Bring stories to life with animation and motion graphics.",
       tags: ["Animation", "Motion", "Creative"],
     },
