@@ -7,31 +7,31 @@ import { motion } from "framer-motion";
 
 const works = [
   {
-    title: "Redesign a website",
+    title: "UIUX",
     description:
-      "We help revamp your site to reflect your goals and connect with users.",
+      "Add life to your brand through animation, movement, and storytelling.",
     image: "/project-01.png",
-    link: "/work/wireframe-design",
+    link: "/Service/ui-ux",
   },
   {
-    title: "How to build solid portfolio",
+    title: "Web Dev",
     description: "Create a portfolio that highlights your best work.",
     image: "/project-03.png",
-    link: "/work/branding-mockup",
+    link: "/Service/WebDev-project-1",
   },
   {
-    title: "Illustrator of the year",
+    title: "Branding",
     description:
       "Modernize your site with strategic design updates that improve usability and visual appeal.",
     image: "/project-05.png",
-    link: "/work/dashboard-ui",
+    link: "/Service/Branding-project-1",
   },
   {
-    title: "Web Design for Inspiring",
+    title: "Motion",
     description:
       "Add life to your brand through animation, movement, and storytelling.",
     image: "/project-06.png",
-    link: "/work/dashboard-ui",
+    link: "/Service/Motion-project-1",
   },
 ];
 
