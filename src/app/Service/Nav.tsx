@@ -49,18 +49,18 @@ const cardsData: Record<
   ],
   Branding: [
     {
-      image: "/project-06.png",
+      image: "/project-04.png",
       title: "Branding Project 1",
-      link: "/Service/Branding-project-1",
+      link: "/Service/branding",
       description: "Create memorable brands that stand out in the market.",
       tags: ["Branding", "Marketing", "Design"],
     },
   ],
   Motion: [
     {
-      image: "/project-05.png",
+      image: "/project-03.png",
       title: "Motion Project 1",
-      link: "/Service/Motion-project-1",
+      link: "/Service/motion",
       description: "Bring stories to life with animation and motion graphics.",
       tags: ["Animation", "Motion", "Creative"],
     },
