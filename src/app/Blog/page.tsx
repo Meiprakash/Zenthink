@@ -44,7 +44,7 @@ const blogs = [
     description:
       "Discover the fascinating process behind transforming innovative ideas into powerful digital experiences that truly resonate with users.",
     image: "/blog-05.png",
-    link: "/blog/design-mistakes",
+    link: "/Blog/design-mistakes",
   },
   {
     title: "How Branding Shapes the Way Customers Feel",
@@ -53,7 +53,7 @@ const blogs = [
     description:
       "Explore key strategies brands use to stand out in today's competitive market. Learn how they build unique identities and engage consumers.",
     image: "/blog-04.png",
-    link: "/blog/design-mistakes",
+    link: "/Blog/design-mistakes",
   },
   {
     title: "Why Great Design Is More Than Just Looks",
@@ -62,7 +62,7 @@ const blogs = [
     description:
       "Avoid common mistakes that harm your website's performance and user experience. Being aware of these pitfalls can improve functionality and satisfaction.",
     image: "/blog-03.png",
-    link: "/blog/design-mistakes",
+    link: "/Blog/design-mistakes",
   },
   {
     title: "The $0 Marketing Plan Creative Strategies",
@@ -71,7 +71,7 @@ const blogs = [
     description:
       "Explore these fantastic and cost-free strategies to promote your digital products effectively and stand out in the market!",
     image: "/blog-02.png",
-    link: "/blog/design-mistakes",
+    link: "/Blog/design-mistakes",
   },
   {
     title: "Worst Advice We've Ever Heard About Web Design",
@@ -80,7 +80,7 @@ const blogs = [
     description:
       "A digital overhaul increased website traffic, enhanced user engagement, and fueled business growth.",
     image: "/blog-01.png",
-    link: "/blog/design-mistakes",
+    link: "/Blog/design-mistakes",
   },
 ];
 
