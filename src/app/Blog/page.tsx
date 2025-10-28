@@ -86,9 +86,9 @@ const blogs = [
 
 const Blog: React.FC = () => {
   return (
-    <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]">
+    <div className="bg-white">
       <Navbar />
-      <section className="w-full bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] py-24 px-6 md:px-16 overflow-hidden">
+      <section className="w-full bg-white py-24 px-6 md:px-16 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Section Heading */}
           <motion.div

@@ -19,10 +19,10 @@ const rotatingTexts = [
 export default function Hero() {
   return (
     <section
-      className="relative overflow-hidden bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]"
+      className="relative overflow-hidden "
       style={{ backgroundImage: "url('/hero-bg.webp')" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-between gap-10 bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]">
+      <div className="max-w-7xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-between gap-10 ">
         {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -80 }}
