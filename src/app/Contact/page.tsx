@@ -8,6 +8,12 @@ import Navbar from "../Components/Navbar/Navbar";
 import ConnectSection from "../Components/ConnectUs";
 import Footer from "../Components/Footer";
 
+declare global {
+  interface Window {
+    ethereum?: ethers.Eip1193Provider;
+  }
+}
+
 export default function Hero() {
   const container = {
     hidden: { opacity: 0 },
@@ -59,6 +65,12 @@ export default function Hero() {
     try {
       if (!walletAddress) {
         alert("Please connect your wallet first.");
+        setLoading(false);
+        return;
+      }
+
+      if (!window.ethereum) {
+        alert("MetaMask is not available.");
         setLoading(false);
         return;
       }
