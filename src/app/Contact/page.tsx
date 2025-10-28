@@ -36,7 +36,7 @@ export default function Hero() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // 👉 Connect to MetaMask
+  //  Connect to MetaMask
   const connectWallet = async () => {
     try {
       if (!window.ethereum) {
@@ -51,7 +51,7 @@ export default function Hero() {
     }
   };
 
-  // 👉 Sign message before submission
+  //  Sign message before submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -133,7 +133,7 @@ export default function Hero() {
                   Thank You!
                 </h2>
                 <p className="text-gray-600 text-lg">
-                  Your message has been signed and submitted successfully. ✅
+                  Your message has been signed and submitted successfully. 
                 </p>
               </motion.div>
             ) : (

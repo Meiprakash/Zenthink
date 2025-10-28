@@ -11,10 +11,10 @@ import Nav from "./Nav";
 
 const Service: React.FC = () => {
   return (
-    <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]">
+    <div className="bg-white">
       <Navbar />
      
-      <section className="w-full  bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+      <section className="w-full  bg-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

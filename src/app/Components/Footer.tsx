@@ -7,7 +7,12 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer
-      className="relative overflow-hidden rounded-t-[1rem] bg-gradient-to-r from-[#060606] via-[#0e0a20] to-[#3c0f6e] text-white"
+      className="relative overflow-hidden rounded-t-[1rem] text-white bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage:
+          "linear-gradient(to right, #060606, #0e0a20, #3c0f6e), url('/footer-bg.webp')",
+        backgroundBlendMode: "overlay",
+      }}
     >
       <div className="max-w-[1300px] mx-auto px-6 md:px-12 py-16">
         {/* Top Section */}
