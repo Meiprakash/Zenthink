@@ -42,7 +42,7 @@ export default function AboutUs() {
   };
 
   return (
-    <section className="w-full px-6 md:px-16 py-16 bg-[#faf8f4] font-[Inter,sans-serif]">
+    <section className="w-full px-6 md:px-16 py-16 bg-gray-50 font-[Inter,sans-serif]">
       <motion.div
         className="max-w-7xl mx-auto"
         initial="hidden"
