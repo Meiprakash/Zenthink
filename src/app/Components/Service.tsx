@@ -41,7 +41,7 @@ const ServiceSection: React.FC = () => {
         viewport={{ once: true, amount: 0.3 }} // animate only once, when 30% visible
         className="py-24 bg-white"
       >
-        <section className="w-full bg-gray-50 py-35 px-6 md:px-16 pt-0 ">
+        <section className="w-full bg-white py-35 px-6 md:px-16 pt-0 ">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <p className="text-md text-gray-900 mb-3 flex items-center gap-2">

@@ -39,7 +39,7 @@ const logoVariant = {
 
 export default function InvestorsSection() {
   return (
-    <section className="bg-white py-20 border-t border-gray-100 overflow-hidden">
+    <section className="bg-gray-50 py-20 border-t border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* HEADING */}
         <motion.h2
