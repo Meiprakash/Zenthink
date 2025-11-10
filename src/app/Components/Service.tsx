@@ -58,12 +58,12 @@ const ServiceSection: React.FC = () => {
 
             {/* Title + Description */}
             <div className="grid grid-cols-2 gap-10 mb-16">
-              <h2 className="text-3xl md:text-5xl  text-gray-900 leading-tight">
+              <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px]  text-gray-900 leading-tight">
                 We Engineer Solutions That Transform{" "}
                 <br className="hidden md:block" />
                 Businesses Into Leaders.
               </h2>
-              <p className="text-gray-600 text-start md:text-lg leading-relaxed md:ml-3">
+              <p className="text-gray-600 text-start text-[10px] md:text-[16px] sm:text-[15px] leading-relaxed md:ml-3">
                 We help businesses scale through strategic software and digital
                 innovation. From custom applications to enterprise platforms,
                 our services are engineered to optimize your operations and
@@ -79,12 +79,12 @@ const ServiceSection: React.FC = () => {
                   className={`bg-white border border-gray-200 hover:border-transparent rounded-3xl p-8 flex flex-col justify-between     duration-500 h-[390px]
               ${
                 index % 2 === 1
-                  ? "translate-y-18" // lower 2nd and 4th
-                  : "translate-y-0" // keep 1st and 3rd at top
+                  ? "md:translate-y-18" // lower 2nd and 4th
+                  : "md:translate-y-0" // keep 1st and 3rd at top
               }`}
                 >
                   <div>
-                    <h3 className="text-4xl sm:text-2xl font-semibold text-gray-900 mb-3">
+                    <h3 className="text-xl  md:text-2xl lg:text-3xl font-semibold text-gray-900 mb-3 ">
                       {service.title}
                     </h3>
                     <p className="text-gray-600 text-md leading-relaxed">
@@ -92,7 +92,7 @@ const ServiceSection: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="mt-8">
+                  <div className="mt-1 sm:mt-2 md:mt-8 lg:mt-8">
                     <Image
                       src={service.icon}
                       alt={service.title}

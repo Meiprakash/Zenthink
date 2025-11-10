@@ -15,19 +15,17 @@ const Footer = () => {
       }}
     >
       <div className="max-w-[1300px] mx-auto px-6 md:px-12 py-16">
-        {/* Top Section */}
-        <div className="flex flex-wrap justify-between gap-12 lg:gap-20 md:ml-9">
-          {/* Left */}
+        {/* <div className="flex flex-wrap justify-between gap-1  lg:gap-20 md:ml-9">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="min-w-[250px] flex-1"
           >
-            <p className="md:text-8xl sm:text-[52px] font-semibold mb-3 ">
+            <p className="text-6xl md:text-8xl sm:text-[52px] font-semibold mb-3 ">
               InoVis
             </p>
-            <p className="text-lg mb-2 font-medium tracking-tight">
+            <p className="text-md md:text-lg sm:text-lg lg:text-lg mb-2 font-medium tracking-tight">
               Save time. Get Started Now.
             </p>
             <p className="text-gray-400 max-w-xs text-base leading-relaxed">
@@ -55,15 +53,14 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Company */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="min-w-[150px] flex-1 md:ml-110 sm:ml-10"
+            className="min-w-[150px] flex-1  md:ml-110 sm:ml-10"
           >
             <h4 className="font-semibold md:text-2xl mb-6">Company</h4>
-            <ul className="space-y-6 text-gray-200 md:text-lg mb-6">
+            <ul className="space-y-6 text-gray-200 text-sm md:text-lg mb-6">
               {[
                 { name: "Home", link: "/" },
                 { name: "About Us", link: "/about-us" },
@@ -84,15 +81,14 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Utilities */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="min-w-[150px] flex-1 sm:ml-0"
+            className="min-w-[150px] flex-1 "
           >
             <h4 className="font-semibold md:text-2xl mb-4">Utilities</h4>
-            <ul className="space-y-6 text-gray-200 md:text-lg">
+            <ul className="space-y-6 text-gray-200 text-sm md:text-lg">
               {[
                 "Privacy & policy",
                 "Style guide",
@@ -108,6 +104,100 @@ const Footer = () => {
               ))}
             </ul>
           </motion.div>
+        </div> */}
+        {/* Top Section */}
+        <div className="grid grid-cols-3 sm:grid-cols-3  lg:grid-cols-3 gap-10">
+          {/* Left */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className=""
+          >
+            <p className="text-5xl sm:text-6xl md:text-8xl font-semibold mb-3">
+              InoVis
+            </p>
+            <p className="text-sm md:text-lg sm:text-lg mb-2 font-medium tracking-tight">
+              Save time. Get Started Now.
+            </p>
+            <p className="text-gray-400 max-w-xs text-sm sm:text-base leading-relaxed">
+              Unleash the most advanced Agency and boost your productivity
+            </p>
+
+            <div className="mt-10 sm:mt-20">
+              <p className="text-lg font-semibold mb-4">Stay in the know</p>
+              <div className="flex items-center gap-4">
+                {[FaTwitter, FaLinkedinIn, FaYoutube].map((Icon, i) => (
+                  <motion.a
+                    key={i}
+                    whileHover={{ scale: 1.15 }}
+                    href="#"
+                    className="bg-white text-black p-3 rounded-full hover:bg-purple-600 hover:text-white transition-all"
+                  >
+                    <Icon />
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+          <div className="flex gap-20 ml-10 md:gap-30 md:ml-10 sm:gap-20 sm:ml-30 lg:gap-25 lg:ml-100">
+            {/* Company */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className=""
+            >
+              <h4 className="font-semibold text-lg sm:text-xl mb-6">Company</h4>
+              <ul className="space-y-4 text-gray-200 text-sm sm:text-base">
+                {[
+                  "Home",
+                  "About Us",
+                  "Service",
+                  "Blog",
+                  "Shop",
+                  "Contact Us",
+                ].map((item, i) => (
+                  <li key={i}>
+                    <Link
+                      href="#"
+                      className="hover:text-white transition-colors"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Utilities */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className=""
+            >
+              <h4 className="font-semibold text-xl mb-6">Utilities</h4>
+              <ul className="space-y-4 text-gray-200 text-sm sm:text-base">
+                {[
+                  "Privacy & policy",
+                  "Style guide",
+                  "Changelog",
+                  "License",
+                  "404 page",
+                ].map((item, i) => (
+                  <li key={i}>
+                    <Link
+                      href="#"
+                      className="hover:text-white transition-colors"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
         </div>
 
         {/* Divider */}
