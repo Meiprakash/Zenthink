@@ -67,7 +67,7 @@ export default function AboutUs() {
           <div className="grid grid-cols-2 gap-8 items-start ">
             {/* Left: Heading */}
             <div>
-              <h2 className="text-[28px] sm:text-4xl md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
+              <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
                 Our Approach is Innovative <br className="hidden md:block" />{" "}
                 and Results-Focused.
               </h2>
@@ -75,7 +75,7 @@ export default function AboutUs() {
 
             {/* Right: Description */}
             <div>
-              <p className="text-gray-600 md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+              <p className="text-gray-600 text-[10px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
                 Custom software development, robust enterprise solutions, or
                 scalable digital platforms. Our team excels across multiple
                 technology domains, including cloud architecture, application
@@ -86,16 +86,16 @@ export default function AboutUs() {
         </motion.div>
 
         {/* Main grid: image (left) and accordion (right) */}
-        <div className="grid md:grid-cols-2   gap-10 items-start">
+        <div className="grid md:grid-cols-2   gap-5 items-start">
           {/* Left: Video thumbnail / image */}
           <motion.div variants={fadeUp} className="flex justify-start ">
-            <div className="relative w-300   max-w-[560px] rounded-[28px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30 sm:ml-15 md:ml-8 md:h-110 ">
+            <div  className="relative w-full max-w-[560px] h-[260px] sm:h-[320px] md:h-[380px] rounded-[28px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30 md:ml-8 mx-auto">
               {/* subtle overlay for frosted look */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-white/0 z-10 pointer-events-none" />
               <Image
                 src="/videimg.jpg"
                 alt="About video"
-               fill
+                fill
                 className="w-full h-full object-cover rounded-[28px] brightness-60 "
               />
 
@@ -106,7 +106,7 @@ export default function AboutUs() {
                 aria-label="Play Video"
                 className="absolute inset-0 flex items-center justify-center z-20"
               >
-                <div className="bg-white/80 hover:bg-white/95 transition p-4 rounded-full shadow-lg">
+                <div className="bg-white hover:bg-white/95 transition p-4 rounded-full shadow-lg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-9 h-9 text-black"
@@ -121,11 +121,14 @@ export default function AboutUs() {
           </motion.div>
 
           {/* Right: Accordion */}
-          <motion.div variants={fadeUp} className="flex flex-col gap-4 ">
+          <motion.div
+            variants={fadeUp}
+            className="flex flex-col gap-4  w-full sm:w-3/3  overflow-x-hidden"
+          >
             {items.map((item, i) => (
               <div
                 key={i}
-                className={`rounded-2xl bg-blue-10 border border-gray-200 overflow-hidden transition-all duration-300 p-3 ${
+                className={`rounded-2xl bg-blue-10 box-border border border-gray-200  overflow-hidden transition-all duration-300 p-3 ${
                   activeIndex === i
                     ? "bg-[#f7f7f7] shadow-sm"
                     : "bg-white hover:shadow-sm"
@@ -170,7 +173,7 @@ export default function AboutUs() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.28 }}
                     >
-                      <div className="px-6 pb-5 text-gray-600 text-[15px] leading-relaxed">
+                      <div className="px-6   b-5 text-gray-600 text-[15px] leading-relaxed">
                         {item.content}
                       </div>
                     </motion.div>
