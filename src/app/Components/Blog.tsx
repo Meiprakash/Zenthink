@@ -40,25 +40,25 @@ const BlogSection: React.FC = () => {
         >
           {/* Left side title */}
           <div>
-            <span className="flex text-gray-800 text-lg font-medium  mb-4">
+            <span className="flex text-gray-800 text-xl md:text-2xl font-medium  mb-4">
               Blog{" "}
               <span className="ml-2 ">
                 <Image
                   src="/badge.jpg"
-                  className="w-6 mt-0.9"
+                  className="w-6 mt-1"
                   alt=""
                   width={16}
                   height={16}
                 />
               </span>
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-bold text-gray-900 leading-tight">
               Company insights
             </h2>
           </div>
 
           {/* Right side text */}
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-lg">
+          <p className="text-gray-600 text-sm md:text-lg mt-10 leading-relaxed max-w-lg">
             Our services help you create digital products. Stay ahead of the
             curve with our latest insights, tips, and industry trends.
           </p>

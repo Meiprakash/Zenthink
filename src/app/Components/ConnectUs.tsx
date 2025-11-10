@@ -92,7 +92,7 @@ const ConnectSection = () => {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="absolute left-0 top-1/3 -translate-y-1/2 w-[450px] h-[450px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] opacity-90"
+        className="absolute left-0 top-1/3 -translate-y-1/2 w-[200px] h-[250px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] opacity-90"
       >
         <Image
           src="/cta-shape-left.jpg"
@@ -109,14 +109,14 @@ const ConnectSection = () => {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="absolute right-0 top-1/3 -translate-y-1/2 w-[450px] h-[450px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] opacity-90"
+        className="absolute right-0 top-1/3 -translate-y-1/2  w-[200px] h-[250px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] opacity-90"
       >
         <Image
           src="/cta-shape-right.jpg"
           alt="Right Sphere"
           width={450}
           height={450}
-          className="md:w-450 md:h-140 sm:w-50"
+          className=" md:w-450 md:h-140 sm:w-50"
         />
       </motion.div>
 

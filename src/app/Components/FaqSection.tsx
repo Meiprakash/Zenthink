@@ -57,7 +57,7 @@ const FAQ = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <p className="flex  lg:justify-start items-center text-lg text-black mb-2 tracking-wide">
+        <p className="flex  lg:justify-start items-center text-md md:text-lg  text-black mb-2 tracking-wide">
           FAQ{" "}
           <span>
             <Image
@@ -69,11 +69,11 @@ const FAQ = () => {
             />
           </span>
         </p>
-        <div className="flex items-start">
-          <h2 className="flex sm:item-start text-start text-3xl sm:text-4xl font-semibold mb-4  text-gray-900">
+        <div className="flex gap-20 sm:gap-3 md:gap-3 lg-gap-3 items-start">
+          <h2 className="flex sm:item-start text-start text-lg sm:text-2xl md:text-4xl font-semibold mb-4  text-gray-900">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl text-start  mx-auto lg:mx-0">
+          <p className="text-gray-600 text-md max-w-2xl text-start  mx-auto lg:mx-0">
             Our services help you create digital products. Stay ahead of the
             curve with our latest insights, tips, and industry trends.
           </p>

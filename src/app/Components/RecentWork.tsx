@@ -17,21 +17,21 @@ const works = [
     title: "Web Dev",
     description: "Create a portfolio that highlights your best work.",
     image: "/project-03.png",
-    link: "/Service/WebDev-project-1",
+    link: "/Service/web-dev",
   },
   {
     title: "Branding",
     description:
       "Modernize your site with strategic design updates that improve usability and visual appeal.",
     image: "/project-05.png",
-    link: "/Service/Branding-project-1",
+    link: "/Service/branding",
   },
   {
     title: "Motion",
     description:
       "Add life to your brand through animation, movement, and storytelling.",
     image: "/project-06.png",
-    link: "/Service/Motion-project-1",
+    link: "/Service/motion",
   },
 ];
 
@@ -49,7 +49,7 @@ const RecentWork: React.FC = () => {
         >
           {/* Left title part */}
           <div>
-            <p className="text-lg text-gray-800 mb-3 flex items-center gap-2">
+            <p className="text-md sm:text-xl md:text-2xl lg:text-xl text-gray-800 mb-3 flex items-center gap-1">
               Recent work
               <span>
                 <Image
@@ -60,62 +60,37 @@ const RecentWork: React.FC = () => {
                 />
               </span>
             </p>
-            <h2 className="sm:text-3xl md:text-5xl font-semibold text-gray-900 leading-tight">
-              Explore Our <br className="hidden md:block" />
-              Transformative Solutions
-            </h2>
+            <div className="grid grid-cols-2 gap-10 mb-16">
+              <h2 className="text-[15px] sm:text-3xl  md:text-5xl lg:text-[48px]  text-gray-900 leading-tight">
+                We Engineer Solutions That Transform{" "}
+                <br className="hidden md:block" />
+                Businesses Into Leaders.
+              </h2>
+              <p className="text-gray-600 text-start text-[10px] md:text-[16px] sm:text-[15px] leading-relaxed md:ml-3">
+                We help businesses scale through strategic software and digital
+                innovation. From custom applications to enterprise platforms,
+                our services are engineered to optimize your operations and
+                drive competitive advantage.
+              </p>
+            </div>
           </div>
-
-          {/* Right description part */}
-          <p className="text-gray-600 text-base md:text-lg sm:text-sm leading-relaxed max-w-lg sm:ml-18 sm:mt-5">
-            We believe exceptional software comes from deep collaboration. Our
-            approach is designed to deliver results. Most of our projects are
-            protected under NDAs, but here is a glimpse into our delivered
-            solutions.
-          </p>
         </motion.div>
 
         {/* ✅ Asymmetric Grid Layout */}
-        <div className="grid grid-cols-12 gap-8">
-          {/* Row 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="md:col-span-8 sm:col-span-6"
-          >
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8">
+          <motion.div className="col-span-1 sm:col-span-2 md:col-span-8">
             <WorkCard work={works[0]} height="h-[500px]" />
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="md:col-span-4 sm:col-span-6"
-          >
+          <motion.div className="col-span-1 sm:col-span-2 md:col-span-4">
             <WorkCard work={works[1]} height="h-[500px]" />
           </motion.div>
 
-          {/* Row 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="col-span-5 sm:col-span-6"
-          >
+          <motion.div className="col-span-1 sm:col-span-2 md:col-span-5">
             <WorkCard work={works[2]} height="h-[420px]" />
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="col-span-7 sm:col-span-6"
-          >
+          <motion.div className="col-span-1 sm:col-span-2 md:col-span-7">
             <WorkCard work={works[3]} height="h-[420px]" />
           </motion.div>
         </div>
