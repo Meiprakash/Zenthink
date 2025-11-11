@@ -162,16 +162,24 @@ const ProcessSection = () => {
       </div>
 
       {/* Header Section */}
-      <div className="flex  md:flex-row md:justify-between md:items-start mb-16">
-        <h2 className="sm:text-2xl md:text-4xl md:font-bold:font-semibold text-gray-900 max-w-lg leading-snug sm:mt-2">
-          Creative Steps That Deliver Real Results
-        </h2>
-        <p className="text-gray-600 max-w-lg  md:mt-0 md:text-base sm:text-sm sm:ml-10 leading-relaxed">
-          We believe great work comes from clear collaboration. Our process is
-          designed to guide you from the first idea to final launch—smoothly,
-          strategically, and creatively. Here’s how we bring your vision to
-          life.
-        </p>
+
+      <div className="grid grid-cols-2 gap-8 items-start ">
+        {/* Left: Heading */}
+        <div>
+          <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
+            Creative Steps That Deliver Real Results
+          </h2>
+        </div>
+
+        {/* Right: Description */}
+        <div>
+          <p className="text-gray-600 text-[10px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+            We believe great work comes from clear collaboration. Our process is
+            designed to guide you from the first idea to final launch—smoothly,
+            strategically, and creatively. Here’s how we bring your vision to
+            life.
+          </p>
+        </div>
       </div>
 
       {/* Process Cards */}

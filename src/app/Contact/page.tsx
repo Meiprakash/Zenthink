@@ -107,14 +107,14 @@ export default function Hero() {
         className="w-full flex md:flex-row items-start justify-between px-8 md:px-30 py-24 md:py-20"
       >
         <motion.div variants={item} className="flex-1 max-w-2xl mb-10 md:mb-0">
-          <h1 className="text-gray-900 font-semibold text-4xl sm:text-4xl md:text-6xl leading-tight">
+          <h1 className="text-gray-900 font-semibold text-xl sm:text-4xl md:text-6xl leading-tight">
             We Create <br /> Amazing Project
           </h1>
         </motion.div>
 
         <motion.div
           variants={item}
-          className="flex-1 max-w-md md:mt-7 text-gray-600 sm:text-md md:text-lg leading-relaxed"
+          className="flex-1 max-w-md md:mt-7 text-gray-600 text-sm sm:text-md md:text-lg leading-relaxed"
         >
           Our services help you create digital products and solve your problems
           objectively, with strategy, technology, and analysis.

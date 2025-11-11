@@ -53,7 +53,7 @@ const ProjectCards = () => {
           >
             <Link
               href={item.link}
-              className="group flex  md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500"
+              className="group flex flex-col  sm:flex-row bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500"
             >
               {/* Left Image */}
               <div className="md:w-1/2 w-full overflow-hidden">
