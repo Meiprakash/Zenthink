@@ -2,6 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 import { Twitter, Facebook, Linkedin } from "lucide-react";
 
 const teamMembers = [
@@ -29,32 +31,52 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section className="w-full bg-white py-20 px-6 md:px-16   lg:px-24">
+    <section className="w-full bg-white py-20 px-6 md:px-16   lg:px-24 ">
       {/* Top Section */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6 md:ml-15 md:mr-8">
-        <div>
-          <span className="inline-flex items-center gap-2  text-gray-700 px-3 py-1 rounded-full text-lg font-medium">
-            Team
-            <Image
-              src="/badge.jpg"
-              alt="badge"
-              width={18}
-              height={18}
-              className="object-contain"
-            />
-          </span>
+      <div className="flex items-start gap-2 mb-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-gray-900 text-lg font-medium"
+        >
+          Team
+        </motion.h2>
 
-          <h2 className="text-3xl md:text-4xl font-semibold mt-3 text-gray-900">
-            Meet Our Professionals <br /> trusted Team
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            src="/badge.jpg"
+            alt="badge"
+            width={20}
+            height={20}
+            className="mt-1"
+          />
+        </motion.div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-8 items-start mb-6">
+        {/* Left: Heading */}
+        <div>
+          <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
+            Meet Our Professionals trusted Team
           </h2>
         </div>
 
-        <p className="text-gray-600 max-w-lg text-base md:text-lg">
-          We help brands grow through strategic design and digital experiences.
-          From brand identity to powerful websites, our services are Impression.
-        </p>
+        {/* Right: Description */}
+        <div>
+          <p className="text-gray-600 text-[10px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+            We help brands grow through strategic design and digital
+            experiences. From brand identity to powerful websites, our services
+            are Impression.
+          </p>
+        </div>
       </div>
-
       {/* Team Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:ml-15 md:mr-8 gap-10">
         {teamMembers.map((member, index) => (

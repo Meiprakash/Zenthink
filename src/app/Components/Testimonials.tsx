@@ -112,7 +112,7 @@ export default function TestimonialsSection() {
               className="flex  flex-row md:items-end md:justify-between mb-16 "
             >
               <div className="">
-                <p className="text-gray-800 text-md font-medium mb-2 flex items-center gap-2">
+                <p className="text-gray-800 text-sm sm:text-lg font-medium mb-2 flex items-center gap-2">
                   Testimonials{" "}
                   <Image
                     src="/badge.jpg"
@@ -122,7 +122,7 @@ export default function TestimonialsSection() {
                     className="inline-block"
                   />
                 </p>
-                <h2 className="md:text-4xl sm:text-lg font-bold text-gray-900 leading-tight">
+                <h2 className="text-sm sm:text-lg md:text-2xl lg:text-4xl font-bold text-gray-900 leading-tight">
                   Praise from our <br />
                   customers
                 </h2>
