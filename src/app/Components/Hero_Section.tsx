@@ -56,13 +56,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mt-6"
+            className="flex  sm:flex-row items-center sm:items-start gap-4 mt-6"
           >
             {/* Let's work button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative overflow-hidden rounded-full bg-black px-6 py-3 text-white font-medium group cursor-pointer"
+              className="relative overflow-hidden rounded-lg bg-black px-3 sm:px-6 py-3 sm:py-3  text-white font-sm sm:font-medium group cursor-pointer"
             >
               <Link href="/Contact">
                 <span className="relative z-10">Let’s Work Together ?</span>
@@ -81,29 +81,18 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="flex items-center space-x-3"
+              className="flex  items-center space-x-3"
             >
-              <div className="flex items-center content-center">
+              <div className="flex items-center ">
                 <motion.img
-                  src="https://i.pravatar.cc/40?img=1"
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                  alt="User"
-                  whileHover={{ scale: 1.1 }}
-                />
-                <motion.img
-                  src="https://i.pravatar.cc/40?img=2"
-                  className="w-8 h-8 rounded-full border-2 border-white -ml-2"
-                  alt="User"
-                  whileHover={{ scale: 1.1 }}
-                />
-                <motion.img
-                  src="https://i.pravatar.cc/40?img=3"
-                  className="w-8 h-8 rounded-full border-2 border-white -ml-2"
+                  src="about-avater-group.jpg"
+                  className="w-full h-10 rounded-full border-2 border-white"
                   alt="User"
                   whileHover={{ scale: 1.1 }}
                 />
               </div>
-              <span className="text-xl text-gray-600">
+
+              <span className="flex-col text-sm sm:text-lg md:text-xl text-gray-600">
                 <strong>120K+</strong> Active users
               </span>
             </motion.div>

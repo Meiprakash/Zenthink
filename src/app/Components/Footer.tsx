@@ -4,6 +4,15 @@ import { motion } from "framer-motion";
 import { FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 
+
+const companies = [
+ { name: "Home", link: "#" },
+ { name: "About", link: "/about-us" },
+ { name: "Servie", link: "/Service" },
+ { name: "Blog", link: "/Blog" },
+ { name: "ContactUs", link: "/Contact" },
+  
+]
 const Footer = () => {
   return (
     <footer
@@ -15,96 +24,7 @@ const Footer = () => {
       }}
     >
       <div className="max-w-[1300px] mx-auto px-6 md:px-12 py-16">
-        {/* <div className="flex flex-wrap justify-between gap-1  lg:gap-20 md:ml-9">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="min-w-[250px] flex-1"
-          >
-            <p className="text-6xl md:text-8xl sm:text-[52px] font-semibold mb-3 ">
-              InoVis
-            </p>
-            <p className="text-md md:text-lg sm:text-lg lg:text-lg mb-2 font-medium tracking-tight">
-              Save time. Get Started Now.
-            </p>
-            <p className="text-gray-400 max-w-xs text-base leading-relaxed">
-              Unleash the most advanced Agency and boost your productivity
-            </p>
-
-            <div className="mt-40 md:ml-0">
-              <p className="text-lg font-semibold mb-4">Stay in the know</p>
-              <div className="flex items-center gap-4">
-                {[
-                  { icon: <FaTwitter />, href: "#" },
-                  { icon: <FaLinkedinIn />, href: "#" },
-                  { icon: <FaYoutube />, href: "#" },
-                ].map((item, i) => (
-                  <motion.a
-                    key={i}
-                    whileHover={{ scale: 1.15 }}
-                    href={item.href}
-                    className="bg-white text-black p-3 rounded-full hover:bg-purple-600 hover:text-white transition-all"
-                  >
-                    {item.icon}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="min-w-[150px] flex-1  md:ml-110 sm:ml-10"
-          >
-            <h4 className="font-semibold md:text-2xl mb-6">Company</h4>
-            <ul className="space-y-6 text-gray-200 text-sm md:text-lg mb-6">
-              {[
-                { name: "Home", link: "/" },
-                { name: "About Us", link: "/about-us" },
-                { name: "Service", link: "/Service" },
-                { name: "Blog", link: "/Blog" },
-                { name: "Shop", link: "/shop" },
-                { name: "Contact Us", link: "/Contact" },
-              ].map((item, i) => (
-                <li key={i}>
-                  <Link
-                    href={item.link}
-                    className="hover:text-white transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="min-w-[150px] flex-1 "
-          >
-            <h4 className="font-semibold md:text-2xl mb-4">Utilities</h4>
-            <ul className="space-y-6 text-gray-200 text-sm md:text-lg">
-              {[
-                "Privacy & policy",
-                "Style guide",
-                "Changelog",
-                "License",
-                "404 page",
-              ].map((item, i) => (
-                <li key={i}>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div> */}
+       
         {/* Top Section */}
         <div className="grid grid-cols-3 sm:grid-cols-3  lg:grid-cols-3 gap-10">
           {/* Left */}
@@ -148,22 +68,17 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className=""
             >
-              <h4 className="font-semibold text-lg sm:text-xl mb-6">Company</h4>
-              <ul className="space-y-4 text-gray-200 text-sm sm:text-base">
-                {[
-                  "Home",
-                  "About Us",
-                  "Service",
-                  "Blog",
-                  "Shop",
-                  "Contact Us",
-                ].map((item, i) => (
+              <h4 className="font-semibold text-[14px] sm:text-xl mb-6">
+                Company
+              </h4>
+              <ul className="space-y-4 text-gray-200 text-[11px]  sm:text-base">
+                {companies.map((item, i) => (
                   <li key={i}>
                     <Link
-                      href="#"
+                      href={item.link}
                       className="hover:text-white transition-colors"
                     >
-                      {item}
+                      {item.name}
                     </Link>
                   </li>
                 ))}
@@ -177,8 +92,10 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className=""
             >
-              <h4 className="font-semibold text-xl mb-6">Utilities</h4>
-              <ul className="space-y-4 text-gray-200 text-sm sm:text-base">
+              <h4 className="font-semibold text-[14px] sm:text-xl mb-6">
+                Utilities
+              </h4>
+              <ul className="space-y-4 text-gray-200 text-[11px] sm:text-base">
                 {[
                   "Privacy & policy",
                   "Style guide",

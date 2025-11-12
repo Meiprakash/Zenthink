@@ -15,6 +15,7 @@ const secondRow = [
   { src: "/snyk.jpg", alt: "Snyk" },
   { src: "/comply.jpg", alt: "Comply Advantage" },
   { src: "/UI_path.jpg", alt: "UiPath" },
+  { src: "/deliver.jpg", alt: "Deliveroo" },
 ];
 
 // Animation variants
@@ -59,7 +60,7 @@ export default function InvestorsSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center items-center gap-10 sm:gap-14 md:gap-40 mb-10"
+          className="flex flex-wrap justify-center items-center gap-3 sm:gap-14 md:gap-40 mb-10"
         >
           {firstRow.map((logo, i) => (
             <motion.div

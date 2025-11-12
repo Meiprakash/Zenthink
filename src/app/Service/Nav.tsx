@@ -72,14 +72,14 @@ const Nav = () => {
 
     return (
       <div>
-        <div className="flex flex-col items-center justify-center text-xl py-10 bg-gray-50bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] min-h-screen">
+        <div className="flex flex-col  items-center justify-center text-lg sm:text-xl py-10 bg-gray-50bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] min-h-screen">
           {/* Nav Buttons */}
-          <ul className="flex flex-wrap justify-center gap-4 text-gray-700 font-medium mb-10">
+          <ul className="flex flex-row justify-center gap-3  md:gap-4 text-gray-700  font-medium mb-10">
             {navItems.map((item) => (
               <li
                 key={item}
                 onClick={() => setActive(item)}
-                className={`cursor-pointer border border-gray-400 transition-all duration-300 py-3 px-6 rounded-3xl hover:bg-black hover:text-white ${
+                className={`cursor-pointer border border-gray-400 transition-all duration-300 py-2 px-2 sm:py-3 sm:px-6 rounded-3xl hover:bg-black hover:text-white ${
                   active === item
                     ? "bg-black text-white"
                     : "bg-white text-gray-600"
@@ -91,7 +91,7 @@ const Nav = () => {
           </ul>
 
           {/* Cards Section */}
-          <div className="w-full flex flex-col items-center">
+          <div className="sm:w-full flex flex-col items-center">
             <AnimatePresence mode="wait">
               {cardsData[active].map((card, index) => (
                 <motion.div

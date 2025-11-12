@@ -5,7 +5,17 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import Link from "next/link";
+import {  easeOut } from "framer-motion";
 
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.55, ease: easeOut },
+    },
+  };
 const faqs = [
   {
     question: "What is Webflow and why is it the best website builder?",
@@ -50,35 +60,39 @@ const FAQ = () => {
   return (
     <section className="w-full bg-white py-9 px-4 sm:px-6 lg:px-10 overflow-hidden">
       {/* Header Section */}
-      <motion.div
-        className="max-w-6xl mx-auto text-center lg:text-left"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <p className="flex  lg:justify-start items-center text-md md:text-lg  text-black mb-2 tracking-wide">
+      <motion.div className="mb-8 ml-10" variants={fadeUp}>
+        <p className="text-md text-gray-900 mb-3 md:ml-26 flex items-center gap-2">
           FAQ{" "}
           <span>
             <Image
-              src="/badge.jpg"
-              className="w-5 ml-2 mt-1"
+              src="/badge-icon.webp"
               alt="badge"
               width={16}
               height={16}
+              className="w-4"
             />
           </span>
         </p>
-        <div className="flex gap-20 sm:gap-3 md:gap-3 lg-gap-3 items-start">
-          <h2 className="flex sm:item-start text-start text-lg sm:text-2xl md:text-4xl font-semibold mb-4  text-gray-900">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-gray-600 text-md max-w-2xl text-start  mx-auto lg:mx-0">
-            Our services help you create digital products. Stay ahead of the
-            curve with our latest insights, tips, and industry trends.
-          </p>
+
+        <div className="grid sm:grid-cols-2 gap-8 items-start ">
+          {/* Left: Heading */}
+          <div>
+            <h2 className="text-[23px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold md:ml-26 text-gray-900 leading-tight tracking-tight">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          {/* Right: Description */}
+          <div>
+            <p className="text-gray-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+              Our services help you create digital products. Stay ahead of the
+              curve with our latest insights, tips, and industry trends.
+            </p>
+          </div>
         </div>
       </motion.div>
+
+      
 
       {/* FAQ Grid Section */}
       <div className="max-w-9xl mx-auto mt-10 mr-10  grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
@@ -107,10 +121,10 @@ const FAQ = () => {
                 together!
               </p>
               <Link href="/Service">
-              <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group cursor-pointer">
-                <span className="relative z-10">See All Work</span>
-                <span className="absolute inset-0 rounded-lg  bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
-              </button>
+                <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group cursor-pointer">
+                  <span className="relative z-10">See All Work</span>
+                  <span className="absolute inset-0 rounded-lg  bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                </button>
               </Link>
             </div>
           </div>

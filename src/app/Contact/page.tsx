@@ -104,10 +104,10 @@ export default function Hero() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="w-full flex md:flex-row items-start justify-between px-8 md:px-30 py-24 md:py-20"
+        className="w-full flex flex-col sm:flex-row items-start justify-between px-8 md:px-30 py-24 md:py-20"
       >
-        <motion.div variants={item} className="flex-1 max-w-2xl mb-10 md:mb-0">
-          <h1 className="text-gray-900 font-semibold text-xl sm:text-4xl md:text-6xl leading-tight">
+        <motion.div variants={item} className="flex-1 max-w-2xl mb-4 sm:mb-10 md:mb-0">
+          <h1 className="text-gray-900 font-semibold text-2xl sm:text-4xl md:text-6xl leading-tight">
             We Create <br /> Amazing Project
           </h1>
         </motion.div>
