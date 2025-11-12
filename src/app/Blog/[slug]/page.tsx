@@ -56,7 +56,7 @@ export default async function BlogDetail({
       {/* Blog Header Section */}
       <div className="  px-6 md:px-20 py-16 sm:py-16">
         <div className="grid sm:grid-cols-2 p-4 lg:p-8 lg:mb-4 sm:gap-8">
-          <h1 className="text-xl sm:text-2xl lg:text-4xl sm:ml-2 sm:ml-7 text-black font-semibold  mb-4 col-span-1">
+          <h1 className="text-xl sm:text-2xl lg:text-4xl sm:ml-7 text-black font-semibold  mb-4 col-span-1">
             {blog.title}
           </h1>
           <p className="text-gray-500 text-sm md:text-lg mb-8  col-span-1 lg:ml-19 lg:mr-7">
