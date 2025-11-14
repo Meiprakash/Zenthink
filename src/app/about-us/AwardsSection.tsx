@@ -67,7 +67,7 @@ const AwardsSection = () => {
         viewport={{ once: true }}
         className="flex sm:flex-row md:flex-row md:justify-between mb-14 "
       >
-        <div className="grid grid-cols-2 gap-8 items-start ">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-8 items-start ">
           {/* Left: Heading */}
           <div>
             <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
@@ -77,7 +77,7 @@ const AwardsSection = () => {
 
           {/* Right: Description */}
           <div>
-            <p className="text-gray-600 text-[10px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+            <p className="text-gray-600 text-[11px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
               We believe great work comes from clear collaboration. Our process
               is designed to guide you from the first idea to final
               launch—smoothly, strategically, and creatively.
@@ -95,35 +95,35 @@ const AwardsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row  md:items-start md:gap-10 border-b border-gray-200 pb-10"
+            className="flex  md:flex-row  md:items-start md:gap-10 border-b border-gray-200 pb-10"
           >
             {/* Image */}
-            <div className="w-full md:w-1/5 flex justify-start md:justify-start">
+            <div className="  w-full md:w-3/5 flex justify-start md:justify-start sm:mr-7">
               <Image
                 src={award.image}
                 alt={award.title}
                 width={180}
                 height={180}
-                className="rounded-lg object-cover shadow-sm"
+                className="rounded-lg  object-cover shadow-sm"
               />
             </div>
 
             {/* Year */}
-            <div className="flex gap-8 items-center justify-center mt-16">
-              <div className="w-full md:w-[6%] mt-4 md:mt-0 flex justify-center h-full md:items-center md:justify-center">
+            <div className="flex  pr-10 sm:gap-10 md:gap-8 items-center justify-center  sm:mt-8 sm:mr-30 ">
+              <div className="w-full md:w-[6%] mt-17 sm:mt-4 md:mt-0 flex justify-center h-full md:items-center md:justify-center">
                 <p className="text-gray-500 text-base font-medium">
                   {award.year}
                 </p>
               </div>
 
               {/* Title + Description */}
-              <div className="md:flex md:flex-row-2 gap-4">
+              <div className="md:flex md:flex-row-2 sm:gap-4">
                 <div className="">
-                  <h4 className="text-xl md:text-2xl  text-gray-900">
+                  <h4 className="text-lg sm:text-lg md:text-2xl  text-gray-900">
                     {award.title}
                   </h4>
                 </div>
-                <p className="text-gray-600 text-base mt-2 md:mt-3 md:max-w-xl">
+                <p className="text-gray-600 text-sm sm:text-base mt-2 md:mt-3 md:max-w-xl">
                   {award.desc}
                 </p>
               </div>

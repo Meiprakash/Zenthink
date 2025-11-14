@@ -96,17 +96,17 @@ const Blog: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex  md:flex-row md:items-end justify-between mb-16 gap-6"
+            className="flex flex-col  sm:flex-row md:items-end justify-between mb-16 gap-6"
           >
             {/* Left side title */}
             <div>
-              <h2 className="text-4xl md:text-6xl md:ml-5 font-semibold text-gray-900 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-6xl md:ml-5 font-semibold text-gray-900 leading-tight">
                 Blog
               </h2>
             </div>
 
             {/* Right side text */}
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-lg">
+            <p className="text-gray-600 text-[13px] sm:text-base md:text-lg leading-relaxed max-w-lg">
               We combine bold ideas with smart strategy to design brand
               experiences that connect, convert, and inspire. From startups to
               industry leaders unforgettable.

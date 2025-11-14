@@ -60,7 +60,7 @@ const Team = () => {
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-2 gap-8 items-start mb-6">
+      <div className="grid sm:grid-cols-2 gap-4 sm:gap-8 items-start mb-6">
         {/* Left: Heading */}
         <div>
           <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
@@ -70,7 +70,7 @@ const Team = () => {
 
         {/* Right: Description */}
         <div>
-          <p className="text-gray-600 text-[10px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+          <p className="text-gray-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
             We help brands grow through strategic design and digital
             experiences. From brand identity to powerful websites, our services
             are Impression.
@@ -78,7 +78,7 @@ const Team = () => {
         </div>
       </div>
       {/* Team Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:ml-15 md:mr-8 gap-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 md:ml-15 md:mr-8 gap-10">
         {teamMembers.map((member, index) => (
           <div
             key={index}

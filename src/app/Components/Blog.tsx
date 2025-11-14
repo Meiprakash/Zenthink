@@ -3,7 +3,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: easeOut },
+  },
+};
 
 const blogs = [
   {
@@ -31,38 +40,46 @@ const BlogSection: React.FC = () => {
     <section className="w-full bg-[#fafafa] py-24 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="flex  md:flex-row md:items-end justify-between mb-16 gap-6"
-        >
-          {/* Left side title */}
-          <div>
-            <span className="flex text-gray-800 text-xl md:text-2xl font-medium  mb-4">
-              Blog{" "}
-              <span className="ml-2 ">
-                <Image
-                  src="/badge.jpg"
-                  className="w-6 mt-1"
-                  alt=""
-                  width={16}
-                  height={16}
-                />
-              </span>
+        <motion.div className="mb-8 " variants={fadeUp}>
+          <p className="text-md sm:text-lg text-gray-900 mb-3  flex items-center gap-2">
+            Blog{" "}
+            <span>
+              <Image
+                src="/badge-icon.webp"
+                alt="badge"
+                width={16}
+                height={16}
+                className="w-4"
+              />
             </span>
-            <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-bold text-gray-900 leading-tight">
-              Company insights
-            </h2>
-          </div>
+          </p>
 
-          {/* Right side text */}
-          <p className="text-gray-600 text-sm md:text-lg mt-10 leading-relaxed max-w-lg">
+          <div className="grid sm:grid-cols-2 gap-8 items-start ">
+            {/* Left: Heading */}
+            <div>
+              <h2 className="text-[23px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold  text-gray-900 leading-tight tracking-tight">
+                Company insights
+              </h2>
+            </div>
+
+            {/* Right: Description */}
+            <div>
+              <p className="text-gray-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+                Our services help you create digital products. Stay ahead of the
+                curve with our latest insights, tips, and industry trends.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+        {/* <div className="sm:flex gap-20 sm:gap-3 md:gap-3 lg-gap-3 items-start">
+          <h2 className="flex sm:item-start text-start text-lg sm:text-2xl md:text-4xl font-semibold mb-4  text-gray-900">
+            Company insights
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-md max-w-xl sm:ml-10 text-start  mx-auto lg:mx-0">
             Our services help you create digital products. Stay ahead of the
             curve with our latest insights, tips, and industry trends.
           </p>
-        </motion.div>
+        </div> */}
 
         {/* Blog Cards Section */}
         <div className="grid md:grid-cols-2 sm:grid-cols-2 gap-10">

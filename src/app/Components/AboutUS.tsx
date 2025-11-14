@@ -64,10 +64,10 @@ export default function AboutUs() {
             </span>
           </p>
 
-          <div className="grid grid-cols-2 gap-8 items-start ">
+          <div className="grid sm:grid-cols-2 gap-8 items-start ">
             {/* Left: Heading */}
             <div>
-              <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
+              <h2 className="text-[23px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
                 Our Approach is Innovative <br className="hidden md:block" />{" "}
                 and Results-Focused.
               </h2>
@@ -75,7 +75,7 @@ export default function AboutUs() {
 
             {/* Right: Description */}
             <div>
-              <p className="text-gray-600 text-[10px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+              <p className="text-gray-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
                 Custom software development, robust enterprise solutions, or
                 scalable digital platforms. Our team excels across multiple
                 technology domains, including cloud architecture, application

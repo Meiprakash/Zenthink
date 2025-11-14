@@ -296,7 +296,7 @@ export default function serviceId({
           </div>
         </div>
       </div>
-      <section className="w-full   py-18 px-6 md:px-12 lg:px-20 overflow-hidden">
+      <section className="w-full pt-6 px-5   sm:py-18 sm:px-6 md:px-12 lg:px-20 overflow-hidden">
         <div className=" sm:flex md:flex-row items-start md:items-end md:ml-17 justify-between gap-8 md:gap-12">
           {/* Left side title */}
           <div className="text-start md:text-left flex-1">

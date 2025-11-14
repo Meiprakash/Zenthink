@@ -163,7 +163,7 @@ const ProcessSection = () => {
 
       {/* Header Section */}
 
-      <div className="grid grid-cols-2 gap-8 items-start ">
+      <div className="grid sm:grid-cols-2 sm:gap-8 gap-4 items-start ">
         {/* Left: Heading */}
         <div>
           <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
@@ -173,7 +173,7 @@ const ProcessSection = () => {
 
         {/* Right: Description */}
         <div>
-          <p className="text-gray-600 text-[10px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+          <p className="text-gray-600 text-[11px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
             We believe great work comes from clear collaboration. Our process is
             designed to guide you from the first idea to final launch—smoothly,
             strategically, and creatively. Here’s how we bring your vision to
@@ -183,7 +183,7 @@ const ProcessSection = () => {
       </div>
 
       {/* Process Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
         {processes.map((item, index) => (
           <motion.div
             key={item.id}
@@ -191,7 +191,7 @@ const ProcessSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="bg-white rounded-3xl shadow-sm p-12 flex flex-col justify-between hover:shadow-md transition"
+            className="bg-white h-[340px] sm:h-full rounded-3xl shadow-sm p-12 flex flex-col justify-between hover:shadow-md transition"
           >
             {/* Image on top for 2nd and 4th cards */}
             {(index === 1 || index === 3) && (
@@ -201,7 +201,7 @@ const ProcessSection = () => {
                   alt={item.title}
                   width={90}
                   height={70}
-                  className="rounded-full mb-8 md:w-27"
+                  className="rounded-full mb-8 md:w-27 sm:w-20 w-17"
                 />
               </div>
             )}
@@ -217,13 +217,13 @@ const ProcessSection = () => {
 
             {/* Image at bottom for 1st and 3rd cards */}
             {(index === 0 || index === 2) && (
-              <div className="flex justify-center mt-18  w-full">
+              <div className="flex justify-center sm:mt-18 mt-6   w-full">
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={90}
                   height={70}
-                  className="rounded-full mt-18 md:w-27 "
+                  className="rounded-full sm:mt-18 md:w-27 sm:w-20 w-17 "
                 />
               </div>
             )}

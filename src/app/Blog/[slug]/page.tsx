@@ -55,8 +55,8 @@ export default async function BlogDetail({
 
       {/* Blog Header Section */}
       <div className="  px-6 md:px-20 py-16 sm:py-16">
-        <div className="grid grid-cols-2 p-4 lg:p-8 lg:mb-4 gap-8">
-          <h1 className="text-xl sm:text-2xl lg:text-4xl ml-2 sm:ml-7 text-black font-semibold  mb-4 col-span-1">
+        <div className="grid sm:grid-cols-2 p-4 lg:p-8 lg:mb-4 sm:gap-8">
+          <h1 className="text-xl sm:text-2xl lg:text-4xl sm:ml-7 text-black font-semibold  mb-4 col-span-1">
             {blog.title}
           </h1>
           <p className="text-gray-500 text-sm md:text-lg mb-8  col-span-1 lg:ml-19 lg:mr-7">
@@ -217,16 +217,16 @@ export default async function BlogDetail({
       {/* blog cards */}
       <div className="sm:max-w-7xl sm:mx-auto ml-4 mr-4  ">
         {/* Section Heading */}
-        <div className="flex  md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col  md:flex-row md:items-end justify-between mb-16 gap-6">
           {/* Left side title */}
           <div>
-            <h2 className="text-xl md:text-5xl sm:text-2xl ml-4 sm:ml-5 sm:mt-3 font-semibold text-gray-900 leading-tight">
+            <h2 className="text-xl md:text-5xl sm:text-2xl ml-3 sm:ml-5 sm:mt-3 font-semibold text-gray-900 leading-tight">
               Related Blog
             </h2>
           </div>
 
           {/* Right side text */}
-          <p className="text-gray-600 text-sm md:text-lg leading-relaxed max-w-lg">
+          <p className="text-gray-600 text-sm sm:text-lg leading-relaxed ml-2 max-w-lg">
             We help brands grow through strategic design and digital
             experiences. From brand identity to powerful websites, our services
             are Impression

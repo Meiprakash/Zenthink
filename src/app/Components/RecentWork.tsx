@@ -60,13 +60,13 @@ const RecentWork: React.FC = () => {
                 />
               </span>
             </p>
-            <div className="grid grid-cols-2 gap-10 mb-16">
-              <h2 className="text-[15px] sm:text-3xl  md:text-5xl lg:text-[48px]  text-gray-900 leading-tight">
+            <div className="grid sm:grid-cols-2 gap-10 mb-16">
+              <h2 className="text-[19px] sm:text-3xl  md:text-5xl lg:text-[48px]  text-gray-900 leading-tight">
                 We Engineer Solutions That Transform{" "}
                 <br className="hidden md:block" />
                 Businesses Into Leaders.
               </h2>
-              <p className="text-gray-600 text-start text-[10px] md:text-[16px] sm:text-[15px] leading-relaxed md:ml-3">
+              <p className="text-gray-600 text-start text-[14px] md:text-[16px] sm:text-[15px] leading-relaxed md:ml-3">
                 We help businesses scale through strategic software and digital
                 innovation. From custom applications to enterprise platforms,
                 our services are engineered to optimize your operations and
@@ -78,20 +78,20 @@ const RecentWork: React.FC = () => {
 
         {/* ✅ Asymmetric Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8">
-          <motion.div className="col-span-1 sm:col-span-2 md:col-span-8">
-            <WorkCard work={works[0]} height="h-[500px]" />
+          <motion.div className="col-span-1 sm:col-span-1 md:col-span-8">
+            <WorkCard work={works[0]} height="h-[225px] md:h-[500px]" />
           </motion.div>
 
-          <motion.div className="col-span-1 sm:col-span-2 md:col-span-4">
-            <WorkCard work={works[1]} height="h-[500px]" />
+          <motion.div className="col-span-1 sm:col-span-1 md:col-span-4">
+            <WorkCard work={works[1]} height="h-[250px] md:h-[500px]" />
           </motion.div>
 
-          <motion.div className="col-span-1 sm:col-span-2 md:col-span-5">
-            <WorkCard work={works[2]} height="h-[420px]" />
+          <motion.div className="col-span-1 sm:col-span-1 md:col-span-5">
+            <WorkCard work={works[2]} height="h-[225px] md:h-[420px]" />
           </motion.div>
 
-          <motion.div className="col-span-1 sm:col-span-2 md:col-span-7">
-            <WorkCard work={works[3]} height="h-[420px]" />
+          <motion.div className="col-span-1 sm:col-span-1 md:col-span-7">
+            <WorkCard work={works[3]} height="h-[250px] md:h-[420px]" />
           </motion.div>
         </div>
       </div>

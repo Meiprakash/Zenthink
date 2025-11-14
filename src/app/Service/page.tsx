@@ -20,7 +20,7 @@ const Service: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="flex  md:flex-row items-start md:items-end md:ml-17 justify-between gap-8 md:gap-12"
+          className="flex flex-col  sm:flex-row items-start md:items-end md:ml-17 justify-between gap-4 sm:gap-8 md:gap-12"
         >
           {/* Left side title */}
           <div className="text-start md:text-left flex-1">
@@ -32,7 +32,7 @@ const Service: React.FC = () => {
 
           {/* Right side text */}
           <div className="flex-1 text-start md:text-start">
-            <p className="text-gray-600 text-base sm:text-sm md:text-lg leading-relaxed md:max-w-md md:ml-37 mx-auto md:mx-0">
+            <p className="text-gray-600 sm:text-base text-sm md:text-lg leading-relaxed md:max-w-md md:ml-37 mx-auto md:mx-0">
               We combine bold ideas with smart strategy to design brand
               experiences that connect, convert, and inspire. From startups to
               industry leaders, we make your brand unforgettable.
