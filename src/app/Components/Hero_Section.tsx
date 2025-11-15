@@ -22,7 +22,7 @@ export default function Hero() {
       className="relative overflow-hidden "
       style={{ backgroundImage: "url('/hero-bg.webp')" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-between gap-10 ">
+      <div className="max-w-7xl mx-auto  px-6 py-10 sm:py-24 flex flex-col md:flex-row items-center justify-between gap-10 ">
         {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -80 }}
@@ -56,7 +56,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex  sm:flex-row items-center sm:items-start gap-4 mt-6"
+            className="flex flex-col  sm:flex-row items-start gap-4 mt-6"
           >
             {/* Let's work button */}
             <motion.button

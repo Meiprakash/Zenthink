@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -47,34 +46,30 @@ const faqs = [
     answer:
       "Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere.",
   },
-  {
-    question: "Why is it the best website builder?",
-    answer:
-      "Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere.",
-  },
+  
 ];
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="w-full bg-white py-9 px-4 sm:px-6 lg:px-10 overflow-hidden">
+    <section className="w-full bg-white py-5 sm:py-9 px-4 sm:px-6 lg:px-10 overflow-hidden">
       {/* Header Section */}
-      <motion.div className="mb-8 ml-10" variants={fadeUp}>
+      <motion.div className="sm:mb-8 ml-10" variants={fadeUp}>
         <p className="text-md text-gray-900 mb-3 md:ml-26 flex items-center gap-2">
           FAQ{" "}
-          <span>
+          <span className="">
             <Image
               src="/badge-icon.webp"
               alt="badge"
               width={16}
               height={16}
-              className="w-4"
+              className="w-4 "
             />
           </span>
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-8 items-start ">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-8 items-start ">
           {/* Left: Heading */}
           <div>
             <h2 className="text-[23px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold md:ml-26 text-gray-900 leading-tight tracking-tight">
@@ -92,10 +87,8 @@ const FAQ = () => {
         </div>
       </motion.div>
 
-      
-
       {/* FAQ Grid Section */}
-      <div className="max-w-9xl mx-auto mt-10 mr-10  grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
+      <div className="max-w-9xl mx-auto  sm:mt-10 sm:mr-10  grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
         {/* Image Section */}
         <motion.div
           className=" flex justify-center mr-10 pb-9 pl-20 w-full "
@@ -104,17 +97,17 @@ const FAQ = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="relative h-[530px] w-auto max-w-lg ">
+          <div className=" hidden sm:block relative h-[530px] w-auto max-w-lg ">
             <Image
               src="/faq.jpg"
               alt="FAQ"
               width={1200} // intrinsic width
               height={530} // intrinsic height (keep original)
-              className="rounded-[25px] w-[1200px] h-[530px] object-cover"
+              className="rounded-[25px] w-[1200px] h-[530px]  object-cover"
             />
 
             {/* Floating Card */}
-            <div className="absolute bottom-4 left-4 right-4 bg-white shadow-xl rounded-2xl p-5 border">
+            <div className="absolute  bottom-4 left-4 right-4 bg-white shadow-xl rounded-2xl p-5 border">
               <h3 className="text-lg text-black mb-2 ">Need More Info?</h3>
               <p className="text-gray-700 text-sm mb-3 leading-relaxed">
                 Didn’t find what you were looking for? Let’s chat and solve it
@@ -132,7 +125,7 @@ const FAQ = () => {
 
         {/* Accordion Section */}
         <motion.div
-          className="w-full mr-30 "
+          className=" w-full sm:mr-30 "
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -145,7 +138,7 @@ const FAQ = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="flex items-center justify-between w-full text-left text-lg font-medium text-black"
+                className="flex items-center justify-between w-full text-left text-[12px] sm:text-lg font-medium text-black"
               >
                 {faq.question}
                 {openIndex === index ? (
@@ -164,7 +157,7 @@ const FAQ = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="text-gray-600 mt-2 text-base leading-relaxed">
+                    <p className="text-gray-600 mt-2 text-[12px] sm:text-base leading-relaxed">
                       {faq.answer}
                     </p>
                   </motion.div>
@@ -172,6 +165,38 @@ const FAQ = () => {
               </AnimatePresence>
             </div>
           ))}
+        </motion.div>
+        <motion.div
+          className=" flex justify-center mr-10 pb-9 pl-2 w-100 ml-6 mt-5 "
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <div className=" sm:hidden  relative h-[530px] w-auto max-w-lg ">
+            <Image
+              src="/faq.jpg"
+              alt="FAQ"
+              width={1200} // intrinsic width
+              height={530} // intrinsic height (keep original)
+              className="rounded-[25px] w-[1200px] h-[530px]  object-cover"
+            />
+
+            {/* Floating Card */}
+            <div className="absolute  bottom-4 left-4 right-4 bg-white shadow-xl rounded-2xl p-5 border">
+              <h3 className="text-lg text-black mb-2 ">Need More Info?</h3>
+              <p className="text-gray-700 text-sm mb-3 leading-relaxed">
+                Didn’t find what you were looking for? Let’s chat and solve it
+                together!
+              </p>
+              <Link href="/Service">
+                <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group cursor-pointer">
+                  <span className="relative z-10">See All Work</span>
+                  <span className="absolute inset-0 rounded-lg  bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                </button>
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

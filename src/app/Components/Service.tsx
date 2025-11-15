@@ -57,7 +57,7 @@ const ServiceSection: React.FC = () => {
             </p>
 
             {/* Title + Description */}
-            <div className="grid sm:grid-cols-2 gap-10 mb-16">
+            <div className="grid  sm:grid-cols-2 gap-10 mb-16">
               <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px]  text-gray-900 leading-tight">
                 We Engineer Solutions That Transform{" "}
                 <br className="hidden md:block" />
@@ -72,11 +72,11 @@ const ServiceSection: React.FC = () => {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 ">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className={`bg-white border border-gray-200 hover:border-transparent rounded-3xl p-8 flex flex-col justify-between h-[346px]    duration-500 sm:h-[390px]
+                  className={`bg-white border border-gray-200 hover:border-transparent rounded-3xl p-5 sm:p-8 flex flex-col justify-between h-[206px]    duration-500 sm:h-[390px]
               ${
                 index % 2 === 1
                   ? "md:translate-y-18" // lower 2nd and 4th
