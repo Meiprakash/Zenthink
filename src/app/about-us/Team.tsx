@@ -78,18 +78,18 @@ const Team = () => {
         </div>
       </div>
       {/* Team Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 md:ml-15 md:mr-8 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:ml-15 md:mr-8 gap-10">
         {teamMembers.map((member, index) => (
           <div
             key={index}
             className="flex flex-col items-center text-center group"
           >
-            <div className="w-60 h-60 md:w-64 md:h-72 rounded-2xl overflow-hidden shadow-md">
+            <div className="w-60  h-70 md:w-64 md:h-72 rounded-2xl overflow-hidden shadow-md">
               <Image
                 src={member.image}
                 alt={member.name}
                 width={300}
-                height={300}
+                height={340}
                 className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
             </div>

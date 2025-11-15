@@ -87,7 +87,7 @@ const AwardsSection = () => {
       </motion.div>
 
       {/* Awards List */}
-      <div className="flex flex-col gap-16 flex-row-3 sm:flex-col-3">
+      <div className="flex flex-col flex-row-3 sm:flex-col-3">
         {awards.map((award, index) => (
           <motion.div
             key={award.id}
@@ -95,7 +95,7 @@ const AwardsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
             viewport={{ once: true }}
-            className="flex  md:flex-row  md:items-start md:gap-10 border-b border-gray-200 pb-10"
+            className="flex  md:flex-row  md:items-start  md:gap-10 border-b border-gray-200 pb-10"
           >
             {/* Image */}
             <div className="  w-full md:w-3/5 flex justify-start md:justify-start sm:mr-7">
@@ -104,12 +104,12 @@ const AwardsSection = () => {
                 alt={award.title}
                 width={180}
                 height={180}
-                className="rounded-lg  object-cover shadow-sm"
+                className="rounded-lg w-150 h-60 sm:w-50 sm:h-50  object-cover shadow-sm"
               />
             </div>
 
             {/* Year */}
-            <div className="flex  pr-10 sm:gap-10 md:gap-8 items-center justify-center  sm:mt-8 sm:mr-30 ">
+            <div className="flex ml-10 sm:ml-2   pr-10 sm:gap-10 md:gap-8 items-center justify-center mt-5  sm:mt-8 sm:mr-30 ">
               <div className="w-full md:w-[6%] mt-17 sm:mt-4 md:mt-0 flex justify-center h-full md:items-center md:justify-center">
                 <p className="text-gray-500 text-base font-medium">
                   {award.year}
@@ -117,7 +117,7 @@ const AwardsSection = () => {
               </div>
 
               {/* Title + Description */}
-              <div className="md:flex md:flex-row-2 sm:gap-4">
+              <div className="md:flex ml-7 md:flex-row-2 sm:gap-4">
                 <div className="">
                   <h4 className="text-lg sm:text-lg md:text-2xl  text-gray-900">
                     {award.title}
