@@ -45,7 +45,7 @@ const RecentWork: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          className="flex flex-row md:items-end justify-between mb-16 gap-6"
+          className="flex flex-row md:items-end justify-between mb-1 gap-6"
         >
           {/* Left title part */}
           <div>
@@ -133,11 +133,11 @@ const WorkCard = ({ work, height }: { work: WorkItem; height: string }) => (
       </p>
     </div>
     {/* Text area */}
-    <div className="pl-6 pr-6 pb-6">
+    <div className="sm:pl-6 pl-4 pr-6 pb-6">
       <h3 className="md:text-3xl  text-gray-900 mb-1">
         {work.title}
       </h3>
-      <p className="text-gray-600 p-3 text-lg">{work.description}</p>
+      <p className="text-gray-600  text-start text-lg">{work.description}</p>
     </div>
   </Link>
 );

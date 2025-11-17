@@ -53,7 +53,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="w-full bg-white py-5 sm:py-9 px-4 sm:px-6 lg:px-10 overflow-hidden">
+    <section className="w-full bg-white py-5 sm:py-1 px-4 sm:px-6 lg:px-10 overflow-hidden">
       {/* Header Section */}
       <motion.div className="sm:mb-8 ml-10" variants={fadeUp}>
         <p className="text-md text-gray-900 mb-3 md:ml-26 flex items-center gap-2">
@@ -88,7 +88,7 @@ const FAQ = () => {
       </motion.div>
 
       {/* FAQ Grid Section */}
-      <div className="max-w-9xl mx-auto  sm:mt-10 sm:mr-10  grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
+      <div className="max-w-9xl mx-auto  sm:mt-5 sm:mr-10  grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
         {/* Image Section */}
         <motion.div
           className=" flex justify-center mr-10 pb-9 pl-20 w-full "
@@ -173,17 +173,15 @@ const FAQ = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className=" sm:hidden  relative h-[530px] w-auto max-w-lg ">
+          <div className="sm:hidden items-center mr-20 relative h-[420px] w-[300px]">
             <Image
               src="/faq.jpg"
               alt="FAQ"
-              width={1200} // intrinsic width
-              height={530} // intrinsic height (keep original)
-              className="rounded-[25px] w-[1200px] h-[530px]  object-cover"
+              fill
+              className="rounded-[25px] object-cover"
             />
-
             {/* Floating Card */}
-            <div className="absolute  bottom-4 left-4 right-4 bg-white shadow-xl rounded-2xl p-5 border">
+            <div className="absolute  bottom-4 left-4 right-4 bg-white shadow-xl rounded-2xl p-3 border">
               <h3 className="text-lg text-black mb-2 ">Need More Info?</h3>
               <p className="text-gray-700 text-sm mb-3 leading-relaxed">
                 Didn’t find what you were looking for? Let’s chat and solve it

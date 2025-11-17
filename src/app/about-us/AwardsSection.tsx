@@ -87,7 +87,7 @@ const AwardsSection = () => {
       </motion.div>
 
       {/* Awards List */}
-      <div className="flex flex-col flex-row-3 sm:flex-col-3">
+      <div className="flex flex-col  sm:flex-col-3">
         {awards.map((award, index) => (
           <motion.div
             key={award.id}
