@@ -35,9 +35,9 @@ const Navbar = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center space-x-2 cursor-pointer "
+            className="flex items-center space-x-2 cursor-pointer  "
           >
-            <Image src={logo} alt="Logo" width={80} height={50} />
+            <Image src="/ZenThink_Icon.png" alt="Logo" width={150} height={0} />
           </motion.div>
         </Link>
 
