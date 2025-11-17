@@ -169,11 +169,11 @@ const utilities = [
 export default function Footer() {
   return (
     <footer
-      className="relative overflow-hidden rounded-t-[2rem] text-white bg-cover bg-center bg-no-repeat"
+      className="relative overflow-hidden rounded-t-[2rem] bg-black text-white bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage:
-          "linear-gradient(to right, #060606, #0e0a20, #3c0f6e), url('/footer-bg.webp')",
-        backgroundBlendMode: "overlay",
+        // backgroundImage:
+        //   "linear-gradient(to right, #060606, #0e0a20, #3c0f6e), url('/footer-bg.webp')",
+        // backgroundBlendMode: "overlay",
       }}
     >
       <div className="max-w-[1300px] mx-auto px-6 md:px-1 py-16">

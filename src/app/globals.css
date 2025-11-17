@@ -41,3 +41,14 @@ body {
   flex-direction: column;
   animation: scroll-up 10s linear infinite;
 }
+@keyframes zigzag {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(-8px) translateY(-6px); }
+  50% { transform: translateX(8px) translateY(6px); }
+  75% { transform: translateX(-6px) translateY(8px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+.zigzag {
+  animation: zigzag 1.8s infinite ease-in-out;
+}

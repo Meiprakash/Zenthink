@@ -6,16 +6,25 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const rotatingTexts = [
-  "Web Design",
-  "UX Design",
-  "Branding",
-  "UI Design",
-  "Web Design",
-  "UX Design",
-  "Branding",
-  "UI Design",
+  { id: 1, name: "Web Design" },
+  { id: 2, name: " UX Design" },
+  { id: 1, name: "Branding" },
+  { id: 2, name: "UI Design" },
+  { id: 1, name: "Web Design" },
+  { id: 2, name: "UX Design" },
+  { id: 1, name: "Branding" },
+  { id: 2, name: "UI Design" },
 ];
-
+const positions = [
+  "translate-x-[30%]", 
+  "-translate-x-[10%]",
+  "translate-x-[40%]", 
+  "-translate-x-[5%]", 
+  "translate-x-[40%]", 
+  "-translate-x-[10%]", 
+  "translate-x-[43%]", 
+  "-translate-x-[10%]", 
+];
 export default function Hero() {
   return (
     <section
@@ -86,7 +95,7 @@ export default function Hero() {
               <div className="flex items-center ">
                 <motion.img
                   src="about-avater-group.jpg"
-                  className="w-full h-10 rounded-full border-2 border-white"
+                  className="w-full h-10 rounded-full  border-white"
                   alt="User"
                   whileHover={{ scale: 1.1 }}
                 />
@@ -109,11 +118,10 @@ export default function Hero() {
             damping: 20,
             delay: 0.4,
           }}
-          className="relative flex items-center justify-end w-full md:w-1/2 gap-10 md:gap-16"
+          className="relative  flex items-center    justify-between w-full md:w-1/2"
         >
-          {/* Floating / Scrolling Texts */}
-
-          <div className="h-[400px] md:h-[400px] overflow-hidden relative">
+          {/* FLOATING TAGS COLUMN */}
+          <div className="h-[400px] md:h-[400px] overflow-hidden items-center  sm:px-50 md:px-2 px-3 sm:ml-10  md:ml-1  w-[200px]">
             <motion.div
               animate={{ y: ["0%", "-50%"] }}
               transition={{
@@ -122,28 +130,37 @@ export default function Hero() {
                 ease: "linear",
                 repeatType: "loop",
               }}
-              className="flex flex-col"
+              className="flex flex-col px-1  "
             >
               {[...rotatingTexts, ...rotatingTexts].map((text, i) => (
                 <div
                   key={i}
-                  className="mb-16 md:mb-8 bg-white text-black shadow-md rounded-full px-6 py-3 text-sm md:text-base font-medium flex items-center gap-6"
+                  className={`
+           mb-12 md:mb-10 
+bg-white/90 backdrop-blur-sm shadow-md shadow-gray-300/30 
+border border-gray-200 text-black 
+rounded-full px-3 py-2 sm:px-6 sm:py-3     /* smaller X padding */
+text-[12px] md:text-[15px] font-medium 
+flex items-center gap-1     /* smaller gap */
+max-w-[190px] w-fit         /* fits inside 200px column */
+truncate   
+            ${positions[i % positions.length]}
+          `}
                 >
-                  <span>{text}</span>
-                  <Layers size={18} />
+                  <span>{text.name}</span>
                 </div>
               ))}
             </motion.div>
           </div>
 
-          {/* Floating Sphere Image */}
+          {/* FLOATING SPHERE IMAGE */}
           <motion.div
             transition={{
               duration: 4,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="relative w-[160px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px]"
+            className="relative  w-[160px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px]"
           >
             <Image
               src="/hero.jpg"
