@@ -72,9 +72,9 @@ const Nav = () => {
 
     return (
       <div>
-        <div className="flex flex-col  items-center justify-center text-lg sm:text-xl py-10 bg-gray-50bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] min-h-screen">
+        <div className="flex flex-col   items-center justify-center text-lg sm:text-xl py-10 bg-gray-50bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] mt-1">
           {/* Nav Buttons */}
-          <ul className="flex flex-row justify-center gap-3  md:gap-4 text-gray-700  font-medium mb-10">
+          <ul className="flex flex-row justify-center gap-3  md:gap-4 text-gray-700  font-medium mb-6">
             {navItems.map((item) => (
               <li
                 key={item}
