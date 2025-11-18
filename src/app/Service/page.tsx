@@ -4,16 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "../Components/Navbar/Navbar";
+import Nav from "./Nav";
 import FAQ from "../Components/FaqSection";
 import ConnectSection from "../Components/ConnectUs";
 import Footer from "../Components/Footer";
-import Nav from "./Nav";
+import BlogSection from "../Components/Blog";
+import TestimonialsSection from "../Components/Testimonials";
 
 const Service: React.FC = () => {
   return (
     <div className="bg-white">
       <Navbar />
-     
+
       <section className="w-full  bg-white py-9 px-6 md:px-12 lg:px-20 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -40,7 +42,48 @@ const Service: React.FC = () => {
           </div>
         </motion.div>
       </section>
-      <Nav/>
+
+      <div className="grid grid-cols-1 sm:grid-cols-6 md:gap-4 gap-4 mx-4 sm:gap-1 sm:ml-10">
+        <div className="md:ml-34 sm:col-span-3   ">
+          <Image
+            src="/service2.webp"
+            alt="service"
+            width={800}
+            height={20}
+            className="rounded-2xl"
+          />
+        </div>
+        <div className="sm:col-span-1 bg-gray-200 text-black p-2 rounded-2xl sm:w-40 md:w-60 sm:ml-2 md:ml-1 ">
+          <div className="mt-4 ml-2 md:text-3xl sm:text-xl text-lg text-gray-600">
+            Satisfied <h2 className="sm:flex ">Customers</h2>
+          </div>
+          <div className="mt-4 sm:mt-15 md:text-5xl ml-2">200K+</div>
+          <div className="mt-7 md:mt-24 ml-2">
+            <Image
+              src="/about-avater-group.jpg"
+              alt="img"
+              width={100}
+              height={100}
+              className="sm:w-20 md:w-30"
+            />
+          </div>
+        </div>
+        <div className="sm:col-span-2  md:mr-30   sm:ml-18 md:ml-10">
+          <Image
+            src="/service3.jpg"
+            alt="servie"
+            width={800}
+            height={20}
+            className="sm:h-60  md:h-98 rounded-2xl"
+          />
+        </div>
+      </div>
+      {/* <Nav /> */}
+      <TestimonialsSection/>
+      <FAQ />
+      <BlogSection />
+      <ConnectSection />
+      <Footer />
     </div>
   );
 };

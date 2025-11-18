@@ -17,6 +17,8 @@ const navItems = [
   { name: "Contact", href: "/Contact" },
 ];
 
+
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
