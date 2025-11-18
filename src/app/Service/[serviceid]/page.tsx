@@ -139,7 +139,7 @@ export default function serviceId({
             General Info
           </h2>
 
-          {/* ✅ Mobile View Layout */}
+          {/*  Mobile View Layout */}
           <div className="items-start sm:hidden block w-90 mt-4 mb-4 ml-2 ">
             {/* Row Titles */}
             <div className="grid grid-cols-3  text-gray-700 text-md mb-2">
@@ -162,7 +162,7 @@ export default function serviceId({
             </div>
           </div>
 
-          {/* ✅ Laptop / Tablet View Layout (your original one) */}
+          {/*  Laptop / Tablet View Layout (your original one) */}
           <div className="hidden sm:block gap-13 md:mt-15 ml-2">
             <div className="md:mt-10 sm:mt-5 md:mb-10 md:text-xl sm:text-lg text-gray-700">
               <p>Clients</p>
