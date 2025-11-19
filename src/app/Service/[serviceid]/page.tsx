@@ -10,8 +10,8 @@ import BlogSection from "@/app/Components/Blog";
 
 const services = [
   {
-    serviceId: "ui-ux",
-    title: "UI-UX Design for Project ",
+    serviceId: "it-consulting",
+    title: "IT consulting service ",
     author: "Elen Arose",
     date: "May 20, 2025",
     content:
