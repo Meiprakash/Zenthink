@@ -138,7 +138,7 @@ export default function Hero() {
       <Values />
       <AwardsSection />
       <ProcessSection />
-      <Team />
+      {/* <Team /> */}
       <TestimonialsSection />
       <FAQ />
       <BlogSection />
