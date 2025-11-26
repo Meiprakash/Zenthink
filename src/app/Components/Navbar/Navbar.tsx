@@ -147,8 +147,8 @@ export default function Navbar() {
             <Image
               src="/ZenThink_Icon.png"
               alt="Logo"
-              width={150}
-              height={40}
+              width={110}
+              height={50}
             />
           </motion.div>
         </Link>

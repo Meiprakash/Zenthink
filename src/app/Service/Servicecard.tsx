@@ -66,7 +66,7 @@ function Servicecard() {
         {servicecard.map((i, index) => (
           <div
             key={index}
-            className="col-span-1 bg-gray-100 p-5 rounded-xl shadow-xs hover:shadow-xl"
+            className="col-span-1 bg-gray-100 p-5 rounded-xl shadow-xs hover:shadow-xl transition delay-100 duration-150"
           >
             <div className="mb-18">
               <Image
@@ -85,7 +85,13 @@ function Servicecard() {
               <Link href={i.link} className="text-black flex gap-1 ">
                 Read more{" "}
                 <span>
-                  <Image src="/arrow2.png" alt="arrow" width={15} height={8} className="mt-1.5 " />
+                  <Image
+                    src="/arrow2.png"
+                    alt="arrow"
+                    width={15}
+                    height={8}
+                    className="mt-1.5 "
+                  />
                 </span>
               </Link>
             </div>

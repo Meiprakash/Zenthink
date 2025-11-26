@@ -82,7 +82,7 @@ const BlogSection: React.FC = () => {
         </div> */}
 
         {/* Blog Cards Section */}
-        <div className="grid md:grid-cols-2 sm:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 gap-10 p-3">
           {blogs.map((blog, index) => (
             <motion.div
               key={index}
