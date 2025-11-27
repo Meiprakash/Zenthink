@@ -15,6 +15,7 @@ const secondRow = [
   { src: "/snyk.jpg", alt: "Snyk" },
   { src: "/comply.jpg", alt: "Comply Advantage" },
   { src: "/UI_path.jpg", alt: "UiPath" },
+  // { src: "/deliver.jpg", alt: "Deliveroo" },
 ];
 
 // Animation variants
@@ -33,13 +34,13 @@ const logoVariant = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.5, ease: easeOut }, // ✅ Correct type
+    transition: { duration: 0.5, ease: easeOut }, //  Correct type
   },
 };
 
 export default function InvestorsSection() {
   return (
-    <section className="bg-white py-20 border-t border-gray-100 overflow-hidden">
+    <section className="bg-gray-50 py-10 sm:py-20 border-t border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* HEADING */}
         <motion.h2
@@ -59,7 +60,7 @@ export default function InvestorsSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center items-center gap-10 sm:gap-14 md:gap-40 mb-10"
+          className="flex flex-wrap justify-center items-center gap-3 sm:gap-14 md:gap-40 mb-10"
         >
           {firstRow.map((logo, i) => (
             <motion.div
