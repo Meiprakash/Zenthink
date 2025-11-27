@@ -10,7 +10,8 @@
         "button-name": "off",
         "link-name": "off"
       }
-    ]
+    ],
+    "typescript-config/consistent-casing": "off"
   },
   "browserslist": [
     "defaults",
