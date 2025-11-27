@@ -13,7 +13,7 @@ const servicecard = [
     name: "Consulting & Strategy",
     desc: "We provide expert technology guidance that aligns IT investments with business objectives. ",
     icon: "/service-card-02.jpg",
-    link: "/Service/it-consulting",
+    link: "/Service/app-dev",
   },
   {
     name: "Maintenance",
