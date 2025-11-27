@@ -1,12 +1,11 @@
-import BlogSection from "@/app/Components/Blog";
 import Navbar from "@/app/Components/Navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
-import Blog from "../page";
 import ConnectSection from "@/app/Components/ConnectUs";
 import Footer from "@/app/Components/Footer";
 import { FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
+export const runtime = 'edge';
 
 const blogs = [
   {
@@ -96,7 +95,7 @@ export default async function BlogDetail({
                 rel="noopener noreferrer"
                 className="underline text-black font-semibold transition-colors"
               >
-                InnoVis
+                Zenthink
               </Link>{" "}
               has heard some terrible advice tossed around like gospel. Whether
               it’s from outdated blogs, “experts” with no UX background, or
