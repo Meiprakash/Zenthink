@@ -105,27 +105,27 @@ import Image from "next/image";
 const processes = [
   {
     id: 1,
-    title: "Discover",
-    desc: "We explore your brand, goals, and audience to uncover key insights.",
+    title: "Listen ",
+    desc: "We immerse ourselves in your business context, challenges, and vision through deep conversations",
     icon: <Share2 className="w-10 h-10 text-black" />,
     image: "/process-card-img-01.webp",
   },
   {
     id: 2,
-    title: "Design",
-    desc: "We craft tailored visual and UX strategies that align with your vision.",
+    title: "Align ",
+    desc: "We synchronize expectations, timelines, and success metrics ensuring complete stakeholder buy-in.",
     image: "/process-card-img-02.webp",
   },
   {
     id: 3,
-    title: "Develop",
-    desc: "We create scalable solutions via strategy calls and planning.",
+    title: "Collaborate ",
+    desc: "We maintain open communication with regular updates, feedback sessions, and agile adaptability.",
     image: "/process-card-img-03.webp",
   },
   {
     id: 4,
-    title: "Launch",
-    desc: "We wrap up and launch—ensuring everything goes smoothly.",
+    title: "Empower ",
+    desc: "We transfer knowledge and provide training—ensuring your team owns and sustains the solution.",
     image: "/process-card-img-04.webp",
   },
 ];
@@ -167,17 +167,17 @@ const ProcessSection = () => {
         {/* Left: Heading */}
         <div>
           <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
-            Creative Steps That Deliver Real Results
+            Partnership Principles That Build Lasting Success
           </h2>
         </div>
 
         {/* Right: Description */}
         <div>
           <p className="text-gray-600 text-[11px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
-            We believe great work comes from clear collaboration. Our process is
-            designed to guide you from the first idea to final launch—smoothly,
-            strategically, and creatively. Here’s how we bring your vision to
-            life.
+            We believe meaningful relationships create extraordinary results.
+            Our culture is designed to support you from day one to long-term
+            partnership—honestly, proactively, and respectfully. Here's the
+            Zenthink difference in action.
           </p>
         </div>
       </div>

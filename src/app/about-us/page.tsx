@@ -59,9 +59,9 @@ export default function Hero() {
             leading-tight
           "
         >
-          We’re a Creative Agency with{" "}
-          <span className="text-gray-700">Heart</span> and{" "}
-          <span className="text-gray-700">Vision</span>
+          We're a Technology Partner with{" "}
+          <span className="text-gray-700">Vision </span> and{" "}
+          <span className="text-gray-700">Precision</span>
         </motion.h1>
 
         {/* 2) AWARD */}
@@ -127,8 +127,9 @@ export default function Hero() {
             mt-2 sm:mt-6 mr-4 
           "
         >
-          We combine bold ideas with smart strategy to design brand experiences
-          that connect, convert, and inspire. From startups to industry leaders.
+          We combine technical excellence with business strategy to engineer
+          software solutions that scale, perform, and transform. From startups
+          to enterprise leaders
         </motion.p>
       </motion.div>
 

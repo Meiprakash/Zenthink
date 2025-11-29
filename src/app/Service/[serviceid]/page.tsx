@@ -8,9 +8,9 @@ import TestimonialsSection from "@/app/Components/Testimonials";
 import FAQ from "@/app/Components/FaqSection";
 import Footer from "@/app/Components/Footer";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
-// ✅ Define proper types
+// TYPES
 interface Stat {
   value: string;
   label: string;
@@ -30,178 +30,199 @@ interface TopProduct {
   features: string[];
 }
 
-interface Service {
+interface WhyItem {
   name: string;
+  desc: string;
+}
+
+interface Industry {
+  title: string;
   slug: string;
-  subtitle: string;
+  desc: string;
   banner: string;
   stats: Stat[];
-  whyChoose: string[];
+  whyChoose: WhyItem[];
   topProducts: TopProduct[];
   products: Product[];
 }
 
-const industriesData = [
+const industriesData: Industry[] = [
   {
-    title: "IT-Consulting",
-    slug: "it-consulting",
-    desc: "We deliver advanced digital healthcare solutions...",
+    title: "Web Application Development That Powers Modern Business",
+    slug: "web-application",
+    desc: "Transforming Operations with Scalable, Secure Web Platforms",
+    banner: "/placeholder-product.png",
 
-    services: [
+    stats: [
+      { value: "500M+", label: "Transactions Processed" },
+      { value: "100K+", label: "Active Users Daily" },
+      { value: "50+", label: "Enterprises Powered" },
+    ],
+
+    whyChoose: [
       {
-        name: "AI Healthcare Software Development & Consulting",
-        slug: "it-consulting",
-        subtitle: "Transforming Healthcare With AI Intelligence",
-        banner: "/placeholder-product.png",
+        name: "Responsive & Scalable",
+        desc: "Built with modern frameworks and cloud infrastructure for seamless performance across all devices and growing traffic volumes.",
+      },
+      {
+        name: "User-Centric Design",
+        desc: "Intuitive interfaces that enhance user experience and boost productivity through thoughtful UX/UI design and accessibility standards.",
+      },
+      {
+        name: "Secure & Compliant",
+        desc: "Enterprise-grade security with data encryption, regular audits, and industry compliance protecting your sensitive business information.",
+      },
+      {
+        name: "Fast Integration",
+        desc: "Seamless connectivity with existing CRMs, ERPs, payment gateways, and third-party tools through robust API architecture.",
+      },
+    ],
 
-        stats: [
-          { value: "10M+", label: "Patients Served" },
-          { value: "50K+", label: "Doctors Connected" },
-          { value: "300+", label: "Hospitals Scaled" },
-        ],
-
-        whyChoose: [
-          "HIPAA-Compliant Architecture",
-          "Smart Diagnosis Assistance",
-          "Predictive Treatment Reports",
-          "Automated Workflow Systems",
-        ],
-
-        topProducts: [
-          {
-            title: "AI Diagnosis Engine",
-            desc: "AI-powered system that assists doctors...",
-            price: "$1599",
-            image: "/placeholder-product.png",
-            features: [
-              "Smart predictions",
-              "Fast diagnosis support",
-              "Accurate medical insights",
-            ],
-          },
-          {
-            title: "Medical Analytics Dashboard",
-            desc: "Centralized analytics for hospitals...",
-            price: "$1899",
-            image: "/placeholder-product.png",
-            features: [
-              "Smart predictions",
-              "Fast diagnosis support",
-              "Accurate medical insights",
-            ],
-          },
-        ],
-
-        products: [
-          {
-            name: "Patient Analytics App",
-            price: "$499",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "AI Medical Bot",
-            price: "$799",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "Hospital BI Dashboard",
-            price: "$1299",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "Hospital BI Dashboard",
-            price: "$1299",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "Hospital BI Dashboard",
-            price: "$1299",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "Hospital BI Dashboard",
-            price: "$1299",
-            image: "/placeholder-product.png",
-          },
+    topProducts: [
+      {
+        title: "AI Diagnosis Engine",
+        desc: "AI-powered system that assists doctors...",
+        price: "$1599",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
         ],
       },
-
       {
-        name: "Healthcare App Development",
-        slug: "app-dev",
-        subtitle: "Smart Patient Care at Your Fingertips",
-        banner: "/placeholder-product.png",
-
-        stats: [
-          { value: "5M+", label: "App Users" },
-          { value: "20K+", label: "Doctors Registered" },
-          { value: "4.8 ★", label: "App Rating" },
+        title: "Medical Analytics Dashboard",
+        desc: "Centralized analytics for hospitals...",
+        price: "$1899",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
         ],
+      },
+    ],
 
-        whyChoose: [
-          "Doctor & Patient Dashboards",
-          "Telemedicine Integration",
-          "Secure Medical Payments",
-          "Digital Prescription System",
-        ],
+    products: [
+      {
+        name: "Patient Analytics App",
+        price: "$499",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "AI Medical Bot",
+        price: "$799",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+    ],
+  },
 
-        topProducts: [
-          {
-            title: "Telemedicine App",
-            desc: "Online consultations, video calls...",
-            price: "$999",
-            image: "/placeholder-product.png",
-            features: [
-              "Smart predictions",
-              "Fast diagnosis support",
-              "Accurate medical insights",
-            ],
-          },
-          {
-            title: "Digital Prescription App",
-            desc: "Auto-generated prescriptions...",
-            price: "$1199",
-            image: "/placeholder-product.png",
-            features: [
-              "Smart predictions",
-              "Fast diagnosis support",
-              "Accurate medical insights",
-            ],
-          },
-        ],
+  {
+    title: "Mobile Application Development That Connects Your Business",
+    slug: "mobile-application",
+    desc: "Transforming User Experience with Native and Cross-Platform Apps",
+    banner: "/placeholder-product.png",
 
-        products: [
-          {
-            name: "Doctor App",
-            price: "$499",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "Patient App",
-            price: "$399",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "Pharmacy App",
-            price: "$899",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "Pharmacy App",
-            price: "$899",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "Pharmacy App",
-            price: "$899",
-            image: "/placeholder-product.png",
-          },
-          {
-            name: "Pharmacy App",
-            price: "$899",
-            image: "/placeholder-product.png",
-          },
+    stats: [
+      { value: "5M+", label: "App Downloads" },
+      { value: "50K+", label: "Active Users Daily" },
+      { value: "4.8★", label: "Average App Rating" },
+    ],
+
+    whyChoose: [
+      {
+        name: "Native & Cross-Platform",
+        desc: "Built with optimal technology—native iOS/Android or Flutter/React Native for faster deployment.",
+      },
+      {
+        name: "Intuitive User Experience",
+        desc: "Seamless UI with smooth animations, gesture controls, and accessibility features.",
+      },
+      {
+        name: "Offline Functionality",
+        desc: "Local data storage ensures your app works even without internet.",
+      },
+      {
+        name: "Push Notifications",
+        desc: "Real-time engagement updates that increase user retention.",
+      },
+    ],
+
+    topProducts: [
+      {
+        title: "AI Diagnosis Engine",
+        desc: "AI-powered system that assists doctors...",
+        price: "$1599",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
         ],
+      },
+      {
+        title: "Medical Analytics Dashboard",
+        desc: "Centralized analytics for hospitals...",
+        price: "$1899",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
+        ],
+      },
+    ],
+
+    products: [
+      {
+        name: "Patient Analytics App",
+        price: "$499",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "AI Medical Bot",
+        price: "$799",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
       },
     ],
   },
@@ -210,62 +231,54 @@ const industriesData = [
 export default function ServiceDetails() {
   const { serviceid } = useParams();
   const router = useRouter();
-  
-  // ✅ Move hooks BEFORE any conditional returns
+
+  const industry = industriesData.find((d) => d.slug === serviceid);
+
+  if (!industry) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <h1 className="text-3xl font-bold text-gray-600">
+          404 | Page Not Found
+        </h1>
+      </div>
+    );
+  }
+
+  // Prepare whyChoose columns
+  const whyLeft = industry.whyChoose.slice(0, 2);
+  const whyRight = industry.whyChoose.slice(2, 4);
+
+  // Scroll Ref
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scrollLeft = () => {
+  const scrollLeft = () =>
     scrollRef.current?.scrollBy({ left: -300, behavior: "smooth" });
-  };
-
-  const scrollRight = () => {
+  const scrollRight = () =>
     scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
-  };
-
-  function goto() {
-    router.push("/Contact");
-  }
-
-  //  ✅ FIND SERVICE - properly typed
-  let selectedService: Service | null = null;
-  for (const industry of industriesData) {
-    const match = industry.services.find(
-      (s) => s.slug.toLowerCase() === String(serviceid).toLowerCase()
-    );
-    if (match) selectedService = match;
-  }
-
-  //  If not found → show Not Found
-  if (!selectedService) {
-    return (
-      <h2 className="text-center py-24 text-xl text-gray-600">Not Found</h2>
-    );
-  }
 
   return (
-    <main className="font-inter ">
+    <main className="font-inter">
+      {/* HEADER SECTION */}
       <div className="bg-[#91f096]">
         <Navbar />
 
         <section className="md:ml-15 py-20 px-6 md:px-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-              {selectedService.name}
+              {industry.title}
             </h1>
 
-            <p className="text-gray-700 mt-6 text-lg">
-              {selectedService.subtitle}
-            </p>
+            <p className="text-gray-700 mt-6 text-lg">{industry.desc}</p>
 
             <button
-              onClick={goto}
+              onClick={() => router.push("/Contact")}
               className="mt-10 bg-black text-white px-7 py-3 rounded-lg hover:bg-gray-900"
             >
               Request a Quote
             </button>
 
             <div className="mt-10 flex gap-10 text-center">
-              {selectedService.stats.map((item) => (
+              {industry.stats.map((item) => (
                 <div key={item.label}>
                   <h3 className="text-black text-3xl font-semibold">
                     {item.value}
@@ -277,57 +290,47 @@ export default function ServiceDetails() {
           </div>
 
           <Image
-            src={selectedService.banner}
+            src={industry.banner}
             width={360}
             height={360}
-            alt={selectedService.name}
+            alt={industry.title}
             className="rounded-xl shadow-xl object-cover"
           />
         </section>
       </div>
-      {/*  WHY CHOOSE  */}
+
+      {/* WHY CHOOSE */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold mb-4 text-black">
-            Why Choose {selectedService.name}?
+            Why Choose {industry.title}?
           </h2>
 
           <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-            Discover quality digital solutions designed to elevate your business
-            operations.
+            Discover powerful solutions designed to elevate your business
+            operations and drive results.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-            {/* LEFT TEXT */}
+            {/* LEFT COLUMN */}
             <div className="space-y-10 text-left">
-              <div>
-                <h3 className="text-black text-lg font-semibold">
-                  Secure & Scalable
-                </h3>
-                <p className="text-gray-500 text-sm mt-2">
-                  Built with enterprise-grade security and scalable cloud
-                  architecture.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-black text-lg font-semibold">
-                  Smart Automation
-                </h3>
-                <p className="text-gray-500 text-sm mt-2">
-                  Reduce manual work with AI-driven workflow automation.
-                </p>
-              </div>
+              {whyLeft.map((item, index) => (
+                <div key={index}>
+                  <h3 className="text-black text-lg font-semibold">
+                    {item.name}
+                  </h3>
+                  <p className="text-gray-500 text-sm mt-2">{item.desc}</p>
+                </div>
+              ))}
             </div>
 
             {/* CENTER IMAGE */}
             <div className="flex justify-center">
               <div className="relative w-64 h-64 flex items-center justify-center">
-                <div className="absolute w-56 h-48 bg-[#99f39d] rounded-full bottom-0"></div>
-
+                <div className="absolute w-56 h-48 bg-[#99f39d] rounded-full bottom-0" />
                 <Image
                   src="/product.png"
-                  alt="AI Product"
+                  alt="feature"
                   width={200}
                   height={300}
                   className="relative z-10 object-contain"
@@ -335,30 +338,22 @@ export default function ServiceDetails() {
               </div>
             </div>
 
-            {/* RIGHT TEXT */}
+            {/* RIGHT COLUMN */}
             <div className="space-y-10 text-left">
-              <div>
-                <h3 className="text-black text-lg font-semibold">
-                  Trusted Worldwide
-                </h3>
-                <p className="text-gray-500 text-sm mt-2">
-                  Used by hospitals, startups, enterprises and global partners.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-black">
-                  Proven Results
-                </h3>
-                <p className="text-gray-500 text-sm mt-2">
-                  Optimized systems deliver reliable performance and insights.
-                </p>
-              </div>
+              {whyRight.map((item, index) => (
+                <div key={index}>
+                  <h3 className="text-black text-lg font-semibold">
+                    {item.name}
+                  </h3>
+                  <p className="text-gray-500 text-sm mt-2">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
-      {/* FEATURED */}
+
+      {/* FEATURED PRODUCTS */}
       <section className="py-26 px-6 md:px-24 bg-white">
         <h2 className="text-3xl font-bold text-center mb-4 text-black">
           Discover the Best Solutions
@@ -370,22 +365,18 @@ export default function ServiceDetails() {
         </p>
 
         <div className="max-w-5xl mx-auto flex flex-col gap-16">
-          {selectedService.topProducts.map((p: TopProduct, i: number) => (
+          {industry.topProducts.map((p, i) => (
             <div
               key={i}
               className="grid md:grid-cols-[1fr_1fr] gap-4 items-center"
             >
-              {/* IMAGE SIDE */}
               <div
                 className={`flex ${
-                  i % 2 === 0
-                    ? "order-1 justify-start ml-14"
-                    : "order-2 justify-start ml-14"
-                }`}
+                  i % 2 === 0 ? "order-1" : "order-2"
+                } justify-start ml-14`}
               >
                 <div className="relative w-64 h-56 flex items-center justify-center">
                   <div className="absolute w-94 h-62 bg-[#91f096] rounded-2xl" />
-
                   <Image
                     src={p.image}
                     alt={p.title}
@@ -396,17 +387,15 @@ export default function ServiceDetails() {
                 </div>
               </div>
 
-              {/* TEXT SIDE */}
               <div
                 className={`${i % 2 === 0 ? "order-2" : "order-1"} text-left`}
               >
                 <h3 className="text-2xl font-semibold text-black">{p.title}</h3>
                 <p className="text-gray-600 mt-2 text-sm">{p.desc}</p>
 
-                {/* FEATURES */}
                 <ul className="text-gray-700 text-sm mt-3 space-y-1">
-                  {p.features.map((f: string, index: number) => (
-                    <li key={index} className="flex items-start gap-2">
+                  {p.features.map((f, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-black rounded-full mt-1"></span>
                       {f}
                     </li>
@@ -424,7 +413,8 @@ export default function ServiceDetails() {
           ))}
         </div>
       </section>
-      
+
+      {/* PRODUCTS */}
       <section className="py-16 px-6 md:px-24 bg-white">
         <h2 className="text-3xl font-bold text-center text-black">
           Our Products
@@ -437,7 +427,7 @@ export default function ServiceDetails() {
         <div className="relative">
           <button
             onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full z-10 text-black hover:bg-[#91f096]"
           >
             ◀
           </button>
@@ -446,7 +436,7 @@ export default function ServiceDetails() {
             ref={scrollRef}
             className="flex gap-10 overflow-x-auto px-6 scrollbar-hide scroll-smooth"
           >
-            {selectedService.products.map((prod, i) => (
+            {industry.products.map((prod, i) => (
               <div
                 key={i}
                 className="min-w-[260px] max-w-[260px] mx-auto flex-shrink-0"
@@ -469,7 +459,6 @@ export default function ServiceDetails() {
                   <button className="bg-black text-white px-4 py-1 rounded-full text-sm">
                     Buy Now
                   </button>
-
                   <p className="font-semibold text-black">{prod.price}</p>
                 </div>
               </div>
@@ -478,13 +467,13 @@ export default function ServiceDetails() {
 
           <button
             onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full z-10 text-black hover:bg-[#91f096]"
           >
             ▶
           </button>
         </div>
       </section>
-      
+
       <TestimonialsSection />
       <FAQ />
       <Footer />
