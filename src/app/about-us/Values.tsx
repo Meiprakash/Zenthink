@@ -40,16 +40,16 @@ const Values = () => {
           {/* Left: Heading */}
           <div>
             <h2 className="text-[20px] sm:text-3xl   md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
-              Guiding Lights of Our Works
+              Driving Principles of Our Solutions
             </h2>
           </div>
 
           {/* Right: Description */}
           <div>
             <p className="text-gray-600 text-[11px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed  md:mt-3 md:mr-14">
-              We believe great work comes from clear collaboration. Our process
-              is designed to guide you from the first idea to final
-              launch—smoothly, strategically, and creatively.
+              We believe great software comes from close collaboration. Our
+              process is designed to guide you from initial discovery to final
+              deployment—efficiently, strategically, and systematically.
             </p>
           </div>
         </div>
@@ -74,10 +74,10 @@ const Values = () => {
           className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all lg:row-span-2"
         >
           <div>
-            <h2 className="text-black text-2xl font-bold mb-3">CREATIVITY</h2>
+            <h2 className="text-black text-2xl font-bold mb-3">INNOVATION </h2>
             <p className="text-gray-700 text-base leading-relaxed">
-              We get to know your brand, goals, and audience. Through strategy
-              calls.
+              We explore your business challenges, objectives, and user needs.
+              Through discovery workshops and technical assessments
             </p>
           </div>
           <div className="mt-8">
@@ -104,8 +104,8 @@ const Values = () => {
               COLLABORATION
             </h2>
             <p className="text-gray-700 text-base leading-relaxed">
-              We get to know your brand, goals, and audience. Through strategy
-              calls.
+              We partner with your team, aligning stakeholders and gathering
+              requirements. Through agile sprints and transparent communication
             </p>
           </div>
           <div className="mt-8">
@@ -128,10 +128,10 @@ const Values = () => {
           className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all lg:row-span-2"
         >
           <div>
-            <h2 className="text-black text-2xl font-bold mb-3">EXCELLENCE</h2>
+            <h2 className="text-black text-2xl font-bold mb-3">QUALITY </h2>
             <p className="text-gray-700 text-base leading-relaxed">
-              We get to know your brand, goals, and audience. Through strategy
-              calls.
+              We ensure code excellence, security standards, and performance
+              optimization. Through rigorous testing and peer reviews
             </p>
           </div>
           <div className="mt-8">
@@ -154,10 +154,10 @@ const Values = () => {
           className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all"
         >
           <div>
-            <h2 className="text-black text-2xl font-bold mb-3">INNOVATION</h2>
+            <h2 className="text-black text-2xl font-bold mb-3">DELIVERY </h2>
             <p className="text-gray-700 text-base leading-relaxed">
-              We get to know your brand, goals, and audience. Through strategy
-              calls.
+              We deploy reliable solutions, provide comprehensive training, and
+              ongoing support. Through structured implementation and maintenance.
             </p>
           </div>
           <div className="mt-8">

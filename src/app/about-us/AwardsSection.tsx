@@ -7,29 +7,29 @@ const awards = [
   {
     id: 1,
     year: "2025",
-    title: "Digital Innovation Summit",
-    desc: "Awarded for groundbreaking contributions in product strategy and technology.",
+    title: "Enterprise Solutions Scalable Systems for Complex Operations ",
+    desc: "Delivered mission-critical applications handling millions of transactions daily—from supply chain management to financial processing with 99.9% uptime.",
     image: "/award-01.jpg",
   },
   {
     id: 2,
     year: "2024",
-    title: "Best UI Design Award",
-    desc: "Celebrated for achievements in user interface design, our team pushes the boundaries of what's possible.",
+    title: "Digital Transformation Modernizing Legacy into Cloud-Native",
+    desc: "Transformed outdated infrastructure for 200+ clients—migrating on-premise systems to cloud platforms while reducing costs by 40% and improving performance.",
     image: "/award-02.jpg",
   },
   {
     id: 3,
     year: "2023",
-    title: "Global IT Agency Award",
-    desc: "Recognized for exceptional IT solutions that drive impact and foster innovation.",
+    title: "Industry Platforms Vertical-Specific Software Solutions",
+    desc: "Built specialized platforms for healthcare (HIPAA-compliant), fintech (PCI-DSS certified), education (LMS), and logistics (real-time tracking) with domain expertise.",
     image: "/award-03.jpg",
   },
   {
     id: 4,
     year: "2022",
-    title: "Visual Web Artisan",
-    desc: "Renowned for exceptional artistry in creating immersive visual web experiences that captivate users.",
+    title: "Integration Services Connecting Disparate Systems Seamlessly",
+    desc: "Architected 500+ API integrations linking CRMs, ERPs, payment gateways, and third-party services—creating unified ecosystems that eliminate data silos.",
     image: "/award-04.jpg",
   },
 ];
@@ -71,16 +71,17 @@ const AwardsSection = () => {
           {/* Left: Heading */}
           <div>
             <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
-              Achieved awards for excellence recognizing success.
+              Expertise That Transforms Challenges Into Competitive Advantages
             </h2>
           </div>
 
           {/* Right: Description */}
           <div>
             <p className="text-gray-600 text-[11px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
-              We believe great work comes from clear collaboration. Our process
-              is designed to guide you from the first idea to final
-              launch—smoothly, strategically, and creatively.
+              We help organizations scale through intelligent software and
+              proven methodologies. From system modernization to new product
+              development, our capabilities drive innovation and sustainable
+              growth
             </p>
           </div>
         </div>
@@ -119,7 +120,7 @@ const AwardsSection = () => {
               {/* Title + Description */}
               <div className="md:flex ml-7 md:flex-row-2 sm:gap-4">
                 <div className="">
-                  <h4 className="text-lg sm:text-lg md:text-2xl  text-gray-900">
+                  <h4 className="text-lg sm:text-lg md:text-xl  text-gray-900">
                     {award.title}
                   </h4>
                 </div>

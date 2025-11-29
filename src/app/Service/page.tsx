@@ -28,14 +28,13 @@ const Service: React.FC = () => {
         >
           {/* Left side title */}
           <div className="text-start md:text-left flex-1">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight">
-              We Create <br className="hidden sm:block" />
-              Amazing Projects
+            <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight">
+              We Engineer Transformative Software Solutions
             </h2>
           </div>
 
           {/* Right side text */}
-          <div className="flex-1 text-start md:text-start">
+          <div className="flex-1 text-start md:text-start md:mb-11">
             <p className="text-gray-600 sm:text-base text-sm md:text-lg leading-relaxed md:max-w-md md:ml-37 mx-auto md:mx-0">
               We combine bold ideas with smart strategy to design brand
               experiences that connect, convert, and inspire. From startups to
@@ -81,50 +80,50 @@ const Service: React.FC = () => {
         </div>
       </div>
       {/* Servicecard section*/}
-<div className="mt-18">
-      {" "}
-      <p className="text-md text-gray-900  md:ml-39 sm:ml-7 ml-7 flex items-center gap-2">
-        Our Services{" "}
-        <span className="">
-          <Image
-            src="/badge-icon.webp"
-            alt="badge"
-            width={16}
-            height={16}
-            className="w-4 "
-          />
-        </span>
-      </p>
-      <section className="w-full  bg-white py-5 px-6 md:px-12 lg:px-20 overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="flex flex-col  sm:flex-row items-start md:items-end md:ml-17 justify-between gap-4 sm:gap-8 md:gap-12"
-        >
-          {/* Left side title */}
-          <div className="text-start md:text-left flex-1">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-4xl font-semibold text-gray-900 leading-tight">
-              {/* We Create <br className="hidden sm:block" />
+      <div className="mt-18">
+        {" "}
+        <p className="text-md text-gray-900  md:ml-39 sm:ml-7 ml-7 flex items-center gap-2">
+          Our Services{" "}
+          <span className="">
+            <Image
+              src="/badge-icon.webp"
+              alt="badge"
+              width={16}
+              height={16}
+              className="w-4 "
+            />
+          </span>
+        </p>
+        <section className="w-full  bg-white py-5 px-6 md:px-12 lg:px-20 overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="flex flex-col  sm:flex-row items-start md:items-end md:ml-17 justify-between gap-4 sm:gap-8 md:gap-12"
+          >
+            {/* Left side title */}
+            <div className="text-start md:text-left flex-1">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold text-gray-900 leading-tight">
+                {/* We Create <br className="hidden sm:block" />
               Amazing Projects */}
-              We Engineer Solutions That Transform Businesses Into Leaders.
-            </h2>
-          </div>
+                Software Excellence Across Every Business Function
+              </h2>
+            </div>
 
-          {/* Right side text */}
-          <div className="flex-1 text-start md:text-start">
-            <p className="text-gray-600 sm:text-base text-sm md:text-[15px] leading-relaxed md:max-w-md md:ml-37 mx-auto md:mx-0 mb-9">
-              We help businesses scale through strategic software and digital
-              innovation. From custom applications to enterprise platforms, our
-              services are engineered to optimize your operations and drive
-              competitive advantage.
-            </p>
-          </div>
-        </motion.div>
-      </section>
+            {/* Right side text */}
+            <div className="flex-1 text-start md:text-start">
+              <p className="text-gray-600 sm:text-base text-sm md:text-[15px] leading-relaxed md:max-w-md md:ml-37 mx-auto md:mx-0 mb-9">
+                We create technology that directly impacts your bottom line.
+                From customer-facing applications to backend infrastructure, our
+                solutions are engineered to improve performance, increase
+                agility, and deliver measurable ROI
+              </p>
+            </div>
+          </motion.div>
+        </section>
       </div>
-      <Servicecard/>
+      <Servicecard />
       <TestimonialsSection />
       <FAQ />
       <BlogSection />
