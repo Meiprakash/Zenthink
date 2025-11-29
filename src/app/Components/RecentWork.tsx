@@ -5,7 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const works = [
+interface WorkItem {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+const works: WorkItem[] = [
   {
     title: "UIUX",
     description:
@@ -101,16 +108,13 @@ const RecentWork: React.FC = () => {
 
 export default RecentWork;
 
-// 🔹 Define a type for work items
-interface WorkItem {
-  title: string;
-  description: string;
-  image: string;
-  link: string;
+// 🔹 Reusable WorkCard Component with proper types
+interface WorkCardProps {
+  work: WorkItem;
+  height: string;
 }
 
-// 🔹 Reusable WorkCard Component
-const WorkCard = ({ work, height }: { work: WorkItem; height: string }) => (
+const WorkCard: React.FC<WorkCardProps> = ({ work, height }) => (
   <Link
     href={work.link}
     className="block overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-500"
