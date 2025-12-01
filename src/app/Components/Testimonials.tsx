@@ -96,7 +96,7 @@ export default function TestimonialsSection() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="relative bg-[#f9fafb] font-[Inter,sans-serif] py-[10vh]"
+      className="relative  font-[Inter,sans-serif] py-[10vh] "
     >
       {/* Desktop Parallax Version */}
       <div className="hidden lg:block relative h-[200vh]">

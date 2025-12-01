@@ -42,7 +42,7 @@ export default function AboutUs() {
   };
 
   return (
-    <section className="w-full px-6 md:px-16 py-1 bg-gray-50 font-[Inter,sans-serif]">
+    <section className="w-full px-6 md:px-16 py-1  font-[Inter,sans-serif]">
       <motion.div
         className="max-w-7xl mx-auto"
         initial="hidden"
@@ -89,7 +89,7 @@ export default function AboutUs() {
         <div className="grid md:grid-cols-2   gap-5 items-start">
           {/* Left: Video thumbnail / image */}
           <motion.div variants={fadeUp} className="flex justify-start ">
-            <div  className="relative w-full max-w-[560px] h-[260px] sm:h-[320px] md:h-[380px] rounded-[28px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30 md:ml-8 mx-auto">
+            <div className="relative w-full max-w-[560px] h-[260px] sm:h-[320px] md:h-[380px] rounded-[28px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30 md:ml-8 mx-auto">
               {/* subtle overlay for frosted look */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-white/0 z-10 pointer-events-none" />
               <Image
@@ -130,8 +130,8 @@ export default function AboutUs() {
                 key={i}
                 className={`rounded-2xl bg-blue-10 box-border border border-gray-200  overflow-hidden transition-all duration-300 p-3 ${
                   activeIndex === i
-                    ? "bg-[#f7f7f7] shadow-sm"
-                    : "bg-white hover:shadow-sm"
+                    ? "bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))] shadow-sm"
+                    : "bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))] hover:shadow-sm"
                 }`}
               >
                 <button

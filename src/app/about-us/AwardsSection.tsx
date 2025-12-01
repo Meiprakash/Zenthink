@@ -36,7 +36,7 @@ const awards = [
 
 const AwardsSection = () => {
   return (
-    <section className="px-6 md:px-16 lg:px-24 py-16 bg-white md:ml-5">
+    <section className="px-6 md:px-16 lg:px-24 py-16  md:ml-5">
       {/* Header */}
       <div className="flex items-center gap-2 mb-6">
         <motion.h2

@@ -39,9 +39,9 @@ const ServiceSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }} // animate only once, when 30% visible
-        className="md:py-10 py-3 bg-white"
+        className="md:py-10 py-3 "
       >
-        <section className="w-full bg-white py-10  mb-16 px-6 md:px-16  ">
+        <section className="w-full  py-10  mb-16 px-6 md:px-16  ">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <p className="text-md text-gray-900 mb-3 flex items-center gap-2">
@@ -76,7 +76,7 @@ const ServiceSection: React.FC = () => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className={`bg-white border border-gray-200 hover:shadow-xl rounded-3xl p-5 sm:p-8 flex flex-col justify-between h-[206px]    duration-500 sm:h-[390px]
+                  className={`bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))]  border border-gray-200 hover:shadow-xl rounded-3xl p-5 sm:p-8 flex flex-col justify-between h-[206px]    duration-500 sm:h-[390px]
               ${
                 index % 2 === 1
                   ? "md:translate-y-18" // lower 2nd and 4th

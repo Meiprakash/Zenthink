@@ -27,7 +27,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]">
       <Navbar />
 
       {/* HERO GRID */}

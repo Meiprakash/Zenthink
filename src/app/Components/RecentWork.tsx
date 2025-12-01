@@ -44,7 +44,7 @@ const works: WorkItem[] = [
 
 const RecentWork: React.FC = () => {
   return (
-    <section className="w-full bg-white  px-6 md:px-16 overflow-hidden">
+    <section className="w-full  px-6 md:px-16 overflow-hidden ">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <motion.div
@@ -117,7 +117,7 @@ interface WorkCardProps {
 const WorkCard: React.FC<WorkCardProps> = ({ work, height }) => (
   <Link
     href={work.link}
-    className="block overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-500"
+    className="block overflow-hidden rounded-3xl border border-gray-200 bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))] shadow-sm hover:shadow-md transition-all duration-500"
   >
     {/* 🔸 Image hover only */}
     <div className={`overflow-hidden rounded-3xl group ${height}`}>
@@ -138,9 +138,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work, height }) => (
     </div>
     {/* Text area */}
     <div className="sm:pl-6 pl-4 pr-6 pb-6">
-      <h3 className="md:text-3xl  text-gray-900 mb-1">
-        {work.title}
-      </h3>
+      <h3 className="md:text-3xl  text-gray-900 mb-1">{work.title}</h3>
       <p className="text-gray-600  text-start text-lg">{work.description}</p>
     </div>
   </Link>

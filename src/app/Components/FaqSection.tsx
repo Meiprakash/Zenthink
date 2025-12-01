@@ -53,7 +53,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="w-full bg-white py-5 sm:py-1 px-4 sm:px-6 lg:px-10 overflow-hidden">
+    <section className="w-full  py-5 sm:py-1 px-4 sm:px-6 lg:px-10 overflow-hidden">
       {/* Header Section */}
       <motion.div className="sm:mb-8 ml-10" variants={fadeUp}>
         <p className="text-md text-gray-900 mb-3 md:ml-26 flex items-center gap-2">
