@@ -12,18 +12,18 @@ import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]">
       <Navbar />
       <Hero />
-      <InvestorsSection/>
-      <AboutUs/>
-      <ServiceSection/>
-      <RecentWork/>
+      <InvestorsSection />
+      <AboutUs />
+      <ServiceSection />
+      <RecentWork />
       <TestimonialsSection />
       <FAQ />
       <BlogSection />
-      <ConnectSection/>
-      <Footer/>
+      <ConnectSection />
+      <Footer />
     </div>
   );
 }

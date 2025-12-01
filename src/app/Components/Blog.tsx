@@ -37,7 +37,7 @@ const blogs = [
 
 const BlogSection: React.FC = () => {
   return (
-    <section className="w-full bg-[#fafafa] py-2 px-6 md:px-16 overflow-hidden">
+    <section className="w-full  py-2 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <motion.div className="mb-8 " variants={fadeUp}>

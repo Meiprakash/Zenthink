@@ -15,10 +15,10 @@ import Servicecard from "./Servicecard";
 
 const Service: React.FC = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)]">
       <Navbar />
 
-      <section className="w-full  bg-white py-9 px-6 md:px-12 lg:px-20 overflow-hidden">
+      <section className="w-full   py-9 px-6 md:px-12 lg:px-20 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -72,10 +72,10 @@ const Service: React.FC = () => {
         <div className="sm:col-span-2  md:mr-30   sm:ml-18 md:ml-10">
           <Image
             src="/service3.jpg"
-            alt="servie"
+            alt="service"
             width={800}
-            height={20}
-            className="sm:h-60  md:h-98 rounded-2xl"
+            height={600}
+            className="h-60 md:h-98 w-full object-cover rounded-2xl"
           />
         </div>
       </div>
@@ -94,7 +94,7 @@ const Service: React.FC = () => {
             />
           </span>
         </p>
-        <section className="w-full  bg-white py-5 px-6 md:px-12 lg:px-20 overflow-hidden">
+        <section className="w-full   py-5 px-6 md:px-12 lg:px-20 overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

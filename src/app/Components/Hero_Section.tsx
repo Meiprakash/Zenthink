@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <section
       className="relative overflow-hidden "
-      style={{ backgroundImage: "url('/hero-bg.webp')" }}
+      // style={{ backgroundImage: "url('/hero-bg.webp')" }}
     >
       <div className="max-w-7xl mx-auto  px-6 py-10 sm:py-24 flex flex-col md:flex-row items-center justify-between gap-10 ">
         {/* LEFT SIDE */}

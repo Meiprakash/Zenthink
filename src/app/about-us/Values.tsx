@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Values = () => {
   return (
-    <section className="px-6 sm:px-10 md:px-16 lg:px-24 py-16 bg-white">
+    <section className="px-6 sm:px-10 md:px-16 lg:px-24 py-16 ">
       {/* ===== Section Header ===== */}
       <div className="flex items-center gap-2 mb-8">
         <motion.h2
@@ -157,7 +157,8 @@ const Values = () => {
             <h2 className="text-black text-2xl font-bold mb-3">DELIVERY </h2>
             <p className="text-gray-700 text-base leading-relaxed">
               We deploy reliable solutions, provide comprehensive training, and
-              ongoing support. Through structured implementation and maintenance.
+              ongoing support. Through structured implementation and
+              maintenance.
             </p>
           </div>
           <div className="mt-8">

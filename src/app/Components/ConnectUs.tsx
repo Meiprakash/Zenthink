@@ -85,7 +85,7 @@ import Link from "next/link";
 
 const ConnectSection = () => {
   return (
-    <section className="relative w-full bg-white py-28 flex flex-col items-center justify-center text-center overflow-hidden">
+    <section className="relative w-full  py-28 flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Left Sphere */}
       <motion.div
         initial={{ x: -250, opacity: 0 }}
