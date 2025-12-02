@@ -411,7 +411,8 @@ export default function ServiceDetails() {
       </section>
       <TestimonialsSection />
       <FAQ />
-      <Footer/>
+        <Footer />
+        </div>
     </main>
   );
 }
