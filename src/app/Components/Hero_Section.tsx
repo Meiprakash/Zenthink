@@ -123,7 +123,7 @@ export default function Hero() {
               animate={{
                 scale: [1],
               }}
-              className="absolute top-1/2 left-1 -translate-y-1/3 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] rounded-full bg-gradient-to-r from-lime-500/25 to-transparent blur-3xl"
+              className="absolute top-1/3 left-10 -translate-y-1/3 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] rounded-full bg-gradient-to-r from-lime-500/25 to-transparent blur-3xl"
             /><motion.div
               animate={{ y: ["0%", "-50%"] }}
               transition={{
