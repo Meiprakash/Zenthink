@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import Navbar from "../Components/Navbar/Navbar";
-import FAQ from "../Components/FaqSection";
-import ConnectSection from "../Components/ConnectUs";
-import Footer from "../Components/Footer";
-import BlogSection from "../Components/Blog";
-import TestimonialsSection from "../Components/Testimonials";
-import HeroSection from "./HeroSection";
-import ServiceCard from "./ServiceCard";
+import Navbar from "@/app/Components/Navbar/Navbar";
+import FAQ from "@/app/Components/FaqSection";
+import ConnectSection from "@/app/Components/ConnectUs";
+import Footer from "@/app/Components/Footer";
+import BlogSection from "@/app/Components/Blog";
+import TestimonialsSection from "@/app/Components/Testimonials";
+import ServiceCard from "@/app/Service/ServiceCard";
+import HeroSection from "@/app/Service/HeroSection";
 
 const Service: React.FC = () => {
   return (
