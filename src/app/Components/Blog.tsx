@@ -41,7 +41,7 @@ const BlogSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <motion.div className="mb-8 " variants={fadeUp}>
-          <p className="text-md sm:text-lg text-neutral-900 mb-3  flex items-center gap-2">
+          <p className="text-md sm:text-lg text-neutral-900 mb-3 flex items-center gap-2">
             Blog{" "}
             <span>
               <Image
@@ -54,17 +54,17 @@ const BlogSection: React.FC = () => {
             </span>
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-8 items-start ">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-8 items-start">
             {/* Left: Heading */}
             <div>
-              <h2 className="text-[20px] sm:text-2xl md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-tight tracking-tight">
+              <h2 className="text-[30px] sm:text-2xl md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-tight tracking-tight">
                 Company insights
               </h2>
             </div>
 
             {/* Right: Description */}
             <div>
-              <p className="text-neutral-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+              <p className="text-neutral-600 text-[14px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3">
                 Our services help you create digital products. Stay ahead of the
                 curve with our latest insights, tips, and industry trends.
               </p>
@@ -114,11 +114,11 @@ const BlogSection: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center gap-6 mt-6 ">
+      <div className="flex justify-center gap-6 mt-6">
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-10 inline-block"
+          className="inline-block"
         >
           <Link href="/Blog">
             <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group">

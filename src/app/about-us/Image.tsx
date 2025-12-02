@@ -101,7 +101,7 @@ export default function SecondComp() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="relative w-full mx-auto mt-10 mb-16 px-4 sm:px-6 lg:px-10">
+    <div className="relative w-full mx-auto md:mt-10 md:mb-16 px-4 sm:px-6 lg:px-10">
       {/* ===== Hero Image Section ===== */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}

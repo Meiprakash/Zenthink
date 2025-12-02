@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen">
       {/* Fixed background gradient */}
-      <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#fdfffa] to-[#f2fde4] -z-10" />
+      <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#ffffff] to-[#f2fde4] -z-10" />
       
       {/* Content */}
       <div className="relative z-0">

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const servicecard = [
+const serviceCard = [
   {
     name: "Web Applications & Websites ",
     desc: "We build responsive, high-performance web platforms that deliver seamless user experiences and drive business results across all devices.",
@@ -22,84 +22,70 @@ const servicecard = [
     link: "/Service/legacy-modernization",
   },
   {
-    name: "AI-Enhanced Solutions ",
-    desc: "We integrate intelligent automation and machine learning capabilities that optimize decision-making, predict trends, and unlock hidden insights from your data.",
-    icon: "/service-card-04.jpg",
-    link: "/Service/ai-enhanced-solutions",
-  },
-  {
-    name: "API Development & Integration ",
+    name: "API Development & Integration",
     desc: "We design robust APIs and seamless integrations that connect your systems, enable data flow, and create unified digital ecosystems.",
-    icon: "/service-card-01.jpg",
+    icon: "/service-card-04.jpg",
     link: "/Service/api-development-integration",
   },
   {
-    name: "Custom Software Development ",
-    desc: "We engineer tailored enterprise solutions from the ground up—addressing your unique workflows, compliance requirements, and industry-specific challenge.",
-    icon: "/service-card-02.jpg",
-    link: "/Service/custom-software-development",
+    name: "AI-Enhanced Solutions",
+    desc: "We integrate intelligent automation and machine learning capabilities that optimize decision-making, predict trends, and unlock hidden insights from your data.",
+    icon: "/service-card-01.jpg",
+    link: "/Service/ai-enhanced-solutions",
   },
-  // {
-  //   name: "IT consulting service",
-  //   desc: "Explore how thoughtful layout and digital storytelling can transform online spaces.",
-  //   icon: "/service-card-03.jpg",
-  //   link: "/Service/it-consulting",
-  // },
-  // {
-  //   name: "IT consulting service",
-  //   desc: "Explore how thoughtful layout and digital storytelling can transform online spaces.",
-  //   icon: "/service-card-04.jpg",
-  //   link: "/Service/it-consulting",
-  // },
-  // {
-  //   name: "IT consulting service",
-  //   desc: "Explore how thoughtful layout and digital storytelling can transform online spaces.",
-  //   icon: "/service-card-01.jpg",
-  //   link: "/Service/it-consulting",
-  // },
 ];
 
-function Servicecard() {
+function ServiceCard() {
   return (
-    <div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:mx-39 sm:mx-7 mx-5 h-full  ">
-        {servicecard.map((i, index) => (
-          <div
-            key={index}
-            className="col-span-1 p-5 rounded-xl shadow-xs hover:shadow-xl transition delay-100 duration-150"
-          >
-            <div className="mb-18">
-              <Image
-                src={i.icon}
-                alt="service icon"
-                width={40}
-                height={20}
-                className="mt-2    rounded-2xl"
-              />
-            </div>
-            <div className="text-xl sm:text-3xl mb-2 text-black font-semibold">
-              {i.name}
-            </div>
-            <div className="text-[14px] text-neutral-500">{i.desc}</div>
-            <div className="mt-6">
-              <Link href={i.link} className="text-black flex gap-1 ">
-                Read more{" "}
-                <span>
+    <div className="px-4 sm:px-6 md:px-8 max-w-7xl mx-auto mb-8 md:mb-12 -mt-5 md:mt-0">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 h-full">
+        {serviceCard.map((i, index) => {
+          const colSpanClass = index < 3 ? "md:col-span-4" : "md:col-span-6";
+
+          return (
+            <Link
+              key={index}
+              href={i.link}
+              className={`${colSpanClass} group bg-white p-5 flex flex-col justify-between items-start rounded-xl border border-black/10 transition-all duration-300 ease-in-out hover:-translate-y-1`}
+            >
+              <div>
+                <div className="mb-12">
+                  <Image
+                    src={i.icon}
+                    alt="service icon"
+                    width={40}
+                    height={20}
+                    className="mt-2 rounded-2xl"
+                  />
+                </div>
+
+                <div>
+                  <div className="text-xl sm:text-3xl mb-2 text-black font-semibold group-hover:text-lime-600 transition-colors duration-300">
+                    {i.name}
+                  </div>
+
+                  <div className="text-[14px] text-gray-500">{i.desc}</div>
+                </div>
+              </div>
+
+              <div className="mt-6 flex justify-start">
+                <span className="text-black py-1 p-2 rounded-2xl w-fit flex gap-1 transform transition-all duration-500 ease-in-out group-hover:gap-3 group-hover:text-lime-500">
+                  Read more{" "}
                   <Image
                     src="/arrow2.png"
                     alt="arrow"
                     width={15}
-                    height={8}
-                    className="mt-1.5 "
+                    height={4}
+                    className="mt-1.5 w-4 h-3.5"
                   />
                 </span>
-              </Link>
-            </div>
-          </div>
-        ))}
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
 }
 
-export default Servicecard;
+export default ServiceCard;

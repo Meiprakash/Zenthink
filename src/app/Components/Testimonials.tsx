@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
             {/* Header */}
             <motion.div
               variants={headerVariants}
-              className="flex  flex-row md:items-end md:justify-between mb-16 "
+              className="flex flex-col sm:flex-row max-w-7xl mx-auto items-end justify-between gap-4 sm:gap-8 md:gap-12 mb-16"
             >
               <div className="">
                 <p className="text-neutral-800 text-sm sm:text-lg font-medium mb-2 flex items-center gap-2">
@@ -127,7 +127,7 @@ export default function TestimonialsSection() {
                   customers
                 </h2>
               </div>
-              <p className="text-neutral-500 max-w-md mt-6 md:mt-0 text-start leading-relaxed">
+              <p className="w-1/2 text-neutral-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 ">
                 Our services help you create digital products. Stay ahead of the
                 curve with our latest insights, tips, and industry trends.
               </p>
@@ -186,7 +186,7 @@ export default function TestimonialsSection() {
       {/* Mobile / Tablet Version (Vertical Scroll) */}
       <motion.div
         variants={containerVariants}
-        className="block lg:hidden w-full max-w-6xl mx-auto px-6 md:px-12"
+        className="block lg:hidden w-full max-w-6xl mx-auto px-4 md:px-12 pt-10"
       >
         {/* Header */}
         <motion.div
@@ -194,7 +194,7 @@ export default function TestimonialsSection() {
           className="flex flex-col md:flex-row md:items-end md:justify-between mb-12"
         >
           <div>
-            <p className="text-neutral-800 text-md font-medium mb-2 flex items-center gap-2">
+            <p className="text-neutral-800 text-md mb-2 flex items-center gap-2">
               Testimonials{" "}
               <Image
                 src="/badge.jpg"
@@ -204,12 +204,12 @@ export default function TestimonialsSection() {
                 className="inline-block"
               />
             </p>
-            <h2 className="text-4xl font-bold text-neutral-900 leading-tight">
+            <h2 className="text-[30px] md:text-4xl font-bold text-neutral-900 leading-tight">
               Praise from our <br />
               customers
             </h2>
           </div>
-          <p className="text-neutral-500 max-w-md mt-6 md:mt-0 text-base leading-relaxed">
+          <p className="text-neutral-500 max-w-md mt-3 md:mt-0 text-[14px] md:text-base leading-relaxed">
             Our services help you create digital products. Stay ahead of the
             curve with our latest insights, tips, and industry trends.
           </p>
@@ -218,7 +218,7 @@ export default function TestimonialsSection() {
         {/* Normal vertical list */}
         <motion.div
           variants={containerVariants}
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-5"
         >
           {testimonials.map((item, i) => (
             <motion.div

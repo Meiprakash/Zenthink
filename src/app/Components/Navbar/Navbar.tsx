@@ -22,23 +22,23 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 80, damping: 15 }}
-      className="w-full "
+      className="w-full"
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-7">
+      <div className="max-w-7xl mx-auto flex items-center justify-between pr-3 py-5 md:px-6 md:py-7">
         {/* LOGO */}
         <Link href="/">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Image
               src="/ZenThink_Icon.png"
               alt="Logo"
-              width={130}
+              width={140}
               height={60}
             />
           </motion.div>
         </Link>
 
         {/* DESKTOP NAV */}
-        <ul className="hidden md:flex space-x-8 text-black/70 font-normal transition-all duration-300 ease-in-out">
+        <ul className="hidden md:flex space-x-8 text-black/60 font-normal transition-all duration-300 ease-in-out">
           {/* STATIC NAV LINKS */}
           <li>
             <Link 
@@ -76,7 +76,7 @@ export default function Navbar() {
 
             {isIndustriesOpen && (
               <div
-                className="absolute left-0 top-14 bg-white border shadow-xl rounded-xl p-6 w-[700px] flex z-50"
+                className="absolute -left-24 top-14 bg-white border shadow-md rounded-xl p-6 w-[700px] flex z-50"
                 onMouseEnter={() => setIsIndustriesOpen(true)}
                 onMouseLeave={() => setIsIndustriesOpen(false)}
               >
@@ -88,9 +88,9 @@ export default function Navbar() {
                       onMouseEnter={() => setSelectedIndustry(index)}
                       className={`py-2 cursor-pointer transition-all duration-200 ${
                         selectedIndustry === index
-                          ? "text-black border-l-2 border-black pl-2"
+                          ? "text-lime-500 border-l-2 border-black pl-2"
                           : "text-neutral-600"
-                      } hover:text-black`}
+                      } hover:text-lime-500 hover:font-medium`}
                     >
                       {industry.title}
                     </p>
@@ -103,7 +103,8 @@ export default function Navbar() {
                     <Link
                       key={service.name}
                       href={`/Industries/${industriesData[selectedIndustry].slug}/${service.slug}`}
-                      className="border p-3 rounded-md text-sm hover:shadow-md"
+                      className="border p-3 rounded-md text-md text-neutral-700 font-medium hover:border-lime-500 hover:text-black hover:bg-neutral-50 block"
+                      onClick={() => setIsIndustriesOpen(false)}
                     >
                       {service.name}
                     </Link>
@@ -134,7 +135,7 @@ export default function Navbar() {
         {/* CTA BUTTON */}
         <div className="hidden md:block">
           <Link href="/Contact">
-            <button className="cursor-pointer border hover:border-lime-500 text-black px-5 py-2 rounded-lg hover:bg-lime-500 hover:text-white">
+            <button className="cursor-pointer border border-black text-black font-medium px-5 py-2 rounded-lg hover:bg-black hover:text-white transform transition-all duration-300 ease-in-out">
               Let’s Talk
             </button>
           </Link>
@@ -157,63 +158,87 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-black text-white rounded-2xl mx-6 mt-2"
+            className="md:hidden bg-black text-white rounded-2xl mx-3 mt-0 overflow-hidden"
           >
-            <ul className="flex flex-col ml-10 m-6 py-4 space-y-3">
+            <div className="flex flex-col ml-10 mt-6 py-4 space-y-3">
               <Link 
                 href="/" 
                 onClick={() => setMenuOpen(false)}
-                className={isActive("/") ? "text-lime-500 font-semibold" : ""}
+                className={`${isActive("/") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
               >
                 Home
               </Link>
               <Link 
                 href="/about-us" 
                 onClick={() => setMenuOpen(false)}
-                className={isActive("/about-us") ? "text-lime-500 font-semibold" : ""}
+                className={`${isActive("/about-us") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
               >
                 About
               </Link>
               <Link 
                 href="/Service" 
                 onClick={() => setMenuOpen(false)}
-                className={isActive("/Service") ? "text-lime-500 font-semibold" : ""}
+                className={`${isActive("/Service") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
               >
                 Service
               </Link>
 
-              <details>
-                <summary className={isIndustriesActive ? "text-lime-500 font-semibold" : ""}>
-                  Industries
-                </summary>
-                <div className="ml-4 mt-2 space-y-2 text-neutral-300">
-                  {industriesData.map((ind) => (
-                    <Link
-                      key={ind.slug}
-                      href={`/Industries/${ind.slug}`}
-                      className="block"
-                    >
-                      {ind.title}
-                    </Link>
+              {/* MOBILE INDUSTRIES DROPDOWN - MATCHING DESKTOP LINKS */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className={`${isIndustriesActive ? "text-lime-500 font-semibold" : ""}`}>
+                    Industries
+                  </span>
+                </div>
+                
+                {/* Industry List with Services - Similar to Desktop */}
+                <div className="ml-4 space-y-3 text-neutral-300">
+                  {industriesData.map((industry) => (
+                    <div key={industry.slug} className="space-y-2">
+                      <div className="text-sm font-medium text-white/80 border-l-2 border-lime-500 pl-2 py-1">
+                        {industry.title}
+                      </div>
+                      <div className="ml-4 space-y-2">
+                        {industry.services.map((service) => (
+                          <Link
+                            key={service.slug}
+                            href={`/Industries/${industry.slug}/${service.slug}`}
+                            onClick={() => setMenuOpen(false)}
+                            className="block text-sm text-neutral-400 hover:text-lime-500 transition-colors py-1"
+                          >
+                            • {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
-              </details>
+              </div>
 
               <Link 
                 href="/Blog" 
                 onClick={() => setMenuOpen(false)}
-                className={isActive("/Blog") ? "text-lime-500 font-semibold" : ""}
+                className={`${isActive("/Blog") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
               >
                 Blog
               </Link>
               <Link 
                 href="/Contact" 
                 onClick={() => setMenuOpen(false)}
-                className={isActive("/Contact") ? "text-lime-500 font-semibold" : ""}
+                className={`${isActive("/Contact") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
               >
                 Contact
               </Link>
-            </ul>
+            </div>
+
+            {/* MOBILE CTA BUTTON */}
+            <div className="px-10 pb-6 pt-4">
+              <Link href="/Contact" onClick={() => setMenuOpen(false)}>
+                <button className="w-full cursor-pointer border border-white/30 text-lime-500 font-medium px-5 py-2.5 rounded-lg bg-white hover:text-black transform transition-all duration-300 ease-in-out">
+                  Let’s Talk
+                </button>
+              </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
