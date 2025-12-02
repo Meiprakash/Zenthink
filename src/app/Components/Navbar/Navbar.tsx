@@ -58,8 +58,8 @@ export default function Navbar() {
           </li>
           <li>
             <Link 
-              href="/Service" 
-              className={`hover:text-lime-500 ${isActive("/Service") ? "text-black" : ""}`}
+              href="/service" 
+              className={`hover:text-lime-500 ${isActive("/service") ? "text-black" : ""}`}
             >
               Service
             </Link>
@@ -176,9 +176,9 @@ export default function Navbar() {
                 About
               </Link>
               <Link 
-                href="/Service" 
+                href="/service" 
                 onClick={() => setMenuOpen(false)}
-                className={`${isActive("/Service") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
+                className={`${isActive("/service") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
               >
                 Service
               </Link>

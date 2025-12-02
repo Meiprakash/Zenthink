@@ -30,7 +30,7 @@ const cardsData: Record<
     {
       image: "/project-06.png",
       title: "UIUX Project 1",
-      link: "/Service/ui-ux",
+      link: "/service/ui-ux",
       description:
         "Add life to your brand through animation, movement, and storytelling.",
       tags: ["UI/UX", "Design", "Creative"],
@@ -40,7 +40,7 @@ const cardsData: Record<
     {
       image: "/project-05.png",
       title: "Web Dev Project 1",
-      link: "/Service/web-dev",
+      link: "/service/web-dev",
 
       description:
         "Modernize your site with strategic updates that improve usability.",
@@ -51,7 +51,7 @@ const cardsData: Record<
     {
       image: "/project-04.png",
       title: "Branding Project 1",
-      link: "/Service/branding",
+      link: "/service/branding",
       description: "Create memorable brands that stand out in the market.",
       tags: ["Branding", "Marketing", "Design"],
     },
@@ -60,7 +60,7 @@ const cardsData: Record<
     {
       image: "/project-03.png",
       title: "Motion Project 1",
-      link: "/Service/motion",
+      link: "/service/motion",
       description: "Bring stories to life with animation and motion graphics.",
       tags: ["Animation", "Motion", "Creative"],
     },

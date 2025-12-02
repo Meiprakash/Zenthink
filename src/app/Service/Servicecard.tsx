@@ -7,31 +7,31 @@ const serviceCard = [
     name: "Web Applications & Websites ",
     desc: "We build responsive, high-performance web platforms that deliver seamless user experiences and drive business results across all devices.",
     icon: "/service-card-01.jpg",
-    link: "/Service/web-application",
+    link: "/service/web-application",
   },
   {
     name: "Mobile Applications ",
     desc: "We develop native and cross-platform mobile apps that engage users, streamline operations, and extend your business reach on iOS and Android.",
     icon: "/service-card-02.jpg",
-    link: "/Service/mobile-application",
+    link: "/service/mobile-application",
   },
   {
     name: "Legacy Modernization",
     desc: "We transform outdated systems into modern, cloud-ready architectures that reduce costs, improve performance, and eliminate technical debt.",
     icon: "/service-card-03.jpg",
-    link: "/Service/legacy-modernization",
+    link: "/service/legacy-modernization",
   },
   {
     name: "API Development & Integration",
     desc: "We design robust APIs and seamless integrations that connect your systems, enable data flow, and create unified digital ecosystems.",
     icon: "/service-card-04.jpg",
-    link: "/Service/api-development-integration",
+    link: "/service/api-development-integration",
   },
   {
     name: "AI-Enhanced Solutions",
     desc: "We integrate intelligent automation and machine learning capabilities that optimize decision-making, predict trends, and unlock hidden insights from your data.",
     icon: "/service-card-01.jpg",
-    link: "/Service/ai-enhanced-solutions",
+    link: "/service/ai-enhanced-solutions",
   },
 ];
 

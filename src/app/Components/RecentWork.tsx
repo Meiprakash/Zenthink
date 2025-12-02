@@ -18,27 +18,27 @@ const works: WorkItem[] = [
     description:
       "Add life to your brand through animation, movement, and storytelling.",
     image: "/project-01.png",
-    link: "/Service/ui-ux",
+    link: "/service/ui-ux",
   },
   {
     title: "Web Dev",
     description: "Create a portfolio that highlights your best work.",
     image: "/project-03.png",
-    link: "/Service/web-dev",
+    link: "/service/web-dev",
   },
   {
     title: "Branding",
     description:
       "Modernize your site with strategic design updates that improve usability and visual appeal.",
     image: "/project-05.png",
-    link: "/Service/branding",
+    link: "/service/branding",
   },
   {
     title: "Motion",
     description:
       "Add life to your brand through animation, movement, and storytelling.",
     image: "/project-06.png",
-    link: "/Service/motion",
+    link: "/service/motion",
   },
 ];
 

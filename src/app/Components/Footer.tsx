@@ -8,7 +8,7 @@ import Image from "next/image";
 const companies = [
   { name: "Home", link: "#" },
   { name: "About us", link: "/about-us" },
-  { name: "Service", link: "/Service" },
+  { name: "Service", link: "/service" },
   { name: "Blog", link: "/Blog" },
   { name: "Shop", link: "#" },
   { name: "Contact Us", link: "/Contact" },
