@@ -40,7 +40,7 @@ const logoVariant = {
 
 export default function InvestorsSection() {
   return (
-    <section className="bg-gray-50 py-10 sm:py-20 border-t border-gray-100 overflow-hidden">
+    <section className=" py-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* HEADING */}
         <motion.h2
@@ -48,7 +48,7 @@ export default function InvestorsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl md:text-2xl font-bold text-black mb-12 leading-snug"
+          className="text-xl sm:text-2xl md:text-xl font-medium text-black mb-12 leading-snug"
         >
           Trusted investors and{" "}
           <span className="text-black">Unicorn founders</span>

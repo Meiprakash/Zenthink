@@ -27,7 +27,12 @@ export default function Hero() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="relative min-h-screen">
+      {/* Fixed background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#fdfffa] to-[#f2fde4] -z-10" />
+      
+      {/* Content */}
+      <div className="relative z-0">
       <Navbar />
 
       {/* HERO GRID */}
@@ -53,15 +58,15 @@ export default function Hero() {
           className="
             order-1 sm:order-1
             col-span-1 sm:col-span-3
-            text-gray-900
+            text-neutral-900
             text-4xl sm:text-3xl md:text-6xl sm:mt-10 md:mt-1 sm:ml-12
             font-semibold
             leading-tight
           "
         >
-          We’re a Creative Agency with{" "}
-          <span className="text-gray-700">Heart</span> and{" "}
-          <span className="text-gray-700">Vision</span>
+          We’re a Technology Partner with{" "}
+          <span className="text-neutral-700">Vision </span> and{" "}
+          <span className="text-neutral-700">Precision</span>
         </motion.h1>
 
         {/* 2) AWARD */}
@@ -83,7 +88,7 @@ export default function Hero() {
               className="w-11 sm:w-12 md:w-12"
             />
           </div>
-          <p className="text-gray-800 text-sm sm:text-base md:text-lg mt-1 sm:text-start sm:ml-20">
+          <p className="text-neutral-800 text-sm sm:text-base md:text-lg mt-1 sm:text-start sm:ml-20">
             2025 Best Award
           </p>
         </motion.div>
@@ -109,7 +114,7 @@ export default function Hero() {
             <p className="text-black text-sm sm:text-base md:text-xl font-semibold">
               120K+
             </p>
-            <p className="text-gray-600 text-xs sm:text-sm md:text-base">
+            <p className="text-neutral-600 text-xs sm:text-sm md:text-base">
               Active users
             </p>
           </div>
@@ -121,14 +126,15 @@ export default function Hero() {
           className="
             order-4 sm:order-4
             col-span-1 sm:col-span-2
-            text-gray-600
+            text-neutral-600
             text-sm sm:text-[13px] md:text-[16px]
             leading-relaxed
             mt-2 sm:mt-6 mr-4 
           "
         >
-          We combine bold ideas with smart strategy to design brand experiences
-          that connect, convert, and inspire. From startups to industry leaders.
+          We combine technical excellence with business strategy to engineer
+          software solutions that scale, perform, and transform. From startups
+          to enterprise leaders
         </motion.p>
       </motion.div>
 
@@ -144,6 +150,7 @@ export default function Hero() {
       <BlogSection />
       <ConnectSection />
       <Footer />
+    </div>
     </div>
   );
 }

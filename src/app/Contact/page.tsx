@@ -95,7 +95,12 @@ export default function Hero() {
   };
 
   return (
-    <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] min-h-screen">
+    <div className="relative min-h-screen">
+      {/* Fixed background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#fdfffa] to-[#f2fde4] -z-10" />
+      
+      {/* Content */}
+      <div className="relative z-0">
       <Navbar />
 
       {/* HERO SECTION */}
@@ -106,15 +111,18 @@ export default function Hero() {
         viewport={{ once: true, amount: 0.3 }}
         className="w-full flex flex-col sm:flex-row items-start justify-between px-8 md:px-30 py-24 md:py-20"
       >
-        <motion.div variants={item} className="flex-1 max-w-2xl mb-4 sm:mb-10 md:mb-0">
-          <h1 className="text-gray-900 font-semibold text-2xl sm:text-4xl md:text-6xl leading-tight">
+        <motion.div
+          variants={item}
+          className="flex-1 max-w-2xl mb-4 sm:mb-10 md:mb-0"
+        >
+          <h1 className="text-neutral-900 font-semibold text-2xl sm:text-4xl md:text-6xl leading-tight">
             We Create <br /> Amazing Project
           </h1>
         </motion.div>
 
         <motion.div
           variants={item}
-          className="flex-1 max-w-md md:mt-7 text-gray-600 text-sm sm:text-md md:text-lg leading-relaxed"
+          className="flex-1 max-w-md md:mt-7 text-neutral-600 text-sm sm:text-md md:text-lg leading-relaxed"
         >
           Our services help you create digital products and solve your problems
           objectively, with strategy, technology, and analysis.
@@ -122,7 +130,7 @@ export default function Hero() {
       </motion.section>
 
       {/* CONTACT FORM */}
-      <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] py-7 px-6 md:px-20">
+      <div className="py-7 px-6 md:px-20">
         <motion.section
           variants={container}
           initial="hidden"
@@ -141,23 +149,23 @@ export default function Hero() {
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="text-center w-full py-12"
               >
-                <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+                <h2 className="text-3xl font-semibold text-neutral-900 mb-4">
                   Thank You!
                 </h2>
-                <p className="text-gray-600 text-lg">
-                  Your message has been signed and submitted successfully. 
+                <p className="text-neutral-600 text-lg">
+                  Your message has been signed and submitted successfully.
                 </p>
               </motion.div>
             ) : (
               <>
-                <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-10">
+                <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 mb-10">
                   Contact us
                 </h2>
 
                 <button
                   onClick={connectWallet}
                   type="button"
-                  className="mb-6 w-full bg-purple-600 text-white font-medium py-3 rounded-lg hover:bg-purple-700 transition"
+                  className="mb-6 w-full bg-lime-500 text-white font-medium py-3 rounded-lg hover:bg-lime-700 transition"
                 >
                   {walletAddress
                     ? `Connected: ${walletAddress.slice(
@@ -172,7 +180,7 @@ export default function Hero() {
                   className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 >
                   <div>
-                    <label className="block text-gray-800 mb-2 font-medium">
+                    <label className="block text-neutral-800 mb-2 font-medium">
                       Full Name
                     </label>
                     <input
@@ -181,12 +189,12 @@ export default function Hero() {
                       value={form.name}
                       onChange={handleChange}
                       placeholder="Your Full Name"
-                      className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                      className="w-full bg-neutral-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-gray-800 mb-2 font-medium">
+                    <label className="block text-neutral-800 mb-2 font-medium">
                       Phone Number
                     </label>
                     <input
@@ -195,12 +203,12 @@ export default function Hero() {
                       value={form.phone}
                       onChange={handleChange}
                       placeholder="Your Phone Number"
-                      className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                      className="w-full bg-neutral-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-gray-800 mb-2 font-medium">
+                    <label className="block text-neutral-800 mb-2 font-medium">
                       Email Address
                     </label>
                     <input
@@ -209,12 +217,12 @@ export default function Hero() {
                       value={form.email}
                       onChange={handleChange}
                       placeholder="Your Email Address"
-                      className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                      className="w-full bg-neutral-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-gray-800 mb-2 font-medium">
+                    <label className="block text-neutral-800 mb-2 font-medium">
                       Existing Project URL
                     </label>
                     <input
@@ -223,12 +231,12 @@ export default function Hero() {
                       value={form.url}
                       onChange={handleChange}
                       placeholder="Your Project URL"
-                      className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                      className="w-full bg-neutral-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                     />
                   </div>
 
                   <div className="md:col-span-2">
-                    <label className="block text-gray-800 mb-2 font-medium">
+                    <label className="block text-neutral-800 mb-2 font-medium">
                       Message
                     </label>
                     <textarea
@@ -237,7 +245,7 @@ export default function Hero() {
                       value={form.message}
                       onChange={handleChange}
                       placeholder="Your Message"
-                      className="w-full bg-gray-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+                      className="w-full bg-neutral-100 text-black rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
                     />
                   </div>
 
@@ -245,7 +253,7 @@ export default function Hero() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full bg-black text-white font-medium py-3 rounded-lg hover:bg-gray-900 transition"
+                      className="w-full bg-black text-white font-medium py-3 rounded-lg hover:bg-lime-500 transition"
                     >
                       {loading ? "Signing Message..." : "Submit Form"}
                     </button>
@@ -261,35 +269,35 @@ export default function Hero() {
             className="flex flex-col gap-6 md:w-1/3 w-full"
           >
             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-              <div className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-neutral-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <Image src="/mail.webp" alt="" width={40} height={26} />
               </div>
-              <h3 className="text-lg font-semibold mb-1 text-gray-900">
+              <h3 className="text-lg font-semibold mb-1 text-neutral-900">
                 Email Us
               </h3>
-              <p className="text-gray-700">ideapeel@gmail.com</p>
+              <p className="text-neutral-700">ideapeel@gmail.com</p>
             </div>
 
             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-              <div className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-neutral-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <Image src="/marker.webp" alt="" width={40} height={26} />
               </div>
-              <h3 className="text-lg font-semibold mb-1 text-gray-900">
+              <h3 className="text-lg font-semibold mb-1 text-neutral-900">
                 Drop in us
               </h3>
-              <p className="text-gray-700 flex items-center gap-2">
+              <p className="text-neutral-700 flex items-center gap-2">
                 ideapeel@gmail.com <span>→</span>
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-              <div className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-neutral-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <Image src="/active-call.webp" alt="" width={40} height={26} />
               </div>
-              <h3 className="text-lg font-semibold mb-1 text-gray-900">
+              <h3 className="text-lg font-semibold mb-1 text-neutral-900">
                 Call Us
               </h3>
-              <p className="text-gray-700">+1 800 778 884</p>
+              <p className="text-neutral-700">+1 800 778 884</p>
             </div>
           </motion.div>
         </motion.section>
@@ -297,6 +305,7 @@ export default function Hero() {
 
       <ConnectSection />
       <Footer />
+    </div>
     </div>
   );
 }

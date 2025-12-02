@@ -86,9 +86,14 @@ const blogs = [
 
 const Blog: React.FC = () => {
   return (
-    <div className="bg-white">
+      <div className="relative min-h-screen">
+      {/* Fixed background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#fdfffa] to-[#f2fde4] -z-10" />
+      
+      {/* Content */}
+      <div className="relative z-0">
       <Navbar />
-      <section className="w-full bg-white py-24 px-6 md:px-16 overflow-hidden">
+      <section className="w-full  py-24 px-6 md:px-16 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Section Heading */}
           <motion.div
@@ -100,13 +105,13 @@ const Blog: React.FC = () => {
           >
             {/* Left side title */}
             <div>
-              <h2 className="text-3xl sm:text-4xl md:text-6xl md:ml-5 font-semibold text-gray-900 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-6xl md:ml-5 font-semibold text-neutral-900 leading-tight">
                 Blog
               </h2>
             </div>
 
             {/* Right side text */}
-            <p className="text-gray-600 text-[13px] sm:text-base md:text-lg leading-relaxed max-w-lg">
+            <p className="text-neutral-600 text-[13px] sm:text-base md:text-lg leading-relaxed max-w-lg">
               We combine bold ideas with smart strategy to design brand
               experiences that connect, convert, and inspire. From startups to
               industry leaders unforgettable.
@@ -134,19 +139,19 @@ const Blog: React.FC = () => {
                       alt={blog.title}
                       width={800}
                       height={500}
-                      className="w-full h-72 object-cover transition-transform duration-400 group-hover:scale-125"
+                      className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-125"
                     />
                   </div>
 
                   {/* Text content */}
                   <div className="p-6">
-                    <p className="text-gray-500 text-sm mb-2">
+                    <p className="text-neutral-500 text-sm mb-2">
                       {blog.date} • {blog.author}
                     </p>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 transition-colors duration-300">
+                    <h3 className="text-xl font-semibold text-neutral-900 mb-2 transition-colors duration-300">
                       {blog.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-neutral-600 text-sm leading-relaxed">
                       {blog.description}
                     </p>
                   </div>
@@ -159,6 +164,7 @@ const Blog: React.FC = () => {
       <FAQ />
       <ConnectSection />
       <Footer />
+    </div>
     </div>
   );
 };
