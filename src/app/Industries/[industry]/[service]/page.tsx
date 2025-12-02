@@ -6,6 +6,9 @@ import { industriesData } from "@/app/utils/industriesData";
 import Navbar from "@/app/Components/Navbar/Navbar";
 import { useRef } from "react";
 import { FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import TestimonialsSection from "@/app/Components/Testimonials";
+import FAQ from "@/app/Components/FaqSection";
+import Footer from "@/app/Components/Footer";
 
 export const runtime = 'edge';
 
@@ -401,6 +404,9 @@ export default function ServiceDetails() {
           </button>
         </div>
       </section>
+      <TestimonialsSection />
+      <FAQ />
+      <Footer/>
     </main>
   );
 }

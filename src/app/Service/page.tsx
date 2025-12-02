@@ -55,14 +55,7 @@ const Service: React.FC = () => {
           />
 
           <div
-            className="
-    absolute bottom-4 left-4 right-4 
-    bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))]
-    shadow-xl rounded-2xl p-5 border backdrop-blur-lg
-    opacity-0 group-hover:opacity-100
-    translate-y-4 group-hover:translate-y-0
-    transition-all duration-300 ease-out
-  "
+            className=" absolute bottom-7 left-4 right-4  bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))] shadow-xl rounded-2xl p-5 border backdrop-blur-lg opacity-100 translate-y-4  transition-all duration-300 ease-out"
           >
             <h3 className="text-lg text-black mb-2">Need More Info?</h3>
 
