@@ -81,9 +81,9 @@ const stats: StatCardProps[] = [
 
 export default function StatsSection() {
   return (
-    <section className=" py-16">
+    <section className="py-8 md:py-10">
       {/* Make it 4 in a row even on mobile */}
-      <div className="max-w-6xl mx-auto grid grid-cols-4 text-center gap-6 sm:gap-8 md:gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-4 text-center px-2 md:px-0 gap-4 sm:gap-8 md:gap-10">
         {stats.map((stat, i) => (
           <StatCard key={i} {...stat} />
         ))}

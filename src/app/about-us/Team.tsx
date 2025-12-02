@@ -70,7 +70,7 @@ const Team = () => {
 
         {/* Right: Description */}
         <div>
-          <p className="text-neutral-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+          <p className="text-neutral-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 ">
             We help brands grow through strategic design and digital
             experiences. From brand identity to powerful websites, our services
             are Impression.

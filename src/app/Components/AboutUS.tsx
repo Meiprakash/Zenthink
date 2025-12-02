@@ -42,16 +42,16 @@ export default function AboutUs() {
   };
 
   return (
-    <section className="w-full px-6 md:px-16 py-10 font-[Inter,sans-serif]">
+    <section className="w-full px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 md:py-10 lg:py-12 font-[Inter,sans-serif]">
       <motion.div
         className="max-w-7xl mx-auto"
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         {/* Top label + 2-column header row */}
-        <motion.div className="mb-8 " variants={fadeUp}>
-          <p className="text-md text-neutral-900 mb-3 flex items-center gap-2">
+        <motion.div className="mb-6 sm:mb-8" variants={fadeUp}>
+          <p className="text-md sm:text-lg text-neutral-900 mb-3 flex items-center gap-2">
             About us{" "}
             <span>
               <Image
@@ -59,23 +59,24 @@ export default function AboutUs() {
                 alt="badge"
                 width={16}
                 height={16}
-                className="w-4"
+                className="w-4 h-4"
               />
             </span>
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-8 items-start ">
+          <div className="flex flex-col sm:grid sm:grid-cols-2 gap-6 xs:gap-8 items-start">
             {/* Left: Heading */}
             <div>
-              <h2 className="text-[20px] sm:text-2xl md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-tight tracking-tight">
-                Our Approach is Innovative <br className="hidden md:block" />{" "}
+              <h2 className="text-[30px] sm:text-[32px] md:text-[38px] lg:text-[44px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
+                Our Approach is Innovative{" "}
+                <br className="hidden sm:block" />
                 and Results-Focused.
               </h2>
             </div>
 
             {/* Right: Description */}
             <div>
-              <p className="text-neutral-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+              <p className="text-neutral-600 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
                 Custom software development, robust enterprise solutions, or
                 scalable digital platforms. Our team excels across multiple
                 technology domains, including cloud architecture, application
@@ -86,17 +87,18 @@ export default function AboutUs() {
         </motion.div>
 
         {/* Main grid: image (left) and accordion (right) */}
-        <div className="grid md:grid-cols-2 gap-5 items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start">
           {/* Left: Video thumbnail / image */}
-          <motion.div variants={fadeUp} className="flex justify-start">
-            <div className="relative w-full max-w-full h-[260px] sm:h-[320px] md:h-[380px] rounded-[28px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30 mx-auto">
+          <motion.div variants={fadeUp} className="w-full">
+            <div className="relative w-full h-[200px] xs:h-[240px] sm:h-[280px] md:h-[320px] lg:h-[380px] rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] sm:shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30">
               {/* subtle overlay for frosted look */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-white/0 z-10 pointer-events-none" />
               <Image
                 src="/videimg.jpg"
                 alt="About video"
                 fill
-                className="w-full h-full object-cover rounded-[28px] brightness-80 "
+                className="w-full h-full object-cover brightness-80"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
 
               {/* Play CTA */}
@@ -106,10 +108,10 @@ export default function AboutUs() {
                 aria-label="Play Video"
                 className="absolute inset-0 flex items-center justify-center z-20"
               >
-                <div className="bg-white hover:bg-white/95 transition p-4 rounded-full shadow-lg">
+                <div className="bg-white hover:bg-white/95 transition p-3 sm:p-4 rounded-full shadow-lg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-9 h-9 text-black"
+                    className="w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 text-black"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
@@ -121,7 +123,7 @@ export default function AboutUs() {
           </motion.div>
 
           {/* Right: Accordion */}
-          <motion.div
+           <motion.div
             variants={fadeUp}
             className="flex flex-col gap-4 pb-2 w-full sm:w-3/3 overflow-x-hidden"
           >
@@ -130,8 +132,8 @@ export default function AboutUs() {
                 key={i}
                 className={`rounded-2xl bg-blue-10 box-border border border-neutral-200  overflow-hidden transition-all duration-300 p-3 ${
                   activeIndex === i
-                    ? "bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) shadow-sm"
-                    : "bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) hover:shadow-sm"
+                    ? "bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)"
+                    : "bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)"
                 }`}
               >
                 <button
@@ -144,7 +146,7 @@ export default function AboutUs() {
                       alt="icon"
                       width={16}
                       height={16}
-                      className="w-6"
+                      className="w-5 md:w-6"
                     />
                     <span className="font-semibold text-lg text-neutral-800">
                       {item.title}
@@ -160,7 +162,7 @@ export default function AboutUs() {
                       alt="toggle"
                       width={16}
                       height={16}
-                      className="w-5 opacity-80"
+                      className="w-4 md:w-5"
                     />
                   </span>
                 </button>
@@ -173,7 +175,7 @@ export default function AboutUs() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.28 }}
                     >
-                      <div className="px-6   b-5 text-neutral-600 text-[15px] leading-relaxed">
+                      <div className="px-6 pb-5 text-neutral-600 text-[15px] leading-relaxed">
                         {item.content}
                       </div>
                     </motion.div>
@@ -188,18 +190,19 @@ export default function AboutUs() {
       {/* Video modal */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4"
           onClick={() => setIsModalOpen(false)}
         >
           <button
             onClick={() => setIsModalOpen(false)}
-            className="absolute top-6 right-6 bg-white/80 hover:bg-white text-black p-2 rounded-full z-50 transition"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/80 hover:bg-white text-black p-1.5 sm:p-2 rounded-full z-50 transition"
+            aria-label="Close modal"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
 
           <div
-            className="relative w-[92%] sm:w-[80%] md:w-[70%] lg:w-[60%] aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl"
+            className="relative w-full max-w-[95%] xs:max-w-[92%] sm:max-w-[90%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] aspect-video bg-black rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <iframe

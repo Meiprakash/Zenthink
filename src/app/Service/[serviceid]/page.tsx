@@ -3,38 +3,11 @@
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import Navbar from "@/app/Components/Navbar/Navbar";
-import {
-  useRef,
-  useEffect,
-  useState,
-  useLayoutEffect,
-  useCallback,
-} from "react";
-// shadcn carousel (for desktop What We Build)
-import {
-  Carousel as ShadCarousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import type { EmblaOptionsType } from "embla-carousel";
+import { useRef } from "react";
 import TestimonialsSection from "@/app/Components/Testimonials";
 import FAQ from "@/app/Components/FaqSection";
 import Footer from "@/app/Components/Footer";
-
-// motion & lenis
-import { motion, useMotionValue, useTransform } from "motion/react";
-import Lenis from "lenis";
-
-// (OPTIONAL) icons if you want to use; kept minimal
-import {
-  FiFileText,
-  FiCircle,
-  FiLayers,
-  FiLayout,
-  FiCode,
-} from "react-icons/fi";
+import { motion } from "framer-motion";
 
 /* ----------------------------- TYPES ----------------------------- */
 
@@ -115,9 +88,6 @@ interface Industry {
 }
 
 /* ----------------------------- DATA ----------------------------- */
-/* Two separate industry objects: web-application and mobile-application.
-   Each contains the 4 new sections (industriesWeServe, whatWeBuild, developmentProcess, benefits).
-*/
 
 const industriesData: Industry[] = [
   {
@@ -1248,272 +1218,23 @@ const industriesData: Industry[] = [
   },
 ];
 
-
-
-/* ----------------------------- UI COMPONENTS ----------------------------- */
-
-/** Helpers - detect mobile breakpoint */
-const useIsMobile = (breakpoint = 768) => {
-  const [isMobile, setIsMobile] = useState<boolean>(typeof window !== "undefined" ? window.innerWidth < breakpoint : false);
-  useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < breakpoint);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [breakpoint]);
-  return isMobile;
-};
-
-/* ----------------------------- 1) Carousel (3D-ish cards) ----------------------------- */
-/* cards-only UI for Industries We Serve */
-const DEFAULT_CAROUSEL_ITEMS = (cards: IndustryCard[]) =>
-  cards.map((c, idx) => ({
-    title: c.title,
-    description: c.description,
-    id: idx,
-    icon: idx === 0 ? <FiFileText className="h-[16px] w-[16px] text-white" /> : idx === 1 ? <FiCircle className="h-[16px] w-[16px] text-white" /> : idx === 2 ? <FiLayers className="h-[16px] w-[16px] text-white" /> : <FiCode className="h-[16px] w-[16px] text-white" />,
-  }));
-
-const Carousel = ({ cards, baseWidth = 920, autoplay = false, pauseOnHover = false, loop = false }: { cards: IndustryCard[]; baseWidth?: number; autoplay?: boolean; pauseOnHover?: boolean; loop?: boolean; }) => {
-  const items = DEFAULT_CAROUSEL_ITEMS(cards);
-  const containerPadding = 16;
-  const itemWidth = baseWidth - containerPadding * 2;
-  const GAP = 16;
-  const trackItemOffset = itemWidth + GAP;
-  const carouselItems = loop ? [...items, items[0]] : items;
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const x = useMotionValue(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isResetting, setIsResetting] = useState(false);
-
-  useEffect(() => {
-    if (!autoplay) return;
-    if (autoplay && (!pauseOnHover || !isHovered)) {
-      const timer = setInterval(() => {
-        setCurrentIndex((prev) => {
-          if (prev === items.length - 1 && loop) return prev + 1;
-          if (prev === carouselItems.length - 1) return loop ? 0 : prev;
-          return prev + 1;
-        });
-      }, 3000);
-      return () => clearInterval(timer);
-    }
-  }, [autoplay, isHovered, pauseOnHover, loop, items.length, carouselItems.length]);
-
-  const SPRING_OPTIONS = { type: "spring", stiffness: 300, damping: 30 } as any;
-  const effectiveTransition = isResetting ? { duration: 0 } : SPRING_OPTIONS;
-
-  const handleAnimationComplete = () => {
-    if (loop && currentIndex === carouselItems.length - 1) {
-      setIsResetting(true);
-      x.set(0);
-      setCurrentIndex(0);
-      setTimeout(() => setIsResetting(false), 50);
-    }
-  };
-
-  const handleDragEnd = (_: any, info: any) => {
-    const offset = info.offset.x;
-    const velocity = info.velocity.x;
-    const VELOCITY_THRESHOLD = 500;
-    const DRAG_BUFFER = 0;
-    if (offset < -DRAG_BUFFER || velocity < -VELOCITY_THRESHOLD) {
-      setCurrentIndex((prev) => Math.min(prev + 1, carouselItems.length - 1));
-    } else if (offset > DRAG_BUFFER || velocity > VELOCITY_THRESHOLD) {
-      setCurrentIndex((prev) => Math.max(prev - 1, 0));
-    }
-  };
-
-  return (
-    <div onMouseEnter={() => pauseOnHover && setIsHovered(true)} onMouseLeave={() => pauseOnHover && setIsHovered(false)} className="relative overflow-hidden p-4 rounded-[24px] border border-[#222]" style={{ width: `${baseWidth}px` }}>
-      <motion.div
-        className="flex"
-        drag="x"
-        onDragEnd={handleDragEnd}
-        style={{ width: itemWidth, gap: `${GAP}px`, perspective: 1000, perspectiveOrigin: `${currentIndex * trackItemOffset + itemWidth / 2}px 50%`, x }}
-        animate={{ x: -(currentIndex * trackItemOffset) }}
-        transition={effectiveTransition}
-        onAnimationComplete={handleAnimationComplete}
-      >
-        {carouselItems.map((item, index) => {
-          const range = [-(index + 1) * trackItemOffset, -index * trackItemOffset, -(index - 1) * trackItemOffset];
-          const outputRange = [90, 0, -90];
-          const rotateY = useTransform(x, range, outputRange, { clamp: false });
-
-          return (
-            <motion.div key={index} className="relative shrink-0 flex flex-col items-start justify-between bg-[#222] border border-[#222] rounded-[12px] overflow-hidden cursor-grab active:cursor-grabbing" style={{ width: itemWidth, height: 260, rotateY }}>
-              <div className="mb-4 p-5">
-                <span className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#111] mb-4">{item.icon}</span>
-                <div className="mb-1 font-black text-lg text-white">{item.title}</div>
-                <p className="text-sm text-white">{item.description}</p>
-              </div>
-            </motion.div>
-          );
-        })}
-      </motion.div>
-
-      <div className="flex w-full justify-center">
-        <div className="mt-4 flex w-[150px] justify-between px-8">
-          {items.map((_, index) => (
-            <motion.div
-              key={index}
-              className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${currentIndex % items.length === index ? "bg-[#333333]" : "bg-[rgba(51,51,51,0.4)]"}`}
-              animate={{ scale: currentIndex % items.length === index ? 1.2 : 1 }}
-              onClick={() => setCurrentIndex(index)}
-              transition={{ duration: 0.15 }}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-/* -------------------------------------------
-   Vertical Carousel for "What We Build" Section
--------------------------------------------- */
-const VerticalShadCarousel = ({ items }: { items: WhatWeBuildItem[] }) => {
-  return (
-    <div className="w-full py-6">
-      <ShadCarousel
-        orientation="vertical"
-        className="w-full max-w-xl mx-auto"
-      >
-        <CarouselContent className="flex flex-col gap-6">
-          {items.map((item, idx) => (
-            <CarouselItem key={idx}>
-              <div className="bg-white p-8 shadow-md rounded-2xl border border-neutral-100">
-                <h3 className="text-2xl font-semibold text-black">
-                  {item.title}
-                </h3>
-                <p className="text-neutral-600 mt-3 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-
-        {/* <div className="flex flex-col items-center gap-3 mt-6">
-          <CarouselPrevious className="rotate-90" />
-          <CarouselNext className="-rotate-90" />
-        </div> */}
-      </ShadCarousel>
-    </div>
-  );
-};
-
-
-
-
-/* ----------------------------- 3) Mobile fallback for WhatWeBuild: Horizontal swipe carousel ----------------------------- */
-/* Option M2: medium cards - ~250px wide */
-const MobileWhatWeBuildCarousel = ({ items }: { items: WhatWeBuildItem[] }) => {
-  return (
-    <div className="overflow-x-auto px-4 py-4">
-      <div className="flex gap-4" style={{ paddingBottom: 8 }}>
-        {items.map((it, idx) => (
-          <div key={idx} className="min-w-[250px] max-w-[250px] bg-white rounded-2xl shadow p-5">
-            <h4 className="text-lg font-semibold">{it.title}</h4>
-            <p className="text-sm text-neutral-600 mt-2">{it.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-/* ----------------------------- 4) Vertical Timeline ----------------------------- */
-const VerticalTimeline = ({ heading, description, steps }: { heading: string; description: string; steps: ProcessStep[] }) => {
-  return (
-    <section className="py-16 px-6 md:px-24 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4 text-black">{heading}</h2>
-        <p className="text-neutral-600 mb-8">{description}</p>
-        <div className="relative">
-          <div className="absolute left-4 top-0 bottom-0 w-1 bg-neutral-200 rounded" />
-          <div className="ml-12 space-y-8">
-            {steps.map((s) => (
-              <div key={s.step} className="relative">
-                <div className="absolute left-[-36px] top-2 w-8 h-8 rounded-full flex items-center justify-center bg-black text-white font-bold">
-                  {s.step}
-                </div>
-                <div className="bg-neutral-50 p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-semibold text-black">{s.title}</h3>
-                  <p className="text-neutral-600 mt-2">{s.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-/* ----------------------------- 5) Side-by-side Reveal for Benefits ----------------------------- */
-const SideBySideReveal = ({ heading, description, cards }: { heading: string; description: string; cards: BenefitCard[] }) => {
-  const refs = useRef<Array<HTMLElement | null>>([]);
-  useEffect(() => {
-    const observers: IntersectionObserver[] = [];
-    refs.current.forEach((el) => {
-      if (!el) return;
-      const obs = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("translate-y-0", "opacity-100");
-              entry.target.classList.remove("translate-y-6", "opacity-0");
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-      obs.observe(el);
-      observers.push(obs);
-    });
-    return () => observers.forEach((o) => o.disconnect());
-  }, []);
-  return (
-    <section className="py-16 px-6 md:px-24 bg-[linear-gradient(180deg,#f8fff8_0%,#ffffff_100%)]">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4 text-black">{heading}</h2>
-        <p className="text-neutral-600 mb-8">{description}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {cards.map((c, idx) => (
-            <div
-              key={idx}
-              ref={(el) => {
-                refs.current[idx] = el;
-              }}
-              className="transform transition-all duration-700 translate-y-6 opacity-0"
-            >
-              {" "}
-              <div className="p-8 rounded-2xl shadow-md bg-white h-full">
-                <h3 className="text-xl font-semibold text-black">{c.title}</h3>
-                <p className="text-neutral-600 mt-3">{c.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-
-/* ----------------------------- MAIN PAGE ----------------------------- */
-
 export default function ServiceDetails() {
   const { serviceid } = useParams();
   const router = useRouter();
   const industry = industriesData.find((d) => d.slug === serviceid);
 
-  const isMobile = useIsMobile(768);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollLeft = () =>
+    scrollRef.current?.scrollBy({ left: -300, behavior: "smooth" });
+  const scrollRight = () =>
+    scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
 
   if (!industry) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-3xl font-bold text-neutral-600">404 | Page Not Found</h1>
+        <h1 className="text-3xl font-bold text-neutral-600">
+          404 | Page Not Found
+        </h1>
       </div>
     );
   }
@@ -1522,295 +1243,622 @@ export default function ServiceDetails() {
   const whyLeft = industry.whyChoose.slice(0, 2);
   const whyRight = industry.whyChoose.slice(2, 4);
 
-  // products carousel scroll ref
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const scrollLeft = () => scrollRef.current?.scrollBy({ left: -300, behavior: "smooth" });
-  const scrollRight = () => scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
-
   return (
     <div className="relative min-h-screen">
-      {/* Fixed background gradient */}
+      {/* Fixed background gradient - Same as Service page */}
       <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#fdfffa] to-[#f2fde4] -z-10" />
-      
+
       {/* Content */}
       <div className="relative z-0">
-      <Navbar />
+        <Navbar />
 
-      {/* Header */}
-      <section className="py-20 px-6 md:px-24 grid md:grid-cols-2 ml-17 gap-10 items-center">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900">
-            {industry.title}
-          </h1>
-          <p className="text-neutral-700 mt-6 text-lg">{industry.desc}</p>
-          <button
-            onClick={() => router.push("/Contact")}
-            className="mt-10 bg-black text-white px-7 py-3 rounded-lg hover:bg-neutral-900"
-          >
-            Request a Quote
-          </button>
-          <div className="mt-10 flex gap-10 text-center">
-            {industry.stats.map((item) => (
-              <div key={item.label}>
-                <h3 className="text-black text-3xl font-semibold">
-                  {item.value}
-                </h3>
-                <p className="text-neutral-900 text-sm">{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <Image
-          src={industry.banner}
-          width={360}
-          height={360}
-          alt={industry.title}
-          className="rounded-xl shadow-xl object-cover"
-        />
-      </section>
-
-      {/* Why Choose */}
-      <section className="w-full py-16 ">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-semibold mb-4 text-black">
-            Why Choose {industry.title}?
-          </h2>
-          <p className="text-neutral-600 max-w-2xl mx-auto mb-12">
-            Discover powerful solutions designed to elevate your business
-            operations and drive results.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-            <div className="space-y-10 text-left">
-              {whyLeft.map((item, index) => (
-                <div key={index}>
-                  <h3 className="text-black text-lg font-semibold">
-                    {item.name}
-                  </h3>
-                  <p className="text-neutral-500 text-sm mt-2">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div className="flex justify-center">
-              <div className="relative w-64 h-64 flex items-center justify-center">
-                <div className="absolute w-56 h-48 bg-[#99f39d] rounded-full bottom-0" />
-                <Image
-                  src="/product.png"
-                  alt="feature"
-                  width={200}
-                  height={300}
-                  className="relative z-10 object-contain"
-                />
-              </div>
-            </div>
-            <div className="space-y-10 text-left">
-              {whyRight.map((item, index) => (
-                <div key={index}>
-                  <h3 className="text-black text-lg font-semibold">
-                    {item.name}
-                  </h3>
-                  <p className="text-neutral-500 text-sm mt-2">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Top Products */}
-      <section className="py-26 px-6 md:px-24 ">
-        <h2 className="text-3xl font-bold text-center mb-4 text-black">
-          Discover the Best Solutions
-        </h2>
-        <p className="text-neutral-600 text-center max-w-2xl mx-auto mb-12">
-          Explore premium software solutions crafted to bring automation,
-          efficiency and intelligent workflows.
-        </p>
-        <div className="max-w-5xl mx-auto flex flex-col gap-16">
-          {industry.topProducts.map((p, i) => (
-            <div
-              key={i}
-              className="grid md:grid-cols-[1fr_1fr] gap-4 items-center"
+        {/* HERO SECTION - Updated with HeroSection styles */}
+        <section className="relative overflow-hidden text-black w-full py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 sm:gap-8 lg:gap-12"
             >
-              <div
-                className={`flex ${
-                  i % 2 === 0 ? "order-1" : "order-2"
-                } justify-start ml-14`}
-              >
-                <div className="relative w-64 h-56 flex items-center justify-center">
-                  <div className="absolute w-94 h-62 bg-[#91f096] rounded-2xl" />
-                  <Image
-                    src={p.image}
-                    alt={p.title}
-                    width={200}
-                    height={200}
-                    className="relative z-10 object-contain"
-                  />
-                </div>
-              </div>
-              <div
-                className={`${i % 2 === 0 ? "order-2" : "order-1"} text-left`}
-              >
-                <h3 className="text-2xl font-semibold text-black">{p.title}</h3>
-                <p className="text-neutral-600 mt-2 text-sm">{p.desc}</p>
-                <ul className="text-neutral-700 text-sm mt-3 space-y-1">
-                  {p.features.map((f, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-black rounded-full mt-1"></span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4 flex items-center gap-3">
-                  <button className="bg-black text-white px-6 py-2 rounded-full text-sm">
-                    Shop Now
-                  </button>
-                  <p className="text-lg font-semibold text-black">{p.price}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+              {/* Left side title */}
+              <div className="lg:flex-1">
+                <motion.h1
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.2, duration: 0.8 }}
+                  className="text-[30px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-medium leading-[1.2] md:leading-[1.1] text-black"
+                >
+                  {industry.title.split(" ").slice(0, 3).join(" ")}{" "}
+                  <span className="text-neutral-500">
+                    {industry.title.split(" ").slice(3).join(" ")}
+                  </span>
+                </motion.h1>
 
-      {/* Products horizontal scroll */}
-      <section className="py-16 px-6 md:px-24 ">
-        <h2 className="text-3xl font-bold text-center text-black">
-          Our Products
-        </h2>
-        <p className="text-neutral-600 text-center max-w-xl mx-auto mt-2 mb-10">
-          Discover tools designed for performance, automation and innovation.
-        </p>
-        <div className="relative">
-          <button
-            onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full z-10 text-black hover:bg-[#91f096]"
-          >
-            ◀
-          </button>
-          <div
-            ref={scrollRef}
-            className="flex gap-10 overflow-x-auto px-6 scrollbar-hide scroll-smooth"
-          >
-            {industry.products.map((prod, i) => (
-              <div
-                key={i}
-                className="min-w-[260px] max-w-[260px] mx-auto flex-shrink-0"
-              >
-                <div className="relative bg-[#99f39d] w-full h-48 rounded-2xl flex items-center justify-center">
-                  <Image
-                    src={prod.image}
-                    alt={prod.name}
-                    width={110}
-                    height={110}
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="mt-4 font-semibold text-lg text-black">
-                  {prod.name}
-                </h3>
-                <div className="flex justify-between items-center mt-3">
-                  <button className="bg-black text-white px-4 py-1 rounded-full text-sm">
-                    Buy Now
-                  </button>
-                  <p className="font-semibold text-black">{prod.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full z-10 text-black hover:bg-[#91f096]"
-          >
-            ▶
-          </button>
-        </div>
-      </section>
+                <motion.p
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.4, duration: 0.8 }}
+                  className="text-neutral-600 mt-4 xs:mt-5 sm:mt-6 text-[14px] sm:text-lg max-w-2xl"
+                >
+                  {industry.desc}
+                </motion.p>
 
-      {/* ------------------ NEW JSON SECTIONS ------------------ */}
-
-      {/* 1) Industries We Serve - Carousel */}
-      {industry.industriesWeServe && (
-        <section className="py-16 px-6 md:px-24 ">
-          <div className="max-w-6xl mx-auto flex flex-col items-center">
-            <h2 className="text-3xl font-semibold mb-2 text-black">
-              {industry.industriesWeServe.heading}
-            </h2>
-            <p className="text-neutral-700 mb-8 max-w-2xl text-center">
-              {industry.industriesWeServe.description}
-            </p>
-            <div className="w-full flex justify-center">
-              <div className="hidden md:block">
-                <Carousel
-                  cards={industry.industriesWeServe.cards}
-                  baseWidth={920}
-                  autoplay={false}
-                  pauseOnHover
-                  loop={false}
-                />
-              </div>
-              <div className="md:hidden grid gap-6 w-full px-4">
-                {industry.industriesWeServe.cards.map((c, i) => (
-                  <div
-                    key={i}
-                    className="bg-neutral-200 p-6 rounded-2xl text-white"
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
+                  className="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 mt-4 sm:mt-6"
+                >
+                  {/* Contact button */}
+                  <motion.div
+                    whileTap={{ scale: 0.95 }}
+                    className="relative overflow-hidden rounded-lg bg-black px-10 sm:px-6 py-2.5 xs:py-3 sm:py-3 text-white font-medium group cursor-pointer"
                   >
-                    <h3 className="text-xl font-semibold">{c.title}iofhsfoh</h3>
-                    <p className="text-neutral-300 mt-2">{c.description}</p>
-                    {c.cta && (
-                      <p className="mt-3 text-sm text-[#9ae6b4]">{c.cta}</p>
-                    )}
+                    <button
+                      onClick={() => router.push("/Contact")}
+                      className="relative z-10 text-[14px] sm:text-md"
+                    >
+                      Request a Quote
+                    </button>
+                    <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                  </motion.div>
+
+                  {/* Stats */}
+                  <div className="flex flex-row gap-4 xs:gap-6 sm:gap-8 text-start md:text-center">
+                    {industry.stats.map((item, index) => (
+                      <div key={index}>
+                        <h3 className="text-black text-2xl sm:text-3xl font-semibold">
+                          {item.value}
+                        </h3>
+                        <p className="text-neutral-600 text-[12px] sm:text-[13px]">
+                          {item.label}
+                        </p>
+                      </div>
+                    ))}
                   </div>
+                </motion.div>
+              </div>
+
+              {/* Right side - Hero image */}
+              <motion.div
+                initial={{ opacity: 0, x: 80 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="relative flex items-center justify-center w-full lg:w-1/2 mt-8 lg:mt-0"
+              >
+                <div className="relative w-[250px] h-[250px] xs:w-[280px] xs:h-[280px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px]">
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.05, 1],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute inset-0 rounded-full bg-gradient-to-r from-lime-500/20 to-transparent blur-2xl sm:blur-3xl"
+                  />
+                  <Image
+                    src={industry.banner}
+                    alt={industry.title}
+                    fill
+                    className="object-contain relative z-10"
+                    priority
+                    sizes="(max-width: 640px) 250px, (max-width: 768px) 280px, (max-width: 1024px) 350px, (max-width: 1280px) 400px, 450px"
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Why Choose Section - Updated with AboutUs styles */}
+        <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="mb-6 sm:mb-8"
+            >
+              <p className="text-md sm:text-lg text-neutral-900 mb-3 flex items-center gap-2">
+                Why Choose {industry.title.split(" ")[0]}?
+                <span>
+                  <Image
+                    src="/badge-icon.webp"
+                    alt="badge"
+                    width={16}
+                    height={16}
+                    className="w-4 h-4"
+                  />
+                </span>
+              </p>
+
+              <div className="flex flex-col sm:grid sm:grid-cols-2 gap-6 xs:gap-8 items-start">
+                {/* Left: Heading */}
+                <div>
+                  <h2 className="text-[30px] sm:text-[32px] md:text-[38px] lg:text-[44px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
+                    Driving Principles of Our Solutions
+                  </h2>
+                </div>
+
+                {/* Right: Description */}
+                <div>
+                  <p className="text-neutral-600 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
+                    Discover powerful solutions designed to elevate your business
+                    operations and drive results.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 items-center">
+              {/* Left features */}
+              <div className="space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8">
+                {whyLeft.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200 shadow-xs"
+                  >
+                    <h3 className="text-black text-base xs:text-lg sm:text-xl font-semibold mb-2 sm:mb-3">
+                      {item.name}
+                    </h3>
+                    <p className="text-neutral-600 text-xs xs:text-sm sm:text-base">
+                      {item.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Center image */}
+              <div className="flex justify-center">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="relative w-48 h-48 xs:w-56 xs:h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center"
+                >
+                  <div className="absolute w-full h-full bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-xl sm:rounded-2xl"></div>
+                  <Image
+                    src="/product.png"
+                    alt="Service Illustration"
+                    width={300}
+                    height={300}
+                    className="relative z-10 object-contain w-3/4 h-3/4"
+                    sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 320px"
+                  />
+                </motion.div>
+              </div>
+
+              {/* Right features */}
+              <div className="space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8">
+                {whyRight.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200 shadow-xs"
+                  >
+                    <h3 className="text-black text-base xs:text-lg sm:text-xl font-semibold mb-2 sm:mb-3">
+                      {item.name}
+                    </h3>
+                    <p className="text-neutral-600 text-xs xs:text-sm sm:text-base">
+                      {item.desc}
+                    </p>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </div>
         </section>
-      )}
 
-      {/* 2) What We Build - ScrollStack on desktop, horizontal swipe on mobile */}
-      {industry.whatWeBuild && (
-        <section className="py-16 px-6 md:px-12">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-semibold mb-2 text-black">
-              {industry.whatWeBuild.heading}
-            </h2>
-            <p className="text-neutral-600 mb-8">
-              {industry.whatWeBuild.description}
-            </p>
+        {/* Featured Top Products Section - Updated with RecentWork styles */}
+        <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9 }}
+              viewport={{ once: true }}
+              className="mb-6 sm:mb-8"
+            >
+              <p className="text-md sm:text-lg md:text-xl text-neutral-800 mb-3 flex items-center gap-1">
+                Premium Solutions
+                <span>
+                  <Image
+                    src="/badge-icon.jpg"
+                    alt="badge"
+                    width={16}
+                    height={16}
+                    className="w-4 h-4"
+                  />
+                </span>
+              </p>
+              
+              <div className="flex flex-col sm:grid sm:grid-cols-2 gap-6 xs:gap-8 sm:gap-10 mb-8 sm:mb-12">
+                <h2 className="text-[30px] sm:text-[32px] md:text-[38px] lg:text-[44px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
+                  Discover Our Premium Solutions
+                </h2>
+                <p className="text-neutral-600 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
+                  Explore premium software solutions crafted to bring automation,
+                  efficiency and intelligent workflows.
+                </p>
+              </div>
+            </motion.div>
 
-            {isMobile ? (
-              /* mobile horizontal swipe M2 - 250px cards */
-              <MobileWhatWeBuildCarousel items={industry.whatWeBuild.items} />
-            ) : (
-              /* desktop - ScrollStack */
-              <VerticalShadCarousel items={industry.whatWeBuild.items} />
-            )}
+            <div className="space-y-12 sm:space-y-16 md:space-y-20">
+              {industry.topProducts.map((product, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className={`grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center ${
+                    index % 2 === 1 ? "md:flex-row-reverse" : ""
+                  }`}
+                >
+                  {/* Image */}
+                  <div className="flex justify-center">
+                    <div className="relative w-full max-w-md h-48 xs:h-56 sm:h-64 md:h-72 lg:h-80 flex items-center justify-center">
+                      <div className="absolute w-full h-full bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-xl sm:rounded-2xl"></div>
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        width={300}
+                        height={300}
+                        className="relative z-10 object-contain w-3/4 h-3/4"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div>
+                    <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-3 sm:mb-4">
+                      {product.title}
+                    </h3>
+                    <p className="text-neutral-600 mb-4 sm:mb-6 text-[14px] xs:text-base">
+                      {product.desc}
+                    </p>
+
+                    {product.features && product.features.length > 0 && (
+                      <ul className="space-y-1 xs:space-y-2 mb-4 sm:mb-6">
+                        {product.features.map((feature, featureIndex) => (
+                          <li
+                            key={featureIndex}
+                            className="flex items-start gap-2 xs:gap-3"
+                          >
+                            <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 bg-neutral-800 rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
+                            <span className="text-neutral-700 text-sm xs:text-base">
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    <div className="flex flex-col xs:flex-row items-start xs:items-center gap-3 xs:gap-4">
+                      <div
+                        onClick={() => router.push("/Contact")}
+                        className="relative overflow-hidden rounded-lg bg-black px-4 xs:px-5 sm:px-6 py-2 xs:py-2.5 sm:py-3 text-white font-medium group cursor-pointer"
+                      >
+                        <span className="relative z-10 text-sm xs:text-base">
+                          Get Started
+                        </span>
+                        <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                      </div>
+                      <p className="text-lg sm:text-xl font-semibold text-black">
+                        {product.price}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
-      )}
 
-      {/* 3) Development Process - Vertical Timeline */}
-      {industry.developmentProcess && (
-        <VerticalTimeline
-          heading={industry.developmentProcess.heading}
-          description={industry.developmentProcess.description}
-          steps={industry.developmentProcess.steps}
-        />
-      )}
+        {/* Products Carousel Section */}
+        <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-start md:text-center mb-8 sm:mb-10 md:mb-12"
+            >
+              <h2 className="text-[24px] xs:text-[26px] sm:text-[32px] md:text-[38px] lg:text-4xl font-semibold text-black mb-3 sm:mb-4">
+                Our Solutions
+              </h2>
+              <p className="text-neutral-600 max-w-xl mx-auto text-[14px] xs:text-base">
+                Discover tools designed for performance, automation and
+                innovation.
+              </p>
+            </motion.div>
 
-      {/* 4) Benefits - Side-by-side reveal */}
-      {industry.benefits && (
-        <SideBySideReveal
-          heading={industry.benefits.heading}
-          description={industry.benefits.description}
-          cards={industry.benefits.cards}
-        />
-      )}
+            <div className="relative">
+              <button
+                onClick={scrollLeft}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 xs:-translate-x-3 sm:-translate-x-4 bg-white shadow-xs p-2 xs:p-3 rounded-full z-10 hover:bg-gray-50 transition-colors"
+                aria-label="Scroll left"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.2em"
+                  height="1.2em"
+                  className="w-4 h-4 xs:w-5 xs:h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M6.325 12.85q-.225-.15-.337-.375T5.874 12t.113-.475t.337-.375l8.15-5.175q.125-.075.263-.112T15 5.825q.4 0 .7.288t.3.712v10.35q0 .425-.3.713t-.7.287q-.125 0-.262-.038t-.263-.112z"
+                  />
+                </svg>
+              </button>
 
-      <TestimonialsSection />
-      <FAQ />
-      <Footer />
-    </div>
+              <div
+                ref={scrollRef}
+                className="flex gap-4 xs:gap-5 sm:gap-6 overflow-x-auto px-2 pb-4 scroll-smooth"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              >
+                {industry.products.map((product, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="min-w-[240px] xs:min-w-[260px] sm:min-w-[280px] flex-shrink-0 bg-white shadow-xs rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200"
+                  >
+                    <div className="relative bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) w-full h-36 xs:h-40 sm:h-48 rounded-lg xs:rounded-xl flex items-center justify-center mb-4 xs:mb-5 sm:mb-6">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={120}
+                        height={120}
+                        className="object-contain w-20 h-20 xs:w-24 xs:h-24"
+                      />
+                    </div>
+
+                    <h3 className="text-base xs:text-lg font-semibold text-black mb-2">
+                      {product.name}
+                    </h3>
+
+                    <div className="flex justify-between items-center">
+                      <div
+                        onClick={() => router.push("/Contact")}
+                        className="relative overflow-hidden rounded-lg bg-black px-3 xs:px-4 py-1.5 xs:py-2 text-white text-xs xs:text-sm font-medium group cursor-pointer"
+                      >
+                        <span className="relative z-10">Learn More</span>
+                        <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                      </div>
+                      <p className="font-semibold text-lime-500 text-sm xs:text-base">
+                        {product.price}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <button
+                onClick={scrollRight}
+                className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 translate-x-2 xs:translate-x-3 sm:translate-x-4 bg-white shadow-xs p-2 xs:p-3 rounded-full z-10 hover:bg-gray-50 transition-colors"
+                aria-label="Scroll right"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.2em"
+                  height="1.2em"
+                  className="w-4 h-4 xs:w-5 xs:h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <g transform="rotate(180 12 12)">
+                    <path
+                      fill="currentColor"
+                      d="M6.325 12.85q-.225-.15-.337-.375T5.874 12t.113-.475t.337-.375l8.15-5.175q.125-.075.263-.112T15 5.825q.4 0 .7.288t.3.712v10.35q0 .425-.3.713t-.7.287q-.125 0-.262-.038t-.263-.112z"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* ------------------ NEW JSON SECTIONS ------------------ */}
+
+        {/* 1) Industries We Serve */}
+        {industry.industriesWeServe && (
+          <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
+            <div className="max-w-7xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-start md:text-center mb-8 sm:mb-10 md:mb-12"
+              >
+                <h2 className="text-[24px] xs:text-[26px] sm:text-[32px] md:text-[38px] lg:text-4xl font-semibold text-black mb-3 sm:mb-4">
+                  {industry.industriesWeServe.heading}
+                </h2>
+                <p className="text-neutral-600 max-w-2xl mx-auto text-[14px] sm:text-lg">
+                  {industry.industriesWeServe.description}
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-5 sm:gap-6">
+                {industry.industriesWeServe.cards.map((card, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200 shadow-xs"
+                  >
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-semibold text-black mb-2 sm:mb-3">
+                      {card.title}
+                    </h3>
+                    <p className="text-neutral-600 mb-3 sm:mb-4 text-[14px] xs:text-base">
+                      {card.description}
+                    </p>
+                    {card.cta && (
+                      <button className="text-black font-medium hover:text-lime-600 transition-colors text-sm xs:text-base">
+                        {card.cta}
+                      </button>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 2) What We Build */}
+        {industry.whatWeBuild && (
+          <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
+            <div className="max-w-7xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-start md:text-center mb-8 sm:mb-10 md:mb-12"
+              >
+                <h2 className="text-[24px] xs:text-[26px] sm:text-[32px] md:text-[38px] lg:text-4xl font-semibold text-black mb-3 sm:mb-4">
+                  {industry.whatWeBuild.heading}
+                </h2>
+                <p className="text-neutral-600 max-w-2xl mx-auto text-[14px] sm:text-lg">
+                  {industry.whatWeBuild.description}
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5 sm:gap-6">
+                {industry.whatWeBuild.items.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200 shadow-xs"
+                  >
+                    <h3 className="text-base xs:text-lg font-semibold text-black mb-2 sm:mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-neutral-600 text-xs xs:text-sm">
+                      {item.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 3) Development Process */}
+        {industry.developmentProcess && (
+          <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
+            <div className="max-w-7xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-start md:text-center mb-8 sm:mb-10 md:mb-12"
+              >
+                <h2 className="text-[24px] xs:text-[26px] sm:text-[32px] md:text-[38px] lg:text-4xl font-semibold text-black mb-3 sm:mb-4">
+                  {industry.developmentProcess.heading}
+                </h2>
+                <p className="text-neutral-600 max-w-2xl mx-auto text-[14px] sm:text-lg">
+                  {industry.developmentProcess.description}
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-5 sm:gap-6">
+                {industry.developmentProcess.steps.map((step, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="relative"
+                  >
+                    <div className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200 shadow-xs h-full">
+                      <div className="w-8 h-8 xs:w-10 xs:h-10 rounded-full bg-black text-white flex items-center justify-center font-bold text-base xs:text-lg mb-3 sm:mb-4">
+                        {step.step}
+                      </div>
+                      <h3 className="text-lg xs:text-xl font-semibold text-black mb-2 sm:mb-3">
+                        {step.title}
+                      </h3>
+                      <p className="text-neutral-600 text-xs xs:text-sm">
+                        {step.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 4) Benefits */}
+        {industry.benefits && (
+          <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28 bg-gradient-to-b from-white/50 to-[#f8fff8]/50">
+            <div className="max-w-7xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-start md:text-center mb-8 sm:mb-10 md:mb-12"
+              >
+                <h2 className="text-[24px] xs:text-[26px] sm:text-[32px] md:text-[38px] lg:text-4xl font-semibold text-black mb-3 sm:mb-4">
+                  {industry.benefits.heading}
+                </h2>
+                <p className="text-neutral-600 max-w-2xl mx-auto text-[14px] sm:text-lg">
+                  {industry.benefits.description}
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-5 sm:gap-6">
+                {industry.benefits.cards.map((card, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200 shadow-xs"
+                  >
+                    <h3 className="text-lg xs:text-xl font-semibold text-black mb-2 sm:mb-3">
+                      {card.title}
+                    </h3>
+                    <p className="text-neutral-600 text-xs xs:text-sm">
+                      {card.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        <TestimonialsSection />
+        <FAQ />
+        <Footer />
+      </div>
     </div>
   );
 }

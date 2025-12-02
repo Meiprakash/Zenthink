@@ -132,7 +132,7 @@ const processes = [
 
 const ProcessSection = () => {
   return (
-    <section className="px-6 md:px-16 lg:px-24 py-20 ">
+    <section className="px-5 md:px-16 lg:px-24 py-10">
       {/* Section Title */}
       <div className="flex items-start gap-2 mb-4">
         <motion.h2
@@ -140,7 +140,7 @@ const ProcessSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-neutral-900 text-lg font-medium"
+          className="text-neutral-900 text-md md:text-lg font-medium"
         >
           Process
         </motion.h2>
@@ -156,7 +156,7 @@ const ProcessSection = () => {
             alt="badge"
             width={20}
             height={20}
-            className="mt-1"
+            className="w-4 h-4 mt-1"
           />
         </motion.div>
       </div>
@@ -166,14 +166,14 @@ const ProcessSection = () => {
       <div className="grid sm:grid-cols-2 sm:gap-8 gap-4 items-start ">
         {/* Left: Heading */}
         <div>
-          <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-neutral-900 leading-tight tracking-tight">
+          <h2 className="text-[30px] md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-tight tracking-tight">
             Partnership Principles That Build Lasting Success
           </h2>
         </div>
 
         {/* Right: Description */}
         <div>
-          <p className="text-neutral-600 text-[11px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+          <p className="text-neutral-600 text-[14px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 ">
             We believe meaningful relationships create extraordinary results.
             Our culture is designed to support you from day one to long-term
             partnership—honestly, proactively, and respectfully. Here’s the
@@ -192,17 +192,17 @@ const ProcessSection = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
             className="bbg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)
- border h-[340px] sm:h-full rounded-3xl p-12 flex flex-col justify-between transition"
+            border h-[280px] sm:h-full rounded-3xl p-8 md:p-12 flex flex-col justify-between transition"
           >
             {/* Image on top for 2nd and 4th cards */}
             {(index === 1 || index === 3) && (
-              <div className="flex justify-center mb-6 w-full">
+              <div className="flex justify-start md:justify-center mb-4 w-full">
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={90}
                   height={70}
-                  className="rounded-full mb-8 md:w-27 sm:w-20 w-17"
+                  className="rounded-full mb-8 md:w-27 sm:w-20 w-15"
                 />
               </div>
             )}
@@ -218,13 +218,13 @@ const ProcessSection = () => {
 
             {/* Image at bottom for 1st and 3rd cards */}
             {(index === 0 || index === 2) && (
-              <div className="flex justify-center sm:mt-18 mt-6   w-full">
+              <div className="flex justify-start md:justify-center sm:mt-18 mt-4 w-full">
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={90}
                   height={70}
-                  className="rounded-full sm:mt-18 md:w-27 sm:w-20 w-17 "
+                  className="rounded-full sm:mt-18 md:w-27 sm:w-20 w-16"
                 />
               </div>
             )}
