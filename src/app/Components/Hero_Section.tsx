@@ -16,14 +16,14 @@ const rotatingTexts = [
   { id: 2, name: "UI Design" },
 ];
 const positions = [
-  "translate-x-[30%]", 
+  "translate-x-[30%]",
   "-translate-x-[10%]",
-  "translate-x-[40%]", 
-  "-translate-x-[5%]", 
-  "translate-x-[40%]", 
-  "-translate-x-[10%]", 
-  "translate-x-[43%]", 
-  "-translate-x-[10%]", 
+  "translate-x-[40%]",
+  "-translate-x-[5%]",
+  "translate-x-[40%]",
+  "-translate-x-[10%]",
+  "translate-x-[43%]",
+  "-translate-x-[10%]",
 ];
 export default function Hero() {
   return (
@@ -46,8 +46,10 @@ export default function Hero() {
             className="text-4xl md:text-5xl font-semibold leading-tight text-black"
           >
             Engineering{"  "}
-            <span className="text-gray-400">Software Solutions</span> That Drive{" "}
-            <span className="text-gray-400">Business Growth</span>
+            <span className="text-gray-700">Software Solutions</span> That Drive{" "}
+            <span className="text-gray-700">
+              Business <span className="text-black">Growth</span>
+            </span>
           </motion.h1>
 
           <motion.p
@@ -75,7 +77,7 @@ export default function Hero() {
             >
               <Link href="/Contact">
                 <span className="relative z-10">Let’s Work Together ?</span>
-                <span className="absolute inset-0 rounded-lg bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
               </Link>
               <motion.span
                 initial={{ x: "-100%" }}
@@ -97,7 +99,6 @@ export default function Hero() {
                   src="about-avater-group.jpg"
                   className="w-full h-10 rounded-full  border-white"
                   alt="User"
-                  whileHover={{ scale: 1.1 }}
                 />
               </div>
 
@@ -121,7 +122,7 @@ export default function Hero() {
           className="relative  flex items-center    justify-between w-full md:w-1/2"
         >
           {/* FLOATING TAGS COLUMN */}
-          <div className="h-[400px] md:h-[400px] overflow-hidden items-center  sm:px-50 md:px-2 px-3 sm:ml-10  md:ml-1  w-[200px]">
+          <div className="h-[400px] md:h-[400px] overflow-hidden items-center  sm:px-50  md:px-2 px- sm:ml-10  md:ml-1  w-[290px]">
             <motion.div
               animate={{ y: ["0%", "-50%"] }}
               transition={{
@@ -139,7 +140,7 @@ export default function Hero() {
            mb-12 md:mb-10 
 bg-white/90 backdrop-blur-sm shadow-md shadow-gray-300/30 
 border border-gray-200 text-black 
-rounded-full px-3 py-2 sm:px-6 sm:py-3     /* smaller X padding */
+rounded-full px-3 py-2 sm:px-5 sm:py-2     /* smaller X padding */
 text-[12px] md:text-[15px] font-medium 
 flex items-center gap-1     /* smaller gap */
 max-w-[190px] w-fit         /* fits inside 200px column */

@@ -96,7 +96,7 @@ export default function TestimonialsSection() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="relative  font-[Inter,sans-serif] py-[10vh] "
+      className="relative  font-[Inter,sans-serif] py-[10vh]"
     >
       {/* Desktop Parallax Version */}
       <div className="hidden lg:block relative h-[200vh]">
@@ -143,7 +143,7 @@ export default function TestimonialsSection() {
                 <motion.div
                   key={i}
                   variants={cardVariants}
-                  className="flex-shrink-0 bg-white rounded-3xl shadow-sm p-8 w-[360px] border border-gray-100"
+                  className="flex-shrink-0 bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-3xl shadow-sm p-8 w-[360px] border border-gray-100"
                   whileHover={{ y: -6 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >

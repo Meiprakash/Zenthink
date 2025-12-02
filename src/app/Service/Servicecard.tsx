@@ -66,7 +66,7 @@ function Servicecard() {
         {servicecard.map((i, index) => (
           <div
             key={index}
-            className="col-span-1 bg-[linear-gradient(180deg,#F4F0FF_0%,#EFE9FF_100%)] p-5 rounded-xl shadow-xs hover:shadow-xl transition delay-100 duration-150"
+            className="col-span-1 bg-[linear-gradient(180deg,#fbfff6_0%,#f5ffe8_100%)] p-5 rounded-xl shadow-xs hover:shadow-xl transition delay-100 duration-150"
           >
             <div className="mb-18">
               <Image
