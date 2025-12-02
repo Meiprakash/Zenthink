@@ -66,7 +66,7 @@ function Servicecard() {
         {servicecard.map((i, index) => (
           <div
             key={index}
-            className="col-span-1 bg-[linear-gradient(180deg,#fbfff6_0%,#f5ffe8_100%)] p-5 rounded-xl shadow-xs hover:shadow-xl transition delay-100 duration-150"
+            className="col-span-1 p-5 rounded-xl shadow-xs hover:shadow-xl transition delay-100 duration-150"
           >
             <div className="mb-18">
               <Image
@@ -80,7 +80,7 @@ function Servicecard() {
             <div className="text-xl sm:text-3xl mb-2 text-black font-semibold">
               {i.name}
             </div>
-            <div className="text-[14px] text-gray-500">{i.desc}</div>
+            <div className="text-[14px] text-neutral-500">{i.desc}</div>
             <div className="mt-6">
               <Link href={i.link} className="text-black flex gap-1 ">
                 Read more{" "}

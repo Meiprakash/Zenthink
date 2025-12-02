@@ -41,7 +41,7 @@ export default async function BlogDetail({
   if (!blog) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-3xl font-bold text-gray-600">
+        <h1 className="text-3xl font-bold text-neutral-600">
           404 | Blog Not Found
         </h1>
       </div>
@@ -49,7 +49,7 @@ export default async function BlogDetail({
   }
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-neutral-100">
       <Navbar />
 
       {/* Blog Header Section */}
@@ -58,7 +58,7 @@ export default async function BlogDetail({
           <h1 className="text-xl sm:text-2xl lg:text-4xl sm:ml-7 text-black font-semibold  mb-4 col-span-1">
             {blog.title}
           </h1>
-          <p className="text-gray-500 text-sm md:text-lg mb-8  col-span-1 lg:ml-19 lg:mr-7">
+          <p className="text-neutral-500 text-sm md:text-lg mb-8  col-span-1 lg:ml-19 lg:mr-7">
             {blog.content}
           </p>
         </div>
@@ -86,7 +86,7 @@ export default async function BlogDetail({
             <h3 className="text-xl lg:text-2xl font-medium mt-8 mb-2">
               Introduction
             </h3>
-            <p className="text-gray-700 text-sm sm:text-[16px] leading-relaxed">
+            <p className="text-neutral-700 text-sm sm:text-[16px] leading-relaxed">
               Web design is full of opinions — and not all of them are good.
               Agency{" "}
               <Link
@@ -109,10 +109,10 @@ export default async function BlogDetail({
             <h3 className="text-lg sm:text-2xl font-medium mb-5">
               Your Website Just Needs to Look Good
             </h3>
-            <p className="text-gray-700 text-sm sm:text-[16px]">
+            <p className="text-neutral-700 text-sm sm:text-[16px]">
               A beautiful site is nice—but it’s not everything.
             </p>
-            <p className="text-gray-700 text-sm sm:text-[16px] mb-4">
+            <p className="text-neutral-700 text-sm sm:text-[16px] mb-4">
               Here’s why that’s a problem:
             </p>
             <ol className="list-decimal list-inside space-y-1 text-black font-semibold text-sm sm:text-[16px]">
@@ -126,7 +126,7 @@ export default async function BlogDetail({
             <h3 className="text-lg sm:text-2xl font-medium mb-5">
               Put Everything on the Homepage
             </h3>
-            <p className="text-gray-700 mb-3 text-sm sm:text-[16px]">
+            <p className="text-neutral-700 mb-3 text-sm sm:text-[16px]">
               Too much information up front can:
             </p>
             <ul className="list-disc list-inside space-y-1 text-black font-semibold text-sm sm:text-[16px]">
@@ -137,7 +137,7 @@ export default async function BlogDetail({
           </div>
 
           <div className="bg-white rounded-2xl p-6">
-            <p className="text-lg md:text-[26px]  text-gray-700 font-medium">
+            <p className="text-lg md:text-[26px]  text-neutral-700 font-medium">
               “Experts with no UX background, or well-meaning clients repeating
               bad trends, can ruin a website before it even launches.”
             </p>
@@ -147,7 +147,7 @@ export default async function BlogDetail({
             <h3 className="text-lg sm:text-xl font-medium mb-2">
               Internal Navigation Done Right
             </h3>
-            <p className="text-gray-700 text-sm sm:text-[16px]">
+            <p className="text-neutral-700 text-sm sm:text-[16px]">
               Internal linking helps with both user experience and SEO. Here’s a
               good example of how to do it:{" "}
               <a
@@ -165,7 +165,7 @@ export default async function BlogDetail({
             <h3 className="text-lg sm:text-xl font-medium mb-2">
               Final Thought
             </h3>
-            <p className="text-gray-700 text-sm sm:text-[16px]">
+            <p className="text-neutral-700 text-sm sm:text-[16px]">
               Web design isn’t just about looking good. It’s about guiding
               users, telling your story, and helping people take action. The
               best sites feel effortless—and that takes thoughtful planning.
@@ -193,7 +193,7 @@ export default async function BlogDetail({
               <h2 className="text-black font-semibold lg:text-xl  mb-2">
                 Jenny Kia
               </h2>
-              <p className="text-gray-700 sm:text-sm lg:mt-5 mt-1">
+              <p className="text-neutral-700 sm:text-sm lg:mt-5 mt-1">
                 Web developer
               </p>
               <div className="flex lg:mt-5">
@@ -219,13 +219,13 @@ export default async function BlogDetail({
         <div className="flex flex-col  md:flex-row md:items-end justify-between mb-16 gap-6">
           {/* Left side title */}
           <div>
-            <h2 className="text-xl md:text-5xl sm:text-2xl ml-3 sm:ml-5 sm:mt-3 font-semibold text-gray-900 leading-tight">
+            <h2 className="text-xl md:text-5xl sm:text-2xl ml-3 sm:ml-5 sm:mt-3 font-semibold text-neutral-900 leading-tight">
               Related Blog
             </h2>
           </div>
 
           {/* Right side text */}
-          <p className="text-gray-600 text-sm sm:text-lg leading-relaxed ml-2 max-w-lg">
+          <p className="text-neutral-600 text-sm sm:text-lg leading-relaxed ml-2 max-w-lg">
             We help brands grow through strategic design and digital
             experiences. From brand identity to powerful websites, our services
             are Impression
@@ -238,7 +238,7 @@ export default async function BlogDetail({
             <div key={index}>
               <Link
                 href={blog.link}
-                className="block group overflow-hidden rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-100"
+                className="block group overflow-hidden rounded-3xl bg-white border border-neutral-100 shadow-sm hover:shadow-md transition-all duration-100"
               >
                 {/* Image */}
                 <div className="overflow-hidden rounded-3xl">
@@ -247,19 +247,19 @@ export default async function BlogDetail({
                     alt={blog.title}
                     width={800}
                     height={500}
-                    className="w-full h-72 object-cover transition-transform duration-400 group-hover:scale-125"
+                    className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-125"
                   />
                 </div>
 
                 {/* Text content */}
                 <div className="p-6">
-                  <p className="text-gray-500 text-sm mb-2">
+                  <p className="text-neutral-500 text-sm mb-2">
                     {blog.date} • {blog.author}
                   </p>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-neutral-900 mb-2 transition-colors duration-300">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-neutral-600 text-sm leading-relaxed">
                     {blog.content}
                   </p>
                 </div>

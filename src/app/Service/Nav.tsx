@@ -72,17 +72,17 @@ const Nav = () => {
 
     return (
       <div>
-        <div className="flex flex-col   items-center justify-center text-lg sm:text-xl py-10 bg-gray-50bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] mt-1">
+        <div className="flex flex-col   items-center justify-center text-lg sm:text-xl py-10 bg-neutral-50bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] mt-1">
           {/* Nav Buttons */}
-          <ul className="flex flex-row justify-center gap-3  md:gap-4 text-gray-700  font-medium mb-6">
+          <ul className="flex flex-row justify-center gap-3  md:gap-4 text-neutral-700  font-medium mb-6">
             {navItems.map((item) => (
               <li
                 key={item}
                 onClick={() => setActive(item)}
-                className={`cursor-pointer border border-gray-400 transition-all duration-300 py-2 px-2 sm:py-3 sm:px-6 rounded-3xl hover:bg-black hover:text-white ${
+                className={`cursor-pointer border border-neutral-400 transition-all duration-300 py-2 px-2 sm:py-3 sm:px-6 rounded-3xl hover:bg-black hover:text-white ${
                   active === item
                     ? "bg-black text-white"
-                    : "bg-white text-gray-600"
+                    : "bg-white text-neutral-600"
                 }`}
               >
                 {item}
@@ -121,10 +121,10 @@ const Nav = () => {
 
                       {/* Right Content */}
                       <div className="mt-6 md:mt-0 md:ml-10 w-full md:w-1/2 p-6 text-left">
-                        <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+                        <h3 className="text-2xl md:text-3xl font-semibold text-neutral-900 mb-4">
                           {card.title}
                         </h3>
-                        <p className="text-gray-600 leading-relaxed mb-4">
+                        <p className="text-neutral-600 leading-relaxed mb-4">
                           {card.description}
                         </p>
 
@@ -133,7 +133,7 @@ const Nav = () => {
                           {card.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
+                              className="px-4 py-1 bg-neutral-100 text-neutral-700 rounded-full text-sm font-medium"
                             >
                               {tag}
                             </span>

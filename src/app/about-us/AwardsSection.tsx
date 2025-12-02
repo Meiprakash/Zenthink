@@ -44,7 +44,7 @@ const AwardsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-gray-900 text-lg font-medium"
+          className="text-neutral-900 text-lg font-medium"
         >
           Awards
         </motion.h2>
@@ -70,14 +70,14 @@ const AwardsSection = () => {
         <div className="grid sm:grid-cols-2 gap-4 sm:gap-8 items-start ">
           {/* Left: Heading */}
           <div>
-            <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-gray-900 leading-tight tracking-tight">
+            <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold text-neutral-900 leading-tight tracking-tight">
               Expertise That Transforms Challenges Into Competitive Advantages
             </h2>
           </div>
 
           {/* Right: Description */}
           <div>
-            <p className="text-gray-600 text-[11px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+            <p className="text-neutral-600 text-[11px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
               We help organizations scale through intelligent software and
               proven methodologies. From system modernization to new product
               development, our capabilities drive innovation and sustainable
@@ -88,7 +88,7 @@ const AwardsSection = () => {
       </motion.div>
 
       {/* Awards List */}
-      <div className="flex flex-col  sm:flex-col-3">
+      <div className="flex flex-col sm:flex-col-3 justify-between items-center">
         {awards.map((award, index) => (
           <motion.div
             key={award.id}
@@ -96,23 +96,23 @@ const AwardsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
             viewport={{ once: true }}
-            className="flex  md:flex-row  md:items-start  md:gap-10 border-b border-gray-200 pb-10"
+            className="flex md:flex-row md:items-center md:gap-10 py-10"
           >
             {/* Image */}
-            <div className="  w-full md:w-3/5 flex justify-start md:justify-start sm:mr-7">
+            <div className="flex justify-center sm:mr-7">
               <Image
                 src={award.image}
                 alt={award.title}
                 width={180}
                 height={180}
-                className="rounded-lg w-150 h-60 sm:w-50 sm:h-50  object-cover shadow-sm"
+                className="rounded-lg w-150 sm:w-60 object-cover shadow-sm"
               />
             </div>
 
             {/* Year */}
-            <div className="flex ml-10 sm:ml-2   pr-10 sm:gap-10 md:gap-8 items-center justify-center mt-5  sm:mt-8 sm:mr-30 ">
+            <div className="flex w-full ml-10 sm:ml-2 sm:gap-10 md:gap-8 items-center justify-center">
               <div className="w-full md:w-[6%] mt-17 sm:mt-4 md:mt-0 flex justify-center h-full md:items-center md:justify-center">
-                <p className="text-gray-500 text-base font-medium">
+                <p className="text-neutral-500 text-base font-medium">
                   {award.year}
                 </p>
               </div>
@@ -120,11 +120,11 @@ const AwardsSection = () => {
               {/* Title + Description */}
               <div className="md:flex ml-7 md:flex-row-2 sm:gap-4">
                 <div className="">
-                  <h4 className="text-lg sm:text-lg md:text-xl  text-gray-900">
+                  <h4 className="text-xl sm:text-2xl md:text-3xl font-medium text-neutral-900">
                     {award.title}
                   </h4>
                 </div>
-                <p className="text-gray-600 text-sm sm:text-base mt-2 md:mt-3 md:max-w-xl">
+                <p className="text-neutral-600 text-sm sm:text-base mt-2 md:mt-3 md:max-w-xl">
                   {award.desc}
                 </p>
               </div>

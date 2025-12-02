@@ -1,6 +1,4 @@
 "use client";
-
-import { Layers } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -28,10 +26,10 @@ const positions = [
 export default function Hero() {
   return (
     <section
-      className="relative overflow-hidden "
+      className="relative overflow-hidden"
       // style={{ backgroundImage: "url('/hero-bg.webp')" }}
     >
-      <div className="max-w-7xl mx-auto  px-6 py-10 sm:py-24 flex flex-col md:flex-row items-center justify-between gap-10 ">
+      <div className="max-w-7xl mx-auto py-10 sm:pt-16 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -80 }}
@@ -43,35 +41,33 @@ export default function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-4xl md:text-5xl font-semibold leading-tight text-black"
+            className="text-4xl md:text-[60px] font-medium leading-light text-black"
           >
-            Engineering{"  "}
-            <span className="text-gray-700">Software Solutions</span> That Drive{" "}
-            <span className="text-gray-700">
-              Business <span className="text-black">Growth</span>
-            </span>
+            Engineering <span className="text-neutral-500">Software</span> <span className="text-neutral-500">Solutions</span> That Drive{" "}
+            <span className="text-neutral-500">
+              Business
+            </span> Growth
           </motion.h1>
 
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-gray-600"
+            className="text-neutral-600"
           >
             From enterprise applications to industry-specific platforms, we
             transform your business challenges into scalable software solutions.
-            Let&apo;s build your digital future—together
+            Let’s build your digital future—together
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-col  sm:flex-row items-start gap-4 mt-6"
+            className="flex flex-col sm:flex-row items-center gap-4 mt-6"
           >
             {/* Let's work button */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="relative overflow-hidden rounded-lg bg-black px-3 sm:px-6 py-3 sm:py-3  text-white font-sm sm:font-medium group cursor-pointer"
             >
@@ -83,7 +79,7 @@ export default function Hero() {
                 initial={{ x: "-100%" }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="absolute inset-0 bg-blue-400 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"
+                className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"
               ></motion.span>
             </motion.button>
 
@@ -102,7 +98,7 @@ export default function Hero() {
                 />
               </div>
 
-              <span className="flex-col text-sm sm:text-lg md:text-xl text-gray-600">
+              <span className="flex-col text-sm sm:text-lg md:text-xl text-neutral-600">
                 <strong>120K+</strong> Active users
               </span>
             </motion.div>
@@ -119,11 +115,16 @@ export default function Hero() {
             damping: 20,
             delay: 0.4,
           }}
-          className="relative  flex items-center    justify-between w-full md:w-1/2"
+          className="relative flex items-center justify-between w-full md:w-1/2"
         >
           {/* FLOATING TAGS COLUMN */}
-          <div className="h-[400px] md:h-[400px] overflow-hidden items-center  sm:px-50  md:px-2 px- sm:ml-10  md:ml-1  w-[290px]">
-            <motion.div
+          <div className="h-[260px] sm:h-[340px] md:h-[420px] lg:h-[480px] overflow-hidden items-center sm:px-50 md:px-6 sm:ml-10 md:ml-1 w-[280px]">
+             <motion.div
+              animate={{
+                scale: [1],
+              }}
+              className="absolute top-1/2 left-1 -translate-y-1/3 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] rounded-full bg-gradient-to-r from-lime-500/25 to-transparent blur-3xl"
+            /><motion.div
               animate={{ y: ["0%", "-50%"] }}
               transition={{
                 repeat: Infinity,
@@ -131,22 +132,21 @@ export default function Hero() {
                 ease: "linear",
                 repeatType: "loop",
               }}
-              className="flex flex-col px-1  "
+              className="flex flex-col px-1"
             >
               {[...rotatingTexts, ...rotatingTexts].map((text, i) => (
                 <div
                   key={i}
                   className={`
-           mb-12 md:mb-10 
-bg-white/90 backdrop-blur-sm shadow-md shadow-gray-300/30 
-border border-gray-200 text-black 
-rounded-full px-3 py-2 sm:px-5 sm:py-2     /* smaller X padding */
-text-[12px] md:text-[15px] font-medium 
-flex items-center gap-1     /* smaller gap */
-max-w-[190px] w-fit         /* fits inside 200px column */
-truncate   
-            ${positions[i % positions.length]}
-          `}
+                    mb-12 md:mb-10 
+                    bg-white/90 backdrop-blur-sm shadow-md shadow-neutral-300/10 text-black 
+                    rounded-full px-3 py-2 sm:px-5 sm:py-3   
+                    text-[12px] md:text-[15px] font-medium 
+                    flex items-center justify-center gap-1   
+                    w-[170px] max-w-[220px]        
+                    truncate   
+                    ${positions[i % positions.length]}
+                  `}
                 >
                   <span>{text.name}</span>
                 </div>
@@ -161,7 +161,7 @@ truncate
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="relative  w-[160px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px]"
+            className="relative w-[160px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:max-w-[300px] lg:h-[560px]"
           >
             <Image
               src="/hero.jpg"

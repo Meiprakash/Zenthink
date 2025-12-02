@@ -15,7 +15,12 @@ import Servicecard from "./Servicecard";
 
 const Service: React.FC = () => {
   return (
-    <div className="bg-[linear-gradient(180deg,#fbfff6_0%,#f5ffe8_100%)]">
+    <div className="relative min-h-screen">
+      {/* Fixed background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#fdfffa] to-[#f2fde4] -z-10" />
+      
+      {/* Content */}
+      <div className="relative z-0">
       <Navbar />
 
       <section className="w-full   py-9 px-6 md:px-12 lg:px-20 overflow-hidden">
@@ -28,14 +33,14 @@ const Service: React.FC = () => {
         >
           {/* Left side title */}
           <div className="text-start md:text-left flex-1">
-            <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-neutral-900 leading-tight">
               We Engineer Transformative Software Solutions
             </h2>
           </div>
 
           {/* Right side text */}
           <div className="flex-1 text-start md:text-start md:mb-11">
-            <p className="text-gray-600 sm:text-base text-sm md:text-lg leading-relaxed md:max-w-md md:ml-37 mx-auto md:mx-0">
+            <p className="text-neutral-600 sm:text-base text-sm md:text-lg leading-relaxed md:max-w-md md:ml-37 mx-auto md:mx-0">
               We combine bold ideas with smart strategy to design brand
               experiences that connect, convert, and inspire. From startups to
               industry leaders, we make your brand unforgettable.
@@ -66,7 +71,7 @@ const Service: React.FC = () => {
           >
             <h3 className="text-lg text-black mb-2">Need More Info?</h3>
 
-            <p className="text-gray-700 text-sm mb-3 leading-relaxed">
+            <p className="text-neutral-700 text-sm mb-3 leading-relaxed">
               Didn’t find what you were looking for? Let’s chat and solve it
               together!
             </p>
@@ -85,8 +90,8 @@ const Service: React.FC = () => {
           </div>
         </div>
 
-        <div className="sm:col-span-1 bg-gray-200 text-black p-2 rounded-2xl sm:w-40 md:w-60 sm:ml-2 md:ml-1 ">
-          <div className="mt-4 ml-2 md:text-3xl sm:text-xl text-lg text-gray-600">
+        <div className="sm:col-span-1 bg-neutral-200 text-black p-2 rounded-2xl sm:w-40 md:w-60 sm:ml-2 md:ml-1 ">
+          <div className="mt-4 ml-2 md:text-3xl sm:text-xl text-lg text-neutral-600">
             Satisfied <h2 className="sm:flex ">Customers</h2>
           </div>
           <div className="mt-4 sm:mt-15 md:text-5xl ml-2">200K+</div>
@@ -113,7 +118,7 @@ const Service: React.FC = () => {
       {/* Servicecard section*/}
       <div className="mt-18">
         {" "}
-        <p className="text-md text-gray-900  md:ml-39 sm:ml-7 ml-7 flex items-center gap-2">
+        <p className="text-md text-neutral-900  md:ml-39 sm:ml-7 ml-7 flex items-center gap-2">
           Our Services{" "}
           <span className="">
             <Image
@@ -135,7 +140,7 @@ const Service: React.FC = () => {
           >
             {/* Left side title */}
             <div className="text-start md:text-left flex-1">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold text-gray-900 leading-tight">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold text-neutral-900 leading-tight">
                 {/* We Create <br className="hidden sm:block" />
               Amazing Projects */}
                 Software Excellence Across Every Business Function
@@ -144,7 +149,7 @@ const Service: React.FC = () => {
 
             {/* Right side text */}
             <div className="flex-1 text-start md:text-start">
-              <p className="text-gray-600 sm:text-base text-sm md:text-[15px] leading-relaxed md:max-w-md md:ml-37 mx-auto md:mx-0 mb-9">
+              <p className="text-neutral-600 sm:text-base text-sm md:text-[15px] leading-relaxed md:max-w-md md:ml-37 mx-auto md:mx-0 mb-9">
                 We create technology that directly impacts your bottom line.
                 From customer-facing applications to backend infrastructure, our
                 solutions are engineered to improve performance, increase
@@ -160,6 +165,7 @@ const Service: React.FC = () => {
       <BlogSection />
       <ConnectSection />
       <Footer />
+    </div>
     </div>
   );
 };

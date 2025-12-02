@@ -58,7 +58,7 @@
 //         {formattedValue()}
 //         {suffix}
 //       </h2>
-//       <p className="text-gray-600 mt-2">{label}</p>
+//       <p className="text-neutral-600 mt-2">{label}</p>
 //     </motion.div>
 //   );
 // }
@@ -122,7 +122,7 @@ function StatCard({ value, label, suffix = "" }: StatCardProps) {
         {formattedValue()}
         {suffix}
       </h2>
-      <p className="text-gray-600 mt-2 text-sm sm:text-base">{label}</p>
+      <p className="text-neutral-600 mt-2 text-sm sm:text-base">{label}</p>
     </motion.div>
   );
 }
