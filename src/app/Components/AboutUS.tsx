@@ -96,7 +96,7 @@ export default function AboutUs() {
                 src="/videimg.jpg"
                 alt="About video"
                 fill
-                className="w-full h-full object-cover rounded-[28px] brightness-60 "
+                className="w-full h-full object-cover rounded-[28px] brightness-80 "
               />
 
               {/* Play CTA */}
@@ -130,8 +130,8 @@ export default function AboutUs() {
                 key={i}
                 className={`rounded-2xl bg-blue-10 box-border border border-gray-200  overflow-hidden transition-all duration-300 p-3 ${
                   activeIndex === i
-                    ? "bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))] shadow-sm"
-                    : "bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))] hover:shadow-sm"
+                    ? "bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) shadow-sm"
+                    : "bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) hover:shadow-sm"
                 }`}
               >
                 <button

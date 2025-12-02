@@ -132,7 +132,7 @@ const BlogSection: React.FC = () => {
           <Link href="/Blog">
             <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group">
               <span className="relative z-10">See All Blog</span>
-              <span className="absolute inset-0 rounded-lg  bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+              <span className="absolute inset-0 rounded-lg  bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
             </button>
           </Link>
         </motion.div>

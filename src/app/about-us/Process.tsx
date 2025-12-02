@@ -183,7 +183,7 @@ const ProcessSection = () => {
       </div>
 
       {/* Process Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+      <div className="mt-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
         {processes.map((item, index) => (
           <motion.div
             key={item.id}
@@ -191,7 +191,8 @@ const ProcessSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="bg-white h-[340px] sm:h-full rounded-3xl shadow-sm p-12 flex flex-col justify-between hover:shadow-md transition"
+            className="bbg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)
+ border h-[340px] sm:h-full rounded-3xl shadow-sm p-12 flex flex-col justify-between hover:shadow-lg transition"
           >
             {/* Image on top for 2nd and 4th cards */}
             {(index === 1 || index === 3) && (

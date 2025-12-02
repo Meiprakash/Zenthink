@@ -107,7 +107,7 @@ const FAQ = () => {
             />
 
             {/* Floating Card */}
-            <div className="absolute  bottom-4 left-4 right-4 bg-white shadow-xl rounded-2xl p-5 border">
+            <div className="absolute  bottom-4 left-4 right-4 bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))] shadow-xl rounded-2xl p-5 border">
               <h3 className="text-lg text-black mb-2 ">Need More Info?</h3>
               <p className="text-gray-700 text-sm mb-3 leading-relaxed">
                 Didn’t find what you were looking for? Let’s chat and solve it
@@ -116,7 +116,7 @@ const FAQ = () => {
               <Link href="/Service">
                 <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group cursor-pointer">
                   <span className="relative z-10">See All Work</span>
-                  <span className="absolute inset-0 rounded-lg  bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                  <span className="absolute inset-0 rounded-lg  bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
                 </button>
               </Link>
             </div>

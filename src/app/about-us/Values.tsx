@@ -71,7 +71,8 @@ const Values = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all lg:row-span-2"
+          className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)
+ border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all lg:row-span-2"
         >
           <div>
             <h2 className="text-black text-2xl font-bold mb-3">INNOVATION </h2>
@@ -97,7 +98,8 @@ const Values = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
-          className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all"
+          className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)
+ border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all"
         >
           <div>
             <h2 className="text-black text-2xl font-bold mb-3">
@@ -125,7 +127,8 @@ const Values = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
-          className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all lg:row-span-2"
+          className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)
+ border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all lg:row-span-2"
         >
           <div>
             <h2 className="text-black text-2xl font-bold mb-3">QUALITY </h2>
@@ -151,7 +154,8 @@ const Values = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true }}
-          className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all"
+          className="bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)
+ border border-gray-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all"
         >
           <div>
             <h2 className="text-black text-2xl font-bold mb-3">DELIVERY </h2>

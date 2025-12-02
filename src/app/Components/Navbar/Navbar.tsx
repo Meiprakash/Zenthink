@@ -40,17 +40,17 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
           {/* STATIC NAV LINKS */}
           <li>
-            <Link href="/" className="hover:text-black">
+            <Link href="/" className="hover:text-lime-500">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about-us" className="hover:text-black">
+            <Link href="/about-us" className="hover:text-lime-500">
               About
             </Link>
           </li>
           <li>
-            <Link href="/Service" className="hover:text-black">
+            <Link href="/Service" className="hover:text-lime-500">
               Service
             </Link>
           </li>
@@ -58,7 +58,7 @@ export default function Navbar() {
           {/* INDUSTRIES DROPDOWN */}
           <li className="relative group">
             <span
-              className="cursor-pointer hover:text-black"
+              className="cursor-pointer hover:text-lime-500"
               onMouseEnter={() => setIsIndustriesOpen(true)}
             >
               Industries
@@ -104,12 +104,12 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link href="/Blog" className="hover:text-black">
+            <Link href="/Blog" className="hover:text-lime-500">
               Blog
             </Link>
           </li>
           <li>
-            <Link href="/Contact" className="hover:text-black">
+            <Link href="/Contact" className="hover:text-lime-500">
               Contact
             </Link>
           </li>
@@ -117,9 +117,11 @@ export default function Navbar() {
 
         {/* CTA BUTTON */}
         <div className="hidden md:block">
-          <button className="border border-black text-black px-5 py-2 rounded-lg hover:bg-black hover:text-white">
-            Let’s Talk
-          </button>
+          <Link href="/Contact">
+            <button className="cursor-pointer border hover:border-lime-500 text-black px-5 py-2 rounded-lg hover:bg-lime-500 hover:text-white">
+              Let’s Talk
+            </button>
+          </Link>
         </div>
 
         {/* MOBILE TOGGLE */}

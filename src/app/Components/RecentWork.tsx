@@ -117,7 +117,7 @@ interface WorkCardProps {
 const WorkCard: React.FC<WorkCardProps> = ({ work, height }) => (
   <Link
     href={work.link}
-    className="block overflow-hidden rounded-3xl border border-gray-200 bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))] shadow-sm hover:shadow-md transition-all duration-500"
+    className="block overflow-hidden rounded-3xl border border-gray-200 bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) shadow-sm hover:shadow-md transition-all duration-500"
   >
     {/* 🔸 Image hover only */}
     <div className={`overflow-hidden rounded-3xl group ${height}`}>

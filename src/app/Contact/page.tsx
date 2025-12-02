@@ -95,7 +95,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] min-h-screen">
+    <div className="bg-[linear-gradient(180deg,#fbfff6_0%,#f5ffe8_100%)] min-h-screen">
       <Navbar />
 
       {/* HERO SECTION */}
@@ -106,7 +106,10 @@ export default function Hero() {
         viewport={{ once: true, amount: 0.3 }}
         className="w-full flex flex-col sm:flex-row items-start justify-between px-8 md:px-30 py-24 md:py-20"
       >
-        <motion.div variants={item} className="flex-1 max-w-2xl mb-4 sm:mb-10 md:mb-0">
+        <motion.div
+          variants={item}
+          className="flex-1 max-w-2xl mb-4 sm:mb-10 md:mb-0"
+        >
           <h1 className="text-gray-900 font-semibold text-2xl sm:text-4xl md:text-6xl leading-tight">
             We Create <br /> Amazing Project
           </h1>
@@ -122,7 +125,7 @@ export default function Hero() {
       </motion.section>
 
       {/* CONTACT FORM */}
-      <div className="bg-[radial-gradient(circle_at_center,white_0%,#EAE4F9_60%,#f9f9f9_100%)] py-7 px-6 md:px-20">
+      <div className="bg-[linear-gradient(180deg,#fbfff6_0%,#f5ffe8_100%)] py-7 px-6 md:px-20">
         <motion.section
           variants={container}
           initial="hidden"
@@ -145,7 +148,7 @@ export default function Hero() {
                   Thank You!
                 </h2>
                 <p className="text-gray-600 text-lg">
-                  Your message has been signed and submitted successfully. 
+                  Your message has been signed and submitted successfully.
                 </p>
               </motion.div>
             ) : (
@@ -157,7 +160,7 @@ export default function Hero() {
                 <button
                   onClick={connectWallet}
                   type="button"
-                  className="mb-6 w-full bg-purple-600 text-white font-medium py-3 rounded-lg hover:bg-purple-700 transition"
+                  className="mb-6 w-full bg-lime-500 text-white font-medium py-3 rounded-lg hover:bg-lime-700 transition"
                 >
                   {walletAddress
                     ? `Connected: ${walletAddress.slice(
@@ -245,7 +248,7 @@ export default function Hero() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full bg-black text-white font-medium py-3 rounded-lg hover:bg-gray-900 transition"
+                      className="w-full bg-black text-white font-medium py-3 rounded-lg hover:bg-lime-500 transition"
                     >
                       {loading ? "Signing Message..." : "Submit Form"}
                     </button>

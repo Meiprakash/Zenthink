@@ -76,7 +76,7 @@ const ServiceSection: React.FC = () => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className={`bg-[linear-gradient(145deg,rgba(255,255,255,0.6),rgba(234,228,249,0.8))]  border border-gray-200 hover:shadow-xl rounded-3xl p-5 sm:p-8 flex flex-col justify-between h-[206px]    duration-500 sm:h-[390px]
+                  className={`bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)  border border-gray-200 hover:shadow-xl rounded-3xl p-5 sm:p-8 flex flex-col justify-between h-[206px]    duration-500 sm:h-[390px]
               ${
                 index % 2 === 1
                   ? "md:translate-y-18" // lower 2nd and 4th
