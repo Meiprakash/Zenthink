@@ -575,6 +575,677 @@ const industriesData: Industry[] = [
       ],
     },
   },
+
+  {
+    title: "Legacy System Modernization That Transforms Your Business",
+    slug: "legacy-modernization",
+    desc: "Eliminate Technical Debt and Unlock Growth with Modern Cloud Architecture",
+    banner: "/placeholder-product.png",
+    stats: [
+      { value: "70%", label: "Cost Reduction Achieved" },
+      { value: "3x", label: "Performance Improvement" },
+      { value: "90%", label: " Faster Deployment" },
+    ],
+    whyChoose: [
+      {
+        name: "Zero Data Loss ",
+        desc: "Comprehensive migration strategies with rigorous testing ensure 100% data integrity, complete audit trails, and seamless transition of historical records.",
+      },
+      {
+        name: "Business Continuity",
+        desc: "Phased modernization approach maintains operations throughout transformation with parallel systems, gradual cutover, and rollback safeguards built-in.",
+      },
+      {
+        name: "Future-Proof Architecture ",
+        desc: "Cloud-native design with microservices, scalable infrastructure, and API-first approach that adapts to evolving business needs effortlessly",
+      },
+      {
+        name: "Cost Optimization ",
+        desc: "Reduce infrastructure costs by 40-70% through cloud migration, automated processes, and elimination of expensive legacy licensing and hardware",
+      },
+    ],
+    topProducts: [
+      {
+        title: "AI Diagnosis Engine",
+        desc: "AI-powered system that assists doctors...",
+        price: "$1599",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
+        ],
+      },
+      {
+        title: "Medical Analytics Dashboard",
+        desc: "Centralized analytics for hospitals...",
+        price: "$1899",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
+        ],
+      },
+    ],
+    products: [
+      {
+        name: "Patient Analytics App",
+        price: "$499",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "AI Medical Bot",
+        price: "$799",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+    ],
+    industriesWeServe: {
+      heading: "Modernizing Systems Across Critical Industries",
+      description:
+        "We understand industry-specific challenges and regulatory requirements that make legacy modernization complex.",
+      cards: [
+        {
+          title: "Retail & E-Commerce",
+          description:
+            "Transform outdated inventory systems, POS platforms, and e-commerce backends into modern, omnichannel solutions that handle peak traffic and integrate seamlessly.",
+          cta: "Explore Retail Mobile Solutions →",
+        },
+        {
+          title: "Company & HR/Staffing",
+          description:
+            "Modernize legacy HRIS, payroll systems, and recruitment platforms into cloud-based solutions with mobile access, automation, and real-time analytics capabilities.",
+          cta: "Explore HR Mobile Solutions →",
+        },
+      ],
+    },
+    whatWeBuild: {
+      heading: "Comprehensive Mobile Solutions for Every Platform",
+      description:
+        "From monolithic applications to outdated databases—we transform legacy technology into modern, efficient solutions.",
+      items: [
+        {
+          title: "Monolithic to Microservices ",
+          description:
+            "Break down complex monolithic applications into independent microservices for better scalability, faster updates, and isolated failure handling.",
+        },
+        {
+          title: "On-Premise to Cloud ",
+          description:
+            "Migrate legacy infrastructure to AWS, Azure, or Google Cloud with optimized architecture, automated scaling, and reduced operational overhead.",
+        },
+        {
+          title: "Legacy Database Migration ",
+          description:
+            "Transition from outdated databases to modern systems like PostgreSQL, MongoDB, or cloud-native databases with improved performance and reliability.",
+        },
+        {
+          title: "Desktop to Web/Mobile ",
+          description:
+            "Convert legacy desktop applications into responsive web apps and native mobile applications accessible anywhere, anytime, on any device",
+        },
+        {
+          title: "API Modernization",
+          description:
+            "Replace SOAP and outdated protocols with RESTful APIs and GraphQL, enabling seamless integration with modern systems and third-party services",
+        },
+        {
+          title: "UI/UX Redesign",
+          description:
+            "Transform outdated interfaces into intuitive, modern designs that improve user adoption, reduce training time, and boost productivity significantly.",
+        },
+      ],
+    },
+    developmentProcess: {
+      heading: "Our Proven 6-Phase Modernization Process",
+      description:
+        "A risk-mitigated methodology that ensures successful transformation with minimal business disruption.",
+      steps: [
+        {
+          step: 1,
+          title: "Assessment & Analysis",
+          description:
+            "Comprehensive audit of existing systems, code review, dependency mapping, performance benchmarking, and identification of modernization priorities and risks.",
+        },
+        {
+          step: 2,
+          title: "Strategy & Roadmap",
+          description:
+            "Define modernization approach (rehost, replatform, refactor, rebuild), create phased migration plan, establish KPIs, and develop risk mitigation strategies.",
+        },
+        {
+          step: 3,
+          title: "Architecture Design",
+          description:
+            "Design modern cloud architecture, microservices structure, API layer, database schema, security framework, and integration points with documentation.",
+        },
+        {
+          step: 4,
+          title: "Migration & Development",
+          description:
+            "Execute phased migration using blue-green deployment, conduct parallel runs, implement new features, and ensure zero downtime during transition.",
+        },
+        {
+          step: 5,
+          title: "Testing & Validation",
+          description:
+            "Rigorous functional testing, performance benchmarking, security audits, data integrity verification, and user acceptance testing across all scenarios.",
+        },
+        {
+          step: 6,
+          title: "Training & Support",
+          description:
+            "Comprehensive user training, documentation delivery, knowledge transfer, 24/7 post-migration support, and continuous optimization based on feedback.",
+        },
+      ],
+    },
+
+    benefits: {
+      heading: "The Business Impact of Modernization",
+      description:
+        "Real benefits that directly affect your bottom line and competitive position.",
+      cards: [
+        {
+          title: "Reduce Operating Costs",
+          description:
+            "Cut infrastructure costs 40-70%, eliminate expensive licensing, reduce maintenance staff requirements, and optimize resource utilization through automation.",
+        },
+        {
+          title: "Improve Performance",
+          description:
+            "Experience 3-5x faster response times, handle 10x more concurrent users, eliminate downtime, and scale instantly during peak demand.",
+        },
+        {
+          title: "Enhance Security",
+          description:
+            "Modern encryption, automated patching, compliance certifications, threat detection, and disaster recovery capabilities protecting your critical assets.",
+        },
+        {
+          title: "Accelerate Innovation",
+          description:
+            "Deploy new features in days instead of months, experiment rapidly, integrate AI/ML capabilities, and respond quickly to market changes.",
+        },
+        {
+          title: "Enable Mobility",
+          description:
+            "Access systems from anywhere on any device, empower remote teams, improve field operations, and enhance customer engagement.",
+        },
+        {
+          title: "Ensure Compliance",
+          description:
+            "Meet GDPR, HIPAA, PCI-DSS, SOC 2 requirements with built-in compliance features, audit trails, and automated reporting capabilities.",
+        },
+      ],
+    },
+  },
+
+  {
+    title: "API Development & Integration That Connects Your Ecosystem",
+    slug: "api-development-integration",
+    desc: "Build Seamless Integrations and Unlock Data Flow Across Your Platforms",
+    banner: "/placeholder-product.png",
+    stats: [
+      { value: "10k%", label: "APIs Integrated" },
+      { value: "99.9%", label: "Uptime Guaranteed" },
+      { value: "<100ms", label: " Average Response Time" },
+    ],
+    whyChoose: [
+      {
+        name: "RESTful & GraphQL Expertise",
+        desc: "Modern API architectures with comprehensive documentation, versioning strategies, and developer-friendly endpoints that follow industry best practices.",
+      },
+      {
+        name: "Enterprise-Grade Security",
+        desc: "OAuth 2.0 authentication, API key management, rate limiting, encryption in transit, and comprehensive audit logging protecting your sensitive data.",
+      },
+      {
+        name: "Scalable Infrastructure",
+        desc: "Cloud-native API gateways handling millions of requests, auto-scaling capabilities, load balancing, and failover mechanisms ensuring consistent performance.",
+      },
+      {
+        name: "Comprehensive Documentation",
+        desc: "Interactive API documentation with Swagger/OpenAPI, code examples in multiple languages, testing sandboxes, and developer portals for easy adoption.",
+      },
+    ],
+    topProducts: [
+      {
+        title: "AI Diagnosis Engine",
+        desc: "AI-powered system that assists doctors...",
+        price: "$1599",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
+        ],
+      },
+      {
+        title: "Medical Analytics Dashboard",
+        desc: "Centralized analytics for hospitals...",
+        price: "$1899",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
+        ],
+      },
+    ],
+    products: [
+      {
+        name: "Patient Analytics App",
+        price: "$499",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "AI Medical Bot",
+        price: "$799",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+    ],
+    industriesWeServe: {
+      heading: "API Solutions Powering Industry Leaders",
+      description:
+        "We build integration solutions tailored to your industry's unique data exchange requirements and compliance standards.",
+      cards: [
+        {
+          title: "Retail & E-Commerce",
+          description:
+            "Connect inventory systems, payment gateways, shipping providers, marketplaces, POS systems, and analytics platforms for unified omnichannel operations.",
+          cta: "Explore Retail API Solutions →",
+        },
+        {
+          title: "Company & HR/Staffing",
+          description:
+            "Integrate HRIS, payroll, ATS, background check providers, benefits platforms, and timekeeping systems for seamless workforce management.",
+          cta: "Explore HR API Solutions →",
+        },
+      ],
+    },
+
+    whatWeBuild: {
+      heading: "Complete API Solutions for Every Integration Need",
+      description:
+        "From custom API development to third-party integrations—we connect your entire technology stack seamlessly.",
+      items: [
+        {
+          title: "Custom API Development",
+          description:
+            "Build proprietary APIs from scratch with custom business logic, data models, authentication, and endpoints tailored to your exact requirements.",
+        },
+        {
+          title: "Third-Party Integrations",
+          description:
+            "Connect with popular platforms like Salesforce, Stripe, Shopify, QuickBooks, Slack, and 1000+ other services through robust API integrations.",
+        },
+        {
+          title: "API Gateway Implementation",
+          description:
+            "Deploy enterprise API management with Kong, AWS API Gateway, or Azure API Management for centralized control, monitoring, and security.",
+        },
+        {
+          title: "Microservices Architecture",
+          description:
+            "Design service-oriented architectures where independent microservices communicate via APIs, enabling agility, scalability, and fault isolation.",
+        },
+        {
+          title: "Webhook Development",
+          description:
+            "Implement real-time event-driven integrations that trigger actions instantly across systems without polling or delays.",
+        },
+        {
+          title: "Data Synchronization",
+          description:
+            "Build bidirectional sync between systems ensuring data consistency, conflict resolution, and real-time updates across your technology landscape.",
+        },
+      ],
+    },
+    developmentProcess: {
+      heading: "Our Proven 6-Phase Modernization Process",
+      description:
+        "A risk-mitigated methodology that ensures successful transformation with minimal business disruption.",
+      steps: [
+        {
+          step: 1,
+          title: "Assessment & Analysis",
+          description:
+            "Comprehensive audit of existing systems, code review, dependency mapping, performance benchmarking, and identification of modernization priorities and risks.",
+        },
+        {
+          step: 2,
+          title: "Strategy & Roadmap",
+          description:
+            "Define modernization approach (rehost, replatform, refactor, rebuild), create phased migration plan, establish KPIs, and develop risk mitigation strategies.",
+        },
+        {
+          step: 3,
+          title: "Architecture Design",
+          description:
+            "Design modern cloud architecture, microservices structure, API layer, database schema, security framework, and integration points with documentation.",
+        },
+        {
+          step: 4,
+          title: "Migration & Development",
+          description:
+            "Execute phased migration using blue-green deployment, conduct parallel runs, implement new features, and ensure zero downtime during transition.",
+        },
+        {
+          step: 5,
+          title: "Testing & Validation",
+          description:
+            "Rigorous functional testing, performance benchmarking, security audits, data integrity verification, and user acceptance testing across all scenarios.",
+        },
+        {
+          step: 6,
+          title: "Training & Support",
+          description:
+            "Comprehensive user training, documentation delivery, knowledge transfer, 24/7 post-migration support, and continuous optimization based on feedback.",
+        },
+      ],
+    },
+
+    benefits: {
+      heading: "The Business Impact of API Integration",
+      description:
+        "Transform disconnected systems into a unified, automated ecosystem that drives efficiency.",
+      cards: [
+        {
+          title: "Eliminate Manual Data Entry",
+          description:
+            "Automated data sync between systems eliminates duplicate entry, reduces human errors by 95%, and frees your team for strategic work.",
+        },
+        {
+          title: "Real-Time Data Access",
+          description:
+            "Instant data availability across platforms enables faster decision-making, improved customer experiences, and immediate response to business changes.",
+        },
+        {
+          title: "Accelerate Development",
+          description:
+            "Well-documented APIs enable rapid feature development, third-party integrations, and mobile app connectivity reducing time-to-market by 60%.",
+        },
+        {
+          title: "Scale Effortlessly",
+          description:
+            "API-first architecture grows with your business, handles increasing traffic automatically, and makes adding new systems or features simple.",
+        },
+        {
+          title: "Unlock New Revenue",
+          description:
+            "Expose your services via APIs to partners and developers, create new distribution channels, and generate additional revenue streams.",
+        },
+        {
+          title: "Reduce IT Complexity",
+          description:
+            "A centralized API layer simplifies your tech stack, reduces maintenance overhead, and makes system upgrades or replacements easier.",
+        },
+      ],
+    },
+  },
+
+  {
+    title: "AI-Enhanced Solutions That Amplify Human Intelligence",
+    slug: "ai-enhanced-solutions",
+    desc: "Transform Operations with Machine Learning, Automation, and Predictive Analytics",
+    banner: "/placeholder-product.png",
+    stats: [
+      { value: "10k%", label: "Task Automation Achieved" },
+      { value: "10x", label: " Faster Data Processing" },
+      { value: "40%", label: "Cost Reduction Average" },
+    ],
+    whyChoose: [
+      {
+        name: "Business-Focused AI",
+        desc: "Pragmatic implementations solving real problems with measurable outcomes—not experimental AI for its own sake but targeted solutions driving ROI.",
+      },
+      {
+        name: "Seamless Integration",
+        desc: "AI capabilities that integrate naturally into existing workflows, systems, and processes without requiring complete technology overhauls or disruption.",
+      },
+      {
+        name: "Transparent & Explainable",
+        desc: "Understand how AI reaches conclusions with explainable models, audit trails, and confidence scores—no mysterious black boxes making critical decisions.",
+      },
+      {
+        name: "Continuous Learning",
+        desc: "Models that improve over time through feedback loops, retraining schedules, and performance monitoring ensuring accuracy increases with usage.",
+      },
+    ],
+    topProducts: [
+      {
+        title: "AI Diagnosis Engine",
+        desc: "AI-powered system that assists doctors...",
+        price: "$1599",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
+        ],
+      },
+      {
+        title: "Medical Analytics Dashboard",
+        desc: "Centralized analytics for hospitals...",
+        price: "$1899",
+        image: "/placeholder-product.png",
+        features: [
+          "Smart predictions",
+          "Fast diagnosis support",
+          "Accurate medical insights",
+        ],
+      },
+    ],
+    products: [
+      {
+        name: "Patient Analytics App",
+        price: "$499",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "AI Medical Bot",
+        price: "$799",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+      {
+        name: "Hospital BI Dashboard",
+        price: "$1299",
+        image: "/placeholder-product.png",
+      },
+    ],
+    industriesWeServe: {
+      heading: "AI Solutions Transforming Industry Operations",
+      description:
+        "We implement intelligent automation tailored to your industry's specific challenges, workflows, and compliance requirements.",
+      cards: [
+        {
+          title: "Retail & E-Commerce",
+          description:
+            "Personalized recommendations, demand forecasting, dynamic pricing, inventory optimization, visual search, and chatbots that increase sales and reduce costs.",
+          cta: "Explore Retail AI Solutions →",
+        },
+        {
+          title: "Company & HR/Staffing",
+          description:
+            "Resume screening, candidate matching, employee sentiment analysis, turnover prediction, skill gap identification, and automated interview scheduling.",
+          cta: "Explore HR AI Solutions →",
+        },
+      ],
+    },
+
+    whatWeBuild: {
+      heading: "Comprehensive AI Capabilities for Every Business Function",
+      description:
+        "From intelligent automation to predictive analytics—we infuse AI across your operations to multiply productivity and insights.",
+      items: [
+        {
+          title: "Intelligent Process Automation",
+          description:
+            "Automate complex workflows combining RPA with AI decision-making—from invoice processing to customer onboarding, handling exceptions humans previously managed.",
+        },
+        {
+          title: "Predictive Analytics",
+          description:
+            "Forecast demand, predict customer churn, anticipate equipment failures, and identify trends before competitors using advanced machine learning models.",
+        },
+        {
+          title: "Natural Language Processing",
+          description:
+            "Extract insights from documents, automate customer support, analyze sentiment, categorize content, and enable conversational interfaces with AI-powered understanding.",
+        },
+        {
+          title: "Computer Vision",
+          description:
+            "Automated quality inspection, document digitization, visual search, facial recognition, object detection, and image classification for operational efficiency.",
+        },
+        {
+          title: "Recommendation Engines",
+          description:
+            "Personalized product suggestions, content recommendations, next-best-action guidance, and cross-sell opportunities increasing revenue per customer significantly.",
+        },
+        {
+          title: "Chatbots & Virtual Assistants",
+          description:
+            "24/7 customer support, employee self-service, lead qualification, appointment scheduling, and FAQ automation reducing support costs while improving satisfaction.",
+        },
+      ],
+    },
+    developmentProcess: {
+      heading: "Our Proven 6-Phase Modernization Process",
+      description:
+        "A risk-mitigated methodology that ensures successful transformation with minimal business disruption.",
+      steps: [
+        {
+          step: 1,
+          title: "Assessment & Analysis",
+          description:
+            "Comprehensive audit of existing systems, code review, dependency mapping, performance benchmarking, and identification of modernization priorities and risks.",
+        },
+        {
+          step: 2,
+          title: "Strategy & Roadmap",
+          description:
+            "Define modernization approach (rehost, replatform, refactor, rebuild), create phased migration plan, establish KPIs, and develop risk mitigation strategies.",
+        },
+        {
+          step: 3,
+          title: "Architecture Design",
+          description:
+            "Design modern cloud architecture, microservices structure, API layer, database schema, security framework, and integration points with documentation.",
+        },
+        {
+          step: 4,
+          title: "Migration & Development",
+          description:
+            "Execute phased migration using blue-green deployment, conduct parallel runs, implement new features, and ensure zero downtime during transition.",
+        },
+        {
+          step: 5,
+          title: "Testing & Validation",
+          description:
+            "Rigorous functional testing, performance benchmarking, security audits, data integrity verification, and user acceptance testing across all scenarios.",
+        },
+        {
+          step: 6,
+          title: "Training & Support",
+          description:
+            "Comprehensive user training, documentation delivery, knowledge transfer, 24/7 post-migration support, and continuous optimization based on feedback.",
+        },
+      ],
+    },
+
+    benefits: {
+      heading: "The Business Impact of API Integration",
+      description:
+        "Transform disconnected systems into a unified, automated ecosystem that drives efficiency.",
+      cards: [
+        {
+          title: "Eliminate Manual Data Entry",
+          description:
+            "Automated data sync between systems eliminates duplicate entry, reduces human errors by 95%, and frees your team for strategic work.",
+        },
+        {
+          title: "Real-Time Data Access",
+          description:
+            "Instant data availability across platforms enables faster decision-making, improved customer experiences, and immediate response to business changes.",
+        },
+        {
+          title: "Accelerate Development",
+          description:
+            "Well-documented APIs enable rapid feature development, third-party integrations, and mobile app connectivity reducing time-to-market by 60%.",
+        },
+        {
+          title: "Scale Effortlessly",
+          description:
+            "API-first architecture grows with your business, handles increasing traffic automatically, and makes adding new systems or features simple.",
+        },
+        {
+          title: "Unlock New Revenue",
+          description:
+            "Expose your services via APIs to partners and developers, create new distribution channels, and generate additional revenue streams.",
+        },
+        {
+          title: "Reduce IT Complexity",
+          description:
+            "A centralized API layer simplifies your tech stack, reduces maintenance overhead, and makes system upgrades or replacements easier.",
+        },
+      ],
+    },
+  },
 ];
 
 
