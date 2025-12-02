@@ -6,8 +6,8 @@ import ConnectSection from "../Components/ConnectUs";
 import Footer from "../Components/Footer";
 import BlogSection from "../Components/Blog";
 import TestimonialsSection from "../Components/Testimonials";
-import ServiceCard from "./ServiceCard";
 import HeroSection from "./HeroSection";
+import ServiceCard from "./ServiceCard";
 
 const Service: React.FC = () => {
   return (
