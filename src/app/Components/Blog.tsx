@@ -37,11 +37,11 @@ const blogs = [
 
 const BlogSection: React.FC = () => {
   return (
-    <section className="w-full  py-2 px-6 md:px-16 overflow-hidden">
+    <section className="w-full py-10 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <motion.div className="mb-8 " variants={fadeUp}>
-          <p className="text-md sm:text-lg text-gray-900 mb-3  flex items-center gap-2">
+          <p className="text-md sm:text-lg text-neutral-900 mb-3  flex items-center gap-2">
             Blog{" "}
             <span>
               <Image
@@ -57,29 +57,20 @@ const BlogSection: React.FC = () => {
           <div className="grid sm:grid-cols-2 gap-8 items-start ">
             {/* Left: Heading */}
             <div>
-              <h2 className="text-[23px] sm:text-3xl  md:text-5xl lg:text-[48px] font-semibold  text-gray-900 leading-tight tracking-tight">
+              <h2 className="text-[20px] sm:text-2xl md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-tight tracking-tight">
                 Company insights
               </h2>
             </div>
 
             {/* Right: Description */}
             <div>
-              <p className="text-gray-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
+              <p className="text-neutral-600 text-[12px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 md:mr-14">
                 Our services help you create digital products. Stay ahead of the
                 curve with our latest insights, tips, and industry trends.
               </p>
             </div>
           </div>
         </motion.div>
-        {/* <div className="sm:flex gap-20 sm:gap-3 md:gap-3 lg-gap-3 items-start">
-          <h2 className="flex sm:item-start text-start text-lg sm:text-2xl md:text-4xl font-semibold mb-4  text-gray-900">
-            Company insights
-          </h2>
-          <p className="text-gray-600 text-sm sm:text-md max-w-xl sm:ml-10 text-start  mx-auto lg:mx-0">
-            Our services help you create digital products. Stay ahead of the
-            curve with our latest insights, tips, and industry trends.
-          </p>
-        </div> */}
 
         {/* Blog Cards Section */}
         <div className="grid md:grid-cols-2 sm:grid-cols-2 gap-10 p-3">
@@ -93,7 +84,7 @@ const BlogSection: React.FC = () => {
             >
               <Link
                 href={blog.link}
-                className="block group overflow-hidden rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-100"
+                className="block group overflow-hidden rounded-3xl transition-all duration-100"
               >
                 {/* Image */}
                 <div className="overflow-hidden rounded-3xl">
@@ -102,19 +93,19 @@ const BlogSection: React.FC = () => {
                     alt={blog.title}
                     width={800}
                     height={500}
-                    className="w-full h-72 object-cover transition-transform duration-400 group-hover:scale-125"
+                    className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-125"
                   />
                 </div>
 
                 {/* Text content */}
-                <div className="p-6">
-                  <p className="text-gray-500 text-sm mb-2">
+                <div className="py-6">
+                  <p className="text-neutral-500 text-sm mb-2">
                     {blog.date} • {blog.author}
                   </p>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-neutral-900 mb-2 transition-colors duration-300">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-neutral-600 text-sm leading-relaxed">
                     {blog.description}
                   </p>
                 </div>

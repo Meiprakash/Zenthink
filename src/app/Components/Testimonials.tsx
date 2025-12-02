@@ -96,14 +96,14 @@ export default function TestimonialsSection() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="relative  font-[Inter,sans-serif] py-[10vh]"
+      className="relative  font-[Inter,sans-serif]"
     >
       {/* Desktop Parallax Version */}
-      <div className="hidden lg:block relative h-[200vh]">
-        <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+      <div className="hidden lg:block relative h-[200vh] bg-white">
+        <div className="sticky top-0 h-auto py-20 flex items-center overflow-hidden">
           {/* Edge fades */}
-          <div className="absolute left-0 top-0 h-full w-28 bg-gradient-to-r from-[#f9fafb] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 h-full w-28 bg-gradient-to-l from-[#f9fafb] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 h-full w-28 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 h-full w-28 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
           <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
             {/* Header */}
@@ -112,7 +112,7 @@ export default function TestimonialsSection() {
               className="flex  flex-row md:items-end md:justify-between mb-16 "
             >
               <div className="">
-                <p className="text-gray-800 text-sm sm:text-lg font-medium mb-2 flex items-center gap-2">
+                <p className="text-neutral-800 text-sm sm:text-lg font-medium mb-2 flex items-center gap-2">
                   Testimonials{" "}
                   <Image
                     src="/badge.jpg"
@@ -122,12 +122,12 @@ export default function TestimonialsSection() {
                     className="inline-block"
                   />
                 </p>
-                <h2 className="text-sm sm:text-lg md:text-2xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-[20px] sm:text-2xl md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-tight tracking-tight">
                   Praise from our <br />
                   customers
                 </h2>
               </div>
-              <p className="text-gray-500 max-w-md mt-6 md:mt-0 text-start leading-relaxed">
+              <p className="text-neutral-500 max-w-md mt-6 md:mt-0 text-start leading-relaxed">
                 Our services help you create digital products. Stay ahead of the
                 curve with our latest insights, tips, and industry trends.
               </p>
@@ -143,35 +143,37 @@ export default function TestimonialsSection() {
                 <motion.div
                   key={i}
                   variants={cardVariants}
-                  className="flex-shrink-0 bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-3xl shadow-sm p-8 w-[360px] border border-gray-100"
+                  className="flex-shrink-0 rounded-3xl shadow-sm p-8 w-[360px] border-1 border-neutral-50"
                   whileHover={{ y: -6 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="mb-4">
+                  <div className="flex flex-col justify-between items-start h-full">
+                  <div className="flex flex-col gap-y-4">
                     <Image
                       src="/stars.jpg"
                       alt="rating stars"
                       width={120}
                       height={20}
-                      className="w-[120px] h-auto object-contain"
+                      className="w-[140px] h-auto object-contain"
                     />
-                  </div>
-                  <p className="text-gray-700 text-xl  leading-relaxed mb-8">
+                  <p className="text-neutral-700 text-xl leading-light font-medium mb-8">
                     {item.text}
                   </p>
+                  </div>
                   <div className="flex items-center gap-3">
                     <Image
                       src={item.avatar}
                       alt={item.name}
                       width={40}
                       height={40}
-                      className="rounded-full border border-gray-200 object-cover"
+                      className="rounded-full border border-neutral-200 object-cover"
                     />
                     <div className="">
-                      <p className="font-semibold text-gray-900 text-md">
+                      <p className="font-semibold text-neutral-900 text-md">
                         {item.name}
                       </p>
-                      <p className="text-gray-500 text-sm">{item.title}</p>
+                      <p className="text-neutral-500 text-sm">{item.title}</p>
+                    </div>
                     </div>
                   </div>
                 </motion.div>
@@ -192,7 +194,7 @@ export default function TestimonialsSection() {
           className="flex flex-col md:flex-row md:items-end md:justify-between mb-12"
         >
           <div>
-            <p className="text-gray-800 text-md font-medium mb-2 flex items-center gap-2">
+            <p className="text-neutral-800 text-md font-medium mb-2 flex items-center gap-2">
               Testimonials{" "}
               <Image
                 src="/badge.jpg"
@@ -202,12 +204,12 @@ export default function TestimonialsSection() {
                 className="inline-block"
               />
             </p>
-            <h2 className="text-4xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-4xl font-bold text-neutral-900 leading-tight">
               Praise from our <br />
               customers
             </h2>
           </div>
-          <p className="text-gray-500 max-w-md mt-6 md:mt-0 text-base leading-relaxed">
+          <p className="text-neutral-500 max-w-md mt-6 md:mt-0 text-base leading-relaxed">
             Our services help you create digital products. Stay ahead of the
             curve with our latest insights, tips, and industry trends.
           </p>
@@ -222,7 +224,7 @@ export default function TestimonialsSection() {
             <motion.div
               key={i}
               variants={cardVariants}
-              className="bg-white rounded-3xl shadow-sm p-8 border border-gray-100"
+              className="bg-white rounded-3xl shadow-sm p-8 border border-neutral-100"
             >
               <div className="mb-4">
                 <Image
@@ -233,7 +235,7 @@ export default function TestimonialsSection() {
                   className="w-[120px] h-auto object-contain"
                 />
               </div>
-              <p className="text-gray-700 text-base leading-relaxed mb-8">
+              <p className="text-neutral-700 text-base leading-relaxed mb-8">
                 {item.text}
               </p>
               <div className="flex items-center gap-3">
@@ -242,13 +244,13 @@ export default function TestimonialsSection() {
                   alt={item.name}
                   width={40}
                   height={40}
-                  className="rounded-full border border-gray-200 object-cover"
+                  className="rounded-full border border-neutral-200 object-cover"
                 />
                 <div>
-                  <p className="font-semibold text-gray-900 text-sm">
+                  <p className="font-semibold text-neutral-900 text-sm">
                     {item.name}
                   </p>
-                  <p className="text-gray-500 text-sm">{item.title}</p>
+                  <p className="text-neutral-500 text-sm">{item.title}</p>
                 </div>
               </div>
             </motion.div>

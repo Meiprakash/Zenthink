@@ -12,22 +12,24 @@ import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
-    <div
-      className="bg-[linear-gradient(180deg,#fbfff6_0%,#f5ffe8_100%)]
-
-"
-    >
-      <Navbar />
-      <Hero />
-      <InvestorsSection />
-      <AboutUs />
-      <ServiceSection />
-      <RecentWork />
-      <TestimonialsSection />
-      <FAQ />
-      <BlogSection />
-      <ConnectSection />
-      <Footer />
+    <div className="relative min-h-screen">
+      {/* Fixed background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#fdfffa] to-[#f2fde4] -z-10" />
+      
+      {/* Content */}
+      <div className="relative z-0">
+        <Navbar />
+        <Hero />
+        <InvestorsSection />
+        <AboutUs />
+        <ServiceSection />
+        <RecentWork />
+        <TestimonialsSection />
+        <FAQ />
+        <BlogSection />
+        <ConnectSection />
+        <Footer />
+      </div>
     </div>
   );
 }

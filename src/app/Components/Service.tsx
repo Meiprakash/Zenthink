@@ -44,7 +44,7 @@ const ServiceSection: React.FC = () => {
         <section className="w-full  py-10  mb-16 px-6 md:px-16  ">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
-            <p className="text-md text-gray-900 mb-3 flex items-center gap-2">
+            <p className="text-md text-neutral-900 mb-3 flex items-center gap-2">
               Service
               <span>
                 <Image
@@ -58,12 +58,12 @@ const ServiceSection: React.FC = () => {
 
             {/* Title + Description */}
             <div className="grid  sm:grid-cols-2 gap-10 mb-16">
-              <h2 className="text-[20px] sm:text-3xl  md:text-5xl lg:text-[48px]  text-gray-900 leading-tight">
+              <h2 className="text-[20px] sm:text-2xl md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-tight tracking-tight">
                 We Engineer Solutions That Transform{" "}
                 <br className="hidden md:block" />
                 Businesses Into Leaders.
               </h2>
-              <p className="text-gray-600 text-start text-[14px] md:text-[16px] sm:text-[15px] leading-relaxed md:ml-3">
+              <p className="text-neutral-600 text-start text-[14px] md:text-[16px] sm:text-[15px] leading-relaxed md:ml-3">
                 We help businesses scale through strategic software and digital
                 innovation. From custom applications to enterprise platforms,
                 our services are engineered to optimize your operations and
@@ -76,7 +76,7 @@ const ServiceSection: React.FC = () => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className={`bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)  border border-gray-200 hover:shadow-xl rounded-3xl p-5 sm:p-8 flex flex-col justify-between h-[206px]    duration-500 sm:h-[390px]
+                  className={`bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)  border border-neutral-200 hover:shadow-xl rounded-3xl p-5 sm:p-8 flex flex-col justify-between h-[206px]    duration-500 sm:h-[390px]
               ${
                 index % 2 === 1
                   ? "md:translate-y-18" // lower 2nd and 4th
@@ -84,10 +84,10 @@ const ServiceSection: React.FC = () => {
               }`}
                 >
                   <div>
-                    <h3 className="text-lg sm:text-xl  md:text-2xl lg:text-3xl font-semibold text-gray-900 mb-3 ">
+                    <h3 className="text-lg sm:text-xl  md:text-2xl lg:text-3xl font-semibold text-neutral-900 mb-3 ">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 text-[12px]   leading-relaxed">
+                    <p className="text-neutral-600 text-[12px]   leading-relaxed">
                       {service.description}
                     </p>
                   </div>

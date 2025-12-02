@@ -44,7 +44,7 @@ const works: WorkItem[] = [
 
 const RecentWork: React.FC = () => {
   return (
-    <section className="w-full  px-6 md:px-16 overflow-hidden ">
+    <section className="w-full  px-6 md:px-16 py-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <motion.div
@@ -56,7 +56,7 @@ const RecentWork: React.FC = () => {
         >
           {/* Left title part */}
           <div>
-            <p className="text-md sm:text-xl md:text-2xl lg:text-xl text-gray-800 mb-3 flex items-center gap-1">
+            <p className="text-md sm:text-xl md:text-2xl lg:text-xl text-neutral-800 mb-3 flex items-center gap-1">
               Recent work
               <span>
                 <Image
@@ -68,12 +68,12 @@ const RecentWork: React.FC = () => {
               </span>
             </p>
             <div className="grid sm:grid-cols-2 gap-10 mb-16">
-              <h2 className="text-[19px] sm:text-3xl  md:text-5xl lg:text-[48px]  text-gray-900 leading-tight">
-                We Engineer Solutions That Transform{" "}
+              <h2 className="text-[20px] sm:text-2xl md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-tight tracking-tight">
+                 We Engineer Solutions That Transform{" "}
                 <br className="hidden md:block" />
                 Businesses Into Leaders.
               </h2>
-              <p className="text-gray-600 text-start text-[14px] md:text-[16px] sm:text-[15px] leading-relaxed md:ml-3">
+              <p className="text-neutral-600 text-start text-[14px] md:text-[16px] sm:text-[15px] leading-relaxed md:ml-3">
                 We help businesses scale through strategic software and digital
                 innovation. From custom applications to enterprise platforms,
                 our services are engineered to optimize your operations and
@@ -117,7 +117,7 @@ interface WorkCardProps {
 const WorkCard: React.FC<WorkCardProps> = ({ work, height }) => (
   <Link
     href={work.link}
-    className="block overflow-hidden rounded-3xl border border-gray-200 bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) shadow-sm hover:shadow-md transition-all duration-500"
+    className="block overflow-hidden rounded-3xl border border-neutral-200 bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) shadow-sm hover:shadow-md transition-all duration-500"
   >
     {/* 🔸 Image hover only */}
     <div className={`overflow-hidden rounded-3xl group ${height}`}>
@@ -130,16 +130,16 @@ const WorkCard: React.FC<WorkCardProps> = ({ work, height }) => (
       />
     </div>
     <div className=" mt-10 ml-4 ">
-      <p className="text-md text-gray-600  mb-3 flex items-center gap-2">
+      <p className="text-md text-neutral-600  mb-3 flex items-center gap-2">
         <span className="m-0">2025</span>
-        <span className="w-2 h-2 bg-gray-800 rounded-full inline-block mx-2" />
+        <span className="w-2 h-2 bg-neutral-800 rounded-full inline-block mx-2" />
         <span>Web Design</span>
       </p>
     </div>
     {/* Text area */}
     <div className="sm:pl-6 pl-4 pr-6 pb-6">
-      <h3 className="md:text-3xl  text-gray-900 mb-1">{work.title}</h3>
-      <p className="text-gray-600  text-start text-lg">{work.description}</p>
+      <h3 className="md:text-3xl  text-neutral-900 mb-1">{work.title}</h3>
+      <p className="text-neutral-600  text-start text-lg">{work.description}</p>
     </div>
   </Link>
 );

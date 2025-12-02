@@ -5,16 +5,17 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { industriesData } from "@/app/utils/industriesData";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [selectedIndustry, setSelectedIndustry] = useState(0);
-
   const pathname = usePathname();
-  const router = useRouter();
+
+  const isActive = (path: unknown) => pathname === path;
+  const isIndustriesActive = pathname.startsWith("/Industries");
 
   return (
     <motion.nav
@@ -30,27 +31,36 @@ export default function Navbar() {
             <Image
               src="/ZenThink_Icon.png"
               alt="Logo"
-              width={110}
-              height={50}
+              width={130}
+              height={60}
             />
           </motion.div>
         </Link>
 
         {/* DESKTOP NAV */}
-        <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <ul className="hidden md:flex space-x-8 text-black/70 font-normal transition-all duration-300 ease-in-out">
           {/* STATIC NAV LINKS */}
           <li>
-            <Link href="/" className="hover:text-lime-500">
+            <Link 
+              href="/" 
+              className={`hover:text-lime-500 ${isActive("/") ? "text-black" : ""}`}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about-us" className="hover:text-lime-500">
+            <Link 
+              href="/about-us" 
+              className={`hover:text-lime-500 ${isActive("/about-us") ? "text-black" : ""}`}
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href="/Service" className="hover:text-lime-500">
+            <Link 
+              href="/Service" 
+              className={`hover:text-lime-500 ${isActive("/Service") ? "text-black" : ""}`}
+            >
               Service
             </Link>
           </li>
@@ -58,7 +68,7 @@ export default function Navbar() {
           {/* INDUSTRIES DROPDOWN */}
           <li className="relative group">
             <span
-              className="cursor-pointer hover:text-lime-500"
+              className={`cursor-pointer hover:text-lime-500 ${isIndustriesActive ? "text-black" : ""}`}
               onMouseEnter={() => setIsIndustriesOpen(true)}
             >
               Industries
@@ -66,7 +76,7 @@ export default function Navbar() {
 
             {isIndustriesOpen && (
               <div
-                className="absolute left-0 top-8 bg-white border shadow-xl rounded-xl p-6 w-[700px] flex z-50"
+                className="absolute left-0 top-14 bg-white border shadow-xl rounded-xl p-6 w-[700px] flex z-50"
                 onMouseEnter={() => setIsIndustriesOpen(true)}
                 onMouseLeave={() => setIsIndustriesOpen(false)}
               >
@@ -78,8 +88,8 @@ export default function Navbar() {
                       onMouseEnter={() => setSelectedIndustry(index)}
                       className={`py-2 cursor-pointer transition-all duration-200 ${
                         selectedIndustry === index
-                          ? "text-black font-semibold border-l-2 border-black pl-2"
-                          : "text-gray-600"
+                          ? "text-black border-l-2 border-black pl-2"
+                          : "text-neutral-600"
                       } hover:text-black`}
                     >
                       {industry.title}
@@ -104,12 +114,18 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link href="/Blog" className="hover:text-lime-500">
+            <Link 
+              href="/Blog" 
+              className={`hover:text-lime-500 ${isActive("/Blog") ? "text-black" : ""}`}
+            >
               Blog
             </Link>
           </li>
           <li>
-            <Link href="/Contact" className="hover:text-lime-500">
+            <Link 
+              href="/Contact" 
+              className={`hover:text-lime-500 ${isActive("/Contact") ? "text-black" : ""}`}
+            >
               Contact
             </Link>
           </li>
@@ -127,7 +143,7 @@ export default function Navbar() {
         {/* MOBILE TOGGLE */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-gray-800 hover:text-black"
+          className="md:hidden text-neutral-800 hover:text-black"
         >
           {menuOpen ? <X size={26} /> : <Menu size={29} />}
         </button>
@@ -144,19 +160,33 @@ export default function Navbar() {
             className="md:hidden bg-black text-white rounded-2xl mx-6 mt-2"
           >
             <ul className="flex flex-col ml-10 m-6 py-4 space-y-3">
-              <Link href="/" onClick={() => setMenuOpen(false)}>
+              <Link 
+                href="/" 
+                onClick={() => setMenuOpen(false)}
+                className={isActive("/") ? "text-lime-500 font-semibold" : ""}
+              >
                 Home
               </Link>
-              <Link href="/about-us" onClick={() => setMenuOpen(false)}>
+              <Link 
+                href="/about-us" 
+                onClick={() => setMenuOpen(false)}
+                className={isActive("/about-us") ? "text-lime-500 font-semibold" : ""}
+              >
                 About
               </Link>
-              <Link href="/Service" onClick={() => setMenuOpen(false)}>
+              <Link 
+                href="/Service" 
+                onClick={() => setMenuOpen(false)}
+                className={isActive("/Service") ? "text-lime-500 font-semibold" : ""}
+              >
                 Service
               </Link>
 
               <details>
-                <summary>Industries</summary>
-                <div className="ml-4 mt-2 space-y-2 text-gray-300">
+                <summary className={isIndustriesActive ? "text-lime-500 font-semibold" : ""}>
+                  Industries
+                </summary>
+                <div className="ml-4 mt-2 space-y-2 text-neutral-300">
                   {industriesData.map((ind) => (
                     <Link
                       key={ind.slug}
@@ -169,10 +199,18 @@ export default function Navbar() {
                 </div>
               </details>
 
-              <Link href="/Blog" onClick={() => setMenuOpen(false)}>
+              <Link 
+                href="/Blog" 
+                onClick={() => setMenuOpen(false)}
+                className={isActive("/Blog") ? "text-lime-500 font-semibold" : ""}
+              >
                 Blog
               </Link>
-              <Link href="/Contact" onClick={() => setMenuOpen(false)}>
+              <Link 
+                href="/Contact" 
+                onClick={() => setMenuOpen(false)}
+                className={isActive("/Contact") ? "text-lime-500 font-semibold" : ""}
+              >
                 Contact
               </Link>
             </ul>

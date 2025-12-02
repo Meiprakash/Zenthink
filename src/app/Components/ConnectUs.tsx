@@ -50,10 +50,10 @@
 //         viewport={{ once: true }}
 //         className="relative z-10 max-w-[90%] md:max-w-3xl mx-auto px-4"
 //       >
-//         <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[6rem] font-bold text-gray-900 leading-tight">
+//         <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[6rem] font-bold text-neutral-900 leading-tight">
 //           Let’s Connect
 //         </h2>
-//         <h3 className="text-[2rem] sm:text-[2.5rem] md:text-[6rem] font-semibold text-gray-400 mt-2 leading-tight">
+//         <h3 className="text-[2rem] sm:text-[2.5rem] md:text-[6rem] font-semibold text-neutral-400 mt-2 leading-tight">
 //           With Us!
 //         </h3>
 
@@ -66,7 +66,7 @@
 //           <Link href="/Contact">
 //             <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group">
 //               <span className="relative z-10">Contact Us</span>
-//               <span className="absolute inset-0 rounded-lg  bg-violet-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+//               <span className="absolute inset-0 rounded-lg  bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
 //             </button>
 //           </Link>
 //         </motion.div>
@@ -128,10 +128,10 @@ const ConnectSection = () => {
         viewport={{ once: true }}
         className="relative z-10 max-w-[90%] md:max-w-3xl mx-auto px-4"
       >
-        <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[6rem] font-bold text-gray-900 leading-tight">
+        <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[6rem] font-bold text-neutral-900 leading-tight">
           Let’s Connect
         </h2>
-        <h3 className="text-[2rem] sm:text-[2.5rem] md:text-[6rem] font-semibold text-gray-400 mt-2 leading-tight">
+        <h3 className="text-[2rem] sm:text-[2.5rem] md:text-[6rem] font-semibold text-neutral-400 mt-2 leading-tight">
           With Us!
         </h3>
 
