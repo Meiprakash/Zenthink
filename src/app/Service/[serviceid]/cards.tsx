@@ -9,7 +9,7 @@ const cardItems = [
   {
     image: "/project-06.png",
     title: "UI-UX Design for Project ",
-    link: "/Service/ui-ux",
+    link: "/service/ui-ux",
     description:
       "Explore how thoughtful layout and digital storytelling can transform online spaces.",
     tags: ["Solving", "UI/UX Design", "Design", "Web Design"],
@@ -17,7 +17,7 @@ const cardItems = [
   {
     image: "/project-03.png",
     title: "Web Design  for Project",
-    link: "/Service/web-dev",
+    link: "/service/web-dev",
     description:
       "Create a strong portfolio that highlights your creative journey effectively.",
     tags: ["Creative", "Design", "Strategy"],
@@ -25,7 +25,7 @@ const cardItems = [
   {
     image: "/project-05.png",
     title: "Branding  Project",
-    link: "/Service/branding",
+    link: "/service/branding",
     description:
       "Recognizing innovation in visual storytelling and brand identity creation.",
     tags: ["Branding", "Visuals", "Award"],
@@ -33,7 +33,7 @@ const cardItems = [
   {
     image: "/project-04.png",
     title: "Motion Project 1",
-    link: "/Service/motion",
+    link: "/service/motion",
     description: "Bring stories to life with animation and motion graphics.",
     tags: ["Animation", "Motion", "Creative"],
   },

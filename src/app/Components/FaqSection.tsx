@@ -112,7 +112,7 @@ const FAQ = () => {
                 Didn’t find what you were looking for? Let’s chat and solve it
                 together!
               </p>
-              <Link href="/Service">
+              <Link href="/service">
                 <button className="relative overflow-hidden text-sm md:text-md font-medium px-4 md:px-5 lg:px-6 py-2.5 md:py-3 rounded-lg text-white bg-black group cursor-pointer w-full sm:w-auto">
                   <span className="relative z-10">See All Work</span>
                   <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
@@ -191,7 +191,7 @@ const FAQ = () => {
                 Didn’t find what you were looking for? Let’s chat and solve it
                 together!
               </p>
-              <Link href="/Service">
+              <Link href="/service">
                 <button className="relative overflow-hidden text-sm xs:text-md font-medium px-4 xs:px-5 py-2 xs:py-2.5 rounded-lg text-white bg-black group cursor-pointer w-full">
                   <span className="relative z-10">See All Work</span>
                   <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
