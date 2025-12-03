@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import Navbar from "../Components/Navbar/Navbar";
-import FAQ from "../Components/FaqSection";
-import ConnectSection from "../Components/ConnectUs";
-import Footer from "../Components/Footer";
-import BlogSection from "../Components/Blog";
-import TestimonialsSection from "../Components/Testimonials";
+import Navbar from "../Components1/Navbar/Navbar";
+import FAQ from "../Components1/FaqSection";
+import ConnectSection from "../Components1/ConnectUs";
+import Footer from "../Components1/Footer";
+import BlogSection from "../Components1/Blog";
+import TestimonialsSection from "../Components1/Testimonials";
 import HeroSection from "./HeroSection";
 import ServiceCard from "./ServiceCard";
 

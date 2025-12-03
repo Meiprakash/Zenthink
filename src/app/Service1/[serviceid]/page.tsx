@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import Navbar from "@/app/Components/Navbar/Navbar";
+import Navbar from "@/app/Components1/Navbar/Navbar";
 import { useRef } from "react";
-import TestimonialsSection from "@/app/Components/Testimonials";
-import FAQ from "@/app/Components/FaqSection";
-import Footer from "@/app/Components/Footer";
+import TestimonialsSection from "@/app/Components1/Testimonials";
+import FAQ from "@/app/Components1/FaqSection";
+import Footer from "@/app/Components1/Footer";
 import { motion } from "framer-motion";
 
 /* ----------------------------- TYPES ----------------------------- */

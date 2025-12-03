@@ -1,14 +1,14 @@
-import TestimonialsSection from "./Components/Testimonials";
-import Navbar from "./Components/Navbar/Navbar";
-import Hero from "./Components/Hero_Section";
-import InvestorsSection from "./Components/Investors";
-import AboutUs from "./Components/AboutUS";
-import ServiceSection from "./Components/Service";
-import RecentWork from "./Components/RecentWork";
-import FAQ from "./Components/FaqSection";
-import BlogSection from "./Components/Blog";
-import ConnectSection from "./Components/ConnectUs";
-import Footer from "./Components/Footer";
+import TestimonialsSection from "./Components1/Testimonials";
+import Navbar from "./Components1/Navbar/Navbar";
+import Hero from "./Components1/Hero_Section";
+import InvestorsSection from "./Components1/Investors";
+import AboutUs from "./Components1/AboutUS";
+import ServiceSection from "./Components1/Service";
+import RecentWork from "./Components1/RecentWork";
+import FAQ from "./Components1/FaqSection";
+import BlogSection from "./Components1/Blog";
+import ConnectSection from "./Components1/ConnectUs";
+import Footer from "./Components1/Footer";
 
 export default function Home() {
   return (
