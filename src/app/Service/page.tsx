@@ -7,7 +7,7 @@ import Footer from "../Components/Footer";
 import BlogSection from "../Components/Blog";
 import TestimonialsSection from "../Components/Testimonials";
 import HeroSection from "./HeroSection";
-import ServiceCard from '../service/ServiceCard';
+import ServiceCard from "./Servicecard";
 
 const Service: React.FC = () => {
   return (
