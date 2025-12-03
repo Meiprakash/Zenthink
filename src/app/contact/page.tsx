@@ -108,7 +108,7 @@ export default function Hero() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" ,  amount:0.1 }}
           className="w-full flex flex-col lg:flex-row items-start justify-between px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-30 py-12 sm:py-16 md:py-20 lg:py-24"
         >
           <motion.div
