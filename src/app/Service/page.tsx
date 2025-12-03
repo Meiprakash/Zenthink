@@ -7,7 +7,6 @@ import Footer from "../Components/Footer";
 import BlogSection from "../Components/Blog";
 import TestimonialsSection from "../Components/Testimonials";
 import HeroSection from "./HeroSection";
-import ServiceCard from "./ServiceCard1";
 
 const Service: React.FC = () => {
   return (
@@ -19,7 +18,7 @@ const Service: React.FC = () => {
       <div className="relative z-0">
         <Navbar />
         <HeroSection />
-        <ServiceCard />
+        {/* <ServiceCard /> */}
         <TestimonialsSection />
         <FAQ />
         <BlogSection />
