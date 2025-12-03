@@ -22,7 +22,7 @@ const blogs = [
     description:
       "Learn from industry errors to avoid web design mistakes. This can enhance your skills and lead to better websites.",
     image: "/blog-02.png",
-    link: "/Blog/case-study",
+    link: "/blog/case-study",
   },
   {
     title: "Top Mistakes Make With Web Design Process",
@@ -120,7 +120,7 @@ const BlogSection: React.FC = () => {
           whileTap={{ scale: 0.95 }}
           className="inline-block"
         >
-          <Link href="/Blog">
+          <Link href="/blog">
             <button className="relative overflow-hidden text-md font-medium px-7 py-4 rounded-lg text-white bg-black group">
               <span className="relative z-10">See All Blog</span>
               <span className="absolute inset-0 rounded-lg  bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
