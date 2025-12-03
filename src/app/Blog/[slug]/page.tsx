@@ -16,7 +16,7 @@ const blogs = [
     content:
       "This is the full content of the blog post where we explain how we helped a business grow online...",
     image: "/blog-02.png",
-    link: "/Blog/case-study",
+    link: "/blog/case-study",
   },
   {
     slug: "design-mistakes",
@@ -26,7 +26,7 @@ const blogs = [
     content:
       "In this article, we explore the biggest mistakes designers make and how to avoid them for better UX...",
     image: "/blog-07.png",
-    link: "/Blog/design-mistakes",
+    link: "/blog/design-mistakes",
   },
 ];
 

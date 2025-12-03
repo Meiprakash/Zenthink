@@ -15,7 +15,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const isActive = (path: unknown) => pathname === path;
-  const isIndustriesActive = pathname.startsWith("/Industries");
+  const isIndustriesActive = pathname.startsWith("/industries");
 
   return (
     <motion.nav
@@ -102,7 +102,7 @@ export default function Navbar() {
                   {industriesData[selectedIndustry].services.map((service) => (
                     <Link
                       key={service.name}
-                      href={`/Industries/${industriesData[selectedIndustry].slug}/${service.slug}`}
+                      href={`/industries/${industriesData[selectedIndustry].slug}/${service.slug}`}
                       className="border p-3 rounded-md text-md text-neutral-700 font-medium hover:border-lime-500 hover:text-black hover:bg-neutral-50 block"
                       onClick={() => setIsIndustriesOpen(false)}
                     >
@@ -116,8 +116,8 @@ export default function Navbar() {
 
           <li>
             <Link 
-              href="/Blog" 
-              className={`hover:text-lime-500 ${isActive("/Blog") ? "text-black" : ""}`}
+              href="/blog" 
+              className={`hover:text-lime-500 ${isActive("/blog") ? "text-black" : ""}`}
             >
               Blog
             </Link>
@@ -202,7 +202,7 @@ export default function Navbar() {
                         {industry.services.map((service) => (
                           <Link
                             key={service.slug}
-                            href={`/Industries/${industry.slug}/${service.slug}`}
+                            href={`/industries/${industry.slug}/${service.slug}`}
                             onClick={() => setMenuOpen(false)}
                             className="block text-sm text-neutral-400 hover:text-lime-500 transition-colors py-1"
                           >
@@ -216,9 +216,9 @@ export default function Navbar() {
               </div>
 
               <Link 
-                href="/Blog" 
+                href="/blog" 
                 onClick={() => setMenuOpen(false)}
-                className={`${isActive("/Blog") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
+                className={`${isActive("/blog") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
               >
                 Blog
               </Link>
