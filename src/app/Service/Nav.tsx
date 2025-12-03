@@ -7,7 +7,7 @@ import Link from "next/link";
 import FAQ from "../Components/FaqSection";
 import ConnectSection from "../Components/ConnectUs";
 import Footer from "../Components/Footer";
-import BlogSection from "../Components/blog";
+import BlogSection from "../Components/Blog";
 
 // Define the Tab type
 type Tab = "UIUX" | "WebDev" | "Branding" | "Motion";
