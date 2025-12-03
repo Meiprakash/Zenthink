@@ -10,7 +10,6 @@ const companies = [
   { name: "About us", link: "/about-us" },
   { name: "Service", link: "/service" },
   { name: "Blog", link: "/blog" },
-  { name: "Shop", link: "#" },
   { name: "Contact Us", link: "/Contact" },
 ];
 

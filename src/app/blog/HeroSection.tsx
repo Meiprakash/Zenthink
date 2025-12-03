@@ -88,7 +88,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true , amount:0.2 }}
             className="flex flex-col sm:flex-row md:items-start justify-between mb-8 md:mb-16 gap-6"
           >
             {/* Left side title */}
