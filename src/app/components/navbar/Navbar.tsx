@@ -50,8 +50,8 @@ export default function Navbar() {
           </li>
           <li>
             <Link 
-              href="/about-us" 
-              className={`hover:text-lime-500 ${isActive("/about-us") ? "text-black" : ""}`}
+              href="/about" 
+              className={`hover:text-lime-500 ${isActive("/about") ? "text-black" : ""}`}
             >
               About
             </Link>
@@ -169,9 +169,9 @@ export default function Navbar() {
                 Home
               </Link>
               <Link 
-                href="/about-us" 
+                href="/about" 
                 onClick={() => setMenuOpen(false)}
-                className={`${isActive("/about-us") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
+                className={`${isActive("/about") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
               >
                 About
               </Link>

@@ -6,11 +6,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const companies = [
-  { name: "Home", link: "#" },
-  { name: "About us", link: "/about-us" },
+  { name: "Home", link: "/" },
+  { name: "About us", link: "/about" },
   { name: "Service", link: "/service" },
   { name: "Blog", link: "/blog" },
-  { name: "Contact Us", link: "/Contact" },
+  { name: "Contact Us", link: "/contact" },
 ];
 
 const utilities = [
