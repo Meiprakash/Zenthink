@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { industriesData } from "@/app/utils/industriesData";
-import Navbar from "@/app/Components1/Navbar/Navbar";
+import Navbar from "@/app/components/navbar/Navbar";
 import { useRef } from "react";
-import TestimonialsSection from "@/app/Components1/Testimonials";
-import FAQ from "@/app/Components1/FaqSection";
-import Footer from "@/app/Components1/Footer";
+import TestimonialsSection from "@/app/components/Testimonials";
+import FAQ from "@/app/components/FaqSection";
+import Footer from "@/app/components/Footer";
 import { motion } from "framer-motion";
 
 export const runtime = 'edge';

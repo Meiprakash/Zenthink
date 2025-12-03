@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Navbar from "../Components1/Navbar/Navbar";
-import FAQ from "../Components1/FaqSection";
-import ConnectSection from "../Components1/ConnectUs";
-import Footer from "../Components1/Footer";
+import Navbar from "../components/navbar/Navbar";
+import FAQ from "../components/FaqSection";
+import ConnectSection from "../components/ConnectUs";
+import Footer from "../components/Footer";
 import HeroSection from "./HeroSection";
 
 const Blog: React.FC = () => {
