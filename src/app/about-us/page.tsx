@@ -8,7 +8,7 @@ import AwardsSection from "./AwardsSection";
 import ProcessSection from "./Process";
 import TestimonialsSection from "../Components/Testimonials";
 import FAQ from "../Components/FaqSection";
-import BlogSection from "../Components/blog";
+import BlogSection from "../Components/Blog";
 import ConnectSection from "../Components/ConnectUs";
 import Footer from "../Components/Footer";
 import HeroSection from "./HeroSection";
