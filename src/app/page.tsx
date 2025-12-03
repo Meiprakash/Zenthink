@@ -1,5 +1,5 @@
 import TestimonialsSection from "./components/Testimonials";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/Hero_Section";
 import InvestorsSection from "./components/Investors";
 import AboutUs from "./components/AboutUS";
