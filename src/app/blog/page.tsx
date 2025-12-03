@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "../components/Navbar1/Navbar";
 import FAQ from "../components/FaqSection";
 import ConnectSection from "../components/ConnectUs";
 import Footer from "../components/Footer";

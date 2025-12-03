@@ -1,6 +1,6 @@
 "use client";
 
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "../components/Navbar1/Navbar";
 import SecondComp from "./Image";
 import StatsSection from "./CountUP";
 import Values from "./Values";
