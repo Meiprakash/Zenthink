@@ -4,9 +4,9 @@ import { useState } from "react";
 import { motion, easeOut } from "framer-motion";
 import { ethers } from "ethers";
 import Image from "next/image";
-import Navbar from "../Components1/Navbar/Navbar";
-import ConnectSection from "../Components1/ConnectUs";
-import Footer from "../Components1/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import ConnectSection from "../components/ConnectUs";
+import Footer from "../components/Footer";
 
 declare global {
   interface Window {

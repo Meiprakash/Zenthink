@@ -4,10 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import FAQ from "../Components1/FaqSection";
-import ConnectSection from "../Components1/ConnectUs";
-import Footer from "../Components1/Footer";
-import BlogSection from "../Components1/Blog";
+import FAQ from "../components/FaqSection";
+import ConnectSection from "../components/ConnectUs";
+import Footer from "../components/Footer";
+import BlogSection from "../components/Blog";
 
 // Define the Tab type
 type Tab = "UIUX" | "WebDev" | "Branding" | "Motion";

@@ -1,8 +1,8 @@
-import Navbar from "@/app/Components1/Navbar/Navbar";
+import Navbar from "@/app/components/Navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
-import ConnectSection from "@/app/Components1/ConnectUs";
-import Footer from "@/app/Components1/Footer";
+import ConnectSection from "@/app/components/ConnectUs";
+import Footer from "@/app/components/Footer";
 import { FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 export const runtime = 'edge';
