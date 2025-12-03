@@ -8,7 +8,7 @@ import FAQ from "./components/FaqSection";
 import BlogSection from "./components/Blog";
 import ConnectSection from "./components/ConnectUs";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar1/Navbar";
+import Navbar from "./components/navbar/Navbar";
 
 export default function Home() {
   return (

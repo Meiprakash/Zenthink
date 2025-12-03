@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import Navbar from "@/app/components/Navbar1/Navbar";
+import Navbar from "@/app/components/navbar/Navbar";
 import { useRef } from "react";
 import TestimonialsSection from "@/app/components/Testimonials";
 import FAQ from "@/app/components/FaqSection";
