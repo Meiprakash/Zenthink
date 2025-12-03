@@ -10,10 +10,24 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Zenthink",
+  title: "Zenthink | Innovative IT Solutions",
   description: "Innovative IT Solutions for Your Business Growth",
-  icons:"favicon.svg"
+  metadataBase: new URL("https://www.zenthink.in"),
+  openGraph: {
+    title: "Zenthink",
+    description: "Innovative IT Solutions for Your Business Growth",
+    url: "https://www.zenthink.in",
+    type: "website",
+    images: [
+      "/og-image.png", 
+    ],
+  },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
+  },
 };
+
 
 export default function RootLayout({
   children,
