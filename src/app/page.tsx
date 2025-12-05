@@ -3,7 +3,7 @@ import Hero from "./components/Hero_Section";
 import InvestorsSection from "./components/Investors";
 import AboutUs from "./components/AboutUS";
 import ServiceSection from "./components/Service";
-import RecentWork from "./components/RecentWork";
+// import RecentWork from "./components/RecentWork";
 import FAQ from "./components/FaqSection";
 import BlogSection from "./components/Blog";
 import ConnectSection from "./components/ConnectUs";
@@ -23,7 +23,7 @@ export default function Home() {
         <InvestorsSection />
         <AboutUs />
         <ServiceSection />
-        <RecentWork />
+        {/* <RecentWork /> */}
         <TestimonialsSection />
         <FAQ />
         <BlogSection />
