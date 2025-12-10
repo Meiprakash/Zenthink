@@ -51,7 +51,7 @@ export default function AdvancedSection({ advanced }: AdvancedProps) {
                 {item.title}
               </h3>
 
-              <p className="text-neutral-600 text-[14px] sm:text-[15px] leading-relaxed">
+              <p className="text-neutral-600 text-[14px] sm:text-[14px] leading-relaxed">
                 {item.description}
               </p>
             </motion.div>
