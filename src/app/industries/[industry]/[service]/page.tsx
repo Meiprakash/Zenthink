@@ -206,8 +206,10 @@ export default function IndustryServiceDetails() {
          
             <TestimonialsSection />
           
-         
+          <div className="mb-[59px]">
+            
             <FAQ />
+         </div>
         
 
           <Footer />
