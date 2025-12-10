@@ -86,7 +86,7 @@ export default function IndustryServiceDetails() {
     <main className="font-inter">
       <div className="relative min-h-screen">
         {/* Fixed background gradient - Same as Service page */}
-        <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#fdfffa] to-[#f2fde4] -z-10" />
+        <div className="fixed inset-0  -z-10" />
 
         {/* Content */}
         <div className="relative z-0">
@@ -181,7 +181,7 @@ export default function IndustryServiceDetails() {
                       className="absolute inset-0 rounded-full bg-gradient-to-r from-lime-500/20 to-transparent blur-2xl sm:blur-3xl"
                     />
                     <Image
-                      src={selectedService.banner}
+                      src={selectedService.banner }
                       alt={selectedService.name}
                       fill
                       className="object-contain relative z-10"
@@ -203,12 +203,12 @@ export default function IndustryServiceDetails() {
           <TimelineSection timeline={selectedService.timeline} />
 
           {/* Additional Sections */}
-          <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-24">
+         
             <TestimonialsSection />
-          </div>
-          <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-24">
+          
+         
             <FAQ />
-          </div>
+        
 
           <Footer />
         </div>

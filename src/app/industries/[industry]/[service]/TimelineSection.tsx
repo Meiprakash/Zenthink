@@ -46,7 +46,7 @@ export default function TimelineSection({
         {/* Timeline Container */}
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-5 sm:left-1/2 top-0 h-full w-[2px] bg-lime-400/50 hidden sm:block"></div>
+          <div className="absolute left-5 sm:left-1/2 top-0 h-full w-[2px] hidden sm:block bg-lime-500"></div>
 
           {/* Phases */}
           <div className="space-y-10">
@@ -62,12 +62,11 @@ export default function TimelineSection({
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 top-3 w-4 h-4 bg-lime-500 rounded-full shadow-md" />
+                <div className="absolute hidden sm:block left-4 sm:left-1/2 transform sm:-translate-x-1/2 top-3 w-4 h-4 bg-lime-500 rounded-full shadow-md" />
 
                 {/* Phase Card */}
                 <div
                   className={`
-                    bg-[linear-gradient(180deg,#ffffff_0%,#f2ffe0_100%)]
                     border border-neutral-200 shadow-sm rounded-xl 
                     p-5 sm:p-6 w-full sm:w-[48%]
                   `}

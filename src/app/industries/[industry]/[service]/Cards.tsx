@@ -26,17 +26,19 @@ export default function CardsSection({ cards }: CardsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
             viewport={{ once: true }}
-            className="relative p-8 rounded-3xl border border-neutral-200 bg-gradient-to-br from-[#ffffff] to-[#f3ffe5] shadow-md hover:shadow-xl transition-all duration-500"
+            className="relative p-8 rounded-3xl border border-neutral-200 shadow-md hover:shadow-xl overflow-hidden transition-all duration-500"
           >
-            {/* Left Highlight Bar */}
-            <div className="absolute left-0 top-0 h-full w-1 bg-lime-500 rounded-l-xl"></div>
+            {/* Left Highlight Bar - FIXED */}
+            <div className="">
+              <div className="absolute  left-0 top-1 bottom-1 w-1.5 bg-lime-400 rounded-l-3xl "></div>
 
-            <h3 className="text-[26px] sm:text-[30px] font-semibold text-neutral-900 mb-3">
-              {block.title}
-            </h3>
-            <p className="text-neutral-600 text-[15px] sm:text-[16px] leading-relaxed">
-              {block.description}
-            </p>
+              <h3 className="text-[26px] sm:text-[30px] font-semibold text-neutral-900 mb-3">
+                {block.title}
+              </h3>
+              <p className="text-neutral-600 text-[15px] sm:text-[14px] leading-relaxed">
+                {block.description}
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>

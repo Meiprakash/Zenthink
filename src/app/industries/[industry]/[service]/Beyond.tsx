@@ -14,7 +14,7 @@ export default function BeyondSection({ beyond }: BeyondProps) {
 
   return (
     <section className="w-full py-16 px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-28">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl  m-3">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ export default function BeyondSection({ beyond }: BeyondProps) {
           viewport={{ once: true }}
           className="space-y-5"
         >
-          <h2 className="text-[32px] sm:text-[36px] md:text-[42px] font-semibold text-neutral-900">
+          <h2 className="text-[32px] sm:text-[36px] md:text-[45px] font-semibold text-neutral-900">
             {beyond.bname}
           </h2>
 

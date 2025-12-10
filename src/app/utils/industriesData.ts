@@ -14,7 +14,7 @@ export const industriesData = [
         slug: "custom-ecommerce-web-development",
         subtitle:
           "Launch a powerful, custom-built online store designed to convert visitors into loyal customers. At ZenThink Technologies Pvt Ltd, our expert ecommerce website development services provide you with a unique digital storefront that perfectly reflects your brand and scales with your business",
-        banner: "/placeholder-product.png",
+        banner: "/industries.png",
 
         stats: [
           { value: "10M+", label: "Patients Served" },
@@ -42,25 +42,25 @@ export const industriesData = [
               title: "Responsive Design",
               description:
                 "Your store will look and function flawlessly on any device, from desktops to smartphones, capturing sales from customers wherever they shop.",
-              icon: "process-card-img-04.webp",
+              icon: "/process-card-img-04.webp",
             },
             {
               title: "Secure Payment Integration",
               description:
                 "We integrate trusted and secure payment gateways, building customer confidence and ensuring every transaction is protected.",
-              icon: "process-card-img-01.webp",
+              icon: "/process-card-img-01.webp",
             },
             {
               title: "Intuitive Inventory Management",
               description:
                 "Effortlessly track stock levels, manage product variations, and automate inventory updates with a powerful back-end system.",
-              icon: "process-card-img-02.webp",
+              icon: "/process-card-img-02.webp",
             },
             {
               title: "Built-in SEO Optimization",
               description:
                 "We build your site with search engine optimization at its core, helping your products get discovered by customers actively searching online.",
-              icon: "process-card-img-03.webp",
+              icon: "/process-card-img-03.webp",
             },
           ],
         },
@@ -206,25 +206,25 @@ export const industriesData = [
               title: "Seamless Vendor Onboarding System",
               description:
                 "Our intuitive vendor onboarding system makes it easy for sellers to register, set up their storefronts, and list products. This automated process reduces administrative workload and helps you scale your vendor network quickly.",
-              icon: "process-card-img-03.webp",
+              icon: "/process-card-img-03.webp",
             },
             {
               title: "Automated Commission Management Software",
               description:
                 "Implement flexible commission structures with a powerful commission management software. Automatically calculate, track, and disburse earnings based on sales, categories, or vendor tiers, ensuring transparent and accurate financial management.",
-              icon: "process-card-img-02.webp",
+              icon: "/process-card-img-02.webp",
             },
             {
               title: "Integrated Dispute Resolution",
               description:
                 "Foster trust and reliability with a built-in dispute resolution module. This feature provides a structured and fair workflow for managing and resolving conflicts between customers and vendors directly on the platform.",
-              icon: "process-card-img-01.webp",
+              icon: "/process-card-img-01.webp",
             },
             {
               title: "Advanced Analytics Dashboard",
               description:
                 "Gain a 360-degree view of your marketplace performance. Your central dashboard provides critical insights into sales trends, top-performing vendors, customer behavior, and revenue streams, enabling data-driven decision-making.",
-              icon: "process-card-img-04.webp",
+              icon: "/process-card-img-04.webp",
             },
           ],
         },
@@ -255,7 +255,7 @@ export const industriesData = [
         slug: "inventory-order",
         subtitle:
           "Unlock operational excellence and maximize profitability with a custom inventory management system from ZenThink Technologies Pvt Ltd. In today's competitive retail landscape, success hinges on the ability to have the right product in the right place at the right time. Our bespoke systems move you beyond reactive problem-solving, providing a proactive, data-driven command center that eliminates costly inefficiencies and turns your inventory into a strategic asset.",
-        banner: "/placeholder-product.png",
+        banner: "/process-card-img-01.webp",
 
         stats: [
           { value: "5M+", label: "App Users" },
