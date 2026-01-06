@@ -108,25 +108,26 @@ const processes = [
     title: "Listen ",
     desc: "We immerse ourselves in your business context, challenges, and vision through deep conversations",
     icon: <Share2 className="w-10 h-10 text-black" />,
-    image: "/process-card-img-01.webp",
+    image: "/using-a-tablet-svgrepo-com.svg",
   },
   {
     id: 2,
     title: "Align ",
     desc: "We synchronize expectations, timelines, and success metrics ensuring complete stakeholder buy-in.",
-    image: "/process-card-img-02.webp",
+    image: "/activity-solid-svgrepo-com.svg",
   },
   {
     id: 3,
     title: "Collaborate ",
     desc: "We maintain open communication with regular updates, feedback sessions, and agile adaptability.",
-    image: "/process-card-img-03.webp",
+    image: "/collaborate-svgrepo-com.svg",
   },
   {
     id: 4,
     title: "Empower ",
     desc: "We transfer knowledge and provide training—ensuring your team owns and sustains the solution.",
-    image: "/process-card-img-04.webp",
+    image:
+      "/knowledge-education-creativity-inspiration-intelligence-svgrepo-com.svg",
   },
 ];
 

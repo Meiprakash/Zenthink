@@ -8,6 +8,7 @@ import { motion, AnimatePresence, easeOut } from "framer-motion";
 interface AccordionItem {
   title: string;
   content: string;
+  image: string;
 }
 
 export default function AboutUs() {
@@ -19,16 +20,19 @@ export default function AboutUs() {
       title: " 100+ Projects Delivered ",
       content:
         "From concept to deployment, we've transformed business challenges into powerful software solutions across 10+ industries, delivering measurable ROI and sustainable growth for every client.",
+      image: "/fast-ship-svgrepo-com.svg",
     },
     {
       title: "1K+ Happy Clients",
       content:
         "Our success is measured by yours. We build lasting partnerships through transparent communication, agile development, and unwavering commitment to your business objectives and technical excellence",
+      image: "/teamwork-svgrepo-com.svg",
     },
     {
       title: "10+ Countries",
       content:
         "Global presence, personalized service. We bring world-class software expertise to businesses worldwide, adapting our solutions to local markets while maintaining international quality standards.",
+      image: "/group-svgrepo-com.svg",
     },
   ];
 
@@ -68,8 +72,7 @@ export default function AboutUs() {
             {/* Left: Heading */}
             <div>
               <h2 className="text-[30px] sm:text-[32px] md:text-[38px] lg:text-[44px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
-                Our Approach is Innovative{" "}
-                <br className="hidden sm:block" />
+                Our Approach is Innovative <br className="hidden sm:block" />
                 and Results-Focused.
               </h2>
             </div>
@@ -123,7 +126,7 @@ export default function AboutUs() {
           </motion.div>
 
           {/* Right: Accordion */}
-           <motion.div
+          <motion.div
             variants={fadeUp}
             className="flex flex-col gap-4 pb-2 w-full sm:w-3/3 overflow-x-hidden"
           >
@@ -142,9 +145,9 @@ export default function AboutUs() {
                 >
                   <div className="flex items-center gap-3">
                     <Image
-                      src="/trophy.png"
+                      src={item.image}
                       alt="icon"
-                      width={16}
+                      width={18}
                       height={16}
                       className="w-5 md:w-6"
                     />

@@ -6,31 +6,31 @@ const serviceCard = [
   {
     name: "Web Applications & Websites ",
     desc: "We build responsive, high-performance web platforms that deliver seamless user experiences and drive business results across all devices.",
-    icon: "/service-card-01.jpg",
+    icon: "/web-development-svgrepo-com.svg",
     link: "/service/web-application",
   },
   {
     name: "Mobile Applications ",
     desc: "We develop native and cross-platform mobile apps that engage users, streamline operations, and extend your business reach on iOS and Android.",
-    icon: "/service-card-02.jpg",
+    icon: "/mobile-development-coding-code-xcode-svgrepo-com.svg",
     link: "/service/mobile-application",
   },
   {
     name: "Legacy Modernization",
     desc: "We transform outdated systems into modern, cloud-ready architectures that reduce costs, improve performance, and eliminate technical debt.",
-    icon: "/service-card-03.jpg",
+    icon: "/tron-arrow-svgrepo-com.svg",
     link: "/service/legacy-modernization",
   },
   {
     name: "API Development & Integration",
     desc: "We design robust APIs and seamless integrations that connect your systems, enable data flow, and create unified digital ecosystems.",
-    icon: "/service-card-04.jpg",
+    icon: "/api-svgrepo-com.svg",
     link: "/service/api-development-integration",
   },
   {
     name: "AI-Enhanced Solutions",
     desc: "We integrate intelligent automation and machine learning capabilities that optimize decision-making, predict trends, and unlock hidden insights from your data.",
-    icon: "/service-card-01.jpg",
+    icon: "/ai-svgrepo-com.svg",
     link: "/service/ai-enhanced-solutions",
   },
 ];
@@ -55,7 +55,7 @@ function ServiceCard() {
                     alt="service icon"
                     width={40}
                     height={20}
-                    className="mt-2 rounded-2xl"
+                    className="mt-2"
                   />
                 </div>
 

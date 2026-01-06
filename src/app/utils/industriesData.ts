@@ -42,25 +42,25 @@ export const industriesData = [
               title: "Responsive Design",
               description:
                 "Your store will look and function flawlessly on any device, from desktops to smartphones, capturing sales from customers wherever they shop.",
-              icon: "/process-card-img-04.webp",
+              icon: "/vuetify-svgrepo-com.svg",
             },
             {
               title: "Secure Payment Integration",
               description:
                 "We integrate trusted and secure payment gateways, building customer confidence and ensuring every transaction is protected.",
-              icon: "/process-card-img-01.webp",
+              icon: "/secure-payment-svgrepo-com.svg",
             },
             {
               title: "Intuitive Inventory Management",
               description:
                 "Effortlessly track stock levels, manage product variations, and automate inventory updates with a powerful back-end system.",
-              icon: "/process-card-img-02.webp",
+              icon: "/inventory-logistics-warehouse-svgrepo-com.svg",
             },
             {
               title: "Built-in SEO Optimization",
               description:
                 "We build your site with search engine optimization at its core, helping your products get discovered by customers actively searching online.",
-              icon: "/process-card-img-03.webp",
+              icon: "/target-seo-and-web-svgrepo-com.svg",
             },
           ],
         },
@@ -206,25 +206,25 @@ export const industriesData = [
               title: "Seamless Vendor Onboarding System",
               description:
                 "Our intuitive vendor onboarding system makes it easy for sellers to register, set up their storefronts, and list products. This automated process reduces administrative workload and helps you scale your vendor network quickly.",
-              icon: "/process-card-img-03.webp",
+              icon: "/ai-ethics-svgrepo-com.svg",
             },
             {
               title: "Automated Commission Management Software",
               description:
                 "Implement flexible commission structures with a powerful commission management software. Automatically calculate, track, and disburse earnings based on sales, categories, or vendor tiers, ensuring transparent and accurate financial management.",
-              icon: "/process-card-img-02.webp",
+              icon: "/ai-solid-svgrepo-com.svg",
             },
             {
               title: "Integrated Dispute Resolution",
               description:
                 "Foster trust and reliability with a built-in dispute resolution module. This feature provides a structured and fair workflow for managing and resolving conflicts between customers and vendors directly on the platform.",
-              icon: "/process-card-img-01.webp",
+              icon: "/domestic-dispute-svgrepo-com.svg",
             },
             {
               title: "Advanced Analytics Dashboard",
               description:
                 "Gain a 360-degree view of your marketplace performance. Your central dashboard provides critical insights into sales trends, top-performing vendors, customer behavior, and revenue streams, enabling data-driven decision-making.",
-              icon: "/process-card-img-04.webp",
+              icon: "/analytics-reference-svgrepo-com.svg",
             },
           ],
         },
@@ -277,25 +277,25 @@ export const industriesData = [
               title: "Real-Time, Multi-Channel Inventory Tracking",
               description:
                 " Achieve a single source of truth for your stock. Our system uses API integrations, barcode scanning, and even RFID technology to synchronize inventory levels in real-time across your ecommerce store, third-party marketplaces (like Amazon or eBay), and physical locations. This completely eliminates the risk of overselling, which prevents customer frustration and protects your brand's reputation.",
-              icon: "/process-card-img-03.webp",
+              icon: "/jira-svgrepo-com.svg",
             },
             {
               title: "Intelligent, Automated Reorder Alerts",
               description:
                 "Stop reacting to stockouts. You can configure dynamic thresholds based on sales velocity and lead times. The system then automatically triggers reorder alerts or even generates draft purchase orders, ensuring your best-selling products are always in stock. This practice of automated stock replenishment prevents lost sales and avoids expensive, last-minute rush shipping fees.",
-              icon: "/service-card-04.jpg",
+              icon: "/thinking-svgrepo-com.svg",
             },
             {
               title: "Integrated Dispute Resolution",
               description:
                 "Foster trust and reliability with a built-in dispute resolution module. This feature provides a structured and fair workflow for managing and resolving conflicts between customers and vendors directly on the platform.",
-              icon: "/process-card-img-03.webp",
+              icon: "/domestic-dispute-svgrepo-com.svg",
             },
             {
               title: "Centralized Order Processing",
               description:
                 "All orders, regardless of their source, flow into one intuitive dashboard. Your team can view, prioritize, and process orders with maximum efficiency. The system automatically routes orders to the correct warehouse or fulfillment center, generates picking lists, and prints shipping labels, drastically reducing manual effort and the potential for human error.",
-              icon: "/service-card-01.jpg",
+              icon: "/symbol-structure-svgrepo-com.svg",
             },
           ],
         },
@@ -365,25 +365,25 @@ export const industriesData = [
               title: "Intuitive Touch-Screen Interface",
               description:
                 "A clean and easy-to-use touch-screen interface minimizes employee training time, accelerates checkout, reduces long queues, and improves customer satisfaction.",
-              icon: "/service-card-04.jpg",
+              icon: "/interface-ui-component-plugin-addon-svgrepo-com.svg",
             },
             {
               title: "Flexible & Secure Payment Processing",
               description:
                 "Accept all modern payment types including chip, contactless cards, UPI, mobile payments, and cash. For grocery and convenience stores, we build EBT-compliant POS flows to handle government-assisted payments securely.",
-              icon: "/service-card-02.jpg",
+              icon: "/secure-payment-fill-svgrepo-com.svg",
             },
             {
               title: "Integrated Receipt & Hardware Management",
               description:
                 "Fully compatible with receipt printers, barcode scanners, cash drawers, and digital receipts (email/SMS). Enables faster product lookup and builds a growing customer contact list.",
-              icon: "/service-card-01.jpg",
+              icon: "/computer-hardware-process-svgrepo-com.svg",
             },
             {
               title: "Powerful Sales Analytics & Reporting",
               description:
                 "Gain insights into top-selling items, peak hours, staff performance, and revenue trends. Make smart decisions about inventory, staffing, and marketing using real-time analytics.",
-              icon: "/process-card-img-03.webp",
+              icon: "/analytics-svgrepo-com.svg",
             },
           ],
         },
@@ -460,25 +460,25 @@ export const industriesData = [
               title: "Points System",
               description:
                 "Implement a flexible points-based rewards engine where customers earn points for purchases, referrals, social actions, and more—redeemable for discounts, products, or exclusive experiences.",
-              icon: "/service-card-01.jpg",
+              icon: "/achievement-2-svgrepo-com.svg",
             },
             {
               title: "Tier-Based Rewards",
               description:
                 "Motivate long-term engagement using tiered structures like Bronze, Silver, and Gold—each unlocking bigger benefits such as VIP access, birthday gifts, or exclusive service.",
-              icon: "/service-card-03.jpg",
+              icon: "/google-opinion-rewards-svgrepo-com.svg",
             },
             {
               title: "Personalized Offers",
               description:
                 "Leverage behavioral and purchase data to deliver targeted promotions, surprise rewards, and recommendations—boosting reward redemption rates by up to 50%.",
-              icon: "/service-card-04.jpg",
+              icon: "/pixeled-gift-svgrepo-com.svg",
             },
             {
               title: "Mobile App Integration",
               description:
                 "A native Flutter mobile app allows customers to track points, redeem rewards, and receive push notifications—keeping engagement high across all touchpoints.",
-              icon: "/service-card-02.jpg",
+              icon: "/mobile-app-developing-svgrepo-com.svg",
             },
           ],
         },
@@ -556,37 +556,37 @@ export const industriesData = [
               title: "Advanced Push Notification System",
               description:
                 "Engage customers with personalized alerts, promotional messages, cart recovery notifications, and tailored product recommendations.",
-              icon: "/service-card-01.jpg",
+              icon: "/push-notification-solid-svgrepo-com.svg",
             },
             {
               title: "Intelligent Wishlist Management",
               description:
                 "Enable users to save, track, and organize their favorite products, increasing long-term engagement.",
-              icon: "/service-card-02.jpg",
+              icon: "/electronic-wishlist-svgrepo-com.svg",
             },
             {
               title: "Seamless Social Sharing",
               description:
                 "Allow customers to share products effortlessly across social platforms to increase brand visibility.",
-              icon: "/service-card-03.jpg",
+              icon: "/social-share-svgrepo-com.svg",
             },
             {
               title: "One-Click Checkout Process",
               description:
                 "Reduce friction and cart abandonment with a fast, intuitive checkout flow.",
-              icon: "/service-card-04.jpg",
+              icon: "/click-touch-press-811-svgrepo-com.svg",
             },
             {
               title: "In-App Checkout SDK",
               description:
                 "Provide secure and seamless payment processing with multiple gateway integrations.",
-              icon: "/process-card-img-04.webp",
+              icon: "/anchor-svgrepo-com.svg",
             },
             {
               title: "App-Based Loyalty Wallet",
               description:
                 "Reward users, build retention, and drive repeat purchases through integrated loyalty programs.",
-              icon: "/process-card-img-03.webp",
+              icon: "/brand-staylinked-svgrepo-com.svg",
             },
           ],
         },

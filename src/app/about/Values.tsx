@@ -24,11 +24,11 @@ const Values = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true, margin: "-50px" }}
         >
-          <Image 
-            src="/badge.jpg" 
-            alt="badge" 
-            width={22} 
-            height={22} 
+          <Image
+            src="/badge.jpg"
+            alt="badge"
+            width={22}
+            height={22}
             className="w-4 h-4"
           />
         </motion.div>
@@ -90,11 +90,11 @@ const Values = () => {
           </div>
           <div className="mt-6 sm:mt-8">
             <Image
-              src="/value-card-img-01.jpg"
-              width={70}
-              height={70}
+              src="/creative-mind-innovation-svgrepo-com.svg"
+              width={90}
+              height={90}
               alt="innovation"
-              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16"
+              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 md:w-66 md:h-46"
             />
           </div>
         </motion.div>
@@ -118,7 +118,7 @@ const Values = () => {
           </div>
           <div className="mt-6 sm:mt-8">
             <Image
-              src="/value-card-img-02.jpg"
+              src="/collaboration-svgrepo-com.svg"
               width={70}
               height={70}
               alt="collaboration"
@@ -146,11 +146,11 @@ const Values = () => {
           </div>
           <div className="mt-6 sm:mt-8">
             <Image
-              src="/value-card-img-04.jpg"
+              src="/medal-quality-svgrepo-com.svg"
               width={70}
               height={70}
               alt="quality"
-              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16"
+              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 md:w-66 md:h-46"
             />
           </div>
         </motion.div>
@@ -175,7 +175,7 @@ const Values = () => {
           </div>
           <div className="mt-6 sm:mt-8">
             <Image
-              src="/value-card-img-03.jpg"
+              src="/delivery-date-svgrepo-com.svg"
               width={70}
               height={70}
               alt="delivery"
