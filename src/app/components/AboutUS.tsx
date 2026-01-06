@@ -20,19 +20,19 @@ export default function AboutUs() {
       title: " 100+ Projects Delivered ",
       content:
         "From concept to deployment, we've transformed business challenges into powerful software solutions across 10+ industries, delivering measurable ROI and sustainable growth for every client.",
-      image: "/fast-ship-svgrepo-com.svg",
+      image: "/cup.png",
     },
     {
       title: "1K+ Happy Clients",
       content:
         "Our success is measured by yours. We build lasting partnerships through transparent communication, agile development, and unwavering commitment to your business objectives and technical excellence",
-      image: "/teamwork-svgrepo-com.svg",
+      image: "/users-svgrepo-com.svg",
     },
     {
       title: "10+ Countries",
       content:
         "Global presence, personalized service. We bring world-class software expertise to businesses worldwide, adapting our solutions to local markets while maintaining international quality standards.",
-      image: "/group-svgrepo-com.svg",
+      image: "/maps-and-flags-pin-svgrepo-com.svg",
     },
   ];
 
@@ -149,7 +149,7 @@ export default function AboutUs() {
                       alt="icon"
                       width={18}
                       height={16}
-                      className="w-5 md:w-6"
+                      className="w-5 md:w-6 stroke-9  opacity-1000"
                     />
                     <span className="font-semibold text-lg text-neutral-800">
                       {item.title}

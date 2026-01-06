@@ -146,7 +146,7 @@ const Values = () => {
           </div>
           <div className="mt-6 sm:mt-8">
             <Image
-              src="/medal-quality-svgrepo-com.svg"
+              src="/quality-svgrepo-com.svg"
               width={70}
               height={70}
               alt="quality"
@@ -175,11 +175,11 @@ const Values = () => {
           </div>
           <div className="mt-6 sm:mt-8">
             <Image
-              src="/delivery-date-svgrepo-com.svg"
+              src="/delivery-svgrepo-com.svg"
               width={70}
               height={70}
               alt="delivery"
-              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16"
+              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-22 sm:h-19"
             />
           </div>
         </motion.div>
