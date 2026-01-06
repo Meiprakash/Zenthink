@@ -94,7 +94,7 @@ const Values = () => {
               width={90}
               height={90}
               alt="innovation"
-              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 md:w-66 md:h-46"
+              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 "
             />
           </div>
         </motion.div>
@@ -150,7 +150,7 @@ const Values = () => {
               width={70}
               height={70}
               alt="quality"
-              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 md:w-66 md:h-46"
+              className="object-contain w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 "
             />
           </div>
         </motion.div>
