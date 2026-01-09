@@ -6,30 +6,51 @@ import Image from "next/image";
 const awards = [
   {
     id: 1,
-    year: "2025",
+    year: "2021",
     title: "Enterprise Solutions Scalable Systems for Complex Operations",
-    desc: "Delivered mission-critical applications handling millions of transactions daily—from supply chain management to financial processing with 99.9% uptime.",
+    desc: "Started as TuneUp Technologies which is to develop Mobile App, Web Applications and Websites for the Tier 2 industry client  ",
     image: "/award-01.jpg",
   },
   {
     id: 2,
-    year: "2024",
+    year: "2022",
     title: "Digital Transformation Modernizing Legacy into Cloud-Native",
-    desc: "Transformed outdated infrastructure for 200+ clients—migrating on-premise systems to cloud platforms while reducing costs by 40% and improving performance.",
+    desc: "Focused on building scalable solutions using Artificial Intelligence systems and build 10+ SaaS Applications .",
     image: "/award-02.jpg",
   },
   {
     id: 3,
     year: "2023",
     title: "Industry Platforms Vertical-Specific Software Solutions",
-    desc: "Built specialized platforms for healthcare (HIPAA-compliant), fintech (PCI-DSS certified), education (LMS), and logistics (real-time tracking) with domain expertise.",
+    desc: "Planned to onboard 5+ Advisor board members of different verticals to take more foreign projects.",
     image: "/award-03.jpg",
   },
   {
     id: 4,
-    year: "2022",
+    year: "2024",
     title: "Integration Services Connecting Disparate Systems Seamlessly",
-    desc: "Architected 500+ API integrations linking CRMs, ERPs, payment gateways, and third-party services—creating unified ecosystems that eliminate data silos.",
+    desc: " Had a well equipped team of 15 Members with expertise in Mobile, Web and AI development to scale up the system  ",
+    image: "/award-04.jpg",
+  },
+  {
+    id: 5,
+    year: "2025",
+    title: "Integration Services Connecting Disparate Systems Seamlessly",
+    desc: " ZenThink Technologies was Incorporated and started to scale up with the vision and accomplished 15+ Industry projects within 6 Months   ",
+    image: "/award-04.jpg",
+  },
+  {
+    id: 6,
+    year: "2026",
+    title: "Integration Services Connecting Disparate Systems Seamlessly",
+    desc: " Vision to reach 10M+ revenue on the Annual Maintenance projects and advanced technology with Cyber security solutions integrated    ",
+    image: "/award-04.jpg",
+  },
+  {
+    id: 7,
+    year: "2030",
+    title: "Integration Services Connecting Disparate Systems Seamlessly",
+    desc: "Vision to accomplish as the one of the leading companies to manage all verticals of services for the recursion projects all over the world.  ",
     image: "/award-04.jpg",
   },
 ];
@@ -46,7 +67,7 @@ const AwardsSection = () => {
           viewport={{ once: true, margin: "-50px" }}
           className="text-neutral-900 text-base sm:text-lg md:text-xl font-medium"
         >
-          Awards
+          From our Day 1
         </motion.h2>
 
         <motion.div

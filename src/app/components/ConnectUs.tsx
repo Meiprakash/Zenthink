@@ -63,7 +63,7 @@ const ConnectSection = () => {
           whileTap={{ scale: 0.95 }}
           className="mt-8 sm:mt-10 md:mt-12 inline-block"
         >
-          <Link href="/Contact">
+          <Link href="/contact">
             <button className="relative overflow-hidden text-sm xs:text-base sm:text-md font-medium px-5 xs:px-6 sm:px-7 py-3 xs:py-3.5 sm:py-4 rounded-lg text-white bg-black group min-w-[140px] xs:min-w-[160px]">
               <span className="relative z-10">Contact Us</span>
               <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>

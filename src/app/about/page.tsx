@@ -30,10 +30,10 @@ export default function Hero() {
       <Values />
       <AwardsSection />
       <ProcessSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection />
       <FAQ />
       <BlogSection />
-      <ConnectSection />
+      <ConnectSection /> */}
       <Footer />
     </div>
     </div>

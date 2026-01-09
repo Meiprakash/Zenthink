@@ -177,7 +177,7 @@ const ProcessSection = () => {
           <p className="text-neutral-600 text-[14px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3 ">
             We believe meaningful relationships create extraordinary results.
             Our culture is designed to support you from day one to long-term
-            partnership—honestly, proactively, and respectfully. Here’s the
+            partnership honestly, proactively, and respectfully. Here’s the
             Zenthink difference in action.
           </p>
         </div>
@@ -193,7 +193,7 @@ const ProcessSection = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
             className="bbg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)
-            border h-[280px] sm:h-full rounded-3xl p-8 md:p-12 flex flex-col justify-between transition"
+            border h-[280px] sm:h-[400px] rounded-3xl p-8 md:p-10 flex flex-col justify-between transition"
           >
             {/* Image on top for 2nd and 4th cards */}
             {(index === 1 || index === 3) && (
@@ -225,7 +225,7 @@ const ProcessSection = () => {
                   alt={item.title}
                   width={90}
                   height={70}
-                  className="rounded-full sm:mt-18 md:w-27 sm:w-20 w-16"
+                  className="rounded-full sm:mt-7 md:w-27 sm:w-20 w-16"
                 />
               </div>
             )}

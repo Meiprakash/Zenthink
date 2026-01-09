@@ -73,17 +73,19 @@ interface StatCardProps {
 }
 
 const stats: StatCardProps[] = [
-  { value: 650, label: "Award winning" },
-  { value: 1000, label: "Project Done", suffix: "K+" },
-  { value: 95, label: "Happy Client", suffix: "%" },
-  { value: 2000, label: "Projects Designed", suffix: "M" },
+  { value: 5, label: "Advisor Board " },
+  { value: 7, label: "Conglomerate companies " },
+  { value: 25, label: "Clienteles", suffix: "%" },
+  { value: 30, label: " Projects done  ", suffix: "%" },
+  { value: 1, label: "Revenue", suffix:"M"  },
+  { value: 4, label: " Innovative Solutions  ", suffix: "+" },
 ];
 
 export default function StatsSection() {
   return (
     <section className="py-8 md:py-10">
       {/* Make it 4 in a row even on mobile */}
-      <div className="max-w-6xl mx-auto grid grid-cols-4 text-center px-2 md:px-0 gap-4 sm:gap-8 md:gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-6 text-center px-2 md:px-0 gap-4 sm:gap-8 md:gap-10">
         {stats.map((stat, i) => (
           <StatCard key={i} {...stat} />
         ))}
@@ -106,7 +108,7 @@ function StatCard({ value, label, suffix = "" }: StatCardProps) {
 
   const formattedValue = () => {
     if (suffix === "K+") return (count / 1000).toFixed(0);
-    if (suffix === "M") return (count / 1000).toFixed(0);
+    // if (suffix === "M") return (count / 1000).toFixed(0);
     return count;
   };
 

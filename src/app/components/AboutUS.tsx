@@ -12,24 +12,24 @@ interface AccordionItem {
 }
 
 export default function AboutUs() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  // const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const items: AccordionItem[] = [
     {
-      title: " 100+ Projects Delivered ",
+      title: " 20+ Projects Delivered ",
       content:
         "From concept to deployment, we've transformed business challenges into powerful software solutions across 10+ industries, delivering measurable ROI and sustainable growth for every client.",
       image: "/cup.png",
     },
     {
-      title: "1K+ Happy Clients",
+      title: "10+ Happy Clients",
       content:
         "Our success is measured by yours. We build lasting partnerships through transparent communication, agile development, and unwavering commitment to your business objectives and technical excellence",
       image: "/users-svgrepo-com.svg",
     },
     {
-      title: "10+ Countries",
+      title: "2+ Countries",
       content:
         "Global presence, personalized service. We bring world-class software expertise to businesses worldwide, adapting our solutions to local markets while maintaining international quality standards.",
       image: "/maps-and-flags-pin-svgrepo-com.svg",
@@ -71,33 +71,41 @@ export default function AboutUs() {
           <div className="flex flex-col sm:grid sm:grid-cols-2 gap-6 xs:gap-8 items-start">
             {/* Left: Heading */}
             <div>
-              <h2 className="text-[30px] sm:text-[32px] md:text-[38px] lg:text-[44px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
-                Our Approach is Innovative <br className="hidden sm:block" />
-                and Results-Focused.
+              <h2 className="text-[30px] sm:text-[32px] md:text-[38px] lg:text-[39px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
+                Solving complex technical challenges to deliver{" "}
+                <br className="hidden sm:block" />
+                measurable operational excellence
               </h2>
             </div>
 
             {/* Right: Description */}
             <div>
               <p className="text-neutral-600 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
-                Custom software development, robust enterprise solutions, or
-                scalable digital platforms. Our team excels across multiple
-                technology domains, including cloud architecture, application
-                development, system integration, and more.
+                ZenThink Technologies is a IT services company delivering
+                scalable solutions with security integrated systems and quicker
+                implementation to transforming ideas into the digital assets
+                that would scale your business.
               </p>
             </div>
           </div>
         </motion.div>
 
         {/* Main grid: image (left) and accordion (right) */}
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-stretch">
           {/* Left: Video thumbnail / image */}
           <motion.div variants={fadeUp} className="w-full">
-            <div className="relative w-full h-[200px] xs:h-[240px] sm:h-[280px] md:h-[320px] lg:h-[380px] rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] sm:shadow-[0_8px_40px_rgba(0,0,0,0.06)] bg-white/60 border border-white/30">
+            <div
+              className="relative w-full h-full 
+  min-h-[260px] sm:min-h-[300px] md:min-h-[340px] lg:min-h-[380px]
+  rounded-[20px] sm:rounded-[24px] lg:rounded-[28px]
+  overflow-hidden
+  shadow-[0_8px_40px_rgba(0,0,0,0.06)]
+  bg-white/60 border border-white/30"
+            >
               {/* subtle overlay for frosted look */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-white/0 z-10 pointer-events-none" />
               <Image
-                src="/videimg.jpg"
+                src="/img.png"
                 alt="About video"
                 fill
                 className="w-full h-full object-cover brightness-80"
@@ -105,7 +113,7 @@ export default function AboutUs() {
               />
 
               {/* Play CTA */}
-              <button
+              {/* <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
                 aria-label="Play Video"
@@ -121,68 +129,47 @@ export default function AboutUs() {
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
-              </button>
+              </button> */}
             </div>
           </motion.div>
 
           {/* Right: Accordion */}
           <motion.div
             variants={fadeUp}
-            className="flex flex-col gap-4 pb-2 w-full sm:w-3/3 overflow-x-hidden"
+            className="flex flex-col gap-4 pb-2 w-full h-full sm:w-3/3 overflow-x-hidden"
           >
             {items.map((item, i) => (
               <div
                 key={i}
-                className={`rounded-2xl bg-blue-10 box-border border border-neutral-200  overflow-hidden transition-all duration-300 p-3 ${
-                  activeIndex === i
-                    ? "bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)"
-                    : "bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)"
-                }`}
+                className={`rounded-2xl bg-blue-10 box-border border border-neutral-200  overflow-hidden transition-all duration-300 p-5 `}
               >
-                <button
-                  onClick={() => setActiveIndex(activeIndex === i ? null : i)}
-                  className="w-full flex items-center justify-between p-5 text-left"
-                >
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src={item.image}
-                      alt="icon"
-                      width={18}
-                      height={16}
-                      className="w-5 md:w-6 stroke-9  opacity-1000"
-                    />
-                    <span className="font-semibold text-lg text-neutral-800">
-                      {item.title}
-                    </span>
-                  </div>
-                  <span
-                    className={`transform transition-transform duration-300 ${
-                      activeIndex === i ? "rotate-180" : ""
-                    }`}
-                  >
-                    <Image
-                      src="/Earo_Up.png"
-                      alt="toggle"
-                      width={16}
-                      height={16}
-                      className="w-4 md:w-5"
-                    />
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={item.image}
+                    alt="icon"
+                    width={18}
+                    height={16}
+                    className="w-5 md:w-6 stroke-9 pt-2  opacity-1000"
+                  />
+                  <span className="pt-2 font-semibold text-lg text-neutral-800">
+                    {item.title}
                   </span>
-                </button>
+                </div>
+                <span
+                  className={`transform transition-transform duration-300 `}
+                ></span>
 
                 <AnimatePresence>
-                  {activeIndex === i && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.28 }}
-                    >
-                      <div className="px-6 pb-5 text-neutral-600 text-[15px] leading-relaxed">
-                        {item.content}
-                      </div>
-                    </motion.div>
-                  )}
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.28 }}
+                  >
+                    <div className="px-6 pt-4 pb-5 text-neutral-600 text-[15px] leading-relaxed">
+                      {item.content}
+                    </div>
+                  </motion.div>
                 </AnimatePresence>
               </div>
             ))}
@@ -191,7 +178,7 @@ export default function AboutUs() {
       </motion.div>
 
       {/* Video modal */}
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div
           className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4"
           onClick={() => setIsModalOpen(false)}
@@ -217,7 +204,7 @@ export default function AboutUs() {
             />
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 }

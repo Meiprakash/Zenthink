@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Zenthink | Innovative IT Solutions",
+  title: "Zenthink | Providing Perpetual IT Solutions",
   description: "Innovative IT Solutions for Your Business Growth",
   metadataBase: new URL("https://www.zenthink.in"),
   openGraph: {
@@ -18,9 +18,7 @@ export const metadata: Metadata = {
     description: "Innovative IT Solutions for Your Business Growth",
     url: "https://www.zenthink.in",
     type: "website",
-    images: [
-      "/og-image.png", 
-    ],
+    images: ["/og-image.png"],
   },
   icons: {
     icon: "/favicon.svg",

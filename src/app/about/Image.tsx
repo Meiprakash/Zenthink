@@ -118,7 +118,7 @@ export default function SecondComp() {
         />
 
         {/* Play Button */}
-        <motion.button
+        {/* <motion.button
           type="button"
           onClick={() => setIsModalOpen(true)}
           aria-label="Play Video"
@@ -136,7 +136,7 @@ export default function SecondComp() {
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
-        </motion.button>
+        </motion.button> */}
       </motion.div>
 
       {/* ===== Video Modal ===== */}

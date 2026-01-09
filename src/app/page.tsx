@@ -21,11 +21,11 @@ export default function Home() {
         <Navbar />
         <Hero />
         <InvestorsSection />
-        <AboutUs />
         <ServiceSection />
+        <AboutUs />
         {/* <RecentWork /> */}
-        <TestimonialsSection />
-        <FAQ />
+        {/* <TestimonialsSection />
+        <FAQ /> */}
         <BlogSection />
         <ConnectSection />
         <Footer />

@@ -110,50 +110,7 @@ const HeroSection = () => {
           </section>
 
           {/* Services Intro Section */}
-          <section className="w-full py-10 md:py-12 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
-            <div className="max-w-7xl mx-auto">
-              {/* Section Header */}
-              <div className="flex items-center gap-2 mb-3 md:mb-0">
-                <span className="text-md sm:text-lg md:text-xl font-medium text-neutral-900">
-                  Our Services
-                </span>
-                <span className="relative w-4 h-4 xs:w-5 xs:h-5">
-                  <Image
-                    src="/badge-icon.webp"
-                    alt="Verified badge"
-                    fill
-                    className="object-contain w-4 h-4"
-                  />
-                </span>
-              </div>
-
-              {/* Section Content */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: true, margin: "-50px" }}
-                className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 sm:gap-8 lg:gap-12"
-              >
-                {/* Left side title */}
-                <div className="lg:flex-1">
-                  <h2 className="text-[30px] sm:text-[32px] md:text-[38px] lg:text-[44px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
-                    Software Excellence Across Every Business Function
-                  </h2>
-                </div>
-
-                {/* Right side text */}
-                <div className="lg:flex-1 lg:max-w-md lg:pl-4 -mt-3 md:mt-0">
-                  <p className="text-neutral-600 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
-                    We create technology that directly impacts your bottom line.
-                    From customer-facing applications to backend infrastructure, our
-                    solutions are engineered to improve performance, increase
-                    agility, and deliver measurable ROI.
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-          </section>
+     
         </div>
     </div>
   )

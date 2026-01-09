@@ -42,9 +42,9 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-[30px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-medium leading-[1.2] md:leading-[1.1] text-black"
           >
-            Engineering <span className="text-neutral-500">Software</span>{" "}
-            <span className="text-neutral-500">Solutions</span> That Drive{" "}
-            <span className="text-neutral-500">Business</span> Growth
+            Your <span className="text-neutral-500">IT</span>{" "}
+            <span className="text-neutral-500">Department,</span>Virtually{" "}
+            {/* <span className="text-neutral-500">Business</span> Growth */}
           </motion.h1>
 
           <motion.p
@@ -53,9 +53,7 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-neutral-600 text-[14px] sm:text-lg leading-relaxed px-2 xs:px-0"
           >
-            From enterprise applications to industry-specific platforms, we
-            transform your business challenges into scalable software solutions.
-            Let’s build your digital future—together
+            Native App, Hybrid App, Website, Web App, Software, Cloud Solution
           </motion.p>
 
           <motion.div
@@ -69,9 +67,9 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="relative overflow-hidden rounded-lg bg-black px-4 xs:px-5 sm:px-6 py-2.5 xs:py-3 sm:py-3 text-white font-medium group cursor-pointer"
             >
-              <Link href="/Contact" className="block">
+              <Link href="#" className="block">
                 <span className="relative z-10 text-[14px] sm:text-md">
-                  Let’s Work Together ?
+                  Let’s Work Together
                 </span>
                 <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
               </Link>
@@ -95,7 +93,8 @@ export default function Hero() {
               </div>
 
               <span className="flex-col text-[14px] sm:text-base md:text-lg lg:text-xl text-neutral-600">
-                <span className="font-medium text-black">120K+</span> Active users
+                <span className="font-medium text-black">120K+</span> Active
+                users
               </span>
             </motion.div>
           </motion.div>
