@@ -189,13 +189,13 @@ export default function Footer() {
 
             <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:gap-6 text-xs sm:text-base">
               <Link
-                href="#"
+                href="/privacy-policy"
                 className="hover:text-white transition-colors whitespace-nowrap"
               >
                 Privacy policy
               </Link>
               <Link
-                href="#"
+                href="/cookies"
                 className="hover:text-white transition-colors whitespace-nowrap"
               >
                 Cookies policy

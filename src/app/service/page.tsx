@@ -23,10 +23,10 @@ const Service: React.FC = () => {
         <ServiceItems/>
 
         <ServiceCard />
-        <TestimonialsSection />
+        {/* <TestimonialsSection />
         <FAQ />
         <BlogSection />
-        <ConnectSection />
+        <ConnectSection /> */}
         <Footer />
       </div>
     </div>

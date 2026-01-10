@@ -2,17 +2,12 @@
 
 import { useState } from "react";
 import { motion, easeOut } from "framer-motion";
-import { ethers } from "ethers";
 import Image from "next/image";
 import Navbar from "../components/navbar/Navbar";
 import ConnectSection from "../components/ConnectUs";
 import Footer from "../components/Footer";
 
-declare global {
-  interface Window {
-    ethereum?: ethers.Eip1193Provider;
-  }
-}
+
 
 export default function Hero() {
   const container = {
@@ -32,7 +27,6 @@ export default function Hero() {
     message: "",
   });
 
-  const [walletAddress, setWalletAddress] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -42,63 +36,49 @@ export default function Hero() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Connect to MetaMask
-  const connectWallet = async () => {
-    try {
-      if (!window.ethereum) {
-        alert("Please install MetaMask first.");
-        return;
-      }
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      const accounts = await provider.send("eth_requestAccounts", []);
-      setWalletAddress(accounts[0]);
-    } catch (err) {
-      console.error("Wallet connection error:", err);
-    }
-  };
+ 
 
   // Sign message before submission
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
+ const handleSubmit = async (e: React.FormEvent) => {
+   e.preventDefault();
+   setLoading(true);
 
-    try {
-      if (!walletAddress) {
-        alert("Please connect your wallet first.");
-        setLoading(false);
-        return;
-      }
+   try {
+     const res = await fetch("/api/contact", {
+       method: "POST",
+       headers: {
+         "Content-Type": "application/json",
+       },
+       body: JSON.stringify(form),
+     });
 
-      if (!window.ethereum) {
-        alert("MetaMask is not available.");
-        setLoading(false);
-        return;
-      }
+     if (!res.ok) {
+       throw new Error("Failed");
+     }
 
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      const signer = await provider.getSigner();
-      const message = `I confirm this contact form submission.\nName: ${form.name}\nEmail: ${form.email}`;
-      const signature = await signer.signMessage(message);
+     setForm({
+       name: "",
+       phone: "",
+       email: "",
+       url: "",
+       message: "",
+     });
 
-      console.log("Form Data:", form);
-      console.log("Signature:", signature);
+     setIsSubmitted(true);
+   } catch (error) {
+     alert("Something went wrong. Please try again.");
+   } finally {
+     setLoading(false);
+   }
+ };
 
-      // After signing, reset form and show success
-      setForm({ name: "", phone: "", email: "", url: "", message: "" });
-      setIsSubmitted(true);
-    } catch (err) {
-      console.error("Error during signing:", err);
-      alert("Something went wrong while signing the message.");
-    } finally {
-      setLoading(false);
-    }
-  };
+
 
   return (
     <div className="relative min-h-screen">
       {/* Fixed background gradient */}
       <div className="fixed inset-0 bg-gradient-to-bl from-[#ffffff] via-[#ffffff] to-[#f2fde4] -z-10" />
-      
+
       {/* Content */}
       <div className="relative z-0">
         <Navbar />
@@ -108,7 +88,7 @@ export default function Hero() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" ,  amount:0.1 }}
+          viewport={{ once: true, margin: "-50px", amount: 0.1 }}
           className="w-full flex flex-col lg:flex-row items-start justify-between px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-30 py-12 sm:py-16 md:py-20 lg:py-24"
         >
           <motion.div
@@ -121,8 +101,8 @@ export default function Hero() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-[28px] xs:text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-medium leading-[1.1] sm:leading-[1.15] lg:leading-light text-black"
             >
-              We Create <br />{" "}
-              <span className="text-neutral-500">Amazing</span> Project
+              Create your <br />{" "}
+              <span className="text-neutral-500">Virtual</span> IT Department
             </motion.h1>
           </motion.div>
 
@@ -130,8 +110,8 @@ export default function Hero() {
             variants={item}
             className="flex-1 max-w-md lg:max-w-lg lg:mt-7 text-neutral-600 text-sm xs:text-base sm:text-lg leading-relaxed lg:pl-4"
           >
-            Our services help you create digital products and solve your problems
-            objectively, with strategy, technology, and analysis.
+            Our services help you create digital products and solve your
+            problems objectively, with strategy, technology, and analysis.
           </motion.div>
         </motion.section>
 
@@ -167,19 +147,6 @@ export default function Hero() {
                   <h2 className="mb-6 sm:mb-8 text-[24px] xs:text-[26px] sm:text-[32px] md:text-[38px] lg:text-[44px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
                     Contact us
                   </h2>
-
-                  <button
-                    onClick={connectWallet}
-                    type="button"
-                    className="mb-4 sm:mb-6 w-full bg-lime-500 text-white font-medium py-3 sm:py-3.5 rounded-lg hover:bg-lime-700 transition text-sm sm:text-base"
-                  >
-                    {walletAddress
-                      ? `Connected: ${walletAddress.slice(
-                          0,
-                          6
-                        )}...${walletAddress.slice(-4)}`
-                      : "Connect Wallet"}
-                  </button>
 
                   <form
                     onSubmit={handleSubmit}
@@ -288,7 +255,7 @@ export default function Hero() {
                   Email Us
                 </h3>
                 <p className="text-neutral-700 text-sm xs:text-base">
-                  ideapeel@gmail.com
+                  info@zenthink.in
                 </p>
               </div>
 
@@ -303,10 +270,13 @@ export default function Hero() {
                   />
                 </div>
                 <h3 className="text-base xs:text-lg font-semibold mb-1 text-neutral-900">
-                  Drop in us
+                  Location
                 </h3>
                 <p className="text-neutral-700 text-sm xs:text-base flex items-center gap-1 xs:gap-2">
-                  ideapeel@gmail.com <span>→</span>
+                  Headquarters:
+                  Registered Office: 132, SOUTHBAZZAR,KOTHEER
+                  STREET, POO KADAI LANE Tiruchengodu Namakkal Tamil Nadu India
+                  637211<span></span>
                 </p>
               </div>
 
@@ -324,7 +294,7 @@ export default function Hero() {
                   Call Us
                 </h3>
                 <p className="text-neutral-700 text-sm xs:text-base">
-                  +1 800 778 884
+                  +91 9944500207
                 </p>
               </div>
             </motion.div>

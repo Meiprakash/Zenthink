@@ -135,9 +135,12 @@ export default function Navbar() {
         {/* CTA BUTTON */}
         <div className="hidden md:block">
           <Link href="/contact">
+            {pathname !== "/contact" && (
+
             <button className="cursor-pointer border border-black text-black font-medium px-5 py-2 rounded-lg hover:bg-black hover:text-white transform transition-all duration-300 ease-in-out">
               Let’s Talk
             </button>
+            )}
           </Link>
         </div>
 
@@ -234,9 +237,12 @@ export default function Navbar() {
             {/* MOBILE CTA BUTTON */}
             <div className="px-10 pb-6 pt-4">
               <Link href="/contact" onClick={() => setMenuOpen(false)}>
+                {pathname !== "/contact" && (
+                  
                 <button className="w-full cursor-pointer border border-white/30 text-lime-500 font-medium px-5 py-2.5 rounded-lg bg-white hover:text-black transform transition-all duration-300 ease-in-out">
                   Let’s Talk
                 </button>
+                )}
               </Link>
             </div>
           </motion.div>
