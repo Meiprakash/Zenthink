@@ -133,7 +133,6 @@ const ServiceSection: React.FC = () => {
                 <div
                   key={index}
                   className={`
-        bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)]
         border border-neutral-200 hover:shadow-xl
         rounded-3xl p-4 sm:p-7
         flex flex-col justify-between

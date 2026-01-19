@@ -291,7 +291,7 @@ const ServiceItems = () => {
           </p>
         </div>
 
-        {/* ===== SERVICES GRID ===== */}
+        {/* SERVICES GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
           {services.map((service, index) => {
             const isFirstRow = index < 3;
@@ -301,7 +301,7 @@ const ServiceItems = () => {
                 key={index}
                 whileHover={{ y: -6 }}
                 className={`
-                  group  bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)]
+                  group  
                   border border-neutral-200 rounded-3xl p-5 sm:p-7
                   flex flex-col justify-between
                   h-[280px] sm:h-[380px]
@@ -346,7 +346,7 @@ const ServiceItems = () => {
         </div>
       </div>
 
-      {/* ===== DETAIL OVERLAY (JioHotstar style) ===== */}
+      {/*  DETAIL OVERLAY  */}
       <AnimatePresence>
         {activeService && (
           <motion.div
