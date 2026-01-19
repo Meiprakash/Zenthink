@@ -270,13 +270,23 @@ export default function Hero() {
                   />
                 </div>
                 <h3 className="text-base xs:text-lg font-semibold mb-1 text-neutral-900">
-                  Location
+                  Head Quarters
                 </h3>
                 <p className="text-neutral-700 text-sm xs:text-base flex items-center gap-1 xs:gap-2">
-                  Headquarters:
-                  Registered Office: 132, SOUTHBAZZAR,KOTHEER
-                  STREET, POO KADAI LANE Tiruchengodu Namakkal Tamil Nadu India
-                  637211<span></span>
+                  Registered Office: 132, SOUTHBAZZAR,KOTHEER STREET, POO KADAI
+                  LANE Tiruchengodu Namakkal
+                  <br />Tamil Nadu , India 637211
+                  <span>{"  "}</span>
+                </p><br />
+                <h3 className="text-base xs:text-lg font-semibold mb-1 text-neutral-900">
+                  Regional Centers
+                </h3>
+                <p className="text-neutral-700 text-sm xs:text-base flex items-center gap-1 xs:gap-2">
+                  1) HAPPY OFFICE, 3rd Floor, 161/12, Itteri Road, Meyyanur,
+                  Salem, Tamil Nadu 636004.
+                  <br />2) KSR Kalvi Nagar, Kuchipalayam,
+                  Tiruchengode - 637215, Namakkal District, Tamil Nadu, India.
+                  
                 </p>
               </div>
 
@@ -301,7 +311,6 @@ export default function Hero() {
           </motion.section>
         </div>
 
-        <ConnectSection />
         <Footer />
       </div>
     </div>

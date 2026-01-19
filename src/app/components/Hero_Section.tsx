@@ -4,14 +4,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const rotatingTexts = [
-  { id: 1, name: "Web Design" },
-  { id: 2, name: " UX Design" },
+  { id: 1, name: " Native App" },
+  { id: 2, name: " Hybrid App" },
+  { id: 1, name: "Website" },
+  { id: 2, name: "Web App" },
+  { id: 1, name: " Native App" },
+  { id: 2, name: "Hybrid App" },
   { id: 1, name: "Branding" },
-  { id: 2, name: "UI Design" },
-  { id: 1, name: "Web Design" },
-  { id: 2, name: "UX Design" },
-  { id: 1, name: "Branding" },
-  { id: 2, name: "UI Design" },
+  { id: 2, name: "Software" },
+  { id: 1, name: "Cloud Solution" },
+  { id: 2, name: "Web App" },
 ];
 
 const positions = [
@@ -25,6 +27,15 @@ const positions = [
   "-translate-x-[10%]",
 ];
 
+const handlescroll=()=>{
+  const screen = document.getElementById("investors-section");
+  if (screen) {
+    screen.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+}
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -67,12 +78,12 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="relative overflow-hidden rounded-lg bg-black px-4 xs:px-5 sm:px-6 py-2.5 xs:py-3 sm:py-3 text-white font-medium group cursor-pointer"
             >
-              <Link href="#" className="block">
+              <button onClick={handlescroll} className="block">
                 <span className="relative z-10 text-[14px] sm:text-md">
                   Let’s Work Together
                 </span>
                 <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
-              </Link>
+              </button>
             </motion.div>
 
             {/* Avatars */}
@@ -82,7 +93,7 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
               className="flex flex-col sm:flex-row items-start sm:items-center sm:gap-3"
             >
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <Image
                   src="/about-avater-group.jpg"
                   width={40}
@@ -90,11 +101,11 @@ export default function Hero() {
                   className="min-w-16 h-7.5 md:min-w-20 md:h-10 rounded-full border-2 border-white"
                   alt="User avatars"
                 />
-              </div>
+              </div> */}
 
-              <span className="flex-col text-[14px] sm:text-base md:text-lg lg:text-xl text-neutral-600">
-                <span className="font-medium text-black">120K+</span> Active
-                users
+              <span className="flex-col text-[14px] sm:text-base md:text-lg lg:text-xl text-neutral-700">
+                <span className="font-medium text-black">115+</span>{" "}
+                Successfully Industry projects
               </span>
             </motion.div>
           </motion.div>

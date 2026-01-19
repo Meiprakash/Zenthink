@@ -114,14 +114,14 @@ export default function Navbar() {
             )}
           </li>
 
-          <li>
+          {/* <li>
             <Link 
               href="/blog" 
               className={`hover:text-lime-500 ${isActive("/blog") ? "text-black" : ""}`}
             >
               Blog
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link 
               href="/contact" 

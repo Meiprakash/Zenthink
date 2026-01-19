@@ -71,10 +71,9 @@ export default function AboutUs() {
           <div className="flex flex-col sm:grid sm:grid-cols-2 gap-6 xs:gap-8 items-start">
             {/* Left: Heading */}
             <div>
-              <h2 className="text-[30px] sm:text-[32px] md:text-[38px] lg:text-[39px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
-                Solving complex technical challenges to deliver{" "}
-                <br className="hidden sm:block" />
-                measurable operational excellence
+              <h2 className="text-[30px] sm:text-2xl md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
+                Creating solutions that <br className="hidden sm:block" />
+                improve how businesses operate
               </h2>
             </div>
 

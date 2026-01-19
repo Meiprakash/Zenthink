@@ -73,12 +73,12 @@ interface StatCardProps {
 }
 
 const stats: StatCardProps[] = [
+  { value: 4, label: " Innovative Solutions  ", suffix: "+" },
   { value: 5, label: "Advisor Board " },
   { value: 7, label: "Conglomerate companies " },
-  { value: 25, label: "Clienteles", suffix: "%" },
-  { value: 30, label: " Projects done  ", suffix: "%" },
-  { value: 1, label: "Revenue", suffix:"M"  },
-  { value: 4, label: " Innovative Solutions  ", suffix: "+" },
+  { value: 25, label: "Clientele",  },
+  { value: 30, label: " Projects done  ",  },
+  { value: 1, label: "Revenue", suffix:"M+"  },
 ];
 
 export default function StatsSection() {
@@ -118,7 +118,7 @@ function StatCard({ value, label, suffix = "" }: StatCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2 }}
       viewport={{ once: true }}
-      className="flex flex-col items-center justify-center"
+      className="flex flex-col items-center "
     >
       <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold text-black">
         {formattedValue()}
