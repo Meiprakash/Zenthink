@@ -95,7 +95,7 @@ export default function Footer() {
 
             {/* UTILITIES (COLUMN 3 - MD/LG) */}
             <div className="md:ml-40">
-              <h4 className="font-semibold text-lg  mb-6">Utilities</h4>
+              <h4 className="font-semibold text-lg  mb-6">Quick Links</h4>
               <ul className="md:space-y-7 sm:space-y-4 text-neutral-300 text-sm sm:text-lg">
                 {utilities.map((item, i) => (
                   <li key={i}>
@@ -141,7 +141,7 @@ export default function Footer() {
               {/* UTILITIES MOBILE ONLY */}
               <div>
                 <h4 className="font-semibold text-lg mb-4 text-center">
-                  Utilities
+                  Quick Links
                 </h4>
                 <ul className="space-y-3 text-neutral-300 text-sm text-center">
                   {utilities.map((item, i) => (

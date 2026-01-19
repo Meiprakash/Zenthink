@@ -84,7 +84,7 @@ function ServiceCard() {
           </div>
         </section>
       <div className="px-4 sm:px-6 md:px-8 max-w-7xl mx-auto mb-8 md:mb-12 -mt-5 md:mt-0">
-        <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 h-full">
           {serviceCard.map((i, index) => {
             const colSpanClass = index < 3 ? "md:col-span-4" : "md:col-span-6";
 

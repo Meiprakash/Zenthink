@@ -39,7 +39,7 @@ const logoVariant = {
 
 export default function InvestorsSection() {
   return (
-    <section className="py-8 sm:py-10 md:py-12 overflow-hidden">
+    <section id="investors-section" className="py-8 sm:py-10 md:py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 text-center">
         {/* HEADING */}
         <motion.h2

@@ -133,7 +133,7 @@ const processes = [
 
 const ProcessSection = () => {
   return (
-    <section className="px-5 md:px-16 lg:px-24 py-10">
+    <section className="px-5 md:px-16 lg:px-24 py-10 mb-13">
       {/* Section Title */}
       <div className="flex items-start gap-2 mb-4">
         <motion.h2
