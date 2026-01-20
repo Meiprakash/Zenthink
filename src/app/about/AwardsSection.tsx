@@ -122,15 +122,15 @@ const AwardsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
             viewport={{ once: true, margin: "-50px" }}
-            className="flex flex-col md:flex-row md:items-center gap-8 md:gap-10 py-6 sm:py-8 md:py-10 last:border-b-0"
+            className="flex flex-row items-center gap-8 md:gap-10 py-6 sm:py-8 md:py-10 last:border-b-0"
           >
             {/* Image */}
             <div className="flex justify-center items-center  md:w-1/3 lg:w-1/4">
-              <p className="w-[20px] text-2xl">{award.id}</p>
+              <p className="w-[20px] text-4xl font-semibold sm:text-6xl sm:font-bold">{award.id}</p>
             </div>
 
             {/* Content */}
-            <div className="flex flex-col md:flex-row md:items-center gap-4 xs:gap-5 sm:gap-6 md:gap-8 w-full px-2 md:px-0">
+            <div className="flex flex-row items-center gap-8 xs:gap-5 sm:gap-6 md:gap-8 w-full px-2 md:px-0">
               {/* Year */}
               <div className="md:w-[60px] lg:w-[80px] xl:w-[100px] flex-shrink-0">
                 <p className="text-neutral-600 text-[14px] sm:text-lg md:text-xl font-medium">

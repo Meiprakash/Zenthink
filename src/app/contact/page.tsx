@@ -239,7 +239,7 @@ export default function Hero() {
             {/* RIGHT SIDE CONTACT CARDS */}
             <motion.div
               variants={item}
-              className="flex flex-col gap-4 xs:gap-5 sm:gap-6 lg:w-1/3 w-full"
+              className="flex flex-col gap-4 xs:gap-5 sm:gap-6 lg:w-1/3 w-full mb-7 sm:mb-3"
             >
               <div className="bg-white p-4 xs:p-5 sm:p-6 rounded-xl sm:rounded-2xl shadow-sm transition">
                 <div className="bg-neutral-100 w-10 h-10 xs:w-12 xs:h-12 rounded-full flex items-center justify-center mb-3 xs:mb-4">
