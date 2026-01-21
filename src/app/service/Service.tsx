@@ -185,6 +185,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+
 
 const services = [
   {
@@ -192,15 +194,16 @@ const services = [
     shortDesc:
       "Custom software, web, and mobile solutions tailored to your business.",
     icon: "/service-card-01.jpg",
+    link: "/service/details/software-development",
     fullContent: {
       intro:
         "Custom solutions to power your business through innovative software, web, and mobile applications.",
       points: [
-        "Custom software development – Tailored software built to meet your unique business needs.",
-        "Web application & Website development – Scalable, secure, high-performance web apps.",
-        "Mobile app development (Android / iOS / Flutter) – Engaging mobile experiences.",
-        "SaaS & PaaS development – Cloud-based platforms designed for flexibility and scalability.",
-        "Legacy system modernization – Transform outdated systems into future-ready solutions.",
+        "Custom software development ",
+        "Web application & Website development",
+        "Mobile app development (Android / iOS / Flutter) ",
+        "SaaS & PaaS development",
+        "Legacy system modernization",
       ],
     },
   },
@@ -209,6 +212,7 @@ const services = [
     shortDesc:
       "Secure, scalable cloud solutions to drive agility and performance.",
     icon: "/service-card-02.jpg",
+    link: "/service/details/database-data-",
     fullContent: {
       intro:
         "Optimizing your cloud and IT infrastructure to drive agility, security, and performance.",
@@ -226,6 +230,7 @@ const services = [
     shortDesc:
       "Structured, secure data solutions ready for analytics and growth.",
     icon: "/service-card-03.jpg",
+    link: "/service/details/database-data-services",
     fullContent: {
       intro:
         "Ensuring your data is structured, secure, and always ready for business intelligence.",
@@ -241,6 +246,7 @@ const services = [
     title: "IT Support & Maintenance",
     shortDesc: "Reliable IT systems with proactive monitoring and support.",
     icon: "/service-card-04.jpg",
+    link: "/service/details/it-support-maintenance",
     fullContent: {
       intro:
         "Keeping your IT systems reliable, secure, and running smoothly at all times.",
@@ -255,6 +261,7 @@ const services = [
     title: "DevOps & Automation",
     shortDesc: "Accelerate delivery with automation and CI/CD pipelines.",
     icon: "/service-card-04.jpg",
+    link: "/service/details/devops-automation",
     fullContent: {
       intro:
         "Accelerating software delivery while ensuring reliability, scalability, and efficiency.",
@@ -303,43 +310,45 @@ const ServiceItems = () => {
                 className={`
                   group  
                   border border-neutral-200 rounded-3xl p-5 sm:p-7
-                  flex flex-col justify-between
+                  flex flex-col justify-between 
                   h-[280px] sm:h-[380px]
                   transition-all
                   lg:col-span-${isFirstRow ? "2" : "3"}
                 `}
               >
-                <div className="">
-                  <h3 className="text-lg md:text-2xl font-semibold mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-neutral-600 text-sm">
-                    {service.shortDesc}
-                  </p>
-                  <div className="mt-6 flex justify-start">
-                    <span
-                      onClick={() => setActiveService(service)}
-                      className="text-black cursor-pointer py-1 p-2 rounded-2xl w-fit flex gap-1 transform transition-all duration-500 ease-in-out group-hover:gap-3 group-hover:text-lime-500"
-                    >
-                      Read more
-                      <Image
-                        src="/arrow2.png"
-                        alt="arrow"
-                        width={15}
-                        height={4}
-                        className="mt-1.5 w-4 h-3.5"
-                      />
-                    </span>
+                <Link key={index} href={service.link}>
+                  <div className="">
+                    <h3 className="text-lg md:text-2xl font-semibold mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-neutral-600 text-sm">
+                      {service.shortDesc}
+                    </p>
+                    <div className="mt-6 flex justify-start">
+                      <span
+                        onClick={() => setActiveService(service)}
+                        className="text-black cursor-pointer py-1 p-2 rounded-2xl w-fit flex gap-1 transform transition-all duration-500 ease-in-out group-hover:gap-3 group-hover:text-lime-500"
+                      >
+                        Read more
+                        <Image
+                          src="/arrow2.png"
+                          alt="arrow"
+                          width={15}
+                          height={4}
+                          className="mt-1.5 w-4 h-3.5"
+                        />
+                      </span>
+                    </div>
                   </div>
-                </div>
 
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={40}
-                  height={40}
-                  className="opacity-90"
-                />
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={40}
+                    height={40}
+                    className="opacity-90"
+                  />
+                </Link>
               </motion.div>
             );
           })}
@@ -385,7 +394,7 @@ const ServiceItems = () => {
                 {activeService.fullContent.points.map(
                   (point: string, i: number) => (
                     <li key={i}>• {point}</li>
-                  )
+                  ),
                 )}
               </ul>
             </motion.div>

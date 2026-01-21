@@ -85,7 +85,7 @@ export default function StatsSection() {
   return (
     <section className="py-8 md:py-10">
       {/* Make it 4 in a row even on mobile */}
-      <div className="max-w-6xl mx-auto grid grid-cols-6 text-center px-2 md:px-0 gap-4 sm:gap-8 md:gap-10">
+      <div className="max-w-6xl mx-auto grid sm:grid-cols-6 grid-cols-3 text-center px-2 md:px-0 gap-4 sm:gap-8 md:gap-10">
         {stats.map((stat, i) => (
           <StatCard key={i} {...stat} />
         ))}

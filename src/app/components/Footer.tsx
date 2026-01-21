@@ -9,7 +9,7 @@ const companies = [
   { name: "Home", link: "/" },
   { name: "About us", link: "/about" },
   { name: "Service", link: "/service" },
-  { name: "Blog", link: "/blog" },
+  // { name: "Blog", link: "/blog" },
   { name: "Contact Us", link: "/contact" },
 ];
 
@@ -121,10 +121,10 @@ export default function Footer() {
             <div className="grid grid-cols-2">
               {/* COMPANY MOBILE ONLY */}
               <div>
-                <h4 className="font-semibold text-lg mb-4 text-center">
+                <h4 className="font-semibold text-lg mb-4 ml-7 text-start">
                   Company
                 </h4>
-                <ul className="space-y-3 text-neutral-300 text-sm text-center">
+                <ul className="space-y-3 text-neutral-300 text-sm ml-7 text-start">
                   {companies.map((item, i) => (
                     <li key={i}>
                       <Link
@@ -140,10 +140,10 @@ export default function Footer() {
 
               {/* UTILITIES MOBILE ONLY */}
               <div>
-                <h4 className="font-semibold text-lg mb-4 text-center">
+                <h4 className="font-semibold text-lg mb-4 text-start">
                   Quick Links
                 </h4>
-                <ul className="space-y-3 text-neutral-300 text-sm text-center">
+                <ul className="space-y-3 text-neutral-300 text-sm text-start">
                   {utilities.map((item, i) => (
                     <li key={i}>
                       <Link
