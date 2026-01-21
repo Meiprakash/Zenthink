@@ -128,14 +128,14 @@ export default function Navbar() {
               Blog
             </Link>
           </li> */}
-          <li>
+          {/* <li>
             <Link
               href="/contact"
               className={`hover:text-lime-500 ${isActive("/contact") ? "text-black" : ""}`}
             >
               Contact
             </Link>
-          </li>
+          </li> */}
         </ul>
 
         {/* CTA BUTTON */}
@@ -192,7 +192,7 @@ export default function Navbar() {
               </Link>
 
               {/* MOBILE INDUSTRIES DROPDOWN - MATCHING DESKTOP LINKS */}
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span
                     className={`${isIndustriesActive ? "text-lime-500 font-semibold" : ""}`}
@@ -201,7 +201,6 @@ export default function Navbar() {
                   </span>
                 </div>
 
-                {/* Industry List with Services - Similar to Desktop */}
                 <div className="ml-4 space-y-3 text-neutral-300">
                   {industriesData.map((industry) => (
                     <div key={industry.slug} className="space-y-2">
@@ -238,7 +237,7 @@ export default function Navbar() {
                 className={`${isActive("/contact") ? "text-lime-500 font-semibold" : ""} hover:text-lime-500 transition-colors`}
               >
                 Contact
-              </Link>
+              </Link> */}
             </div>
 
             {/* MOBILE CTA BUTTON */}

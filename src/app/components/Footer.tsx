@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { link } from "fs";
 
 const companies = [
   { name: "Home", link: "/" },
@@ -14,11 +15,11 @@ const companies = [
 ];
 
 const utilities = [
-  "Software Development Services",
-  "Cloud & Infrastructure Services ",
-  "Database & Data Services",
-  " IT Support & Maintenance",
-  "DevOps & Automation",
+  { name: "Software Development Services", link: "/service/details/software-development" },
+  // { name: "Cloud & Infrastructure Services ", link: "/service/details/database-data-services" },
+  { name: "Database & Data Services", link: "/service/details/database-data-services" },
+  { name: " IT Support & Maintenance", link: "/service/details/it-support-maintenance" }, 
+  { name: "DevOps & Automation", link: "/service/details/devops-automation" },
 ];
 
 export default function Footer() {
@@ -100,10 +101,10 @@ export default function Footer() {
                 {utilities.map((item, i) => (
                   <li key={i}>
                     <Link
-                      href="#"
+                      href={item.link}
                       className="hover:text-white transition-colors"
                     >
-                      {item}
+                      {item.name}
                     </Link>
                   </li>
                 ))}
@@ -147,10 +148,10 @@ export default function Footer() {
                   {utilities.map((item, i) => (
                     <li key={i}>
                       <Link
-                        href="#"
+                        href={item.link}
                         className="hover:text-white transition-colors"
                       >
-                        {item}
+                        {item.name}
                       </Link>
                     </li>
                   ))}

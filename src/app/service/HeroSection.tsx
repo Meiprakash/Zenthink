@@ -72,7 +72,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Middle Card - Stats */}
-                <div className="lg:col-span-1 bg-white rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-gray-100 shadow-xs flex flex-row md:flex-col items-center md:items-start justify-between h-[80px] sm:h-[250px] md:h-[300px] lg:h-[400px]">
+                {/* <div className="lg:col-span-1 bg-white rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-gray-100 shadow-xs flex flex-row md:flex-col items-center md:items-start justify-between h-[80px] sm:h-[250px] md:h-[300px] lg:h-[400px]">
                   <div className="text-black text-sm xs:text-base sm:text-lg md:text-xl">
                     <span className="block">Satisfied</span>
                     <span className="block font-medium">Customers</span>
@@ -91,10 +91,10 @@ const HeroSection = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Right Image */}
-                <div className="lg:col-span-2 h-[200px] xs:h-[220px] sm:h-[250px] md:h-[300px] lg:h-[400px]">
+                <div className="lg:col-span-3 h-[200px] xs:h-[220px] sm:h-[250px] md:h-[300px] lg:h-[400px]">
                   <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden">
                     <Image
                       src="/service3.jpg"

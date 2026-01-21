@@ -104,7 +104,7 @@ export default function Hero() {
               </div> */}
 
               <span className="flex-col text-[14px] sm:text-base md:text-lg lg:text-xl text-neutral-700">
-                <span className="font-medium text-black">115+</span>{" "}
+                <span className="font-medium text-black">15+</span>{" "}
                 Successfully Industry projects
               </span>
             </motion.div>

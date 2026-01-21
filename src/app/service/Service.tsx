@@ -1,192 +1,9 @@
-// "use client";
-
-// import React from "react";
-// import Image from "next/image";
-// import { motion } from "framer-motion";
-
-// const services = [
-//   {
-//     title: "Software Development Services ",
-//     description: [
-//       " a) Custom software development",
-//       "b) Web application development",
-//       "c) Mobile app development (Android / iOS / Flutter)",
-//       "d) SaaS & PaaS development",
-//       "e) Website design & development ",
-//       "f) Legacy system modernization",
-//     ],
-//     icon: "/service-card-01.jpg",
-//   },
-//   {
-//     title: "Cloud & Infrastructure Services (Check feasibility)  ",
-//     description: [
-//       " a)  Cloud solutions (AWS, Azure, GCP) ",
-//       "b) Cloud migration & modernization ",
-//       "c) Cloud hosting & management ",
-//       "d) Hybrid & multi-cloud setup",
-//       "e)  Infrastructure monitoring & optimization",
-//     ],
-//     icon: "/service-card-02.jpg",
-//   },
-//   {
-//     title: "Database & Data Services",
-//     description: [
-//       " a) Database as a Service (DBaaS)  ",
-//       "b)Database design & optimization ",
-//       "c)  Data migration  ",
-//       "d)Data warehousing",
-//     ],
-//     icon: "/service-card-03.jpg",
-//   },
-//   {
-//     title: "IT Support & Maintenance  ",
-//     description: [
-//       " a)IT helpdesk support (L1/L2/L3)   ",
-//       "b) Remote & onsite support  ",
-//       "c)  Annual Maintenance Contracts (AMC)",
-//     ],
-//     icon: "/service-card-04.jpg",
-//   },
-//   {
-//     title: " DevOps & Automation   ",
-//     description: [
-//       " a)CI/CD pipeline implementation    ",
-//       "b) Infrastructure as Code (IaC)   ",
-//       "c) Docker & Kubernetes services",
-//       "d) Monitoring & logging solutions ",
-//       "e) Release & deployment management",
-//     ],
-//     icon: "/service-card-04.jpg",
-//   },
-// ];
-
-// const ServiceItems: React.FC = () => {
-//   return (
-//     <motion.section
-//       initial={{ opacity: 0, y: 60 }}
-//       whileInView={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.8, ease: "easeOut" }}
-//       viewport={{ once: true, amount: 0.3 }}
-//       className="md:py-10 py-3 "
-//     >
-//       <section className="w-full  py-10  md:mb-16 px-6 md:px-16  ">
-//         <div className="max-w-7xl mx-auto">
-//           {/* Section Header */}
-//           <p className="text-md text-neutral-900 mb-3 flex items-center gap-2">
-//             Service
-//             <span>
-//               <Image src="/badge-icon.jpg" alt="badge" width={16} height={16} />
-//             </span>
-//           </p>
-
-//           {/* Title + Description */}
-//           <div className="grid sm:grid-cols-2 gap-5 md:gap-10 mb-10 md:mb-16">
-//             <h2 className="text-[30px] sm:text-2xl md:text-4xl lg:text-[44px] font-medium text-neutral-900 leading-tight tracking-tight">
-//               We Engineer Solutions That Transform{" "}
-//               <br className="hidden md:block" />
-//               Businesses Into Leaders.
-//             </h2>
-//             <p className="text-neutral-600 text-[14px] md:text-[16px] sm:text-[15px] md:text-start leading-relaxed md:mt-3">
-//               We help businesses scale through strategic software and digital
-//               innovation. From custom applications to enterprise platforms, our
-//               services are engineered to optimize your operations and drive
-//               competitive advantage.
-//             </p>
-//           </div>
-
-//           {/* Services Grid */}
-//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-8">
-//             {/* {services.map((service, index) => (
-//               <div
-//                 key={index}
-//                 className={`bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)  border border-neutral-200 hover:shadow-xl rounded-3xl p-5 sm:p-8 flex flex-col justify-between h-[260px] duration-500 sm:h-[390px]
-//               ${
-//                 index % 2 === 1
-//                   ? "md:translate-y-18" // lower 2nd and 4th
-//                   : "md:translate-y-0" // keep 1st and 3rd at top
-//               }`}
-//               >
-//                 <div>
-//                   <h3 className="text-xl sm:text-xl  md:text-2xl lg:text-3xl font-semibold text-neutral-900 mb-3 ">
-//                     {service.title}
-//                   </h3>
-//                   <p className="text-neutral-600 text-[14px]   leading-relaxed">
-//                     {service.description}
-//                   </p>
-//                 </div>
-
-//                 <div className="mt-3 sm:mt-2 md:mt-8 lg:mt-8">
-//                   <Image
-//                     src={service.icon}
-//                     alt={service.title}
-//                     width={40}
-//                     height={40}
-//                     className="opacity-90"
-//                   />
-//                 </div>
-//               </div>
-//             ))} */}
-//             {services.map((service, index) => {
-//               const isFirstRow = index < 3;
-
-//               return (
-//                 <div
-//                   key={index}
-//                   className={`
-//         bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%)]
-//         border border-neutral-200 hover:shadow-xl
-//         rounded-3xl p-4 sm:p-7
-//         flex flex-col justify-between
-//         duration-500
-//         h-[260px] sm:h-[390px]
-// ${
-//   index % 2 === 1
-//     ? "md:translate-y-18 lg:translate-y-0" // lower 2nd and 4th
-//     : "md:translate-y-0" // keep 1st and 3rd at top
-// }
-//         lg:col-span-${isFirstRow ? "2" : "3"}
-//       `}
-//                 >
-//                   <div>
-//                     <h3 className="text-lg md:text-2xl lg:text-3xl font-semibold text-neutral-900 mb-3">
-//                       {service.title}
-//                     </h3>
-
-//                     <ul className="text-neutral-600 text-[11px] md:text-[14px]  leading-relaxed space-y-1">
-//                       {service.description.map((item, i) => (
-//                         <li key={i}>{item}</li>
-//                       ))}
-//                     </ul>
-//                   </div>
-
-//                   <div className="mt-6">
-//                     <Image
-//                       src={service.icon}
-//                       alt={service.title}
-//                       width={40}
-//                       height={40}
-//                       className="opacity-90"
-//                     />
-//                   </div>
-//                 </div>
-//               );
-//             })}
-//           </div>
-//         </div>
-//       </section>
-//     </motion.section>
-//   );
-// };
-
-// export default ServiceItems;
-
 "use client";
 
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-
 
 const services = [
   {
@@ -207,24 +24,24 @@ const services = [
       ],
     },
   },
-  {
-    title: "Cloud & Infrastructure Services",
-    shortDesc:
-      "Secure, scalable cloud solutions to drive agility and performance.",
-    icon: "/service-card-02.jpg",
-    link: "/service/details/database-data-",
-    fullContent: {
-      intro:
-        "Optimizing your cloud and IT infrastructure to drive agility, security, and performance.",
-      points: [
-        "Cloud solutions (AWS, Azure, GCP)",
-        "Cloud migration & modernization",
-        "Cloud hosting & management",
-        "Hybrid & multi-cloud setup",
-        "Infrastructure monitoring & optimization",
-      ],
-    },
-  },
+  // {
+  //   title: "Cloud & Infrastructure Services",
+  //   shortDesc:
+  //     "Secure, scalable cloud solutions to drive agility and performance.",
+  //   icon: "/service-card-02.jpg",
+  //   link: "/service/details/database-data-",
+  //   fullContent: {
+  //     intro:
+  //       "Optimizing your cloud and IT infrastructure to drive agility, security, and performance.",
+  //     points: [
+  //       "Cloud solutions (AWS, Azure, GCP)",
+  //       "Cloud migration & modernization",
+  //       "Cloud hosting & management",
+  //       "Hybrid & multi-cloud setup",
+  //       "Infrastructure monitoring & optimization",
+  //     ],
+  //   },
+  // },
   {
     title: "Database & Data Services",
     shortDesc:
@@ -260,7 +77,7 @@ const services = [
   {
     title: "DevOps & Automation",
     shortDesc: "Accelerate delivery with automation and CI/CD pipelines.",
-    icon: "/service-card-04.jpg",
+    icon: "/service-card-02.jpg",
     link: "/service/details/devops-automation",
     fullContent: {
       intro:
@@ -276,8 +93,25 @@ const services = [
   },
 ];
 
+
 const ServiceItems = () => {
   const [activeService, setActiveService] = useState<any>(null);
+  const ServicePage = () => {
+    useEffect(() => {
+      const hash = window.location.hash;
+
+      if (hash) {
+        const id = hash.replace("#", "");
+        const element = document.getElementById(id);
+
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: "smooth" });
+          }, 300);
+        }
+      }
+    }, []);
+  }
 
   return (
     <section className="py-10 md:py-16 px-6 md:px-16">
@@ -299,7 +133,8 @@ const ServiceItems = () => {
         </div>
 
         {/* SERVICES GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+        <div
+        id="service-card"  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const isFirstRow = index < 3;
 
@@ -308,12 +143,12 @@ const ServiceItems = () => {
                 key={index}
                 whileHover={{ y: -6 }}
                 className={`
-                  group  
+                  group
                   border border-neutral-200 rounded-3xl p-5 sm:p-7
-                  flex flex-col justify-between 
-                  h-[280px] sm:h-[380px]
+                  flex flex-col justify-between
+                  h-[280px] sm:h-[215px]
                   transition-all
-                  lg:col-span-${isFirstRow ? "2" : "3"}
+                  lg:col-span-2
                 `}
               >
                 <Link key={index} href={service.link}>
@@ -324,30 +159,29 @@ const ServiceItems = () => {
                     <p className="text-neutral-600 text-sm">
                       {service.shortDesc}
                     </p>
-                    <div className="mt-6 flex justify-start">
-                      <span
-                        onClick={() => setActiveService(service)}
-                        className="text-black cursor-pointer py-1 p-2 rounded-2xl w-fit flex gap-1 transform transition-all duration-500 ease-in-out group-hover:gap-3 group-hover:text-lime-500"
-                      >
-                        Read more
-                        <Image
-                          src="/arrow2.png"
-                          alt="arrow"
-                          width={15}
-                          height={4}
-                          className="mt-1.5 w-4 h-3.5"
-                        />
-                      </span>
-                    </div>
                   </div>
-
-                  <Image
-                    src={service.icon}
-                    alt={service.title}
-                    width={40}
-                    height={40}
-                    className="opacity-90"
-                  />
+                  <div className="flex gap-90 mt-13 ">
+                    <Image
+                      src={service.icon}
+                      alt={service.title}
+                      width={40}
+                      height={40}
+                      className="opacity-90"
+                    />
+                    <span
+                      // onClick={() => setActiveService(service)}
+                      className="text-black cursor-pointer py-1 p-2 rounded-2xl w-fit flex gap-1 transform transition-all duration-500 ease-in-out group-hover:gap-3 group-hover:text-lime-500"
+                    >
+                      Read more
+                      <Image
+                        src="/arrow2.png"
+                        alt="arrow"
+                        width={15}
+                        height={4}
+                        className="mt-1.5 w-4 h-3.5"
+                      />
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             );
@@ -406,3 +240,4 @@ const ServiceItems = () => {
 };
 
 export default ServiceItems;
+
