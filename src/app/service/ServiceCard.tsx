@@ -92,7 +92,7 @@ function ServiceCard() {
               <Link
                 key={index}
                 href={i.link}
-                className={`${colSpanClass} group bg-white p-5 flex flex-col justify-between items-start rounded-xl border border-black/10 transition-all duration-300 ease-in-out hover:-translate-y-1`}
+                className={`${colSpanClass} group e p-5 flex flex-col justify-between items-start rounded-xl border border-black/10 transition-all duration-300 ease-in-out hover:-translate-y-1`}
               >
                 <div>
                   <div className="mb-12">
@@ -114,8 +114,8 @@ function ServiceCard() {
                   </div>
                 </div>
 
-                <div className="mt-6 flex justify-start">
-                  <span className="text-black py-1 p-2 rounded-2xl w-fit flex gap-1 transform transition-all duration-500 ease-in-out group-hover:gap-3 group-hover:text-lime-500">
+                <div className="mt-6 flex justify-start ">
+                  <span className="text-black py-1  rounded-2xl w-fit flex gap-1 transform transition-all duration-500 ease-in-out group-hover:gap-3 group-hover:text-lime-500">
                     Read more{" "}
                     <Image
                       src="/arrow2.png"

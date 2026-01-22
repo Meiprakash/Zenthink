@@ -4,6 +4,7 @@ import React, { useState , useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { Link as LinkIcon, ChevronRight } from "lucide-react";
 
 const services = [
   {
@@ -200,7 +201,7 @@ const ServiceItems = () => {
                   group
                   border border-neutral-200 rounded-3xl p-5 sm:p-7
                   flex flex-col justify-between
-                  h-[280px] sm:h-[215px]
+                  h-[210px] sm:h-[260px] lg:h-[218px]
                   transition-all
                   lg:col-span-2
                 `}
@@ -218,7 +219,7 @@ const ServiceItems = () => {
                       {service.shortDesc}
                     </p>
                   </div>
-                  <div className="flex gap-90 mt-13 ">
+                  <div className="flex gap-37 sm:gap-25 lg:gap-90 mt-13 ">
                     <Image
                       src={service.icon}
                       alt={service.title}
@@ -282,7 +283,7 @@ const ServiceItems = () => {
               </p>
 
               {/* POINTS */}
-              <ul className=" space-y-2 text-sm text-neutral-700">
+              {/* <ul className=" space-y-2 text-sm text-neutral-700">
                 {activeService.fullContent.points.map(
                   (point: any, i: number) => (
                     <li
@@ -309,6 +310,29 @@ const ServiceItems = () => {
                           height={100}
                           className=" text-black w-3 h-3 mt-1 "
                         />
+                      </Link>
+                    </li>
+                  ),
+                )}
+              </ul> */}
+              <ul className="space-y-2 text-sm text-neutral-700">
+                {activeService.fullContent.points.map(
+                  (point: any, i: number) => (
+                    <li
+                      className="group flex gap-2 hover:text-lime-500 transition"
+                      key={i}
+                    >
+                      {/* Replaced link.png with Link2 */}
+                      <LinkIcon className=" w-3 h-3 mt-1.5 transition-colors" />
+
+                      <Link
+                        href={point.link}
+                        className="hover:ml-2 transition flex items-center gap-2 p-1"
+                        onClick={() => setActiveService(null)}
+                      >
+                        {point.name}
+                        {/* Replaced right.png with ChevronRight */}
+                        <ChevronRight className="text-black w-3 h-3 transition-colors group-hover:text-lime-500" />
                       </Link>
                     </li>
                   ),

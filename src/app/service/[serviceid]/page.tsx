@@ -94,7 +94,7 @@ const industriesData: Industry[] = [
     title: "Web Application Development That Powers Modern Business",
     slug: "web-application",
     desc: "Transforming Operations with Scalable, Secure Web Platforms",
-    banner: "/placeholder-product.png",
+    banner: "/04b7045b-e8d9-4e8d-8800-ac80752745aa.png",
     stats: [
       { value: "500M+", label: "Transactions Processed" },
       { value: "100K+", label: "Active Users Daily" },
@@ -122,8 +122,8 @@ const industriesData: Industry[] = [
       {
         title: "AI Diagnosis Engine",
         desc: "AI-powered system that assists doctors...",
-        price: "$1599",
-        image: "/placeholder-product.png",
+        price: "₹1599",
+        image: "/ai-in-robotics-surgery23.jpg",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -133,8 +133,8 @@ const industriesData: Industry[] = [
       {
         title: "Medical Analytics Dashboard",
         desc: "Centralized analytics for hospitals...",
-        price: "$1899",
-        image: "/placeholder-product.png",
+        price: " ₹1899",
+        image: "/cover-14.webp",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -145,33 +145,18 @@ const industriesData: Industry[] = [
     products: [
       {
         name: "Patient Analytics App",
-        price: "$499",
-        image: "/placeholder-product.png",
+        price: "₹499",
+        image: "/revmaxx-Product.svg",
       },
       {
         name: "AI Medical Bot",
-        price: "$799",
-        image: "/placeholder-product.png",
+        price: "₹799",
+        image: "/ai-doctor-bot-stethoscope-medical-600nw-2671534203.webp",
       },
       {
         name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
+        price: "₹1299",
+        image: "/Hospital-Industry.png",
       },
     ],
     industriesWeServe: {
@@ -314,7 +299,7 @@ const industriesData: Industry[] = [
     title: "Mobile Application Development That Connects Your Business",
     slug: "mobile-application",
     desc: "Transforming User Experience with Native and Cross-Platform Apps",
-    banner: "/placeholder-product.png",
+    banner: "/Gemini_Generated_Image_vvqbp3vvqbp3vvqb.png",
     stats: [
       { value: "5M+", label: "App Downloads" },
       { value: "50K+", label: "Active Users Daily" },
@@ -342,8 +327,8 @@ const industriesData: Industry[] = [
       {
         title: "AI Diagnosis Engine",
         desc: "AI-powered system that assists doctors...",
-        price: "$1599",
-        image: "/placeholder-product.png",
+        price: "₹1599",
+        image: "/ai-in-robotics-surgery23.jpg",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -353,8 +338,8 @@ const industriesData: Industry[] = [
       {
         title: "Medical Analytics Dashboard",
         desc: "Centralized analytics for hospitals...",
-        price: "$1899",
-        image: "/placeholder-product.png",
+        price: "₹1899",
+        image: "/cover-14.webp",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -365,33 +350,18 @@ const industriesData: Industry[] = [
     products: [
       {
         name: "Patient Analytics App",
-        price: "$499",
-        image: "/placeholder-product.png",
+        price: "₹499",
+        image: "/revmaxx-Product.svg",
       },
       {
         name: "AI Medical Bot",
-        price: "$799",
-        image: "/placeholder-product.png",
+        price: "₹799",
+        image: "/ai-doctor-bot-stethoscope-medical-600nw-2671534203.webp",
       },
       {
         name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
+        price: "₹1299",
+        image: "/Hospital-Industry.png",
       },
     ],
     industriesWeServe: {
@@ -550,7 +520,7 @@ const industriesData: Industry[] = [
     title: "Legacy System Modernization That Transforms Your Business",
     slug: "legacy-modernization",
     desc: "Eliminate Technical Debt and Unlock Growth with Modern Cloud Architecture",
-    banner: "/placeholder-product.png",
+    banner: "/Gemini_Generated_Image_fk65wofk65wofk65.png",
     stats: [
       { value: "70%", label: "Cost Reduction Achieved" },
       { value: "3x", label: "Performance Improvement" },
@@ -578,8 +548,8 @@ const industriesData: Industry[] = [
       {
         title: "AI Diagnosis Engine",
         desc: "AI-powered system that assists doctors...",
-        price: "$1599",
-        image: "/placeholder-product.png",
+        price: "₹1599",
+        image: "/ai-in-robotics-surgery23.jpg",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -589,8 +559,8 @@ const industriesData: Industry[] = [
       {
         title: "Medical Analytics Dashboard",
         desc: "Centralized analytics for hospitals...",
-        price: "$1899",
-        image: "/placeholder-product.png",
+        price: "₹1899",
+        image: "/cover-14.webp",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -601,33 +571,18 @@ const industriesData: Industry[] = [
     products: [
       {
         name: "Patient Analytics App",
-        price: "$499",
-        image: "/placeholder-product.png",
+        price: "₹499",
+        image: "/revmaxx-Product.svg",
       },
       {
         name: "AI Medical Bot",
-        price: "$799",
-        image: "/placeholder-product.png",
+        price: "₹799",
+        image: "/ai-doctor-bot-stethoscope-medical-600nw-2671534203.webp",
       },
       {
         name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
+        price: "₹1299",
+        image: "/Hospital-Industry.png",
       },
     ],
     industriesWeServe: {
@@ -773,7 +728,7 @@ const industriesData: Industry[] = [
     title: "API Development & Integration That Connects Your Ecosystem",
     slug: "api-development-integration",
     desc: "Build Seamless Integrations and Unlock Data Flow Across Your Platforms",
-    banner: "/placeholder-product.png",
+    banner: "/IT_Solutions_Development_f3428b90.png",
     stats: [
       { value: "10k%", label: "APIs Integrated" },
       { value: "99.9%", label: "Uptime Guaranteed" },
@@ -801,8 +756,8 @@ const industriesData: Industry[] = [
       {
         title: "AI Diagnosis Engine",
         desc: "AI-powered system that assists doctors...",
-        price: "$1599",
-        image: "/placeholder-product.png",
+        price: "₹1599",
+        image: "/ai-in-robotics-surgery23.jpg",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -812,8 +767,8 @@ const industriesData: Industry[] = [
       {
         title: "Medical Analytics Dashboard",
         desc: "Centralized analytics for hospitals...",
-        price: "$1899",
-        image: "/placeholder-product.png",
+        price: "₹1899",
+        image: "/cover-14.webp",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -824,33 +779,18 @@ const industriesData: Industry[] = [
     products: [
       {
         name: "Patient Analytics App",
-        price: "$499",
-        image: "/placeholder-product.png",
+        price: "₹499",
+        image: "/revmaxx-Product.svg",
       },
       {
         name: "AI Medical Bot",
-        price: "$799",
-        image: "/placeholder-product.png",
+        price: "₹799",
+        image: "/ai-doctor-bot-stethoscope-medical-600nw-2671534203.webp",
       },
       {
         name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
+        price: "₹1299",
+        image: "/Hospital-Industry.png",
       },
     ],
     industriesWeServe: {
@@ -997,7 +937,7 @@ const industriesData: Industry[] = [
     title: "AI-Enhanced Solutions That Amplify Human Intelligence",
     slug: "ai-enhanced-solutions",
     desc: "Transform Operations with Machine Learning, Automation, and Predictive Analytics",
-    banner: "/placeholder-product.png",
+    banner: "/Gemini_Generated_Image_ysp2wjysp2wjysp2.png",
     stats: [
       { value: "10k%", label: "Task Automation Achieved" },
       { value: "10x", label: " Faster Data Processing" },
@@ -1025,8 +965,8 @@ const industriesData: Industry[] = [
       {
         title: "AI Diagnosis Engine",
         desc: "AI-powered system that assists doctors...",
-        price: "$1599",
-        image: "/placeholder-product.png",
+        price: "₹1599",
+        image: "/ai-in-robotics-surgery23.jpg",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -1036,8 +976,8 @@ const industriesData: Industry[] = [
       {
         title: "Medical Analytics Dashboard",
         desc: "Centralized analytics for hospitals...",
-        price: "$1899",
-        image: "/placeholder-product.png",
+        price: "₹1899",
+        image: "/cover-14.webp",
         features: [
           "Smart predictions",
           "Fast diagnosis support",
@@ -1048,33 +988,18 @@ const industriesData: Industry[] = [
     products: [
       {
         name: "Patient Analytics App",
-        price: "$499",
-        image: "/placeholder-product.png",
+        price: "₹499",
+        image: "/revmaxx-Product.svg",
       },
       {
         name: "AI Medical Bot",
-        price: "$799",
-        image: "/placeholder-product.png",
+        price: "₹799",
+        image: "/ai-doctor-bot-stethoscope-medical-600nw-2671534203.webp",
       },
       {
         name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
-      },
-      {
-        name: "Hospital BI Dashboard",
-        price: "$1299",
-        image: "/placeholder-product.png",
+        price: "₹1299",
+        image: "/Hospital-Industry.png",
       },
     ],
     industriesWeServe: {
@@ -1343,7 +1268,7 @@ export default function ServiceDetails() {
                     src={industry.banner}
                     alt={industry.title}
                     fill
-                    className="object-contain relative z-10"
+                    className="w-full relative z-10 rounded-2xl"
                     priority
                     sizes="(max-width: 640px) 250px, (max-width: 768px) 280px, (max-width: 1024px) 350px, (max-width: 1280px) 400px, 450px"
                   />
@@ -1387,8 +1312,8 @@ export default function ServiceDetails() {
                 {/* Right: Description */}
                 <div>
                   <p className="text-neutral-600 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
-                    Discover powerful solutions designed to elevate your business
-                    operations and drive results.
+                    Discover powerful solutions designed to elevate your
+                    business operations and drive results.
                   </p>
                 </div>
               </div>
@@ -1425,13 +1350,13 @@ export default function ServiceDetails() {
                   viewport={{ once: true }}
                   className="relative w-48 h-48 xs:w-56 xs:h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center"
                 >
-                  <div className="absolute w-full h-full bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) rounded-xl sm:rounded-2xl"></div>
+                  <div className="absolute w-full h-full rounded-xl sm:rounded-2xl"></div>
                   <Image
-                    src="/product.png"
+                    src="/6e37509e-415e-4415-9bdd-11bd1f49992e.png"
                     alt="Service Illustration"
                     width={300}
                     height={300}
-                    className="relative z-10 object-contain w-3/4 h-3/4"
+                    className="relative z-10 object-contain w-70 h-3/4"
                     sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 320px"
                   />
                 </motion.div>
@@ -1483,14 +1408,14 @@ export default function ServiceDetails() {
                   />
                 </span>
               </p>
-              
+
               <div className="flex flex-col sm:grid sm:grid-cols-2 gap-6 xs:gap-8 sm:gap-10 mb-8 sm:mb-12">
                 <h2 className="text-[30px] sm:text-[32px] md:text-[38px] lg:text-[44px] font-medium text-neutral-900 leading-[1.2] sm:leading-tight tracking-tight">
                   Discover Our Premium Solutions
                 </h2>
                 <p className="text-neutral-600 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
-                  Explore premium software solutions crafted to bring automation,
-                  efficiency and intelligent workflows.
+                  Explore premium software solutions crafted to bring
+                  automation, efficiency and intelligent workflows.
                 </p>
               </div>
             </motion.div>
@@ -1503,7 +1428,7 @@ export default function ServiceDetails() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className={`grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center ${
+                  className={`grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center ₹{
                     index % 2 === 1 ? "md:flex-row-reverse" : ""
                   }`}
                 >
@@ -1516,7 +1441,7 @@ export default function ServiceDetails() {
                         alt={product.title}
                         width={300}
                         height={300}
-                        className="relative z-10 object-contain w-3/4 h-3/4"
+                        className="relative z-10  w-3/4 h-3/4 rounded-2xl"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     </div>
@@ -1621,13 +1546,13 @@ export default function ServiceDetails() {
                     viewport={{ once: true }}
                     className="min-w-[240px] xs:min-w-[260px] sm:min-w-[280px] flex-shrink-0 bg-white shadow-xs rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200"
                   >
-                    <div className="relative bg-[linear-gradient(180deg,#ffffff_0%,#f6ffe9_100%) w-full h-36 xs:h-40 sm:h-48 rounded-lg xs:rounded-xl flex items-center justify-center mb-4 xs:mb-5 sm:mb-6">
+                    <div className="relative  w-full h-36 xs:h-40 sm:h-48 rounded-lg xs:rounded-xl flex items-center justify-center mb-4 xs:mb-5 sm:mb-6">
                       <Image
                         src={product.image}
                         alt={product.name}
                         width={120}
                         height={120}
-                        className="object-contain w-20 h-20 xs:w-24 xs:h-24"
+                        className="object-contain w-30 h-30 xs:w-24 xs:h-24"
                       />
                     </div>
 

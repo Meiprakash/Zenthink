@@ -355,7 +355,7 @@ const PharmacySoftwarePage = () => {
                   key={index}
                   variants={item}
                   // whileHover={{ scale: 1.03 }}
-                  className="border border-gray-100 bg-gray-50/30 hover:border-lime-500 rounded-[2rem] p-10 flex flex-col justify-between hover:shadow-lg  transition-shadow duration-300"
+                  className="border border-gray-100 bg-gray-50/30 hover:border-lime-400 rounded-[2rem] p-10 flex flex-col justify-between hover:shadow-lg  transition-shadow duration-300"
                 >
                   <div>
                     <h3 className="text-xl font-bold mb-4 uppercase tracking-tight">

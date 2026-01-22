@@ -22,36 +22,69 @@ const services = [
   {
     title: "Software Development Services",
     description: [
-      { text: "Custom software development", icon: <Code2 size={16} /> },
-      { text: "Web application development", icon: <Layout size={16} /> },
+      {
+        text: "Custom software development",
+        icon: <Code2 size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Web application development",
+        icon: <Layout size={16} className="text-lime-500" />,
+      },
       {
         text: "Mobile app development (Android / iOS)",
         icon: <Smartphone size={16} />,
       },
-      { text: "SaaS & PaaS development", icon: <Server size={16} /> },
-      { text: "Website design & development", icon: <Layout size={16} /> },
-      { text: "Legacy system modernization", icon: <Settings size={16} /> },
+      {
+        text: "SaaS & PaaS development",
+        icon: <Server size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Website design & development",
+        icon: <Layout size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Legacy system modernization",
+        icon: <Settings size={16} className="text-lime-500" />,
+      },
     ],
     icon: "/service-card-01.jpg",
   },
   {
     title: "Database & Data Services",
     description: [
-      { text: "Database as a Service (DBaaS)", icon: <Database size={16} /> },
-      { text: "Database design & optimization", icon: <Cpu size={16} /> },
-      { text: "Data migration", icon: <Settings size={16} /> },
-      { text: "Data warehousing", icon: <Server size={16} /> },
+      {
+        text: "Database as a Service (DBaaS)",
+        icon: <Database size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Database design & optimization",
+        icon: <Cpu size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Data migration",
+        icon: <Settings size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Data warehousing",
+        icon: <Server size={16} className="text-lime-500" />,
+      },
     ],
     icon: "/service-card-03.jpg",
   },
   {
     title: "IT Support & Maintenance",
     description: [
-      { text: "IT helpdesk support (L1/L2/L3)", icon: <Headset size={16} /> },
-      { text: "Remote & onsite support", icon: <Settings size={16} /> },
+      {
+        text: "IT helpdesk support (L1/L2/L3)",
+        icon: <Headset size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Remote & onsite support",
+        icon: <Settings size={16} className="text-lime-500" />,
+      },
       {
         text: "Annual Maintenance Contracts (AMC)",
-        icon: <ShieldCheck size={16} />,
+        icon: <ShieldCheck size={16} className="text-lime-500" />,
       },
     ],
     icon: "/service-card-02.jpg",
@@ -59,13 +92,25 @@ const services = [
   {
     title: "DevOps & Automation",
     description: [
-      { text: "CI/CD pipeline implementation", icon: <Terminal size={16} /> },
-      { text: "Infrastructure as Code (IaC)", icon: <Code2 size={16} /> },
-      { text: "Docker & Kubernetes services", icon: <Server size={16} /> },
-      { text: "Monitoring & logging solutions", icon: <Settings size={16} /> },
+      {
+        text: "CI/CD pipeline implementation",
+        icon: <Terminal size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Infrastructure as Code (IaC)",
+        icon: <Code2 size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Docker & Kubernetes services",
+        icon: <Server size={16} className="text-lime-500" />,
+      },
+      {
+        text: "Monitoring & logging solutions",
+        icon: <Settings size={16} className="text-lime-500" />,
+      },
       {
         text: "Release & deployment management",
-        icon: <ShieldCheck size={16} />,
+        icon: <ShieldCheck size={16} className="text-lime-500" />,
       },
     ],
     icon: "/service-card-04.jpg",
