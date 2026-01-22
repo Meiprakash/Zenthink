@@ -15,11 +15,17 @@ const companies = [
 ];
 
 const utilities = [
-  { name: "Software Development Services", link: "/service/details/software-development" },
+  { name: "Software Development Services", link: "/service#service-card" },
   // { name: "Cloud & Infrastructure Services ", link: "/service/details/database-data-services" },
-  { name: "Database & Data Services", link: "/service/details/database-data-services" },
-  { name: " IT Support & Maintenance", link: "/service/details/it-support-maintenance" }, 
-  { name: "DevOps & Automation", link: "/service/details/devops-automation" },
+  {
+    name: "Database & Data Services",
+    link: "/service#service-card",
+  },
+  {
+    name: " IT Support & Maintenance",
+    link: "/service#service-card",
+  },
+  { name: "DevOps & Automation", link: "/service#service-card" },
 ];
 
 export default function Footer() {
@@ -75,7 +81,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="hidden sm:flex sm:col-span-2 lg:col-span-2 justify-around"
+            className="hidden sm:flex sm:col-span-2  lg:col-span-2 justify-around"
           >
             {/* COMPANY (COLUMN 2 - MD/LG) */}
             <div className="md:ml-75">

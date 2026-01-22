@@ -16,11 +16,30 @@ const services = [
       intro:
         "Custom solutions to power your business through innovative software, web, and mobile applications.",
       points: [
-        "Custom software development ",
-        "Web application & Website development",
-        "Mobile app development (Android / iOS / Flutter) ",
-        "SaaS & PaaS development",
-        "Legacy system modernization",
+        {
+          name: "Custom software development ",
+          link: "/service/details/software-development/custom-software-development",
+        },
+        {
+          name: "Web application & Website development",
+          link: "/service/details/software-development/web-application-development",
+        },
+        {
+          name: "Mobile App Development",
+          link: "/service/details/software-development/mobile-app-development",
+        },
+        {
+          name: "SaaS & PaaS Development",
+          link: "/service/details/software-development/saas-paas-development",
+        },
+        {
+          name: "Website Design & Development",
+          link: "/service/details/software-development/website-design-development",
+        },
+        {
+          name: "Legacy system modernization",
+          link: "/service/details/software-development/legacy-system-modernization",
+        },
       ],
     },
   },
@@ -52,10 +71,22 @@ const services = [
       intro:
         "Ensuring your data is structured, secure, and always ready for business intelligence.",
       points: [
-        "Database as a Service (DBaaS)",
-        "Database design & optimization",
-        "Data migration",
-        "Data warehousing",
+        {
+          name: "Database as a Service ",
+          link: "/service/details/database-data-services/dbaas",
+        },
+        {
+          name: "Database design & optimization",
+          link: "/service/details/database-data-services/database-design-optimization",
+        },
+        {
+          name: "Data migration",
+          link: "/service/details/database-data-services/data-migration",
+        },
+        {
+          name: "Data warehousing",
+          link: "/service/details/database-data-services/data-warehousing",
+        },
       ],
     },
   },
@@ -68,9 +99,18 @@ const services = [
       intro:
         "Keeping your IT systems reliable, secure, and running smoothly at all times.",
       points: [
-        "IT helpdesk support (L1 / L2 / L3)",
-        "Remote & onsite support",
-        "Annual Maintenance Contracts (AMC)",
+        {
+          name: "IT helpdesk support (L1 / L2 / L3)",
+          link: "/service/details/it-support-maintenance/it-helpdesk-support",
+        },
+        {
+          name: " Remote & Onsite Support ",
+          link: "/service/details/it-support-maintenance/remote-onsite-support",
+        },
+        {
+          name: "Annual Maintenance Contracts (AMC)",
+          link: "/service/details/it-support-maintenance/annual-maintenance-contracts",
+        },
       ],
     },
   },
@@ -83,11 +123,26 @@ const services = [
       intro:
         "Accelerating software delivery while ensuring reliability, scalability, and efficiency.",
       points: [
-        "CI/CD pipeline implementation",
-        "Infrastructure as Code (IaC)",
-        "Docker & Kubernetes services",
-        "Monitoring & logging solutions",
-        "Release & deployment management",
+        {
+          name: "CI/CD pipeline implementation",
+          link: "/service/details/devops-automation/cicd-pipeline",
+        },
+        {
+          name: "Infrastructure as Code (IaC)",
+          link: "/service/details/devops-automation/infrastructure-as-code",
+        },
+        {
+          name: "Docker & Kubernetes services",
+          link: "/service/details/devops-automation/docker-kubernetes",
+        },
+        {
+          name: "Monitoring & logging solutions",
+          link: "/service/details/devops-automation/monitoring-logging-solutions",
+        },
+        {
+          name: "Release & deployment management",
+          link: "/service/details/devops-automation/release-deployment-management",
+        },
       ],
     },
   },
@@ -115,7 +170,7 @@ const ServiceItems = () => {
 
   return (
     <section className="py-10 md:py-16 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto" id="service-card">
         {/* ===== HEADER ===== */}
         <p className="text-md text-neutral-900 mb-3 flex items-center gap-2">
           Service
@@ -133,8 +188,7 @@ const ServiceItems = () => {
         </div>
 
         {/* SERVICES GRID */}
-        <div
-        id="service-card"  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const isFirstRow = index < 3;
 
@@ -151,7 +205,11 @@ const ServiceItems = () => {
                   lg:col-span-2
                 `}
               >
-                <Link key={index} href={service.link}>
+                <span
+                  className="cursor-pointer"
+                  key={index}
+                  onClick={() => setActiveService(service)}
+                >
                   <div className="">
                     <h3 className="text-lg md:text-2xl font-semibold mb-2">
                       {service.title}
@@ -182,7 +240,7 @@ const ServiceItems = () => {
                       />
                     </span>
                   </div>
-                </Link>
+                </span>
               </motion.div>
             );
           })}
@@ -224,10 +282,35 @@ const ServiceItems = () => {
               </p>
 
               {/* POINTS */}
-              <ul className="space-y-2 text-sm text-neutral-700">
+              <ul className=" space-y-2 text-sm text-neutral-700">
                 {activeService.fullContent.points.map(
-                  (point: string, i: number) => (
-                    <li key={i}>• {point}</li>
+                  (point: any, i: number) => (
+                    <li
+                      className="flex gap-2 hover:text-lime-500 transition"
+                      key={i}
+                    >
+                      <Image
+                        src="/link.png"
+                        alt="link"
+                        width={7}
+                        height={100}
+                        className="opacity-90 w-3 h-3 mt-2 hover:text-lime-500"
+                      />
+                      <Link
+                        href={point.link}
+                        className="hover:ml-2 transition  flex gap-2 p-1"
+                        onClick={() => setActiveService(null)}
+                      >
+                        {point.name}
+                        <Image
+                          src="/right.png"
+                          alt="link"
+                          width={7}
+                          height={100}
+                          className=" text-black w-3 h-3 mt-1 "
+                        />
+                      </Link>
+                    </li>
                   ),
                 )}
               </ul>

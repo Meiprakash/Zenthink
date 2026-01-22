@@ -18,13 +18,29 @@ import {
 } from "lucide-react";
 
 export default function ServicePage() {
-  const { slug } = useParams();
-  const category = ServiceDetails.categories.find((c) => c.slug === slug);
+  const params = useParams();
+
+  const categorySlug = params.slug as string;
+  const sectionSlug = params.section as string;
+
+const category = ServiceDetails.categories.find((c) => c.slug === categorySlug);
   const [activeTab, setActiveTab] = useState("");
 
-  useEffect(() => {
-    if (category?.sections?.[0]) setActiveTab(category.sections[0].slug);
-  }, [category]);
+useEffect(() => {
+  if (!category) return;
+
+  if (sectionSlug) {
+    const valid = category.sections.find((s) => s.slug === sectionSlug);
+
+    if (valid) {
+      setActiveTab(sectionSlug);
+      return;
+    }
+  }
+
+  // fallback
+  setActiveTab(category.sections[0].slug);
+}, [category, sectionSlug]);
 
   const activeData = category?.sections.find((s) => s.slug === activeTab);
 
@@ -44,19 +60,19 @@ export default function ServicePage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10"
+          className="flex flex-col sm:flex-row lg:flex-row justify-between items-start lg:items-end gap-10"
         >
           <div className="flex-1">
             {/* <div className="flex items-center gap-2  text-[10px] font-bold uppercase tracking-[0.4em] text-neutral-400">
               <span>Engineering Division</span>
               <span className="text-black">❖</span>
             </div> */}
-            <h1 className="text-[28px] xs:text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-semibold mb-5">
+            <h1 className="text-[28px] xs:text-[32px] sm:text-[35px] md:text-[48px] lg:text-[60px] font-semibold lg:mb-5">
               {category.title}
             </h1>
           </div>
-          <div className="max-w-xs pb-4 sm:pt-4">
-            <p className="text-sm xs:text-base sm:text-lg  text-neutral-500 font-light leading-snug ">
+          <div className="max-w-xs sm:pb-4 sm:pt-4">
+            <p className="text-sm xs:text-base sm:text-[17px] lg:text-lg  text-neutral-500 font-light leading-snug ">
               Transforming complex business logic into high-performance digital
               infrastructure.
             </p>
@@ -65,7 +81,7 @@ export default function ServicePage() {
       </header>
 
       {/* --- TOPIC SELECTOR (STICKY) --- */}
-      <nav className="sticky top-[64px] z-40 bg-white/90 backdrop-blur-md border-b border-neutral-100">
+      <nav className="sticky top-[14px] z-40 bg-white/90 backdrop-blur-md border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 flex items-center gap-2 overflow-x-auto no-scrollbar">
           {category.sections.map((section) => (
             <button
@@ -74,7 +90,7 @@ export default function ServicePage() {
               className={`px-8 py-6 text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap relative ${
                 activeTab === section.slug
                   ? "text-black"
-                  : "text-neutral-300 hover:text-black"
+                  : "text-neutral-500 hover:text-black"
               }`}
             >
               {section.title}
@@ -155,8 +171,8 @@ export default function ServicePage() {
                 )}
 
                 <div className="p-10 border border-neutral-100 rounded-[3rem] space-y-8">
-                  <h4 className="text-[10px] font-black uppercase text-neutral-400 tracking-widest text-center">
-                    Vertical Domain Expertise
+                  <h4 className="text-[15px] font-black uppercase text-neutral-500 tracking-widest text-center">
+                    Industries
                   </h4>
                   <div className="flex flex-wrap justify-center gap-2">
                     {activeData.industries.map((ind: string) => (
@@ -172,7 +188,7 @@ export default function ServicePage() {
               </div>
 
               {/* Right Column: Technical Specification Cards */}
-              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+              <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 items-start">
                 {activeData.groups.map((group, gIdx) => (
                   <motion.div
                     key={gIdx}
@@ -196,7 +212,7 @@ export default function ServicePage() {
                       {group.items.map((item, i) => (
                         <li
                           key={i}
-                          className="flex items-start gap-4 text-sm font-medium text-neutral-400 group-hover:text-black transition-colors leading-snug"
+                          className="flex items-start gap-4 text-sm font-medium text-neutral-700 group-hover:text-black transition-colors leading-snug"
                         >
                           <div className="w-1.5 h-1.5 rounded-full bg-neutral-200 mt-2 flex-shrink-0 group-hover:bg-black" />
                           {item}

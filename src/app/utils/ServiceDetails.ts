@@ -1,560 +1,3 @@
-// export const ServiceDetails ={
-//   "categories": [
-//     {
-//       "id": 1,
-//       "title": "Software Development",
-//       "slug": "software-development",
-//       "sections": [
-//         {
-//           "id": "a",
-//           "title": "Custom Software Development",
-//           "slug": "custom-software-development",
-//           "overview": "Custom Software Development focuses on building software solutions that are specifically designed to meet an organization’s unique business requirements. Unlike off-the-shelf products, custom solutions align with business processes, compliance needs, operational goals, and scalability plans.",
-//           "delivery": "We follow a lifecycle-based development model ensuring quality, security, and scalability.",
-//           "applicationTypes": {
-//             "coreEnterprise": [
-//               "Enterprise business management systems",
-//               "Internal operations platforms",
-//               "Department applications (HR, Finance, Sales, Operations)",
-//               "Multi-branch business systems",
-//               "Mission-critical applications"
-//             ],
-//             "workflowAutomation": [
-//               "Workflow automation systems",
-//               "Approval and escalation systems",
-//               "Document management platforms",
-//               "Business process management systems",
-//               "Task and ticketing platforms"
-//             ],
-//             "enterpriseSystems": [
-//               "Custom CRM",
-//               "Custom ERP modules",
-//               "HRMS platforms",
-//               "Billing and invoicing systems"
-//             ],
-//             "security": [
-//               "Role-based access control systems",
-//               "Authentication platforms",
-//               "Access monitoring systems"
-//             ],
-//             "dataAndCompliance": [
-//               "Management dashboards",
-//               "Business intelligence systems",
-//               "Operational monitoring platforms",
-//               "Compliance reporting systems"
-//             ]
-//           },
-//           "industries": {
-//             "primary": [
-//               "Healthcare",
-//               "BFSI",
-//               "Manufacturing",
-//               "Education",
-//               "Retail",
-//               "Government",
-//               "Logistics"
-//             ],
-//             "additional": [
-//               "IT Services",
-//               "SaaS",
-//               "Real Estate",
-//               "Telecom",
-//               "Travel",
-//               "Professional Services",
-//               "Startups"
-//             ]
-//           }
-//         },
-
-//         {
-//           "id": "b",
-//           "title": "Web Application Development",
-//           "slug": "web-application-development",
-//           "overview": "Web Application Development focuses on building secure, scalable, and high-performance browser-based applications.",
-//           "applicationTypes": {
-//             "enterpriseWeb": [
-//               "Enterprise management systems",
-//               "Internal admin portals",
-//               "Department platforms",
-//               "Multi-user web platforms"
-//             ],
-//             "workflow": [
-//               "Workflow automation portals",
-//               "Approval management systems",
-//               "Document management platforms",
-//               "Ticketing systems"
-//             ],
-//             "managementSystems": [
-//               "Web CRM",
-//               "Web ERP",
-//               "HRMS portals",
-//               "Billing platforms"
-//             ],
-//             "security": [
-//               "RBAC platforms",
-//               "Authentication systems",
-//               "Access monitoring portals"
-//             ],
-//             "reporting": [
-//               "MIS dashboards",
-//               "Analytics platforms",
-//               "Compliance reporting systems"
-//             ]
-//           },
-//           "industries": {
-//             "primary": [
-//               "Healthcare",
-//               "BFSI",
-//               "Manufacturing",
-//               "Education",
-//               "Retail",
-//               "Government",
-//               "Logistics"
-//             ],
-//             "additional": [
-//               "IT Services",
-//               "SaaS",
-//               "Real Estate",
-//               "Travel",
-//               "Startups"
-//             ]
-//           }
-//         },
-
-//         {
-//           "id": "c",
-//           "title": "Mobile App Development",
-//           "slug": "mobile-app-development",
-//           "platforms": ["Android", "iOS", "Flutter"],
-//           "overview": "Mobile App Development focuses on building secure and scalable mobile applications for business and customer engagement.",
-//           "applicationTypes": {
-//             "consumerApps": [
-//               "Customer apps",
-//               "Brand engagement apps",
-//               "Service delivery apps"
-//             ],
-//             "enterpriseApps": [
-//               "Employee management apps",
-//               "Field-force apps",
-//               "Attendance tracking apps",
-//               "Offline-enabled apps"
-//             ],
-//             "workflowApps": [
-//               "Approval apps",
-//               "Document submission apps",
-//               "Ticketing apps"
-//             ],
-//             "commerceApps": [
-//               "E-commerce apps",
-//               "Booking apps",
-//               "Payment apps"
-//             ],
-//             "securityApps": [
-//               "Biometric authentication",
-//               "Role-based access apps",
-//               "Session management"
-//             ],
-//             "dataApps": [
-//               "Mobile dashboards",
-//               "Compliance reporting apps"
-//             ]
-//           },
-//           "industries": {
-//             "primary": [
-//               "Healthcare",
-//               "BFSI",
-//               "Manufacturing",
-//               "Education",
-//               "Retail",
-//               "Government",
-//               "Logistics"
-//             ],
-//             "additional": [
-//               "IT Services",
-//               "SaaS",
-//               "Travel",
-//               "Professional Services",
-//               "Startups"
-//             ]
-//           }
-//         },
-
-//         {
-//           "id": "d",
-//           "title": "SaaS & PaaS Development",
-//           "slug": "saas-paas-development",
-//           "overview": "SaaS & PaaS Development focuses on building scalable subscription-based platforms and enterprise-grade solutions.",
-//           "solutionTypes": {
-//             "saasPlatforms": [
-//               "Subscription platforms",
-//               "Multi-tenant SaaS apps",
-//               "Self-service dashboards"
-//             ],
-//             "enterprisePlatforms": [
-//               "SaaS CRM",
-//               "SaaS ERP",
-//               "SaaS HRMS",
-//               "Billing platforms"
-//             ],
-//             "paasSolutions": [
-//               "API platforms",
-//               "Data orchestration platforms",
-//               "Application enablement platforms"
-//             ],
-//             "subscriptionManagement": [
-//               "Tenant management",
-//               "License systems",
-//               "Plan management"
-//             ],
-//             "analyticsPlatforms": [
-//               "SaaS dashboards",
-//               "Compliance reporting systems"
-//             ]
-//           },
-//           "industries": {
-//             "primary": [
-//               "Healthcare",
-//               "BFSI",
-//               "Manufacturing",
-//               "Education",
-//               "Retail",
-//               "Government",
-//               "Logistics"
-//             ],
-//             "additional": [
-//               "IT Services",
-//               "SaaS",
-//               "Startups"
-//             ]
-//           }
-//         },
-
-//         {
-//           "id": "e",
-//           "title": "Website Design & Development",
-//           "slug": "website-design-development",
-//           "overview": "Website Design & Development focuses on creating responsive, visually engaging and conversion-optimized websites.",
-//           "websiteTypes": {
-//             "corporate": [
-//               "Company websites",
-//               "Business profile websites"
-//             ],
-//             "product": [
-//               "Product landing pages",
-//               "Marketing websites"
-//             ],
-//             "cms": [
-//               "Blog platforms",
-//               "Content websites"
-//             ],
-//             "marketing": [
-//               "Campaign websites",
-//               "Lead generation pages"
-//             ],
-//             "portals": [
-//               "Customer portals",
-//               "Partner portals"
-//             ]
-//           },
-//           "industries": {
-//             "primary": [
-//               "IT Services",
-//               "Professional Services",
-//               "Education",
-//               "Healthcare",
-//               "Retail",
-//               "Government"
-//             ],
-//             "additional": [
-//               "SaaS",
-//               "Real Estate",
-//               "Startups"
-//             ]
-//           }
-//         },
-
-//         {
-//           "id": "f",
-//           "title": "Legacy System Modernization",
-//           "slug": "legacy-system-modernization",
-//           "overview": "Legacy System Modernization focuses on transforming outdated systems into modern scalable platforms.",
-//           "modernizationTypes": {
-//             "applicationModernization": [
-//               "Monolith modernization",
-//               "UI upgrades",
-//               "Re-engineering systems"
-//             ],
-//             "dataTransformation": [
-//               "Database modernization",
-//               "Data migration",
-//               "Optimization"
-//             ],
-//             "integration": [
-//               "API enablement",
-//               "Hybrid system integration"
-//             ],
-//             "securityUpgrade": [
-//               "Access control upgrades",
-//               "Compliance enhancements",
-//               "Audit logging"
-//             ],
-//             "performance": [
-//               "Scalability improvements",
-//               "Reliability optimization"
-//             ]
-//           },
-//           "industries": {
-//             "primary": [
-//               "BFSI",
-//               "Manufacturing",
-//               "Government",
-//               "Healthcare",
-//               "Telecom",
-//               "Logistics"
-//             ],
-//             "additional": [
-//               "Education",
-//               "Retail",
-//               "IT Services"
-//             ]
-//           }
-//         }
-//       ]
-//     },
-
-//     {
-//       "id": 3,
-//       "title": "Database & Data Services",
-//       "slug": "database-data-services",
-//       "sections": [
-//         {
-//           "id": "a",
-//           "title": "Database as a Service (DBaaS)",
-//           "slug": "dbaas",
-//           "overview": "Database as a Service (DBaaS) provides managed, scalable, and secure database platforms.",
-//           "solutionTypes": {
-//             "managedDatabases": [
-//               "Managed relational databases",
-//               "Managed non-relational databases",
-//               "High-availability systems",
-//               "Fault-tolerant platforms"
-//             ],
-//             "applicationDatabases": [
-//               "Web app databases",
-//               "Mobile app databases",
-//               "Transactional databases"
-//             ],
-//             "secureDatabases": [
-//               "Encrypted databases",
-//               "Audit-ready systems",
-//               "Compliance aligned storage"
-//             ]
-//           },
-//           "industries": {
-//             "primary": ["BFSI", "Healthcare", "SaaS", "Retail", "Government"],
-//             "additional": ["Manufacturing", "Education", "Logistics", "IT Services", "Startups"]
-//           }
-//         },
-
-//         {
-//           "id": "b",
-//           "title": "Database Design & Optimization",
-//           "slug": "database-design-optimization",
-//           "overview": "Database Design & Optimization ensures high performance and scalability.",
-//           "solutionTypes": {
-//             "architecture": ["Logical design", "Schema modeling", "Data modeling"],
-//             "performance": ["Query optimization", "Indexing", "Partitioning"],
-//             "scalability": ["Concurrency optimization", "Consistency improvements"]
-//           },
-//           "industries": {
-//             "primary": ["SaaS", "BFSI", "Healthcare", "Retail", "Manufacturing"],
-//             "additional": ["Education", "Government", "IT Services"]
-//           }
-//         },
-
-//         {
-//           "id": "c",
-//           "title": "Data Migration",
-//           "slug": "data-migration",
-//           "overview": "Data Migration securely transfers legacy data to modern systems.",
-//           "solutionTypes": {
-//             "legacyMigration": ["Legacy DB migration", "Platform migration"],
-//             "applicationMigration": ["App DB migration", "Source consolidation"],
-//             "complianceMigration": ["Historical data migration", "Validation"]
-//           },
-//           "industries": {
-//             "primary": ["BFSI", "Government", "Healthcare", "Manufacturing"],
-//             "additional": ["Retail", "Education", "Telecom", "Logistics"]
-//           }
-//         },
-
-//         {
-//           "id": "d",
-//           "title": "Data Warehousing",
-//           "slug": "data-warehousing",
-//           "overview": "Data Warehousing builds centralized analytics platforms.",
-//           "solutionTypes": {
-//             "enterpriseWarehouses": ["Centralized warehouses", "Historical storage"],
-//             "analyticsWarehouses": ["BI systems", "KPI tracking"],
-//             "governanceWarehouses": ["Audit-ready platforms", "Compliance reporting"]
-//           },
-//           "industries": {
-//             "primary": ["BFSI", "Healthcare", "Retail", "Manufacturing", "Government"],
-//             "additional": ["SaaS", "Education", "IT Services"]
-//           }
-//         }
-//       ]
-//     },
-
-//     {
-//       "id": 4,
-//       "title": "IT Support & Maintenance",
-//       "slug": "it-support-maintenance",
-//       "sections": [
-//         {
-//           "id": "a",
-//           "title": "IT Helpdesk Support (L1/L2/L3)",
-//           "slug": "it-helpdesk-support",
-//           "overview": "Multi-level IT support services ensuring system reliability.",
-//           "supportLevels": {
-//             "L1": ["Password reset", "Software install", "Ticket logging"],
-//             "L2": ["System troubleshooting", "Hardware diagnostics"],
-//             "L3": ["Server issues", "Database troubleshooting", "Root cause analysis"]
-//           },
-//           "industries": {
-//             "primary": ["BFSI", "Healthcare", "IT Services", "Manufacturing", "Government"],
-//             "additional": ["Education", "Retail", "Logistics"]
-//           }
-//         },
-
-//         {
-//           "id": "b",
-//           "title": "Remote & Onsite Support",
-//           "slug": "remote-onsite-support",
-//           "overview": "Flexible remote and onsite IT support solutions.",
-//           "supportTypes": {
-//             "remote": ["Real-time troubleshooting", "Monitoring"],
-//             "onsite": ["Hardware repair", "System installation"],
-//             "hybrid": ["Preventive maintenance", "Flexible coverage"]
-//           },
-//           "industries": {
-//             "primary": ["BFSI", "Healthcare", "Manufacturing", "Government"],
-//             "additional": ["Education", "Retail", "IT Services"]
-//           }
-//         },
-
-//         {
-//           "id": "c",
-//           "title": "Annual Maintenance Contracts (AMC)",
-//           "slug": "annual-maintenance-contracts",
-//           "overview": "Long-term IT maintenance and system health management.",
-//           "maintenanceTypes": {
-//             "hardware": ["Preventive maintenance", "Repairs"],
-//             "software": ["Updates", "Bug fixes"],
-//             "network": ["Monitoring", "Backup"],
-//             "reporting": ["System health reports"]
-//           },
-//           "industries": {
-//             "primary": ["BFSI", "Healthcare", "Manufacturing", "Government"],
-//             "additional": ["Education", "Retail", "IT Services"]
-//           }
-//         }
-//       ]
-//     },
-
-//     {
-//       "id": 5,
-//       "title": "DevOps & Automation",
-//       "slug": "devops-automation",
-//       "sections": [
-//         {
-//           "id": "a",
-//           "title": "CI/CD Pipeline Implementation",
-//           "slug": "cicd-pipeline",
-//           "overview": "Automated pipelines for fast and reliable software delivery.",
-//           "solutionTypes": [
-//             "Automated builds",
-//             "Automated testing",
-//             "Multi-environment deployments",
-//             "Release automation"
-//           ],
-//           "industries": {
-//             "primary": ["IT Services", "SaaS", "BFSI", "Healthcare", "Government"],
-//             "additional": ["Retail", "Manufacturing", "Education"]
-//           }
-//         },
-
-//         {
-//           "id": "b",
-//           "title": "Infrastructure as Code (IaC)",
-//           "slug": "infrastructure-as-code",
-//           "overview": "Automated infrastructure provisioning using code.",
-//           "solutionTypes": [
-//             "Cloud provisioning",
-//             "Version controlled infrastructure",
-//             "Environment replication",
-//             "Hybrid cloud automation"
-//           ],
-//           "industries": {
-//             "primary": ["IT Services", "SaaS", "BFSI", "Healthcare", "Government"],
-//             "additional": ["Retail", "Manufacturing", "Education"]
-//           }
-//         },
-
-//         {
-//           "id": "c",
-//           "title": "Docker & Kubernetes Services",
-//           "slug": "docker-kubernetes",
-//           "overview": "Containerized deployment and orchestration solutions.",
-//           "solutionTypes": [
-//             "Docker containers",
-//             "Kubernetes clusters",
-//             "Microservices orchestration",
-//             "Auto scaling"
-//           ],
-//           "industries": {
-//             "primary": ["IT Services", "SaaS", "BFSI", "Healthcare", "Government"],
-//             "additional": ["Retail", "Manufacturing", "Education"]
-//           }
-//         },
-
-//         {
-//           "id": "d",
-//           "title": "Monitoring & Logging Solutions",
-//           "slug": "monitoring-logging",
-//           "overview": "System performance monitoring and centralized logging.",
-//           "solutionTypes": [
-//             "Real-time monitoring",
-//             "Log management",
-//             "Alert systems",
-//             "Incident analysis"
-//           ],
-//           "industries": {
-//             "primary": ["IT Services", "SaaS", "BFSI", "Healthcare", "Government"],
-//             "additional": ["Retail", "Manufacturing", "Education"]
-//           }
-//         },
-
-//         {
-//           "id": "e",
-//           "title": "Release & Deployment Management",
-//           "slug": "release-deployment-management",
-//           "overview": "Controlled release planning and deployment automation.",
-//           "solutionTypes": [
-//             "Release planning",
-//             "Automated deployment",
-//             "Rollback strategies",
-//             "Version management"
-//           ],
-//           "industries": {
-//             "primary": ["IT Services", "SaaS", "BFSI", "Healthcare", "Government"],
-//             "additional": ["Retail", "Manufacturing", "Education"]
-//           }
-//         }
-//       ]
-//     }
-//   ]
-// }
 export const ServiceDetails = {
   categories: [
     {
@@ -916,7 +359,7 @@ export const ServiceDetails = {
           title: "Data Migration",
           slug: "data-migration",
           overview:
-            "Securely transferring data from legacy systems to modern environments while maintaining 100% accuracy and integrity.",
+            "We enable organizations to transform raw data into meaningful insights through structured, reliable, and analytics-ready data platforms. ",
           groups: [
             {
               label: "Migration Types",
@@ -929,6 +372,40 @@ export const ServiceDetails = {
             },
           ],
           industries: ["BFSI", "Government", "Healthcare", "Manufacturing"],
+        },
+        {
+          id: "3d",
+          title: "Data Warehousing",
+          slug: "data-warehousing",
+          overview:
+            "Structuring and refining databases to ensure efficient storage, fast query performance, and long-term scalability.",
+          groups: [
+            {
+              label: "Enterprise Data Warehouses ",
+              items: [
+                "Centralized enterprise data warehouses",
+                "Consolidation of operational and transactional data ",
+                "Historical data storage and trend analysis platforms ",
+              ],
+            },
+            {
+              label: "Analytics & Reporting Warehouses ",
+              items: [
+                "Reporting-focused data warehouses",
+                "Business intelligence and analytics data platforms",
+                "Performance and KPI tracking repositories",
+              ],
+            },
+            {
+              label: "Compliance & Governance Data Platforms  ",
+              items: [
+                "Audit-ready and traceable data warehouses",
+                "Regulatory and compliance reporting data stores ",
+                "Data governance and access-controlled warehouses",
+              ],
+            },
+          ],
+          industries: ["SaaS", "BFSI", "Healthcare", "Retail", "Manufacturing"],
         },
       ],
     },
@@ -978,6 +455,52 @@ export const ServiceDetails = {
             "Government",
           ],
         },
+        {
+          id: "4b",
+          title: "Remote & Onsite Support",
+          slug: "remote-onsite-support",
+          overview:
+            "Remote & Onsite Support ensures continuous IT operations by resolving issues through real-time remote assistance and on-site interventions, helping businesses maintain productivity and operational efficiency.",
+          groups: [
+            {
+              label: "Remote Support",
+              items: [
+                "Real-time troubleshooting for software and systems",
+                "Network and connectivity issue resolution",
+                "Remote monitoring and proactive alerts",
+              ],
+            },
+            {
+              label: "Onsite Support",
+              items: [
+                "Hardware repair and replacement",
+                "System installation and upgrades",
+                "Critical incident management and recovery",
+              ],
+            },
+            {
+              label: "Hybrid Support Models",
+              items: [
+                "Combination of remote and onsite coverage",
+                "Scheduled preventive maintenance visits",
+                "Flexible support for peak and off-peak periods",
+              ],
+            },
+          ],
+          industries: [
+            "BFSI",
+            "Healthcare & Life Sciences",
+            "Manufacturing & Supply Chain",
+            "Government & Public Sector",
+            "IT & Technology Services",
+            "Education & EdTech",
+            "Retail & E-commerce",
+            "Logistics & Transportation",
+            "Telecom & Utilities",
+            "Professional Services",
+          ],
+        },
+
         {
           id: "4c",
           title: "Annual Maintenance Contracts (AMC)",
@@ -1036,6 +559,38 @@ export const ServiceDetails = {
           ],
         },
         {
+          id: "5b",
+          title: "Infrastructure as Code (IaC)",
+          slug: "infrastructure-as-code",
+          overview:
+            "Infrastructure as Code (IaC) enables organizations to define, provision, and manage IT infrastructure using automation and code, ensuring consistent, scalable, and error-free deployments while reducing operational overhead.",
+          groups: [
+            {
+              label: "IaC Solutions",
+              items: [
+                "Automated infrastructure provisioning and configuration",
+                "Version-controlled infrastructure definitions",
+                "Environment replication for Dev, QA, and Production",
+                "Cloud infrastructure management and optimization",
+                "Hybrid and multi-cloud infrastructure automation",
+              ],
+            },
+          ],
+          industries: [
+            "IT & Technology Services",
+            "SaaS & Product Companies",
+            "BFSI",
+            "Healthcare & Life Sciences",
+            "Government & Public Sector",
+            "Retail & E-commerce",
+            "Manufacturing & Supply Chain",
+            "Education & EdTech",
+            "Logistics & Transportation",
+            "Professional Services",
+          ],
+        },
+
+        {
           id: "5c",
           title: "Docker & Kubernetes Services",
           slug: "docker-kubernetes",
@@ -1058,6 +613,68 @@ export const ServiceDetails = {
             "BFSI",
             "Healthcare",
             "Government",
+          ],
+        },
+        {
+          id: "5d",
+          title: "Monitoring & Logging Solutions",
+          slug: "monitoring-logging-solutions",
+          overview:
+            "Monitoring & Logging Solutions provide real-time visibility into applications, infrastructure, and services, enabling proactive issue detection, performance optimization, and faster incident response to ensure business continuity.",
+          groups: [
+            {
+              label: "Monitoring & Logging Solutions",
+              items: [
+                "Real-time application and infrastructure monitoring",
+                "Centralized log collection and analysis",
+                "Alerts and notifications for system anomalies",
+                "Performance and SLA tracking dashboards",
+                "Root-cause analysis and incident reporting",
+              ],
+            },
+          ],
+          industries: [
+            "IT & Technology Services",
+            "SaaS & Product Companies",
+            "BFSI",
+            "Healthcare & Life Sciences",
+            "Government & Public Sector",
+            "Retail & E-commerce",
+            "Manufacturing & Supply Chain",
+            "Education & EdTech",
+            "Logistics & Transportation",
+            "Professional Services",
+          ],
+        },
+        {
+          id: "5e",
+          title: "Release & Deployment Management",
+          slug: "release-deployment-management",
+          overview:
+            "Release & Deployment Management ensures controlled, reliable, and efficient software delivery to production environments by reducing deployment risks, improving release quality, and enhancing lifecycle transparency.",
+          groups: [
+            {
+              label: "Release & Deployment Services",
+              items: [
+                "Release planning and orchestration",
+                "Automated deployment to multiple environments",
+                "Version management and rollback strategies",
+                "Deployment governance and approval workflows",
+                "Coordination between development, QA, and operations teams",
+              ],
+            },
+          ],
+          industries: [
+            "IT & Technology Services",
+            "SaaS & Product Companies",
+            "BFSI",
+            "Healthcare & Life Sciences",
+            "Government & Public Sector",
+            "Retail & E-commerce",
+            "Manufacturing & Supply Chain",
+            "Education & EdTech",
+            "Logistics & Transportation",
+            "Professional Services",
           ],
         },
       ],
