@@ -87,7 +87,7 @@ useEffect(() => {
             <button
               key={section.id}
               onClick={() => setActiveTab(section.slug)}
-              className={`px-8 py-6 text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap relative ${
+              className={`px-8 py-6 text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap relative cursor-pointer ${
                 activeTab === section.slug
                   ? "text-black"
                   : "text-neutral-500 hover:text-black"
@@ -97,7 +97,7 @@ useEffect(() => {
               {activeTab === section.slug && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-black"
+                  className="absolute bottom-0 left-0 right-0 h-1 bg-black "
                 />
               )}
             </button>

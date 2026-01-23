@@ -728,7 +728,7 @@ const industriesData: Industry[] = [
     title: "API Development & Integration That Connects Your Ecosystem",
     slug: "api-development-integration",
     desc: "Build Seamless Integrations and Unlock Data Flow Across Your Platforms",
-    banner: "/IT_Solutions_Development_f3428b90.png",
+    banner: "/34bcde35-3cba-43cb-90ef-7d0ea5080a62.png",
     stats: [
       { value: "10k%", label: "APIs Integrated" },
       { value: "99.9%", label: "Uptime Guaranteed" },
@@ -1167,6 +1167,8 @@ export default function ServiceDetails() {
   // whyChoose split
   const whyLeft = industry.whyChoose.slice(0, 2);
   const whyRight = industry.whyChoose.slice(2, 4);
+  //our solutions
+  const isCarousel = industry.products.length > 3;
 
   return (
     <div className="relative min-h-screen">
@@ -1186,7 +1188,6 @@ export default function ServiceDetails() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 sm:gap-8 lg:gap-12"
             >
-              {/* Left side title */}
               <div className="lg:flex-1">
                 <motion.h1
                   initial={{ y: 30, opacity: 0 }}
@@ -1215,7 +1216,6 @@ export default function ServiceDetails() {
                   transition={{ delay: 0.6, duration: 0.8 }}
                   className="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 mt-4 sm:mt-6"
                 >
-                  {/* Contact button */}
                   <motion.div
                     whileTap={{ scale: 0.95 }}
                     className="relative overflow-hidden rounded-lg bg-black px-10 sm:px-6 py-2.5 xs:py-3 sm:py-3 text-white font-medium group cursor-pointer"
@@ -1229,7 +1229,6 @@ export default function ServiceDetails() {
                     <span className="absolute inset-0 rounded-lg bg-lime-500 transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
                   </motion.div>
 
-                  {/* Stats */}
                   <div className="flex flex-row gap-4 xs:gap-6 sm:gap-8 text-start md:text-center">
                     {industry.stats.map((item, index) => (
                       <div key={index}>
@@ -1245,7 +1244,6 @@ export default function ServiceDetails() {
                 </motion.div>
               </div>
 
-              {/* Right side - Hero image */}
               <motion.div
                 initial={{ opacity: 0, x: 80 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -1268,15 +1266,15 @@ export default function ServiceDetails() {
                     src={industry.banner}
                     alt={industry.title}
                     fill
-                    className="w-full relative z-10 rounded-2xl"
+                    className=" w-full relative z-10 rounded-2xl"
                     priority
-                    sizes="(max-width: 640px) 250px, (max-width: 768px) 280px, (max-width: 1024px) 350px, (max-width: 1280px) 400px, 450px"
                   />
                 </div>
               </motion.div>
             </motion.div>
           </div>
         </section>
+        
 
         {/* Why Choose Section - Updated with AboutUs styles */}
         <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
@@ -1494,6 +1492,7 @@ export default function ServiceDetails() {
         </section>
 
         {/* Products Carousel Section */}
+
         <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-28">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -1513,29 +1512,37 @@ export default function ServiceDetails() {
             </motion.div>
 
             <div className="relative">
-              <button
-                onClick={scrollLeft}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 xs:-translate-x-3 sm:-translate-x-4 bg-white shadow-xs p-2 xs:p-3 rounded-full z-10 hover:bg-gray-50 transition-colors"
-                aria-label="Scroll left"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1.2em"
-                  height="1.2em"
-                  className="w-4 h-4 xs:w-5 xs:h-5"
-                  viewBox="0 0 24 24"
+              {isCarousel && (
+                <button
+                  onClick={scrollLeft}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 xs:-translate-x-3 sm:-translate-x-4 bg-white shadow-xs p-2 xs:p-3 rounded-full z-10 hover:bg-gray-50 transition-colors"
+                  aria-label="Scroll left"
                 >
-                  <path
-                    fill="currentColor"
-                    d="M6.325 12.85q-.225-.15-.337-.375T5.874 12t.113-.475t.337-.375l8.15-5.175q.125-.075.263-.112T15 5.825q.4 0 .7.288t.3.712v10.35q0 .425-.3.713t-.7.287q-.125 0-.262-.038t-.263-.112z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.2em"
+                    height="1.2em"
+                    className="w-4 h-4 xs:w-5 xs:h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M6.325 12.85q-.225-.15-.337-.375T5.874 12t.113-.475t.337-.375l8.15-5.175q.125-.075.263-.112T15 5.825q.4 0 .7.288t.3.712v10.35q0 .425-.3.713t-.7.287q-.125 0-.262-.038t-.263-.112z"
+                    />
+                  </svg>
+                </button>
+              )}
 
               <div
                 ref={scrollRef}
-                className="flex gap-4 xs:gap-5 sm:gap-6 overflow-x-auto px-2 pb-4 scroll-smooth"
-                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                className={`flex gap-4 xs:gap-5 sm:gap-6 px-2 pb-4 scroll-smooth
+    ${isCarousel ? "overflow-x-auto justify-start" : "justify-center"}
+  `}
+                style={
+                  isCarousel
+                    ? { scrollbarWidth: "none", msOverflowStyle: "none" }
+                    : { overflow: "hidden" }
+                }
               >
                 {industry.products.map((product, index) => (
                   <motion.div
@@ -1544,7 +1551,9 @@ export default function ServiceDetails() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="min-w-[240px] xs:min-w-[260px] sm:min-w-[280px] flex-shrink-0 bg-white shadow-xs rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200"
+                    className={`bg-white shadow-xs rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 border border-neutral-200
+  ${isCarousel ? "min-w-[240px] xs:min-w-[260px] sm:min-w-[280px] flex-shrink-0" : "w-[260px]"}
+`}
                   >
                     <div className="relative  w-full h-36 xs:h-40 sm:h-48 rounded-lg xs:rounded-xl flex items-center justify-center mb-4 xs:mb-5 sm:mb-6">
                       <Image
@@ -1575,27 +1584,28 @@ export default function ServiceDetails() {
                   </motion.div>
                 ))}
               </div>
-
-              <button
-                onClick={scrollRight}
-                className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 translate-x-2 xs:translate-x-3 sm:translate-x-4 bg-white shadow-xs p-2 xs:p-3 rounded-full z-10 hover:bg-gray-50 transition-colors"
-                aria-label="Scroll right"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1.2em"
-                  height="1.2em"
-                  className="w-4 h-4 xs:w-5 xs:h-5"
-                  viewBox="0 0 24 24"
+              {isCarousel && (
+                <button
+                  onClick={scrollRight}
+                  className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 translate-x-2 xs:translate-x-3 sm:translate-x-4 bg-white shadow-xs p-2 xs:p-3 rounded-full z-10 hover:bg-gray-50 transition-colors"
+                  aria-label="Scroll right"
                 >
-                  <g transform="rotate(180 12 12)">
-                    <path
-                      fill="currentColor"
-                      d="M6.325 12.85q-.225-.15-.337-.375T5.874 12t.113-.475t.337-.375l8.15-5.175q.125-.075.263-.112T15 5.825q.4 0 .7.288t.3.712v10.35q0 .425-.3.713t-.7.287q-.125 0-.262-.038t-.263-.112z"
-                    />
-                  </g>
-                </svg>
-              </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.2em"
+                    height="1.2em"
+                    className="w-4 h-4 xs:w-5 xs:h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <g transform="rotate(180 12 12)">
+                      <path
+                        fill="currentColor"
+                        d="M6.325 12.85q-.225-.15-.337-.375T5.874 12t.113-.475t.337-.375l8.15-5.175q.125-.075.263-.112T15 5.825q.4 0 .7.288t.3.712v10.35q0 .425-.3.713t-.7.287q-.125 0-.262-.038t-.263-.112z"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              )}
             </div>
           </div>
         </section>

@@ -32,7 +32,7 @@ const services = [
       },
       {
         text: "Mobile app development (Android / iOS)",
-        icon: <Smartphone size={16} />,
+        icon: <Smartphone size={16} className="text-lime-500" />,
       },
       {
         text: "SaaS & PaaS development",
