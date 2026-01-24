@@ -126,7 +126,7 @@ const ServiceSection: React.FC = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.3 }}
-      className="md:py-10 py-3"
+      className="md:py-4 py-3"
     >
       <section className="w-full py-10 md:mb-16 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
