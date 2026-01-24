@@ -4,17 +4,17 @@ import Image from "next/image";
 import { motion, easeOut } from "framer-motion";
 
 const firstRow = [
-  { src: "/intercomn.jpg", alt: "Intercom" },
-  { src: "/deliver.jpg", alt: "Deliveroo" },
-  { src: "/ventures.jpg", alt: "Ventures" },
-  { src: "/Monzo.jpg", alt: "Monzo" },
+  { src: "/2.png", alt: "Intercom" },
+  { src: "/3.png", alt: "Deliveroo" },
+  { src: "/4.png", alt: "Ventures" },
+  { src: "/5.png", alt: "Monzo" },
 ];
 
 const secondRow = [
-  { src: "/Gocardles.jpg", alt: "GoCardless" },
-  { src: "/snyk.jpg", alt: "Snyk" },
-  { src: "/comply.jpg", alt: "Comply Advantage" },
-  { src: "/UI_path.jpg", alt: "UiPath" },
+  { src: "/6.png", alt: "GoCardless" },
+  { src: "/7.png", alt: "Snyk" },
+  { src: "/8.png", alt: "Comply Advantage" },
+  { src: "/9.png", alt: "UiPath" },
 ];
 
 // Animation variants
@@ -39,7 +39,10 @@ const logoVariant = {
 
 export default function InvestorsSection() {
   return (
-    <section id="investors-section" className="py-8 sm:py-10 md:py-12 overflow-hidden">
+    <section
+      id="investors-section"
+      className="py-8 sm:py-10 md:py-12 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 text-center">
         {/* HEADING */}
         <motion.h2
@@ -66,14 +69,14 @@ export default function InvestorsSection() {
               key={i}
               variants={logoVariant}
               whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
-              className="opacity-90 grayscale flex justify-center items-center transition-all duration-300 p-1 xs:p-2"
+              className="  opacity-90 grayscale flex justify-center items-center transition-all duration-300 p-1 xs:p-2"
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={160}
                 height={60}
-                className="object-contain w-[70px] h-[25px] xs:w-[80px] xs:h-[30px] sm:w-[90px] sm:h-[35px] md:w-[110px] md:h-[45px] lg:w-[130px] lg:h-[50px] xl:w-[160px] xl:h-[60px]"
+                className="object-contain  w-[70px] h-[25px] xs:w-[80px] xs:h-[30px] sm:w-[90px] sm:h-[35px] md:w-[110px] md:h-[45px] lg:w-[230px] lg:h-[100px] xl:w-[190px] xl:h-[80px]"
                 sizes="(max-width: 640px) 70px, (max-width: 768px) 90px, (max-width: 1024px) 110px, (max-width: 1280px) 130px, 160px"
               />
             </motion.div>
@@ -93,14 +96,14 @@ export default function InvestorsSection() {
               key={i}
               variants={logoVariant}
               whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
-              className="opacity-90 grayscale flex justify-center items-center transition-all duration-300 p-1 xs:p-2"
+              className=" opacity-90 grayscale flex justify-center items-center transition-all duration-300 p-1 xs:p-2"
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={140}
                 height={50}
-                className="object-contain w-[60px] h-[20px] xs:w-[70px] xs:h-[25px] sm:w-[80px] sm:h-[30px] md:w-[90px] md:h-[35px] lg:w-[110px] lg:h-[40px] xl:w-[130px] xl:h-[50px]"
+                className=" object-contain w-[60px] h-[20px] xs:w-[70px] xs:h-[25px] sm:w-[80px] sm:h-[30px] md:w-[90px] md:h-[35px] lg:w-[110px] lg:h-[40px] xl:w-[190px] xl:h-[80px]"
                 sizes="(max-width: 640px) 60px, (max-width: 768px) 80px, (max-width: 1024px) 90px, (max-width: 1280px) 110px, 130px"
               />
             </motion.div>
