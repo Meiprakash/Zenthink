@@ -9,6 +9,7 @@ import BlogSection from "./components/Blog";
 import ConnectSection from "./components/ConnectUs";
 import Footer from "./components/Footer";
 import Navbar from "./components/navbar/Navbar";
+import CookieConsent from "./components/CookieConsent";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         {/* <BlogSection /> */}
         <ConnectSection />
         <Footer />
+        <CookieConsent/>
       </div>
     </div>
   );
