@@ -4,6 +4,7 @@ import React, { useState , useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Link as LinkIcon, ChevronRight } from "lucide-react";
 
 const services = [
@@ -12,34 +13,41 @@ const services = [
     shortDesc:
       "Custom software, web, and mobile solutions tailored to your business.",
     icon: "/service-card-01.jpg",
-    link: "/service/details/software-development",
+    // link: "/service/details/software-development",
+    link: "/service/newservices/software-development",
     fullContent: {
       intro:
         "Custom solutions to power your business through innovative software, web, and mobile applications.",
       points: [
         {
           name: "Custom software development ",
-          link: "/service/details/software-development/custom-software-development",
+          link: "/service/newservices/software-development/custom-software-development",
+          // link: "/service/details/software-development/custom-software-development",
         },
         {
           name: "Web application & Website development",
-          link: "/service/details/software-development/web-application-development",
+          link: "/service/newservices/software-development/web-application-development",
+          // link: "/service/details/software-development/web-application-development",
         },
         {
           name: "Mobile App Development",
-          link: "/service/details/software-development/mobile-app-development",
+          link: "/service/newservices/software-development/mobile-app-development",
+          // link: "/service/details/software-development/mobile-app-development",
         },
         {
           name: "SaaS & PaaS Development",
-          link: "/service/details/software-development/saas-paas-development",
+          // link: "/service/details/software-development/saas-paas-development",
+          link: "/service/newservices/software-development/saas-paas-development",
         },
         {
           name: "Website Design & Development",
-          link: "/service/details/software-development/website-design-development",
+          link: "/service/newservices/software-development/website-design-development",
+          // link: "/service/details/software-development/website-design-development",
         },
         {
           name: "Legacy system modernization",
-          link: "/service/details/software-development/legacy-system-modernization",
+          link: "/service/newservices/software-development/legacy-system-modernization",
+          // link: "/service/details/software-development/legacy-system-modernization",
         },
       ],
     },
@@ -67,26 +75,31 @@ const services = [
     shortDesc:
       "Structured, secure data solutions ready for analytics and growth.",
     icon: "/service-card-03.jpg",
-    link: "/service/details/database-data-services",
+    // link: "/service/details/database-data-services",
+    link: "/service/newservices/database-data-services",
     fullContent: {
       intro:
         "Ensuring your data is structured, secure, and always ready for business intelligence.",
       points: [
         {
           name: "Database as a Service ",
-          link: "/service/details/database-data-services/dbaas",
+          link: "/service/newservices/database-data-services/dbaas",
+          // link: "/service/details/database-data-services/dbaas",
         },
         {
           name: "Database design & optimization",
-          link: "/service/details/database-data-services/database-design-optimization",
+          link: "/service/newservices/database-data-services/database-design-optimization",
+          // link: "/service/details/database-data-services/database-design-optimization",
         },
         {
           name: "Data migration",
-          link: "/service/details/database-data-services/data-migration",
+          link: "/service/newservices/database-data-services/data-migration",
+          // link: "/service/details/database-data-services/data-migration",
         },
         {
           name: "Data warehousing",
-          link: "/service/details/database-data-services/data-warehousing",
+          link: "/service/newservices/database-data-services/data-warehousing",
+          // link: "/service/details/database-data-services/data-warehousing",
         },
       ],
     },
@@ -95,22 +108,26 @@ const services = [
     title: "IT Support & Maintenance",
     shortDesc: "Reliable IT systems with proactive monitoring and support.",
     icon: "/service-card-04.jpg",
-    link: "/service/details/it-support-maintenance",
+    link: "/service/newservices/it-support-maintenance",
+    // link: "/service/details/it-support-maintenance",
     fullContent: {
       intro:
         "Keeping your IT systems reliable, secure, and running smoothly at all times.",
       points: [
         {
           name: "IT helpdesk support (L1 / L2 / L3)",
-          link: "/service/details/it-support-maintenance/it-helpdesk-support",
+          link: "/service/newservices/it-support-maintenance/it-helpdesk-support",
+          // link: "/service/details/it-support-maintenance/it-helpdesk-support",
         },
         {
           name: " Remote & Onsite Support ",
-          link: "/service/details/it-support-maintenance/remote-onsite-support",
+          link: "/service/newservices/it-support-maintenance/remote-onsite-support",
+          // link: "/service/details/it-support-maintenance/remote-onsite-support",
         },
         {
           name: "Annual Maintenance Contracts (AMC)",
-          link: "/service/details/it-support-maintenance/annual-maintenance-contracts",
+          link: "/service/newservices/it-support-maintenance/annual-maintenance-contracts",
+          // link: "/service/details/it-support-maintenance/annual-maintenance-contracts",
         },
       ],
     },
@@ -119,30 +136,36 @@ const services = [
     title: "DevOps & Automation",
     shortDesc: "Accelerate delivery with automation and CI/CD pipelines.",
     icon: "/service-card-02.jpg",
-    link: "/service/details/devops-automation",
+    link: "/service/newservices/devops-automation",
+    // link: "/service/details/devops-automation",
     fullContent: {
       intro:
         "Accelerating software delivery while ensuring reliability, scalability, and efficiency.",
       points: [
         {
           name: "CI/CD pipeline implementation",
-          link: "/service/details/devops-automation/cicd-pipeline",
+          link: "/service/newservices/devops-automation/cicd-pipeline",
+          // link: "/service/details/devops-automation/cicd-pipeline",
         },
         {
           name: "Infrastructure as Code (IaC)",
-          link: "/service/details/devops-automation/infrastructure-as-code",
+          link: "/service/newservices/devops-automation/infrastructure-as-code",
+          // link: "/service/details/devops-automation/infrastructure-as-code",
         },
         {
           name: "Docker & Kubernetes services",
-          link: "/service/details/devops-automation/docker-kubernetes",
+          link: "/service/newservices/devops-automation/docker-kubernetes",
+          // link: "/service/details/devops-automation/docker-kubernetes",
         },
         {
           name: "Monitoring & logging solutions",
-          link: "/service/details/devops-automation/monitoring-logging-solutions",
+          link: "/service/newservices/devops-automation/monitoring-logging-solutions",
+          // link: "/service/details/devops-automation/monitoring-logging-solutions",
         },
         {
           name: "Release & deployment management",
-          link: "/service/details/devops-automation/release-deployment-management",
+          link: "/service/newservices/devops-automation/release-deployment-management",
+          // link: "/service/details/devops-automation/release-deployment-management",
         },
       ],
     },
@@ -152,6 +175,7 @@ const services = [
 
 const ServiceItems = () => {
   const [activeService, setActiveService] = useState<any>(null);
+   const router = useRouter();
   const ServicePage = () => {
     useEffect(() => {
       const hash = window.location.hash;
@@ -194,10 +218,10 @@ const ServiceItems = () => {
             const isFirstRow = index < 3;
 
             return (
-              <motion.div
-                key={index}
-                whileHover={{ y: -6 }}
-                className={`
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -6 }}
+                  className={`
                   group
                   border border-neutral-200 rounded-3xl p-5 sm:p-7
                   flex flex-col justify-between
@@ -205,44 +229,46 @@ const ServiceItems = () => {
                   transition-all
                   lg:col-span-2
                 `}
-              >
-                <span
-                  className="cursor-pointer"
-                  key={index}
-                  onClick={() => setActiveService(service)}
-                >
-                  <div className="">
-                    <h3 className="text-lg md:text-2xl font-semibold mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-neutral-600 text-sm">
-                      {service.shortDesc}
-                    </p>
-                  </div>
-                  <div className="flex gap-37 sm:gap-25 lg:gap-90 mt-13 ">
-                    <Image
-                      src={service.icon}
-                      alt={service.title}
-                      width={40}
-                      height={40}
-                      className="opacity-90"
-                    />
-                    <span
-                      // onClick={() => setActiveService(service)}
-                      className="text-black cursor-pointer py-1 p-2 rounded-2xl w-fit flex gap-1 transform transition-all duration-500 ease-in-out group-hover:gap-3 group-hover:text-lime-500"
-                    >
-                      Read more
+                >              <Link href={service.link}>
+
+                  <span
+                    className="cursor-pointer"
+                    key={index}
+                    // onClick={() =>router.push() }
+                  >
+                    <div className="">
+                      <h3 className="text-lg md:text-2xl font-semibold mb-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-neutral-600 text-sm">
+                        {service.shortDesc}
+                      </p>
+                    </div>
+                    <div className="flex gap-37 sm:gap-25 lg:gap-90 mt-13 ">
                       <Image
-                        src="/arrow2.png"
-                        alt="arrow"
-                        width={15}
-                        height={4}
-                        className="mt-1.5 w-4 h-3.5"
+                        src={service.icon}
+                        alt={service.title}
+                        width={40}
+                        height={40}
+                        className="opacity-90"
                       />
-                    </span>
-                  </div>
-                </span>
-              </motion.div>
+                      <span
+                        // onClick={() => setActiveService(service)}
+                        className="text-black cursor-pointer py-1 p-2 rounded-2xl w-fit flex gap-1 transform transition-all duration-500 ease-in-out group-hover:gap-3 group-hover:text-lime-500"
+                      >
+                        Read more
+                        <Image
+                          src="/arrow2.png"
+                          alt="arrow"
+                          width={15}
+                          height={4}
+                          className="mt-1.5 w-4 h-3.5"
+                        />
+                      </span>
+                    </div>
+                  </span>
+              </Link>
+                </motion.div>
             );
           })}
         </div>
@@ -283,38 +309,7 @@ const ServiceItems = () => {
               </p>
 
               {/* POINTS */}
-              {/* <ul className=" space-y-2 text-sm text-neutral-700">
-                {activeService.fullContent.points.map(
-                  (point: any, i: number) => (
-                    <li
-                      className="flex gap-2 hover:text-lime-500 transition"
-                      key={i}
-                    >
-                      <Image
-                        src="/link.png"
-                        alt="link"
-                        width={7}
-                        height={100}
-                        className="opacity-90 w-3 h-3 mt-2 hover:text-lime-500"
-                      />
-                      <Link
-                        href={point.link}
-                        className="hover:ml-2 transition  flex gap-2 p-1"
-                        onClick={() => setActiveService(null)}
-                      >
-                        {point.name}
-                        <Image
-                          src="/right.png"
-                          alt="link"
-                          width={7}
-                          height={100}
-                          className=" text-black w-3 h-3 mt-1 "
-                        />
-                      </Link>
-                    </li>
-                  ),
-                )}
-              </ul> */}
+             
               <ul className="space-y-2 text-sm text-neutral-700">
                 {activeService.fullContent.points.map(
                   (point: any, i: number) => (

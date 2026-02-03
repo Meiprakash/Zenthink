@@ -161,7 +161,7 @@ const ServiceSection: React.FC = () => {
                 <div
                   key={index}
                   className={`
-                    border border-neutral-200 hover:shadow-xl
+                    border cursor-pointer border-neutral-200 hover:shadow-xl
                     rounded-3xl p-4 sm:p-7
                     flex flex-col justify-between
                     duration-500
