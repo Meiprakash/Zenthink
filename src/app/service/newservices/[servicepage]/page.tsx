@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/app/components/navbar/Navbar";
 import Footer from "@/app/components/Footer";
+import Link from "next/link";
 
 // Standardized Data for all Service Pages
 const ServiceData = [
@@ -76,31 +77,37 @@ const ServiceData = [
       {
         id: "1.1",
         name: "Custom Software",
+        link: "/service/newservices/software-development/custom-software-development",
         desc: "Tailor-made solutions designed for your unique workflows. No off-the-shelf limitations — just pure functionality built to give you a competitive edge.",
       },
       {
         id: "1.2",
         name: "Web Applications",
+        link: "/service/newservices/software-development/web-application-development",
         desc: "High-performance, browser-based applications (SPAs and PWAs) that offer a desktop-like experience with the accessibility of the web.",
       },
       {
         id: "1.3",
         name: "Mobile Applications",
+        link: "/service/newservices/software-development/mobile-app-development",
         desc: "Native and cross-platform (Flutter and React Native) mobile solutions that prioritize user engagement and sleek, intuitive interfaces.",
       },
       {
         id: "1.4",
         name: "SaaS & PaaS Solutions",
+        link: "/service/newservices/software-development/saas-paas-development",
         desc: "Multi-tenant architectures and cloud-based platforms that scale effortlessly, enabling global software delivery.",
       },
       {
         id: "1.5",
         name: "Website Development",
+        link: "/service/newservices/software-development/website-design-development",
         desc: "High-converting, SEO-optimized, and responsive websites that serve as your brand's digital headquarters.",
       },
       {
         id: "1.6",
         name: "Legacy Modernization",
+        link: "/service/newservices/software-development/legacy-system-modernization",
         desc: "Modernizing aging systems by migrating to the cloud, refactoring code, and improving UI without disrupting operations.",
       },
     ],
@@ -171,21 +178,25 @@ const ServiceData = [
       {
         id: "2.1",
         name: "DBaaS",
+        link: "/service/newservices/database-data-services/dbaas",
         desc: "Fully managed, cloud-hosted database environments that allow you to focus on application logic while we handle the maintenance.",
       },
       {
         id: "2.2",
         name: "Database Design & Optimization",
+        link: "/service/newservices/database-data-services/database-design-optimization",
         desc: "Architecting new databases from scratch or refactoring existing ones to handle modern scale and speed requirements.",
       },
       {
         id: "2.3",
         name: "Data Migration",
+        link: "/service/newservices/database-data-services/data-migration",
         desc: "Seamlessly moving your mission-critical data between platforms—on-premise to cloud or legacy to modern—with zero data loss.",
       },
       {
         id: "2.4",
         name: "Data Warehousing",
+        link: "/service/newservices/database-data-services/data-warehousing",
         desc: "Consolidating disparate data sources into a single Source of Truth for advanced business intelligence and reporting.",
       },
     ],
@@ -248,16 +259,19 @@ const ServiceData = [
       {
         id: "3.1",
         name: "Helpdesk Support",
+        link: "/service/newservices/it-support-maintenance/it-helpdesk-support",
         desc: "Structured technical assistance categorized by complexity and delivery time..",
       },
       {
         id: "3.2",
         name: " Annual Maintenance Contracts (AMC)",
+        link: "/service/newservices/it-support-maintenance/annual-maintenance-contracts",
         desc: "Comprehensive, fixed-cost agreements for total infrastructure peace of mind.",
       },
       {
         id: "3.3",
         name: "Remote/Onsite Support",
+        link: "/service/newservices/it-support-maintenance/remote-onsite-support",
         desc: "Immediate digital troubleshooting combined with physical intervention. ",
       },
     ],
@@ -326,27 +340,32 @@ const ServiceData = [
       ],
     },
     pillars: [
-  {
-    id: "4.1",
-    name: "CI/CD Pipeline",
-    desc: "Bridging the gap between code and customer with automated delivery."
-  },
-  {
-    id: "4.2",
-    name: "Infrastructure as Code",
-    desc: "Version-controlled, reproducible environments built with code."
-  },
-  {
-    id: "4.3",
-    name: "Docker & Kubernetes",
-    desc: "Microservices orchestration for enterprise-level scaling."
-  },
-  {
-    id: "4.4",
-    name: "Release Management",
-    desc: "Strategic control over how and when your software reaches the world."
-  }
-],
+      {
+        id: "4.1",
+        name: "CI/CD Pipeline",
+        link: "/service/newservices/devops-automation/cicd-pipeline",
+        desc: "Bridging the gap between code and customer with automated delivery.",
+      },
+      {
+        id: "4.2",
+        name: "Infrastructure as Code",
+        link: "/service/newservices/devops-automation/infrastructure-as-code",
+
+        desc: "Version-controlled, reproducible environments built with code.",
+      },
+      {
+        id: "4.3",
+        name: "Docker & Kubernetes",
+        link: "/service/newservices/devops-automation/docker-kubernetes",
+        desc: "Microservices orchestration for enterprise-level scaling.",
+      },
+      {
+        id: "4.4",
+        name: "Release Management",
+        link: "/service/newservices/devops-automation/release-deployment-management",
+        desc: "Strategic control over how and when your software reaches the world.",
+      },
+    ],
 
     trust: [
       {
@@ -413,20 +432,11 @@ export default function DynamicServicePage() {
           {/* By adding the <div> or 'null', the 'Expression Expected' error disappears */}
           {data.slug === "software-development" && <div></div>}
 
-          {data.slug === "database-data-services" && (
-            <div >
-            </div>
-          )}
+          {data.slug === "database-data-services" && <div></div>}
 
-          {data.slug === "it-support-maintenance" && (
-            <div >
-            </div>
-          )}
+          {data.slug === "it-support-maintenance" && <div></div>}
 
-          {data.slug === "devops-automation" && (
-            <div >
-            </div>
-          )}
+          {data.slug === "devops-automation" && <div></div>}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 text-left">
             {data.lifecycle.steps.map((step) => (
@@ -456,35 +466,37 @@ export default function DynamicServicePage() {
           <div className="h-[1px] flex-1 bg-neutral-100" />
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {data.pillars.map((pillar) => (
-            <div
-              key={pillar.id}
-              className="group border border-neutral-100 rounded-[3rem] p-12 hover:bg-black transition-all duration-700"
-            >
-              <div className="flex justify-between items-start mb-12">
-                <div className="w-14 h-14 rounded-2xl bg-neutral-50 flex items-center justify-center group-hover:bg-neutral-800">
-                  <Settings
-                    className="text-black group-hover:text-white"
-                    size={24}
-                  />
-                </div>
-                {/* <span className="text-[10px] font-mono text-neutral-300 group-hover:text-neutral-700">
+            {data.pillars.map((pillar) => (
+              <div
+                key={pillar.id}
+                className="group border border-neutral-100 rounded-[3rem] p-12 hover:bg-black transition-all duration-700"
+              >
+          <Link href={pillar.link}>
+                <div className="flex justify-between items-start mb-12">
+                  <div className="w-14 h-14 rounded-2xl bg-neutral-50 flex items-center justify-center group-hover:bg-neutral-800">
+                    <Settings
+                      className="text-black group-hover:text-white"
+                      size={24}
+                    />
+                  </div>
+                  {/* <span className="text-[10px] font-mono text-neutral-300 group-hover:text-neutral-700">
                   ID_{pillar.id}
                 </span> */}
+                </div>
+                <h3 className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] font-mediumd mb-6  tracking-tighter group-hover:text-white">
+                  {pillar.name}
+                </h3>
+                <p className="text-[12px] md:text-[14px] text-neutral-500 group-hover:text-neutral-400 font-light max-w-sm">
+                  {pillar.desc}
+                </p>
+                <div className="mt-12 overflow-hidden">
+                  <button className="flex items-center gap-3 text-[14px] text-neutral-700  tracking-widest group-hover:text-white transition-all transform group-hover:translate-x-2">
+                    Learn More <ArrowRight size={16} />
+                  </button>
+                </div>
+          </Link>
               </div>
-              <h3 className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] font-mediumd mb-6  tracking-tighter group-hover:text-white">
-                {pillar.name}
-              </h3>
-              <p className="text-[12px] md:text-[14px] text-neutral-500 group-hover:text-neutral-400 font-light max-w-sm">
-                {pillar.desc}
-              </p>
-              <div className="mt-12 overflow-hidden">
-                <button className="flex items-center gap-3 text-[14px] text-neutral-700  tracking-widest group-hover:text-white transition-all transform group-hover:translate-x-2">
-                  Learn More <ArrowRight size={16} />
-                </button>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </section>
 
