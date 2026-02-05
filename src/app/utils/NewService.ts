@@ -2,7 +2,7 @@ export const NewService = {
   categories: [
     {
       page: "Software Development Services",
-slug:"/",
+      slug: "/",
       heroSection: {
         title:
           "Engineering Excellence: Custom Software Solutions Built for Scale",
