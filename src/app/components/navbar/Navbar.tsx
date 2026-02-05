@@ -74,7 +74,7 @@ export default function Navbar() {
           </li>
 
           {/* INDUSTRIES DROPDOWN */}
-          {/* <li className="relative group">
+          <li className="relative group">
             <span
               className={`cursor-pointer hover:text-lime-500 ${isIndustriesActive ? "text-black" : ""}`}
               onMouseEnter={() => setIsIndustriesOpen(true)}
@@ -118,7 +118,7 @@ export default function Navbar() {
                 </div>
               </div>
             )}
-          </li> */}
+          </li>
 
           {/* <li>
             <Link 
@@ -127,8 +127,8 @@ export default function Navbar() {
             >
               Blog
             </Link>
-          </li> */}
-          {/* <li>
+          </li>
+          <li>
             <Link
               href="/contact"
               className={`hover:text-lime-500 ${isActive("/contact") ? "text-black" : ""}`}

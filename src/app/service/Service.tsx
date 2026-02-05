@@ -12,7 +12,7 @@ const services = [
     title: "Software Development Services",
     shortDesc:
       "Custom software, web, and mobile solutions tailored to your business.",
-    icon: "/service-card-01.jpg",
+    icon: "/web-development.png",
     // link: "/service/details/software-development",
     link: "/service/newservices/software-development",
     fullContent: {
@@ -74,7 +74,7 @@ const services = [
     title: "Database & Data Services",
     shortDesc:
       "Structured, secure data solutions ready for analytics and growth.",
-    icon: "/service-card-03.jpg",
+    icon: "/database.png",
     // link: "/service/details/database-data-services",
     link: "/service/newservices/database-data-services",
     fullContent: {
@@ -107,7 +107,7 @@ const services = [
   {
     title: "IT Support & Maintenance",
     shortDesc: "Reliable IT systems with proactive monitoring and support.",
-    icon: "/service-card-04.jpg",
+    icon: "/it-department.png",
     link: "/service/newservices/it-support-maintenance",
     // link: "/service/details/it-support-maintenance",
     fullContent: {
@@ -135,7 +135,7 @@ const services = [
   {
     title: "DevOps & Automation",
     shortDesc: "Accelerate delivery with automation and CI/CD pipelines.",
-    icon: "/service-card-02.jpg",
+    icon: "/integration.png",
     link: "/service/newservices/devops-automation",
     // link: "/service/details/devops-automation",
     fullContent: {
@@ -218,10 +218,10 @@ const ServiceItems = () => {
             const isFirstRow = index < 3;
 
             return (
-                <motion.div
-                  key={index}
-                  whileHover={{ y: -6 }}
-                  className={`
+              <motion.div
+                key={index}
+                whileHover={{ y: -6 }}
+                className={`
                   group
                   border border-neutral-200 rounded-3xl p-5 sm:p-7
                   flex flex-col justify-between
@@ -229,15 +229,16 @@ const ServiceItems = () => {
                   transition-all
                   lg:col-span-2
                 `}
-                >              <Link href={service.link}>
-
+              >
+                {" "}
+                <Link href={service.link}>
                   <span
                     className="cursor-pointer"
                     key={index}
                     // onClick={() =>router.push() }
                   >
                     <div className="">
-                      <h3 className="text-lg md:text-2xl font-semibold mb-2">
+                      <h3 className="text-lg md:text-2xl font-semibold mb-2 transform transition-all duration-500 ease-in-out group-hover:text-lime-500">
                         {service.title}
                       </h3>
                       <p className="text-neutral-600 text-sm">
@@ -250,7 +251,7 @@ const ServiceItems = () => {
                         alt={service.title}
                         width={40}
                         height={40}
-                        className="opacity-90"
+                        className="opacity-100 text-black"
                       />
                       <span
                         // onClick={() => setActiveService(service)}
@@ -267,8 +268,8 @@ const ServiceItems = () => {
                       </span>
                     </div>
                   </span>
-              </Link>
-                </motion.div>
+                </Link>
+              </motion.div>
             );
           })}
         </div>

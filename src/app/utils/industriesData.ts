@@ -14,7 +14,7 @@ export const industriesData = [
         slug: "custom-ecommerce-web-development",
         subtitle:
           "Launch a powerful, custom-built online store designed to convert visitors into loyal customers. At ZenThink Technologies Pvt Ltd, our expert ecommerce website development services provide you with a unique digital storefront that perfectly reflects your brand and scales with your business",
-        banner: "/industries.png",
+        banner: "/4ab551fc-238e-4a9f-843e-4a615cb04272.png",
 
         stats: [
           { value: "10M+", label: "Patients Served" },
@@ -184,7 +184,7 @@ export const industriesData = [
         slug: "multi-vendor",
         subtitle:
           "Transform your entrepreneurial vision into a thriving online ecosystem with ZenThink Technologies Pvt Ltd. We specialize in developing the best ecommerce platform solutions for multi-vendor marketplaces, creating robust, scalable, and feature-rich environments that connect sellers with a global customer base.",
-        banner: "/placeholder-product.png",
+        banner: "/4cd3f08f-2a4f-4297-919e-dfef5faa513e.png",
 
         stats: [
           { value: "5M+", label: "App Users" },
@@ -255,7 +255,7 @@ export const industriesData = [
         slug: "inventory-order",
         subtitle:
           "Unlock operational excellence and maximize profitability with a custom inventory management system from ZenThink Technologies Pvt Ltd. In today's competitive retail landscape, success hinges on the ability to have the right product in the right place at the right time. Our bespoke systems move you beyond reactive problem-solving, providing a proactive, data-driven command center that eliminates costly inefficiencies and turns your inventory into a strategic asset.",
-        banner: "/process-card-img-01.webp",
+        banner: "/0901b90e-ae03-4d87-895c-6da1253e7368.png",
 
         stats: [
           { value: "5M+", label: "App Users" },
@@ -342,7 +342,7 @@ export const industriesData = [
         slug: "retail-pos",
         subtitle:
           "Transform your in-store operations with advanced retail POS systems from ZenThink Technologies Pvt Ltd. We build high-performance POS solutions that go far beyond basic billing—empowering your team to accelerate checkout, streamline operations, unlock valuable data insights, and deliver an exceptional customer experience.",
-        banner: "/placeholder-product.png",
+        banner: "/d6821ad2-2688-43ce-9f0e-c6c7d59bf30a.png",
 
         stats: [
           { value: "10K+", label: "Retail Businesses Assisted" },
@@ -437,7 +437,7 @@ export const industriesData = [
         slug: "loyalty-program",
         subtitle:
           "Increase repeat purchases, boost customer lifetime value, and turn casual buyers into loyal brand advocates with our advanced Loyalty Program Software. ZenThink Technologies builds powerful Customer Loyalty & Reward Platforms designed to reward customers at every step and drive sustainable revenue growth.",
-        banner: "/placeholder-product.png",
+        banner: "/a4fcc21a-3525-4409-bfca-934a49dc49f0.png",
 
         stats: [
           { value: "67%", label: "Higher spend from loyal customers" },
@@ -533,7 +533,7 @@ export const industriesData = [
         slug: "ecommerce-mobile-app",
         subtitle:
           "Capture the fast-growing mobile commerce market with high-performance ecommerce mobile apps. At Zenthink Technologies, we build native-like iOS and Android shopping apps using Flutter, delivering seamless, fast, and conversion-focused shopping experiences.",
-        banner: "/placeholder-product.png",
+        banner: "/1e30f1d0-2f22-4558-ae02-3fdb2b7ef7c2.png",
 
         stats: [
           { value: "50%+", label: "Global mobile commerce share" },

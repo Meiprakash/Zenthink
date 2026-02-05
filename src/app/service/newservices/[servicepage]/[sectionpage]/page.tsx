@@ -75,19 +75,6 @@ export default function DynamicServicePage() {
       <main className="flex-grow pt-22 pb-20">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- TOP NAVIGATION BAR --- */}
-          {/* <nav className="flex items-center gap-3 text-sm font-medium text-slate-400 mb-12">
-            <span className="hover:text-lime-500 transition-colors cursor-pointer">
-              Services
-            </span>
-            <ChevronRight size={14} />
-            <span className="hover:text-lime-500 transition-colors cursor-pointer capitalize">
-              {categoryData.title}
-            </span>
-            <ChevronRight size={14} />
-            <span className="text-slate-900 truncate bg-lime-50 px-3 py-1 rounded-full border border-lime-100">
-              {sectionData.title}
-            </span>
-          </nav> */}
 
           {/* --- HERO SECTION --- */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
@@ -109,27 +96,99 @@ export default function DynamicServicePage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="lg:col-span-4 bg-slate-900 p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="lg:col-span-4 relative"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-lime-400/10 blur-[50px] rounded-full" />
-              <Zap className="mb-4 text-lime-400" size={32} />
-              <h3 className="text-lg sm:text-xl font-bold mb-2 text-white">
-                The ZenThink Edge
-              </h3>
-              <p className="text-slate-400 text-[11px] sm:text-sm leading-relaxed mb-6">
-                Proprietary methodologies designed for rapid scalability and
-                enterprise-grade security.
-              </p>
-              <div className="space-y-3 relative z-10">
-                <div className="flex items-center gap-2 text-xs font-bold bg-white/5 border border-white/10 p-2 rounded-lg">
-                  <ShieldCheck size={14} className="text-lime-400" /> 99.9%
-                  Uptime Architecture
-                </div>
-                <div className="flex items-center gap-2 text-xs font-bold bg-white/5 border border-white/10 p-2 rounded-lg">
-                  <ShieldCheck size={14} className="text-lime-400" /> Agile
-                  Delivery Model
+              {/* Modern Technical Blueprint Design */}
+              <div className="bg-white border border-neutral-200 rounded-[2.5rem] p-8 shadow-sm relative overflow-hidden">
+                {/* Subtle Background Decoration */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-lime-400/5 blur-[40px] rounded-full" />
+
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-8">
+                    <div className="w-10 h-10 bg-lime-400 rounded-xl flex items-center justify-center shadow-lg shadow-lime-400/20">
+                      <Cpu size={20} className="text-black" />
+                    </div>
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-400">
+                      Technical Spec
+                    </span>
+                  </div>
+
+                  <div className="space-y-6">
+                    {/* Capability 1 */}
+                    <div className="group/spec">
+                      <div className="flex justify-between items-end mb-2">
+                        <span className="text-xs font-bold text-neutral-900 uppercase tracking-tight">
+                          System Scalability
+                        </span>
+                        <span className="text-[10px] font-mono text-lime-600 font-bold">
+                          L-MAX
+                        </span>
+                      </div>
+                      <div className="h-[2px] w-full bg-neutral-100 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: "100%" }}
+                          transition={{ duration: 1.5, delay: 0.5 }}
+                          className="h-full bg-lime-400"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Capability 2 */}
+                    <div className="group/spec">
+                      <div className="flex justify-between items-end mb-2">
+                        <span className="text-xs font-bold text-neutral-900 uppercase tracking-tight">
+                          Security Protocol
+                        </span>
+                        <span className="text-[10px] font-mono text-lime-600 font-bold">
+                          AES-256
+                        </span>
+                      </div>
+                      <div className="h-[2px] w-full bg-neutral-100 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: "100%" }}
+                          transition={{ duration: 1.5, delay: 0.7 }}
+                          className="h-full bg-lime-400"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Feature Tags */}
+                    <div className="pt-4 grid grid-cols-2 gap-2">
+                      {[
+                        "High-Uptime",
+                        "Agile Flow",
+                        "ISO Ready",
+                        "Cloud Native",
+                      ].map((tag) => (
+                        <div
+                          key={tag}
+                          className="flex items-center gap-2 py-2 px-3 bg-neutral-50 rounded-lg border border-neutral-100 transition-colors hover:border-lime-200"
+                        >
+                          <div className="w-1 h-1 bg-lime-500 rounded-full" />
+                          <span className="text-[10px] font-bold text-neutral-500 uppercase">
+                            {tag}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Trust Badge at bottom */}
+                  <div className="mt-4 flex items-center gap-3 p-4 bg-lime-400 rounded-2xl">
+                    <ShieldCheck size={24} className="text-black" />
+                    <div className="flex flex-col">
+                      <span className="text-[10px] font-black uppercase leading-none text-black">
+                        Enterprise Grade
+                      </span>
+                      <span className="text-[10px] font-medium text-black/70 mt-1 uppercase tracking-tighter">
+                        Guaranteed Performance
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -208,7 +267,7 @@ export default function DynamicServicePage() {
           </section>
 
           {/* --- FINAL CALL TO ACTION --- */}
-          <section className="mt-32 rounded-[4rem] bg-slate-900 p-12 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl shadow-lime-900/10">
+          {/* <section className="mt-32 rounded-[4rem] bg-slate-900 p-12 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl shadow-lime-900/10">
             <div className="relative z-10">
               <h2 className="text-2xl lg:text-5xl font-black mb-6 uppercase tracking-tighter">
                 Ready to <span className="text-lime-400 italic">Evolve?</span>
@@ -225,10 +284,8 @@ export default function DynamicServicePage() {
               </Link>
             </div>
 
-            {/* Decorative BG element */}
-            {/* <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-lime-400/5 blur-[150px] rounded-full -mt-40 -mr-40" />
-            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-lime-400/5 blur-[100px] rounded-full -mb-20 -ml-20" /> */}
-          </section>
+           
+          </section> */}
         </div>
       </main>
 

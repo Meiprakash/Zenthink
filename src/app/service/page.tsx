@@ -22,7 +22,7 @@ const Service: React.FC = () => {
         <HeroSection />
         <ServiceItems/>
 
-        <ServiceCard />
+        {/* <ServiceCard /> */}
         {/* <TestimonialsSection />
         <FAQ />
         <BlogSection />
