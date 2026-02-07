@@ -30,7 +30,6 @@ export default function Home() {
         {/* <BlogSection /> */}
         <ConnectSection />
         <Footer />
-        <CookieConsent/>
       </div>
     </div>
   );

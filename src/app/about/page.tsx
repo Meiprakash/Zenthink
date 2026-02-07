@@ -12,6 +12,7 @@ import BlogSection from "../components/Blog";
 import ConnectSection from "../components/ConnectUs";
 import Footer from "../components/Footer";
 import HeroSection from "./HeroSection";
+import CookieConsent from "../components/CookieConsent";
 
 export default function Hero() {
 

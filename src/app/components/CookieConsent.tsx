@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Cookie } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react"; // Install lucide-react or use a simple svg
+import { X } from "lucide-react"; 
 
 const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,9 +19,15 @@ const CookieConsent: React.FC = () => {
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem("cookie-consent", "true");
+    localStorage.setItem("cookie-consent", "accepted");
     setIsVisible(false);
   };
+
+  const handleReject = () => {
+    localStorage.setItem("cookie-consent", "rejected");
+    setIsVisible(false);
+  };
+
 
   const handleClose = () => {
     setIsVisible(false);
@@ -74,16 +80,17 @@ const CookieConsent: React.FC = () => {
             {/* Buttons Area */}
             <div className="flex flex-row items-center gap-3 w-full md:w-auto">
               <button
-                onClick={handleClose}
-                className="flex-1 md:flex-none px-6 py-2.5 text-sm font-medium text-black border-1 border-black bg-white rounded-lg hover:bg-black hover:text-white transition-colors"
-              >
-                Manage cookies
-              </button>
-              <button
                 onClick={handleAccept}
                 className="flex-1 md:flex-none px-6 py-2.5 text-sm font-medium text-black border-1 border-black bg-white rounded-lg hover:bg-black hover:text-white transition-colors"
               >
+                {" "}
                 Accept all
+              </button>
+              <button
+                onClick={handleReject}
+                className="flex-1 md:flex-none px-6 py-2.5 text-sm font-medium text-black border-1 border-black bg-white rounded-lg hover:bg-black hover:text-white transition-colors"
+              >
+                Reject all
               </button>
             </div>
           </div>
