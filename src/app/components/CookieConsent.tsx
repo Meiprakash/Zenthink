@@ -41,7 +41,7 @@ const CookieConsent: React.FC = () => {
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 text-neutral-400 hover:text-neutral-600 transition-colors"
+              className="absolute cursor-pointer top-4 right-4 text-neutral-400 hover:text-neutral-600 transition-colors"
             >
               <X size={20} />
             </button>

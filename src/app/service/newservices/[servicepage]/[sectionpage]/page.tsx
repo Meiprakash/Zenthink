@@ -423,7 +423,6 @@ export default function DynamicServicePage() {
                 transition-all duration-300"
               >
                 {/* Accent bar */}
-                <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-lime-400 to-transparent rounded-t-2xl" />
 
                 {/* Icon */}
                 <div
